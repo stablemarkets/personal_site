@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on </title>
+    <link>/tags/r/</link>
+    <description>Recent content in R on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bayesian Survival Analysis with Data Augmentation</title>
+      <link>/post/bayesian-survival-analysis-with-data-augmentation/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/bayesian-survival-analysis-with-data-augmentation/</guid>
+      <description>This is a test post
+\[f_x(x) = \int f_{xy}(x,y) dy\]
+\[\begin{aligned} y_j \sim N(\theta_j , \sigma_j^2) \\ \sigma_j = \nu/\sqrt{n_j} \\ \theta = \mu +\tau \times \eta \\ \eta \sim N(0,1) \\ \mu + \tau\times\eta = \theta \sim N(\mu , \tau^2) \end{aligned}\]
+library(dplyr) ## ## Attaching package: &amp;#39;dplyr&amp;#39; ## The following objects are masked from &amp;#39;package:stats&amp;#39;: ## ## filter, lag ## The following objects are masked from &amp;#39;package:base&amp;#39;: ## ## intersect, setdiff, setequal, union library(tidyr) library(DT) library(ggplot2) library(plotly) ## ## Attaching package: &amp;#39;plotly&amp;#39; ## The following object is masked from &amp;#39;package:ggplot2&amp;#39;: ## ## last_plot ## The following object is masked from &amp;#39;package:stats&amp;#39;: ## ## filter ## The following object is masked from &amp;#39;package:graphics&amp;#39;: ## ## layout anscombe_tidy &amp;lt;- anscombe %&amp;gt;% mutate(observation = seq_along(x1)) %&amp;gt;% gather(key, value, -observation) %&amp;gt;% separate(key, c(&amp;quot;variable&amp;quot;, &amp;quot;set&amp;quot;), 1, convert = TRUE) %&amp;gt;% mutate(set = as.</description>
+    </item>
+    
+  </channel>
+</rss>

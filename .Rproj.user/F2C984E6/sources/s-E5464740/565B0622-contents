@@ -1,0 +1,35 @@
+---
+title: Bayesian Survival Analysis with Data Augmentation
+author: Arman Oganisian
+date: '2019-03-06'
+slug: bayesian-survival-analysis-with-data-augmentation
+categories:
+  - Bayesian
+  - Survival Analysis
+  - MCMC
+tags:
+  - R
+  - Bayesian
+image:
+  caption: ''
+  focal_point: ''
+---
+This is a test post
+
+$$f_x(x) = \int f_{xy}(x,y) dy$$
+
+
+$$
+\begin{aligned}
+y_j \sim N(\theta_j , \sigma_j^2) \\
+\sigma_j = \nu/\sqrt{n_j}   \\
+\theta = \mu +\tau \times \eta \\
+\eta \sim N(0,1) \\
+\mu + \tau\times\eta = \theta \sim N(\mu , \tau^2)
+\end{aligned}
+$$
+
+```{r}
+hist(rnorm(1000))
+```
+
