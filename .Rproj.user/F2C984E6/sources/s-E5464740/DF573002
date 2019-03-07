@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551896196285.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "664400642",
+    "id" : "DF573002",
+    "lastKnownWriteTime" : 1551935062,
+    "last_content_update" : 1551935062150,
+    "path" : "~/Dropbox/personal_site/content/post/2019-03-06-bayesian-survival-analysis-with-data-augmentation.Rmd",
+    "project_path" : "content/post/2019-03-06-bayesian-survival-analysis-with-data-augmentation.Rmd",
+    "properties" : {
+        "cursorPosition" : "103,123",
+        "scrollLine" : "96",
+        "source_window_id" : ""
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

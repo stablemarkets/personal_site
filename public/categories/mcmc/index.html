@@ -315,10 +315,7 @@
     <h2><a href="/post/bayesian-survival-analysis-with-data-augmentation/">Bayesian Survival Analysis with Data Augmentation</a></h2>
     <div class="article-style">
       
-      This is a test post
-\[f_x(x) = \int f_{xy}(x,y) dy\]
-\[\begin{aligned} y_j \sim N(\theta_j , \sigma_j^2) \\ \sigma_j = \nu/\sqrt{n_j} \\ \theta = \mu +\tau \times \eta \\ \eta \sim N(0,1) \\ \mu + \tau\times\eta = \theta \sim N(\mu , \tau^2) \end{aligned}\]
-library(dplyr) ## ## Attaching package: &#39;dplyr&#39; ## The following objects are masked from &#39;package:stats&#39;: ## ## filter, lag ## The following objects are masked from &#39;package:base&#39;: ## ## intersect, setdiff, setequal, union library(tidyr) library(DT) library(ggplot2) library(plotly) ## ## Attaching package: &#39;plotly&#39; ## The following object is masked from &#39;package:ggplot2&#39;: ## ## last_plot ## The following object is masked from &#39;package:stats&#39;: ## ## filter ## The following object is masked from &#39;package:graphics&#39;: ## ## layout anscombe_tidy &lt;- anscombe %&gt;% mutate(observation = seq_along(x1)) %&gt;% gather(key, value, -observation) %&gt;% separate(key, c(&quot;variable&quot;, &quot;set&quot;), 1, convert = TRUE) %&gt;% mutate(set = as.
+      Motivation Model Set Up Data Augmentation Metropolis-in-Gibbs Sampler Simulation Example in R   Motivation When dealing with time-to-event data, right-censoring is a common occurance. Although most are familiar with likelihood construction under right-censoring (and corresponding frequentist estimation), there’s very little available online about Bayesian approaches even for fully parametric models. Here I’ll briefly outline a Bayesian estimation procedure for a Weibull model with right-censoring. The estimation procedure is MCMC based using a data augmentation approach.
       
     </div>
   </div>
@@ -329,10 +326,6 @@ library(dplyr) ## ## Attaching package: &#39;dplyr&#39; ## The following objects
 </div>
 <div class="container">
   <footer class="site-footer">
-  
-  <p class="powered-by">
-    <a href="/privacy/">Privacy Policy</a>
-  </p>
   
 
   <p class="powered-by">
