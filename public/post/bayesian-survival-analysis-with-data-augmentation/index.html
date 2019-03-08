@@ -495,9 +495,34 @@ p(T_{r+1:n}^m | \beta, b, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta_i=1}
 <div id="simulation-example-in-r" class="section level2">
 <h2>Simulation Example in R</h2>
 <p>All of the code can be found on my <a href="https://github.com/stablemarkets/BayesianTutorials/tree/master/BayesianSurvival">GitHub</a>. Here I simulate a data set with three covariates for 1,000 subjects with censoring and survival times independently drawn from a Weibull.</p>
+<pre class="r"><code>library(survival)
+library(truncdist)
+
+################################################################################
+### 0 - Simulate Data
+################################################################################
+set.seed(1)
+
+n &lt;- 1000
+x1 &lt;- rnorm(n)
+x2 &lt;- rnorm(n)
+A &lt;- rbinom(n, 1, .5)
+
+X &lt;- model.matrix(~ x1 + x2 + A)
+
+true_beta &lt;- matrix(c(1, .5, -.5, 1), ncol=1)
+true_shape &lt;- exp(X %*% true_beta)
+true_scale &lt;- 1
+
+# simulate censoring and survival times
+survt = rweibull(n, true_shape, true_scale) 
+cent = rweibull(n, true_shape, true_scale)
+
+## observed data:
+#censoring indicator
+delta &lt;- cent &lt; survt
+survt[delta==1] &lt;- cent[delta==1] # censor survival time.</code></pre>
 <p>Here are the results using the augmentated sampler described above. The posterior distribution of survival is concentrated around the truth. The Kaplan-Meier also does a nice job, but gives noisier estimates near the end.</p>
-<p><img src="/post/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/augmented_sampler-1.png" width="672" /></p>
-<p>Below the Weibull survival estimated using only uncensored data. The Kaplan-Meier is estimated using all the data. As expected, ignoring censored subjects leads us to underestimate survival. <img src="/post/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/naive_analysis-1.png" width="672" /></p>
 </div>
 
     </div>

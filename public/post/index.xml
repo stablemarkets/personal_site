@@ -20,5 +20,14 @@
       <description>Motivation Model Set Up Data Augmentation Metropolis-in-Gibbs Sampler Simulation Example in R   Motivation When dealing with time-to-event data, right-censoring is a common occurance. Although most are familiar with likelihood construction under right-censoring (and corresponding frequentist estimation), there’s very little available online about Bayesian approaches even for fully parametric models. Here I’ll briefly outline a Bayesian estimation procedure for a Weibull model with right-censoring. The estimation procedure is MCMC based using a data augmentation approach.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>/post/header/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/header/</guid>
+      <description>/* ======================================================================== * Bootstrap: transition.js v3.3.7 * http://getbootstrap.com/javascript/#transitions * ======================================================================== * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) * ======================================================================== */ +function ($) { &#39;use strict&#39;; // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/) // ============================================================ function transitionEnd() { var el = document.createElement(&#39;bootstrap&#39;) var transEndEventNames = { WebkitTransition : &#39;webkitTransitionEnd&#39;, MozTransition : &#39;transitionend&#39;, OTransition : &#39;oTransitionEnd otransitionend&#39;, transition : &#39;transitionend&#39; } for (var name in transEndEventNames) { if (el.</description>
+    </item>
+    
   </channel>
 </rss>
