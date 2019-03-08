@@ -16,7 +16,51 @@ image:
 output:
   blogdown::html_page:
     toc: true
+  bookdown::html_document2:
+    includes:
+      in_header: header.html
+  bookdown::gitbook:
+    includes:
+      in_header: header.html
 ---
+
+
+```{r setup, include=FALSE}
+# Add a common class name for every chunks
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r htmlTemp3, echo=FALSE, eval=TRUE}
+codejs <- readr::read_lines("js/codefolding.js")
+collapsejs <- readr::read_lines("js/collapse.js")
+transitionjs <- readr::read_lines("js/transition.js")
+
+htmlhead <- 
+  paste('
+<script>',
+paste(transitionjs, collapse = "\n"),
+'</script>
+<script>',
+paste(collapsejs, collapse = "\n"),
+'</script>
+<script>',
+paste(codejs, collapse = "\n"),
+'</script>
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+.row { display: flex; }
+.collapse { display: none; }
+.in { display:block }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+', sep = "\n")
+
+readr::write_lines(htmlhead, path = "header.html")
+```
 
 ## Motivation
 When dealing with time-to-event data, right-censoring is a common occurance. Although most are familiar with likelihood construction under right-censoring (and corresponding frequentist estimation), there's very little available online about Bayesian approaches even for fully parametric models. Here I'll briefly outline a Bayesian estimation procedure for a Weibull model with right-censoring. The estimation procedure is MCMC based using a data augmentation approach.
@@ -103,7 +147,7 @@ We retain the sample of $(\beta, b)$ for inference and toss samples of $T^m$
 
 All of the code can be found on my [GitHub](https://github.com/stablemarkets/BayesianTutorials/tree/master/BayesianSurvival). Here I simulate a data set with three covariates for 1,000 subjects with censoring and survival times independently drawn from a Weibull. 
 
-```{r helpers, echo=F, warning=F, error=F, include=F}
+```{r helpers, warning=F, error=F, include=F}
 log_post_a <- function(beta, b, X, survt){ # shape
   
   a <- exp( X %*% beta )
@@ -150,7 +194,7 @@ metrop_hastings<-function(x_0, iter=1, log_post_density,
 ```
 
 
-```{r simulate_data, echo=F, warning=F, error=F, cache=T}
+```{r simulate_data, warning=F, error=F, cache=T}
 library(survival)
 library(truncdist)
 
@@ -182,124 +226,5 @@ survt[delta==1] <- cent[delta==1] # censor survival time.
 
 Here are the results using the augmentated sampler described above. The posterior distribution of survival is concentrated around the truth. The Kaplan-Meier also does a nice job, but gives noisier estimates near the end.
 
-```{r augmented_sampler, echo=F, warning=F, error=F, cache=T}
-
-################################################################################
-### 1 - Run Augmented Sampler Accounting for Censoring 
-################################################################################
-iter <- 10000 # number of gibbs iterations
-
-# shells for storing parameters
-bshell <- matrix(NA, nrow=4, ncol = iter)
-scaleshell <- numeric(iter)
-
-scaleshell[1] <- c(0)
-bshell[,1] <- c(0,0,0,0)
-
-survt_all <- survt
-n_miss <- sum(delta)
-row_miss <- c(1:n)[delta]
-
-par(mfrow=c(1,1))
-plot(survfit(Surv(survt, 1-delta) ~ 1),conf.int = F, col='green',
-     xlab=c('Time'),ylab='Survival Probability',
-     main = 'Data augmentation with all subjects')
-
-prop_covar <- diag(c(.0001,.0001,.0001,.0001))
-
-for(i in 2:iter){
-  ## sample from posterior of parameters, 
-  ## conditional on observed and missing survival times
-  bshell[,i] <- metrop_hastings(x_0 = bshell[,i-1, drop=F], iter = 1,
-                                log_post_density = log_post_a,
-                                prop_sigma = prop_covar, 
-                                X=X, survt=survt_all, b=scaleshell[i-1] )$x_0
-  
-  scaleshell[i] <- metrop_hastings(x_0 = scaleshell[i-1], iter = 1,
-                                   log_post_density = log_post_b,
-                                   prop_sigma = matrix(.0001), 
-                                   X=X, survt=survt_all, 
-                                   beta=bshell[, i, drop=F] )$x_0
-  
-  ## sample from conditional posterior of missing survival times
-  for(m in row_miss){
-    survt_all[m] <- rtrunc(1, spec = 'weibull', 
-                           a = survt[m], 
-                           shape = exp( X[m,,drop=F] %*% bshell[,i, drop=F] ) , 
-                           scale =  exp(scaleshell[i]) )
-  }
-  
-  if(i>9500){
-    post_draw <- rweibull(n, 
-                          shape =  exp(X %*% bshell[,i,drop=F]), 
-                          scale = rep(exp(scaleshell[i]), n)  )
-    post_ecdf <- ecdf(post_draw)
-    curve(1-post_ecdf(x), add=T, from=0, to=4, col='gray')
-  }
-  
-}
-
-prior_draw <- rweibull(1000, 
-                       shape = exp(X %*% true_beta), 
-                       scale = true_scale  )
-prior_ecdf <- ecdf(prior_draw)
-curve(1-prior_ecdf(x), add=T, from=0, to=4, col='red', lwd=2)
-
-lines(survfit(Surv(survt, 1-delta) ~ 1),conf.int = F, col='green', lwd=2)
-legend('topright',
-       legend=c('Kaplan-Meier', 
-                'Posterior Survival Draws',
-                'True Survival Curve'),
-       col=c('green','gray','red'), bty='n', lty=c(1,1,1))
-```
-
-Below the Weibull survival estimated using only uncensored data. The Kaplan-Meier is estimated using all the data. As expected, ignoring censored subjects leads us to underestimate survival.
-```{r naive_analysis, echo=F, warning=F, error=F, cache=T}
-################################################################################
-### 2 - Run Sampler with only uncensored patients
-################################################################################
-survt_obs <- survt[delta!=1]
-X_obs <- X[delta!=1, ]
-
-plot(survfit(Surv(survt, 1-delta) ~ 1), conf.int=F,col='green',
-     xlab=c('Time'),ylab='Survival Probability',
-     main = 'Metropolis with only uncensored subjects')
-
-for(i in 2:iter){
-  bshell[,i] <- metrop_hastings(x_0 = bshell[,i-1, drop=F], iter = 1,
-                                log_post_density = log_post_a,
-                                prop_sigma = prop_covar, 
-                                X=X_obs, survt=survt_obs,b=scaleshell[i-1] )$x_0
-  
-  scaleshell[i] <- metrop_hastings(x_0 = scaleshell[i-1], iter = 1,
-                                    log_post_density = log_post_b,
-                                    prop_sigma = matrix(.0001), 
-                                    X=X_obs, survt=survt_obs, 
-                                    beta=bshell[, i, drop=F] )$x_0
-  
-  if(i>9500){
-    post_draw <- rweibull(nrow(X_obs), 
-                          shape =  exp(X_obs %*% bshell[,i,drop=F]), 
-                          scale = rep(exp(scaleshell[i]), n)  )
-    post_ecdf <- ecdf(post_draw)
-    curve(1-post_ecdf(x), add=T, from=0, to=4, col='gray')
-  }
-  
-}
-
-prior_draw <- rweibull(1000, 
-                       shape = exp(X_obs %*% true_beta), 
-                       scale = true_scale  )
-prior_ecdf <- ecdf(prior_draw)
-curve(1-prior_ecdf(x), add=T, from=0, to=4, col='red', lwd=2)
-
-legend('topright',
-       legend=c('Kaplan-Meier', 
-                'Posterior Survival Draws', 
-                'True Survival Curve'),
-       col=c('green','gray','red'), bty='n', lty=c(1,1,1))
-
-lines(survfit(Surv(survt, 1-delta) ~ 1), conf.int=F,col='green', lwd=2)
-```
 
 
