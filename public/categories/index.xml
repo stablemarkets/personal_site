@@ -6,7 +6,7 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Bayesian</title>
       <link>/categories/bayesian/</link>
-      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/bayesian/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>MCMC</title>
       <link>/categories/mcmc/</link>
-      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/mcmc/</guid>
       <description></description>
@@ -32,7 +32,7 @@
     <item>
       <title>Survival Analysis</title>
       <link>/categories/survival-analysis/</link>
-      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/survival-analysis/</guid>
       <description></description>

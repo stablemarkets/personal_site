@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.1.0">
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Arman Oganisian">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in Stan.
+Let’s start with simulating some randomly censored data from a Weibull model.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/post2/specifying-accelerated-failure-time-models-in-stan/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/magula.min.css" crossorigin="anonymous">
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-37364497-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/post2/specifying-accelerated-failure-time-models-in-stan/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@StableMarkets">
+  <meta property="twitter:creator" content="@StableMarkets">
+  
+  <meta property="og:site_name" content="">
+  <meta property="og:url" content="/post/post2/specifying-accelerated-failure-time-models-in-stan/">
+  <meta property="og:title" content="Specifying Accelerated Failure Time Models in STAN | ">
+  <meta property="og:description" content="This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in Stan.
+Let’s start with simulating some randomly censored data from a Weibull model."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-03-09T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-03-09T13:42:15-05:00">
+  
+
+  
+
+  
+
+  <title>Specifying Accelerated Failure Time Models in STAN | </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/"></a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/post">
+            
+            <span>Blog Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Specifying Accelerated Failure Time Models in STAN</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2019-03-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-03-09 13:42:15 -0500 EST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Mar 9, 2019</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/bayesian/">Bayesian</a>, 
+    
+    <a href="/categories/mcmc/">MCMC</a>, 
+    
+    <a href="/categories/survival-analysis/">Survival Analysis</a>
+    
+  </span>
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Specifying%20Accelerated%20Failure%20Time%20Models%20in%20STAN&amp;url=%2fpost%2fpost2%2fspecifying-accelerated-failure-time-models-in-stan%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fpost2%2fspecifying-accelerated-failure-time-models-in-stan%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fpost2%2fspecifying-accelerated-failure-time-models-in-stan%2f&amp;title=Specifying%20Accelerated%20Failure%20Time%20Models%20in%20STAN"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fpost2%2fspecifying-accelerated-failure-time-models-in-stan%2f&amp;title=Specifying%20Accelerated%20Failure%20Time%20Models%20in%20STAN"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Specifying%20Accelerated%20Failure%20Time%20Models%20in%20STAN&amp;body=%2fpost%2fpost2%2fspecifying-accelerated-failure-time-models-in-stan%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<p>This post is an add-on to my <a href="https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/">previous post</a> about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in <a href="https://mc-stan.org/users/interfaces/rstan">Stan</a>.</p>
+<p>Let’s start with simulating some randomly censored data from a Weibull model. In this case, we just include a binary indicator and are interested in characterizing survival between these two groups.</p>
+<pre class="r"><code>set.seed(1)
+
+n &lt;- 1000
+
+# simulate covariates (just a binary treatment indicator)
+A &lt;- rbinom(n, 1, .5)
+X &lt;- model.matrix(~ A)
+
+# true parameters
+true_beta &lt;- (1/2)*matrix(c(-1/3, 2), ncol=1)
+true_mu &lt;- X %*% true_beta
+
+true_sigma &lt;- 1
+
+true_alpha &lt;- 1/true_sigma
+true_lambda &lt;- exp(-1*true_mu*true_alpha)
+
+# simulate censoring and survival times
+survt = rweibull(n, shape=true_alpha, scale = true_lambda) 
+cent = rweibull(n, shape=true_alpha, scale = true_lambda)
+
+## observed data:
+#censoring indicator
+delta &lt;- cent &lt; survt
+survt[delta==1] &lt;- cent[delta==1] # censor survival time.
+
+# count number of missing/censored survival times
+n_miss &lt;- sum(delta)
+
+d_list &lt;- list(N_m = n_miss, N_o = n - n_miss, P=2, # number of betas
+               # data for censored subjects
+               y_m=survt[delta==1], X_m=X[delta==1,],
+               # data for uncensored subjects
+               y_o=survt[delta==0], X_o=X[delta==0,])</code></pre>
+<p>The list <code>d_list</code> is what we’ll eventually feed to Stan. Below is the Stan model for Weibull distributed survival times. Note in the transformed parameters block we specify the canonical accelerated failure time (AFT) parameterization - modeling the scale as a function of the shape parameter, <span class="math inline">\(\alpha\)</span>, and covariates.</p>
+<p>In the model block, we specify the likelihood as the Weibull density for uncensored subjects, and then augment the likelihood with evaluations from the Weibull survival function (<code>_lccdf</code>).</p>
+<p>The generated quantities block transforms the parameters to get posterior draws of the hazard ratio (as specified in my <a href="https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/">previous post</a> ) as well as posterior draws of the survival function.</p>
+<pre class="stan"><code>data {
+  int&lt;lower=0&gt; P; // number of beta parameters
+  
+  // data for censored subjects
+  int&lt;lower=0&gt; N_m;
+  matrix[N_m,P] X_m;
+  vector[N_m] y_m;
+  
+  // data for observed subjects
+  int&lt;lower=0&gt; N_o;
+  matrix[N_o,P] X_o;
+  real y_o[N_o];
+}
+
+parameters {
+  vector[P] beta;                
+  real&lt;lower=0&gt; alpha; // Weibull Shape      
+}
+
+transformed parameters{
+  // model Weibull rate as function of covariates
+  vector[N_m] lambda_m;
+  vector[N_o] lambda_o;
+  
+  // standard weibull AFT re-parameterization
+  lambda_m = exp((X_m*beta)*alpha);
+  lambda_o = exp((X_o*beta)*alpha);
+}
+
+model {
+  beta ~ normal(0, 100);
+  alpha ~ exponential(1);
+  
+  // evaluate likelihood for censored and uncensored subjects
+  target += weibull_lpdf(y_o | alpha, lambda_o);
+  target += weibull_lccdf(y_m | alpha, lambda_m);
+}
+
+
+// generate posterior quantities of interest
+generated quantities{
+  vector[1000] post_pred_trt;
+  vector[1000] post_pred_pbo;
+  real lambda_trt; 
+  real lambda_pbo; 
+  real hazard_ratio;
+  
+  // generate hazard ratio
+  lambda_trt = exp((beta[1] + beta[2])*alpha ) ;
+  lambda_pbo = exp((beta[1])*alpha ) ;
+  
+  hazard_ratio = exp(beta[2]*alpha ) ;
+  
+  // generate survival times (for plotting survival curves)
+  for(i in 1:1000){
+    post_pred_trt[i] = weibull_rng(alpha,  lambda_trt);
+    post_pred_pbo[i] = weibull_rng(alpha,  lambda_pbo);
+  }
+}
+</code></pre>
+<p>The Stan model specified above is stored in an object called <code>weibull_mod</code>, which is called below in <code>sampling()</code>. The code below samples from the posterior and outputs posterior draws of the hazard and predicted survival times.</p>
+<pre class="r"><code>weibull_fit &lt;- sampling(weibull_mod,
+                data = d_list, 
+                chains = 1, iter=20000, warmup=19000, save_warmup=F,
+                pars= c(&#39;hazard_ratio&#39;,&#39;post_pred_trt&#39;,&#39;post_pred_pbo&#39;))</code></pre>
+<pre><code>## 
+## SAMPLING FOR MODEL &#39;80acc0f9293b946800a710dd7f5e211c&#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 0.000141 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.41 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:     1 / 20000 [  0%]  (Warmup)
+## Chain 1: Iteration:  2000 / 20000 [ 10%]  (Warmup)
+## Chain 1: Iteration:  4000 / 20000 [ 20%]  (Warmup)
+## Chain 1: Iteration:  6000 / 20000 [ 30%]  (Warmup)
+## Chain 1: Iteration:  8000 / 20000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 10000 / 20000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 12000 / 20000 [ 60%]  (Warmup)
+## Chain 1: Iteration: 14000 / 20000 [ 70%]  (Warmup)
+## Chain 1: Iteration: 16000 / 20000 [ 80%]  (Warmup)
+## Chain 1: Iteration: 18000 / 20000 [ 90%]  (Warmup)
+## Chain 1: Iteration: 19001 / 20000 [ 95%]  (Sampling)
+## Chain 1: Iteration: 20000 / 20000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 9.37183 seconds (Warm-up)
+## Chain 1:                0.838987 seconds (Sampling)
+## Chain 1:                10.2108 seconds (Total)
+## Chain 1:</code></pre>
+<pre class="r"><code>post_draws&lt;-extract(weibull_fit)</code></pre>
+<p>Below we plot posterior distribution of the hazard ratio. The red line indicates the true value under which we generated the data.</p>
+<pre class="r"><code>hist(post_draws$hazard_ratio,
+     xlab=&#39;Hazard Ratio&#39;, main=&#39;Hazard Ratio Posterior Distribution&#39;)
+abline(v=exp(-1*true_beta[2,1]*true_alpha), col=&#39;red&#39;)</code></pre>
+<p><img src="/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_hazard_ratio-1.png" width="672" /></p>
+<pre class="r"><code>mean(post_draws$hazard_ratio)</code></pre>
+<pre><code>## [1] 0.3635223</code></pre>
+<pre class="r"><code>quantile(post_draws$hazard_ratio, probs = c(.025, .975))</code></pre>
+<pre><code>##      2.5%     97.5% 
+## 0.2989080 0.4399663</code></pre>
+<p>Below we plot the survival functions. Note these results are very similar to the augmented sampler coded in the previous post.</p>
+<pre class="r"><code>plot(survfit(Surv(survt, 1-delta) ~ A ), col=c(&#39;black&#39;,&#39;blue&#39;),
+     xlab=&#39;Time&#39;,ylab=&#39;Survival Probability&#39;, conf.int=T)
+
+for(i in 1:1000){
+  trt_ecdf &lt;- ecdf(post_draws$post_pred_trt[i,])
+  curve(1 - trt_ecdf(x), from = 0, to=4, add=T, col=&#39;gray&#39;)
+  
+  pbo_ecdf &lt;- ecdf(post_draws$post_pred_pbo[i,])
+  curve(1 - pbo_ecdf(x), from = 0, to=4, add=T, col=&#39;lightblue&#39;)
+}
+
+lines(survfit(Surv(survt, 1-delta) ~ A ), col=c(&#39;black&#39;,&#39;blue&#39;), add=T,
+      conf.int=T)
+
+legend(&#39;topright&#39;, 
+       legend = c(&#39;KM Curve and Intervals (TRT)&#39;,
+                  &#39;Posterior Survival Draws (TRT)&#39;,
+                  &#39;KM Curve and Intervals (PBO)&#39;,
+                  &#39;Posterior Survival Draws (PBO)&#39;),
+       col=c(&#39;black&#39;,&#39;gray&#39;,&#39;blue&#39;,&#39;lightblue&#39;), 
+       lty=c(1,0,1,0), pch=c(NA,15,NA,15), bty=&#39;n&#39;)</code></pre>
+<p><img src="/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_survival-1.png" width="672" /></p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/bayesian/">Bayesian</a>
+  
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
+  <a class="badge badge-light" href="/tags/stan/">Stan</a>
+  
+</div>
+
+
+
+
+    
+      
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  
+  <img class="portrait mr-3" src="/author/admin/avatar_hu59943354d6eaad50302ed7f71648e9ac_1366580_250x250_fill_q90_lanczos_center.JPG" itemprop="image" alt="Avatar">
+  
+
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/authors/admin">Arman Oganisian</a></h5>
+    <h6 class="card-subtitle">Biostatistics PhD Candidate</h6>
+    <p class="card-text" itemprop="description">Bayesed and Confused.</p>
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      <li>
+        <a itemprop="sameAs" href="mailto:aoganisi@upenn.edu" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/StableMarkets" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://scholar.google.com/citations?user=ACzVmWYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/stablemarkets" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://upenn.box.com/s/kwmi230d7le4x950qgvssld4n7cxm41d" target="_blank" rel="noopener">
+          <i class="ai ai-cv"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/post1/bayesian-survival-analysis-with-data-augmentation/">Bayesian Survival Analysis with Data Augmentation</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d7381f2d79e6271d4da28f474f49096c.js"></script>
+
+  </body>
+</html>
+
