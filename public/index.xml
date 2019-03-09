@@ -125,8 +125,8 @@ generated quantities{
 &lt;pre&gt;&lt;code&gt;## 
 ## SAMPLING FOR MODEL &amp;#39;80acc0f9293b946800a710dd7f5e211c&amp;#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000182 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.82 seconds.
+## Chain 1: Gradient evaluation took 0.00018 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.8 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -143,9 +143,9 @@ generated quantities{
 ## Chain 1: Iteration: 19000 / 20000 [ 95%]  (Sampling)
 ## Chain 1: Iteration: 20000 / 20000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 9.68095 seconds (Warm-up)
-## Chain 1:                3.65054 seconds (Sampling)
-## Chain 1:                13.3315 seconds (Total)
+## Chain 1:  Elapsed Time: 11.8051 seconds (Warm-up)
+## Chain 1:                4.84561 seconds (Sampling)
+## Chain 1:                16.6507 seconds (Total)
 ## Chain 1:&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;post_draws&amp;lt;-extract(weibull_fit)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Below we plot posterior distribution of the hazard ratio. The red line indicates the true value under which we generated the data.&lt;/p&gt;
