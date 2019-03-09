@@ -33,9 +33,9 @@ Suppose we observe $i=1,\dots, r$ survival times, $T^o_i$. Survival times past t
 $$ T^o_i \sim Weibull(\alpha, \lambda_i) $$
 Where $\alpha$ is the shape parameter and $\lambda_i$ is a subject-specific scale. An Accelerated Failure Time model (AFT) follows from modeling a reparameterization of the scale function $\lambda_i = exp(-\mu_i\alpha)$, where $\mu_i = x_i^T\beta$.
 
-We'll consider the setting where we regress on a binary treatment indicator, $\mu_i = \beta_0 + \beta_1A$ where $A=1$ indicates treated and $A=0$ indicates untreated/placebo. This is a funky reparameterization, but it yields intuitive interpretations for $\beta_1$ in terms of the Weibull's hazard function, $h(t|\beta,x, \alpha) = \lambda_i\alpha x^{\alpha-1}$. Substituting $\lambda_i$, we seethe hazard for treated subjects is $h(t|A=1) = e^{-(\beta_0 + \beta_1)/\alpha}\alpha t^{\alpha-1}$ and for untreated subjects it is $h(t|A=1) = e^{-(\beta_0)/\alpha}\alpha t^{\alpha-1}$. The hazard ratio is,
+We'll consider the setting where we regress on a binary treatment indicator, $\mu_i = \beta_0 + \beta_1A$ where $A=1$ indicates treated and $A=0$ indicates untreated/placebo. This is a funky reparameterization, but it yields intuitive interpretations for $\beta_1$ in terms of the Weibull's hazard function, $h(t|\beta,x, \alpha) = \lambda_i\alpha x^{\alpha-1}$. Substituting $\lambda_i$, we see the hazard for treated subjects is $h(t|A=1) = e^{-(\beta_0 + \beta_1)*\alpha}\alpha t^{\alpha-1}$ and for untreated subjects it is $h(t|A=1) = e^{-(\beta_0)*\alpha}\alpha t^{\alpha-1}$. The hazard ratio is,
 
-$$HR = \frac{h(t|A=1) }{h(t|A=0)} = e^{-\beta_1/\alpha} $$
+$$HR = \frac{h(t|A=1) }{h(t|A=0)} = e^{-\beta_1*\alpha} $$
 If $HR=.5$, then the hazard of death, for example, at time $t$ is $50\%$ lower in the treated group, relative to the untreated.
 
 From a Bayesian point of view, we are interested in the posterior $p(\beta, \alpha | T^o_{1:r} , \delta_{1:n},  \tau)$. Once we have this, we can get a whole posterior distribution for the survival function itself - as well as any quantity derived from it. For example, posterior mean and credible intervals for $HR$ (just a function of $\beta_1$ and $\alpha$). We can also get posterior survival curve estimates for each treatment group. For the Weibull, the survival curve is given by $S(t|\beta,\alpha, A) = exp(-\lambda t^\alpha)$ - again just a function of $\beta_1$ and $\alpha$.
@@ -264,7 +264,7 @@ for(i in 2:iter){
     # store hazard ratio
     hazard_ratio[i-burnin] <- exp(-beta_shell[2]/alpha_curr) 
 
-    if(i>iter-500){
+    if(i>iter - 500){
       # plot 500 posterior survival curve draws for treated and placebo
       mu_trt <-  sum(beta_shell)
       mu_pbo <-  beta_shell[1]
@@ -299,13 +299,13 @@ That's just a helpful reminder of the efficiency gains parametric models have ov
 
 par(mfrow=c(1,2))
 plot(hazard_ratio, type='l',
-     xlab='MCMC Draw', ylab='Hazard Ratio', main='MCMC chain for hazard ratio')
-abline(h=exp(-true_beta[2]/true_alpha), col='red')
+     xlab='MCMC Iterations', ylab='Hazard Ratio', main='MCMC chain for hazard ratio')
+abline(h=exp(-true_beta[2]*true_alpha), col='red')
 
 hist(hazard_ratio,xlab='Hazard Ratio', 
      main='Posterior distribution of hazard ratio')
-abline(v=exp(-true_beta[2]/true_alpha), col='red')
+abline(v=exp(-true_beta[2]*true_alpha), col='red')
 ```
-We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and $95\%$ credible interval are $.32 \ (.24-.41)$. The true value is $.38$. Not too bad, but not too good either. Remember this is only a single simulated dataset.
+We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and $95\%$ credible interval are $.36 \ (.24-.40)$. The true value is $.367$. Not too bad. Remember this is only a single simulated dataset.
 
 
