@@ -138,7 +138,7 @@ The Stan model specified above is stored in an object called `weibull_mod`, whic
 
 weibull_fit <- sampling(weibull_mod,
                 data = d_list, 
-                chains = 1, iter=20000, warmup=15000,
+                chains = 1, iter=20000, warmup=19000, save_warmup=F,
                 pars= c('hazard_ratio','post_pred_trt','post_pred_pbo'))
 
 post_draws<-extract(weibull_fit)
@@ -160,7 +160,7 @@ Below we plot the survival functions. Note these results are very similar to the
 plot(survfit(Surv(survt, 1-delta) ~ A ), col=c('black','blue'),
      xlab='Time',ylab='Survival Probability', conf.int=T)
 
-for(i in 1:5000){
+for(i in 1:1000){
   trt_ecdf <- ecdf(post_draws$post_pred_trt[i,])
   curve(1 - trt_ecdf(x), from = 0, to=4, add=T, col='gray')
   
