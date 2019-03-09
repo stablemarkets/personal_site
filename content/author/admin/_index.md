@@ -9,14 +9,14 @@ authors = ["admin"]
 superuser = true
 
 # Role/position
-role = "PhD Candidate, Biostatistics"
+role = "Biostatistics PhD Candidate"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-organizations = [ { name = "University of Pennsylvania", url = "" } ]
+organizations = [ { name = "University of Pennsylvania", url = "https://www.dbei.med.upenn.edu/" } ]
 
 # Short bio (displayed in user profile at end of posts)
-bio = "Interests include inference, causality, and Bayesian modeling."
+bio = "Bayesed and Confused."
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email = "aoganisi@upenn.edu"
@@ -24,8 +24,8 @@ email = "aoganisi@upenn.edu"
 # List (academic) interests or hobbies
 interests = [
   "Bayesian Nonparametrics",
-  "Inference",
-  "Causality"
+  "Causal Inference",
+  "Health Economics"
 ]
 
 # Organizational groups that you belong to (for People widget)
@@ -39,7 +39,7 @@ user_groups = ["Researchers", "Visitors"]
   year = 2018
 
 [[education.courses]]
-  course = "BA, Quantitative Economics; Minor: Mathematics"
+  course = "BA, Quantitative Economics"
   institution = "Providence College"
   year = 2013
 
@@ -82,8 +82,8 @@ user_groups = ["Researchers", "Visitors"]
 
 +++
 
-I’m a biostatistics PhD candidate at the University of Pennsylvania. I am also an Associate Fellow at the [LDI](https://ldi.upenn.edu/) and a member of of the [Center for Causal Inference](https://www.cceb.med.upenn.edu/cci). For the most part, my research centers around developing Bayesian nonparametric methods for causal inference problems. Before Penn, I was a senior analyst at [Analysis Group](https://www.analysisgroup.com/practices/epidemiology-and--biostatistics/).
+I’m a biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the [LDI](https://ldi.upenn.edu/), and a member of the [Center for Causal Inference](https://www.cceb.med.upenn.edu/cci). My research centers around developing Bayesian nonparametric methods with applications to health economics, prediction, and causal inference problems. Before Penn, I was a Senior Analyst at [Analysis Group](https://www.analysisgroup.com/practices/epidemiology-and--biostatistics/)'s health economics and outcomes research (HEOR) group.
 
-I blog about statistics, bayesian methods, computation/MCMC, visualization, and other things that happen to interest me.
+I blog about statistics, bayesian methods, computation/MCMC, visualization, and other things I happen to stumble upon during research.
 
 My blog posts are syndicated on [R-bloggers](https://www.r-bloggers.com/).

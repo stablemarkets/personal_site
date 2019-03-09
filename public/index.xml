@@ -11,10 +11,10 @@
     
     <item>
       <title>Bayesian Survival Analysis with Data Augmentation</title>
-      <link>/post/bayesian-survival-analysis-with-data-augmentation/</link>
+      <link>/post/post1/bayesian-survival-analysis-with-data-augmentation/</link>
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/bayesian-survival-analysis-with-data-augmentation/</guid>
+      <guid>/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -34,92 +34,70 @@
 &lt;/div&gt;
 &lt;div id=&#34;model-set-up&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Model Set Up&lt;/h2&gt;
-&lt;p&gt;Suppose we observe &lt;span class=&#34;math inline&#34;&gt;\(i=1,\dots, r\)&lt;/span&gt; survival times, &lt;span class=&#34;math inline&#34;&gt;\(T^o_i\)&lt;/span&gt;. Survival times past the end of our study (at time &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;) are censored for subjects &lt;span class=&#34;math inline&#34;&gt;\(i=r+1, \dots, n\)&lt;/span&gt;. We know that the survival times for these subjects are greater than &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;, but that is all. Say we also have some &lt;span class=&#34;math inline&#34;&gt;\(p\times 1\)&lt;/span&gt; covariate vector, &lt;span class=&#34;math inline&#34;&gt;\(x_i\)&lt;/span&gt; and our task is to make inference about the survival function &lt;span class=&#34;math inline&#34;&gt;\(P(T \geq t)\)&lt;/span&gt;. Finally, we have indicator of whether survival time is observed &lt;span class=&#34;math inline&#34;&gt;\(\delta_{1:n}\)&lt;/span&gt; for each subject. A parametric approach follows by assuming a model for &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, we choose the Weibull&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ T^o_i \sim Weibull(a_i, b) \]&lt;/span&gt; Where &lt;span class=&#34;math inline&#34;&gt;\(a\)&lt;/span&gt; is the shape parameter and &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt; is the scale. We model the shape parameter as a function of covariates &lt;span class=&#34;math inline&#34;&gt;\(a_i = exp(x_i^T \beta)\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;In this parametric setting, the target of interest (the survival function) is determined by the Weibull parameters, &lt;span class=&#34;math inline&#34;&gt;\(P(T&amp;gt;t| a_i, b)\)&lt;/span&gt; - which we’ll need to estimate.&lt;/p&gt;
-&lt;p&gt;From a Bayesian point of view, we are interested in the posterior &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, b | T^o_{1:r} , \tau)\)&lt;/span&gt;. Once we have this, we can get a whole posterior distribution for the survival function itself - as well as any quantity derived from it (e.g. mean survival time, hazard, etc).&lt;/p&gt;
+&lt;p&gt;Suppose we observe &lt;span class=&#34;math inline&#34;&gt;\(i=1,\dots, r\)&lt;/span&gt; survival times, &lt;span class=&#34;math inline&#34;&gt;\(T^o_i\)&lt;/span&gt;. Survival times past the end of our study (at time &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;) are censored for subjects &lt;span class=&#34;math inline&#34;&gt;\(i=r+1, \dots, n\)&lt;/span&gt;. We know that the survival times for these subjects are greater than &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;, but that is all. Say we also have some &lt;span class=&#34;math inline&#34;&gt;\(p\times 1\)&lt;/span&gt; covariate vector, &lt;span class=&#34;math inline&#34;&gt;\(x_i\)&lt;/span&gt;. Finally, we have indicator of whether survival time is observed &lt;span class=&#34;math inline&#34;&gt;\(\delta_{1:n}\)&lt;/span&gt; for each subject. A parametric approach follows by assuming a model for &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, we choose the Weibull&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ T^o_i \sim Weibull(\alpha, \lambda_i) \]&lt;/span&gt; Where &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; is the shape parameter and &lt;span class=&#34;math inline&#34;&gt;\(\lambda_i\)&lt;/span&gt; is a subject-specific scale. An Accelerated Failure Time model (AFT) follows from modeling a reparameterization of the scale function &lt;span class=&#34;math inline&#34;&gt;\(\lambda_i = exp(-\mu_i\alpha)\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(\mu_i = x_i^T\beta\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;We’ll consider the setting where we regress on a binary treatment indicator, &lt;span class=&#34;math inline&#34;&gt;\(\mu_i = \beta_0 + \beta_1A\)&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(A=1\)&lt;/span&gt; indicates treated and &lt;span class=&#34;math inline&#34;&gt;\(A=0\)&lt;/span&gt; indicates untreated/placebo. This is a funky reparameterization, but it yields intuitive interpretations for &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; in terms of the Weibull’s hazard function, &lt;span class=&#34;math inline&#34;&gt;\(h(t|\beta,x, \alpha) = \lambda_i\alpha x^{\alpha-1}\)&lt;/span&gt;. Substituting &lt;span class=&#34;math inline&#34;&gt;\(\lambda_i\)&lt;/span&gt;, we seethe hazard for treated subjects is &lt;span class=&#34;math inline&#34;&gt;\(h(t|A=1) = e^{-(\beta_0 + \beta_1)/\alpha}\alpha t^{\alpha-1}\)&lt;/span&gt; and for untreated subjects it is &lt;span class=&#34;math inline&#34;&gt;\(h(t|A=1) = e^{-(\beta_0)/\alpha}\alpha t^{\alpha-1}\)&lt;/span&gt;. The hazard ratio is,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[HR = \frac{h(t|A=1) }{h(t|A=0)} = e^{-\beta_1/\alpha} \]&lt;/span&gt; If &lt;span class=&#34;math inline&#34;&gt;\(HR=.5\)&lt;/span&gt;, then the hazard of death, for example, at time &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(50\%\)&lt;/span&gt; lower in the treated group, relative to the untreated.&lt;/p&gt;
+&lt;p&gt;From a Bayesian point of view, we are interested in the posterior &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, \alpha | T^o_{1:r} , \delta_{1:n}, \tau)\)&lt;/span&gt;. Once we have this, we can get a whole posterior distribution for the survival function itself - as well as any quantity derived from it. For example, posterior mean and credible intervals for &lt;span class=&#34;math inline&#34;&gt;\(HR\)&lt;/span&gt; (just a function of &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;). We can also get posterior survival curve estimates for each treatment group. For the Weibull, the survival curve is given by &lt;span class=&#34;math inline&#34;&gt;\(S(t|\beta,\alpha, A) = exp(-\lambda t^\alpha)\)&lt;/span&gt; - again just a function of &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-augmentation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data Augmentation&lt;/h2&gt;
 &lt;p&gt;We’ll first look at the joint data distribution (the likelihood) for this problem. The central idea is to view the survival times for the &lt;span class=&#34;math inline&#34;&gt;\(n-r\)&lt;/span&gt; censored subjects as missing data, &lt;span class=&#34;math inline&#34;&gt;\(T^m_{r+1:n}\)&lt;/span&gt;. We refer to the full data as &lt;span class=&#34;math inline&#34;&gt;\(T_{i=1:n} = (T_{i:r}^o, T_{r+1:n}^m)\)&lt;/span&gt;. Now we construct a complete-data (augmented) likelihood with these values. The observed likelihood and complete-data likelihood are related by&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
- p(T^o_{1:r}, \delta_{1:n}| \tau, \beta, b) &amp;amp; = \int p(T_{1:n}, \delta_{1:n} | \tau, \beta, b) \ dT^m_{r+1:n} \\
-  &amp;amp; = \int p(\delta_{1:n} | T_{1:n}, \tau, \beta, b) \ p(T_{1:n} | \tau, \beta, b) \ dT^m_{r+1:n}
+ p(T^o_{1:r}, \delta_{1:n}| \tau, \beta, \alpha) &amp;amp; = \int p(T_{1:n}, \delta_{1:n} | \tau, \beta, \alpha) \ dT^m_{r+1:n} \\
+  &amp;amp; = \int p(\delta_{1:n} | T_{1:n}, \tau, \beta, \alpha) \ p(T_{1:n} | \tau, \beta, \alpha) \ dT^m_{r+1:n}
 \end{aligned}
-\]&lt;/span&gt; Now in this ideal, complete-data setting, we observe patients with either &lt;span class=&#34;math inline&#34;&gt;\(\delta_i = 1 \ \cap \ T_i &amp;gt; \tau\)&lt;/span&gt; or with &lt;span class=&#34;math inline&#34;&gt;\(\delta_i = 0 \ \cap \ T_i &amp;lt; \tau\)&lt;/span&gt;. That is, &lt;span class=&#34;math inline&#34;&gt;\(p(\delta_{i} | T_i, \tau, \beta, b)=1\)&lt;/span&gt; if either of these conditions hold and &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; otherwise.&lt;/p&gt;
-&lt;p&gt;We also assume that subjects are independent so that &lt;span class=&#34;math inline&#34;&gt;\(p(T_{i=1:n} | \tau, \beta, b) = p(T^o_{1:r}| \tau, \beta, b)p( T^m_{r+1:n} | \tau, \beta, b)\)&lt;/span&gt;. So the likelihood simplifies to: &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt; Now in this ideal, complete-data setting, we observe patients with either &lt;span class=&#34;math inline&#34;&gt;\(\delta_i = 1 \ \cap \ T_i &amp;gt; \tau\)&lt;/span&gt; or with &lt;span class=&#34;math inline&#34;&gt;\(\delta_i = 0 \ \cap \ T_i &amp;lt; \tau\)&lt;/span&gt;. That is, &lt;span class=&#34;math inline&#34;&gt;\(p(\delta_{i} | T_i, \tau, \beta, \alpha)=1\)&lt;/span&gt; if either of these conditions hold and &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; otherwise.&lt;/p&gt;
+&lt;p&gt;We also assume that subjects are independent so that &lt;span class=&#34;math inline&#34;&gt;\(p(T_{i=1:n} | \tau, \beta, \alpha) = p(T^o_{1:r}| \tau, \beta, \alpha)p( T^m_{r+1:n} | \tau, \beta, \alpha)\)&lt;/span&gt;. So the likelihood simplifies to: &lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
- p(T^o_{1:r}, \delta_{1:n}| \tau, \beta, b) &amp;amp; = \prod_{i=1}^n\int p(\delta_{i} | T_{i}, \tau, \beta, b) \ p(T_{i} | \tau, \beta, b) \ dT^m_{r+1:n} \\
- &amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, b) \prod_{i| \delta_i=1} \int p(\delta_{i} | T^m_{i}, \tau, \beta, b) \ p(T_{i}^m | \tau, \beta, b) \ dT^m_{i} \\
-&amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, b) \prod_{i| \delta_i=1} \int I(T_i^m &amp;gt; \tau) \ p(T_{i}^m | \tau, \beta, b) \ dT^m_{i} \\
-&amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, b) \prod_{i| \delta_i=1} \int_\tau^\infty \ p(T_{i}^m | \tau, \beta, b) \ dT^m_{i} \\
+ p(T^o_{1:r}, \delta_{1:n}| \tau, \beta, \alpha) &amp;amp; = \prod_{i=1}^n\int p(\delta_{i} | T_{i}, \tau, \beta, \alpha) \ p(T_{i} | \tau, \beta, \alpha) \ dT^m_{r+1:n} \\
+ &amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} \int p(\delta_{i} | T^m_{i}, \tau, \beta, \alpha) \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i} \\
+&amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} \int I(T_i^m &amp;gt; \tau) \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i} \\
+&amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} \int_\tau^\infty \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i} \\
 \end{aligned}
 \]&lt;/span&gt; The first line follows by independence of observations. The second line follows by separating censored and uncensored subjects. &lt;span class=&#34;math inline&#34;&gt;\(p(\delta_i | -)=1\)&lt;/span&gt; for all uncensored subjects, but &lt;span class=&#34;math inline&#34;&gt;\(p(\delta_i | -)=1\)&lt;/span&gt; for censored subjects only when &lt;span class=&#34;math inline&#34;&gt;\(T_i^m \in (0, \infty)\)&lt;/span&gt;. Otherwise, the integrand is 0. Therefore, in the fourth line we only need to integrate of the region where the integrand is non-zero.&lt;/p&gt;
-&lt;p&gt;Now the integral is over the region &lt;span class=&#34;math inline&#34;&gt;\(T_i^m \in (0, \infty)\)&lt;/span&gt;. But in this region &lt;span class=&#34;math inline&#34;&gt;\(p(\delta_{i} | T^m_{i}, \tau, \beta, b)=1\)&lt;/span&gt; only when &lt;span class=&#34;math inline&#34;&gt;\(T_i^m &amp;gt;\tau\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;This is the usual likelihood for frequentist survival models: uncensored subjects contribute to the likelihood via the density while censored subjects contribute to the likelihood via the survival function &lt;span class=&#34;math inline&#34;&gt;\(\int_\tau^\infty \ p(T_{i}^m | \tau, \beta, b) \ dT^m_{i}\)&lt;/span&gt;. Functions for this integral exist in for most basic distributions in &lt;code&gt;R&lt;/code&gt;. For our Weibull model, it is &lt;code&gt;1-pweibull()&lt;/code&gt;. We would simply place priors on &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(b\)&lt;/span&gt;, then sample from the posterior using MCMC.&lt;/p&gt;
+&lt;p&gt;Now the integral is over the region &lt;span class=&#34;math inline&#34;&gt;\(T_i^m \in (0, \infty)\)&lt;/span&gt;. But in this region &lt;span class=&#34;math inline&#34;&gt;\(p(\delta_{i} | T^m_{i}, \tau, \beta, \alpha)=1\)&lt;/span&gt; only when &lt;span class=&#34;math inline&#34;&gt;\(T_i^m &amp;gt;\tau\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;This is the usual likelihood for frequentist survival models: uncensored subjects contribute to the likelihood via the density while censored subjects contribute to the likelihood via the survival function &lt;span class=&#34;math inline&#34;&gt;\(\int_\tau^\infty \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i}\)&lt;/span&gt;. Functions for this integral exist in for most basic distributions in &lt;code&gt;R&lt;/code&gt;. For our Weibull model, it is &lt;code&gt;1-pweibull()&lt;/code&gt;. We would simply place priors on &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;, then sample from the posterior using MCMC.&lt;/p&gt;
 &lt;p&gt;But what if this integral was too hard to evaluate (as it may be for more complicated censoring mechanisms) and the complete data likelihood given below is easier?&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
- p(T^o_{1:r}, T^m_{r+1:n}, \delta_{1:n}| \tau, \beta, b) &amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, b) \prod_{i| \delta_i=1} I(T_i^m &amp;gt; \tau)\ p(T_{i}^m | \tau, \beta, b)\\
+ p(T^o_{1:r}, T^m_{r+1:n}, \delta_{1:n}| \tau, \beta, \alpha) &amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} I(T_i^m &amp;gt; \tau)\ p(T_{i}^m | \tau, \beta, \alpha)\\
 \end{aligned}
 \]&lt;/span&gt; Then we can design a Gibbs sampler around this complete data likelihood.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;metropolis-in-gibbs-sampler&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Metropolis-in-Gibbs Sampler&lt;/h2&gt;
-&lt;p&gt;The target posterior of interest is &lt;span class=&#34;math display&#34;&gt;\[p(\beta, b, T_{r+1:n}^m | T^o_{1:r}, \delta_{1:n}) = p(\beta, b | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n}) \ p(T_{r+1:n}^m | \beta, b, T^o_{1:r}, \delta_{1:n})\]&lt;/span&gt; Where each conditional posterior is known up to a proportionality constant. With a joint prior &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, b)\)&lt;/span&gt; specified, we have&lt;/p&gt;
+&lt;p&gt;The target posterior of interest is &lt;span class=&#34;math display&#34;&gt;\[p(\beta, \alpha, T_{r+1:n}^m | T^o_{1:r}, \delta_{1:n}) = p(\beta, \alpha | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n}) \ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n})\]&lt;/span&gt; Where each conditional posterior is known up to a proportionality constant. With a joint prior &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, \alpha)\)&lt;/span&gt; specified, we have&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 \begin{aligned}
-p(\beta, b | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n}) &amp;amp; \propto \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, b) \prod_{i| \delta_i=1} I(T_i^m &amp;gt; \tau)\ p(T_{i}^m | \tau, \beta, b)  \\
-&amp;amp; \propto p(\beta, b) \prod_{i=1}^n p(T_{i}| \tau, \beta, b) \\
+p(\beta, \alpha | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n}) &amp;amp; \propto \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} I(T_i^m &amp;gt; \tau)\ p(T_{i}^m | \tau, \beta, \alpha)  \\
+&amp;amp; \propto p(\beta, \alpha) \prod_{i=1}^n p(T_{i}| \tau, \beta, \alpha) \\
 \end{aligned}
-\]&lt;/span&gt; Note here that &lt;span class=&#34;math inline&#34;&gt;\(p(T_{i}| \tau, \beta, b)\)&lt;/span&gt; is the assumed Weibull density. We can use a Metropolis step to sample &lt;span class=&#34;math inline&#34;&gt;\((\beta, b)\)&lt;/span&gt; from this distribution.&lt;/p&gt;
+\]&lt;/span&gt; Note here that &lt;span class=&#34;math inline&#34;&gt;\(p(T_{i}| \tau, \beta, \alpha)\)&lt;/span&gt; is the assumed Weibull density. We can use a Metropolis step to sample &lt;span class=&#34;math inline&#34;&gt;\((\beta, \alpha)\)&lt;/span&gt; from this distribution.&lt;/p&gt;
 The second conditional posterior is
 &lt;span class=&#34;math display&#34;&gt;\[\begin{equation}
 \begin{aligned}
-p(T_{r+1:n}^m | \beta, b, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta_i=1} I(T_i^m &amp;gt; \tau)\ p(T_{i}^m | \tau, \beta, b)
+p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta_i=1} I(T_i^m &amp;gt; \tau)\ p(T_{i}^m | \tau, \beta, \alpha)
 \end{aligned}
 \end{equation}\]&lt;/span&gt;
 &lt;p&gt;This is a truncated Weibull distribution (truncated at the bottom by &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;). We can also sample from this using a Metropolis step.&lt;/p&gt;
 &lt;p&gt;The Gibbs sampler alternates between sampling from these two conditionals:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Given parameters &lt;span class=&#34;math inline&#34;&gt;\((\beta, b)\)&lt;/span&gt;, impute &lt;span class=&#34;math inline&#34;&gt;\(T^m_i\)&lt;/span&gt; by drawing from &lt;span class=&#34;math inline&#34;&gt;\(p(T_{r+1:n}^m | \beta, b, T^o_{1:r}, \delta_{1:n})\)&lt;/span&gt;, for each &lt;span class=&#34;math inline&#34;&gt;\(i=r+1,\dots, n\)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;Combine these imputed values, &lt;span class=&#34;math inline&#34;&gt;\(T^m_{r+1:n}\)&lt;/span&gt;, with observed data &lt;span class=&#34;math inline&#34;&gt;\(T_{1:n}^o\)&lt;/span&gt;, and update the parameters &lt;span class=&#34;math inline&#34;&gt;\((\beta, b)\)&lt;/span&gt; from &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, b | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n})\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Given parameters &lt;span class=&#34;math inline&#34;&gt;\((\beta, \alpha)\)&lt;/span&gt;, impute &lt;span class=&#34;math inline&#34;&gt;\(T^m_i\)&lt;/span&gt; by drawing from &lt;span class=&#34;math inline&#34;&gt;\(p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n})\)&lt;/span&gt;, for each &lt;span class=&#34;math inline&#34;&gt;\(i=r+1,\dots, n\)&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;Combine these imputed values, &lt;span class=&#34;math inline&#34;&gt;\(T^m_{r+1:n}\)&lt;/span&gt;, with observed data &lt;span class=&#34;math inline&#34;&gt;\(T_{1:n}^o\)&lt;/span&gt;, and update the parameters &lt;span class=&#34;math inline&#34;&gt;\((\beta, \alpha)\)&lt;/span&gt; from &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, \alpha | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n})\)&lt;/span&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;As the parameter estimates update, the imputations get better. As the imputations get better, the parameter estimates improve. Over time the process yields draws from the joint posterior &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, b, T_{r+1:n}^m | T^o_{1:r}, \delta_{1:n})\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;We retain the sample of &lt;span class=&#34;math inline&#34;&gt;\((\beta, b)\)&lt;/span&gt; for inference and toss samples of &lt;span class=&#34;math inline&#34;&gt;\(T^m\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;As the parameter estimates update, the imputations get better. As the imputations get better, the parameter estimates improve. Over time the process yields draws from the joint posterior &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, \alpha, T_{r+1:n}^m | T^o_{1:r}, \delta_{1:n})\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We retain the sample of &lt;span class=&#34;math inline&#34;&gt;\((\beta, \alpha)\)&lt;/span&gt; for inference and toss samples of &lt;span class=&#34;math inline&#34;&gt;\(T^m\)&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;simulation-example-in-r&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Simulation Example in R&lt;/h2&gt;
-&lt;p&gt;All of the code can be found on my &lt;a href=&#34;https://github.com/stablemarkets/BayesianTutorials/tree/master/BayesianSurvival&#34;&gt;GitHub&lt;/a&gt;. Here I simulate a data set with three covariates for 1,000 subjects with censoring and survival times independently drawn from a Weibull.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(survival)
-library(truncdist)
-
-################################################################################
-### 0 - Simulate Data
-################################################################################
-set.seed(1)
-
-n &amp;lt;- 1000
-x1 &amp;lt;- rnorm(n)
-x2 &amp;lt;- rnorm(n)
-A &amp;lt;- rbinom(n, 1, .5)
-
-X &amp;lt;- model.matrix(~ x1 + x2 + A)
-
-true_beta &amp;lt;- matrix(c(1, .5, -.5, 1), ncol=1)
-true_shape &amp;lt;- exp(X %*% true_beta)
-true_scale &amp;lt;- 1
-
-# simulate censoring and survival times
-survt = rweibull(n, true_shape, true_scale) 
-cent = rweibull(n, true_shape, true_scale)
-
-## observed data:
-#censoring indicator
-delta &amp;lt;- cent &amp;lt; survt
-survt[delta==1] &amp;lt;- cent[delta==1] # censor survival time.&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Here are the results using the augmentated sampler described above. The posterior distribution of survival is concentrated around the truth. The Kaplan-Meier also does a nice job, but gives noisier estimates near the end.&lt;/p&gt;
+&lt;p&gt;All of the code implementing the augmented sampler (from scratch!) can be found on my &lt;a href=&#34;https://github.com/stablemarkets/BayesianTutorials/tree/master/BayesianSurvival&#34;&gt;GitHub&lt;/a&gt;. Basically I simulate a data set with a binary treatment indicator for 1,000 subjects with censoring and survival times independently drawn from a Weibull. \&lt;/p&gt;
+&lt;p&gt;For the &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; vector, I use independent &lt;span class=&#34;math inline&#34;&gt;\(N(0,sd=100)\)&lt;/span&gt; priors. For the shape parameter, I use an &lt;span class=&#34;math inline&#34;&gt;\(Exp(1)\)&lt;/span&gt; prior. I run a single MCMC chain for 20,000 iterations and toss the first 15,000 out as burn-in.&lt;/p&gt;
+&lt;p&gt;Here is the estimated survival function for each treatment group. Overlayed are the non-parametric estimates from a stratified Kaplan-Meier (KM) estimator. Note the parametric model is correctly specified here, so it does just as well as the KM in terms of estimating the mean curve. But the parametric model provides a less noisy fit - notice the credible bands are narrower at later time points when the at-risk counts get low in each treatment arm.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/sampler-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;That’s just a helpful reminder of the efficiency gains parametric models have over nonparametric ones (when they’re correctly specified. Let’s take a look at the posterior distribution of the hazard ratio. The true value is indicated by the red line.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png&#34; width=&#34;1152&#34; /&gt; We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; credible interval are &lt;span class=&#34;math inline&#34;&gt;\(.32 \ (.24-.41)\)&lt;/span&gt;. The true value is &lt;span class=&#34;math inline&#34;&gt;\(.38\)&lt;/span&gt;. Not too bad, but not too good either. Remember this is only a single simulated dataset.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -195,363 +173,6 @@ survt[delta==1] &amp;lt;- cent[delta==1] # censor survival time.&lt;/code&gt;&lt
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/post/header/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/post/header/</guid>
-      <description>
-&lt;script&gt;
-/* ========================================================================
- * Bootstrap: transition.js v3.3.7
- * http://getbootstrap.com/javascript/#transitions
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
-
-+function ($) {
-  &#39;use strict&#39;;
-
-  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
-  // ============================================================
-
-  function transitionEnd() {
-    var el = document.createElement(&#39;bootstrap&#39;)
-
-    var transEndEventNames = {
-      WebkitTransition : &#39;webkitTransitionEnd&#39;,
-      MozTransition    : &#39;transitionend&#39;,
-      OTransition      : &#39;oTransitionEnd otransitionend&#39;,
-      transition       : &#39;transitionend&#39;
-    }
-
-    for (var name in transEndEventNames) {
-      if (el.style[name] !== undefined) {
-        return { end: transEndEventNames[name] }
-      }
-    }
-
-    return false // explicit for ie8 (  ._.)
-  }
-
-  // http://blog.alexmaccaw.com/css-transitions
-  $.fn.emulateTransitionEnd = function (duration) {
-    var called = false
-    var $el = this
-    $(this).one(&#39;bsTransitionEnd&#39;, function () { called = true })
-    var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
-    setTimeout(callback, duration)
-    return this
-  }
-
-  $(function () {
-    $.support.transition = transitionEnd()
-
-    if (!$.support.transition) return
-
-    $.event.special.bsTransitionEnd = {
-      bindType: $.support.transition.end,
-      delegateType: $.support.transition.end,
-      handle: function (e) {
-        if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
-      }
-    }
-  })
-
-}(jQuery);
-&lt;/script&gt;
-&lt;script&gt;
-/* ========================================================================
- * Bootstrap: collapse.js v3.3.7
- * http://getbootstrap.com/javascript/#collapse
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
-/* jshint latedef: false */
-
-+function ($) {
-  &#39;use strict&#39;;
-
-  // COLLAPSE PUBLIC CLASS DEFINITION
-  // ================================
-
-  var Collapse = function (element, options) {
-    this.$element      = $(element)
-    this.options       = $.extend({}, Collapse.DEFAULTS, options)
-    this.$trigger      = $(&#39;[data-toggle=&#34;collapse&#34;][href=&#34;#&#39; + element.id + &#39;&#34;],&#39; +
-                           &#39;[data-toggle=&#34;collapse&#34;][data-target=&#34;#&#39; + element.id + &#39;&#34;]&#39;)
-    this.transitioning = null
-
-    if (this.options.parent) {
-      this.$parent = this.getParent()
-    } else {
-      this.addAriaAndCollapsedClass(this.$element, this.$trigger)
-    }
-
-    if (this.options.toggle) this.toggle()
-  }
-
-  Collapse.VERSION  = &#39;3.3.7&#39;
-
-  Collapse.TRANSITION_DURATION = 350
-
-  Collapse.DEFAULTS = {
-    toggle: true
-  }
-
-  Collapse.prototype.dimension = function () {
-    var hasWidth = this.$element.hasClass(&#39;width&#39;)
-    return hasWidth ? &#39;width&#39; : &#39;height&#39;
-  }
-
-  Collapse.prototype.show = function () {
-    if (this.transitioning || this.$element.hasClass(&#39;in&#39;)) return
-
-    var activesData
-    var actives = this.$parent &amp;&amp; this.$parent.children(&#39;.panel&#39;).children(&#39;.in, .collapsing&#39;)
-
-    if (actives &amp;&amp; actives.length) {
-      activesData = actives.data(&#39;bs.collapse&#39;)
-      if (activesData &amp;&amp; activesData.transitioning) return
-    }
-
-    var startEvent = $.Event(&#39;show.bs.collapse&#39;)
-    this.$element.trigger(startEvent)
-    if (startEvent.isDefaultPrevented()) return
-
-    if (actives &amp;&amp; actives.length) {
-      Plugin.call(actives, &#39;hide&#39;)
-      activesData || actives.data(&#39;bs.collapse&#39;, null)
-    }
-
-    var dimension = this.dimension()
-
-    this.$element
-      .removeClass(&#39;collapse&#39;)
-      .addClass(&#39;collapsing&#39;)[dimension](0)
-      .attr(&#39;aria-expanded&#39;, true)
-
-    this.$trigger
-      .removeClass(&#39;collapsed&#39;)
-      .attr(&#39;aria-expanded&#39;, true)
-
-    this.transitioning = 1
-
-    var complete = function () {
-      this.$element
-        .removeClass(&#39;collapsing&#39;)
-        .addClass(&#39;collapse in&#39;)[dimension](&#39;&#39;)
-      this.transitioning = 0
-      this.$element
-        .trigger(&#39;shown.bs.collapse&#39;)
-    }
-
-    if (!$.support.transition) return complete.call(this)
-
-    var scrollSize = $.camelCase([&#39;scroll&#39;, dimension].join(&#39;-&#39;))
-
-    this.$element
-      .one(&#39;bsTransitionEnd&#39;, $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
-  }
-
-  Collapse.prototype.hide = function () {
-    if (this.transitioning || !this.$element.hasClass(&#39;in&#39;)) return
-
-    var startEvent = $.Event(&#39;hide.bs.collapse&#39;)
-    this.$element.trigger(startEvent)
-    if (startEvent.isDefaultPrevented()) return
-
-    var dimension = this.dimension()
-
-    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
-
-    this.$element
-      .addClass(&#39;collapsing&#39;)
-      .removeClass(&#39;collapse in&#39;)
-      .attr(&#39;aria-expanded&#39;, false)
-
-    this.$trigger
-      .addClass(&#39;collapsed&#39;)
-      .attr(&#39;aria-expanded&#39;, false)
-
-    this.transitioning = 1
-
-    var complete = function () {
-      this.transitioning = 0
-      this.$element
-        .removeClass(&#39;collapsing&#39;)
-        .addClass(&#39;collapse&#39;)
-        .trigger(&#39;hidden.bs.collapse&#39;)
-    }
-
-    if (!$.support.transition) return complete.call(this)
-
-    this.$element
-      [dimension](0)
-      .one(&#39;bsTransitionEnd&#39;, $.proxy(complete, this))
-      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
-  }
-
-  Collapse.prototype.toggle = function () {
-    this[this.$element.hasClass(&#39;in&#39;) ? &#39;hide&#39; : &#39;show&#39;]()
-  }
-
-  Collapse.prototype.getParent = function () {
-    return $(this.options.parent)
-      .find(&#39;[data-toggle=&#34;collapse&#34;][data-parent=&#34;&#39; + this.options.parent + &#39;&#34;]&#39;)
-      .each($.proxy(function (i, element) {
-        var $element = $(element)
-        this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
-      }, this))
-      .end()
-  }
-
-  Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
-    var isOpen = $element.hasClass(&#39;in&#39;)
-
-    $element.attr(&#39;aria-expanded&#39;, isOpen)
-    $trigger
-      .toggleClass(&#39;collapsed&#39;, !isOpen)
-      .attr(&#39;aria-expanded&#39;, isOpen)
-  }
-
-  function getTargetFromTrigger($trigger) {
-    var href
-    var target = $trigger.attr(&#39;data-target&#39;)
-      || (href = $trigger.attr(&#39;href&#39;)) &amp;&amp; href.replace(/.*(?=#[^\s]+$)/, &#39;&#39;) // strip for ie7
-
-    return $(target)
-  }
-
-
-  // COLLAPSE PLUGIN DEFINITION
-  // ==========================
-
-  function Plugin(option) {
-    return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data(&#39;bs.collapse&#39;)
-      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == &#39;object&#39; &amp;&amp; option)
-
-      if (!data &amp;&amp; options.toggle &amp;&amp; /show|hide/.test(option)) options.toggle = false
-      if (!data) $this.data(&#39;bs.collapse&#39;, (data = new Collapse(this, options)))
-      if (typeof option == &#39;string&#39;) data[option]()
-    })
-  }
-
-  var old = $.fn.collapse
-
-  $.fn.collapse             = Plugin
-  $.fn.collapse.Constructor = Collapse
-
-
-  // COLLAPSE NO CONFLICT
-  // ====================
-
-  $.fn.collapse.noConflict = function () {
-    $.fn.collapse = old
-    return this
-  }
-
-
-  // COLLAPSE DATA-API
-  // =================
-
-  $(document).on(&#39;click.bs.collapse.data-api&#39;, &#39;[data-toggle=&#34;collapse&#34;]&#39;, function (e) {
-    var $this   = $(this)
-
-    if (!$this.attr(&#39;data-target&#39;)) e.preventDefault()
-
-    var $target = getTargetFromTrigger($this)
-    var data    = $target.data(&#39;bs.collapse&#39;)
-    var option  = data ? &#39;toggle&#39; : $this.data()
-
-    Plugin.call($target, option)
-  })
-
-}(jQuery);
-&lt;/script&gt;
-&lt;script&gt;
-window.initializeCodeFolding = function(show) {
-
-  // handlers for show-all and hide all
-  $(&#34;#rmd-show-all-code&#34;).click(function() {
-    $(&#39;div.r-code-collapse&#39;).each(function() {
-      $(this).collapse(&#39;show&#39;);
-    });
-  });
-  $(&#34;#rmd-hide-all-code&#34;).click(function() {
-    $(&#39;div.r-code-collapse&#39;).each(function() {
-      $(this).collapse(&#39;hide&#39;);
-    });
-  });
-
-  // index for unique code element ids
-  var currentIndex = 1;
-
-  // select all R code blocks
-  var rCodeBlocks = $(&#39;pre.sourceCode, pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan&#39;);
-  rCodeBlocks.each(function() {
-
-    // create a collapsable div to wrap the code in
-    var div = $(&#39;&lt;div class=&#34;collapse r-code-collapse&#34;&gt;&lt;/div&gt;&#39;);
-    if (show)
-      div.addClass(&#39;in&#39;);
-    var id = &#39;rcode-643E0F36&#39; + currentIndex++;
-    div.attr(&#39;id&#39;, id);
-    $(this).before(div);
-    $(this).detach().appendTo(div);
-
-    // add a show code button right above
-    var showCodeText = $(&#39;&lt;span&gt;&#39; + (show ? &#39;Hide&#39; : &#39;Code&#39;) + &#39;&lt;/span&gt;&#39;);
-    var showCodeButton = $(&#39;&lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-xs code-folding-btn pull-right&#34;&gt;&lt;/button&gt;&#39;);
-    showCodeButton.append(showCodeText);
-    showCodeButton
-        .attr(&#39;data-toggle&#39;, &#39;collapse&#39;)
-        .attr(&#39;data-target&#39;, &#39;#&#39; + id)
-        .attr(&#39;aria-expanded&#39;, show)
-        .attr(&#39;aria-controls&#39;, id);
-
-    var buttonRow = $(&#39;&lt;div class=&#34;row&#34;&gt;&lt;/div&gt;&#39;);
-    var buttonCol = $(&#39;&lt;div class=&#34;col-md-12&#34;&gt;&lt;/div&gt;&#39;);
-
-    buttonCol.append(showCodeButton);
-    buttonRow.append(buttonCol);
-
-    div.before(buttonRow);
-
-    // update state of button on show/hide
-    div.on(&#39;hidden.bs.collapse&#39;, function () {
-      showCodeText.text(&#39;Code&#39;);
-    });
-    div.on(&#39;show.bs.collapse&#39;, function () {
-      showCodeText.text(&#39;Hide&#39;);
-    });
-  });
-
-}
-&lt;/script&gt;
-&lt;style type=&#34;text/css&#34;&gt;
-.code-folding-btn { margin-bottom: 4px; }
-.row { display: flex; }
-.collapse { display: none; }
-.in { display:block }
-&lt;/style&gt;
-&lt;script&gt;
-$(document).ready(function () {
-  window.initializeCodeFolding(&#34;show&#34; === &#34;show&#34;);
-});
-&lt;/script&gt;
-
 </description>
     </item>
     

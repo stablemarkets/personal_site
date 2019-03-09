@@ -9,4 +9,11 @@ title = "What I'm About..."
 # Choose the user profile to display
 # This should be the username of a profile in your `content/author/` folder.
 author = "admin"
+
+[design.background]
+
+image = "surv.png"  # Name of image in `static/img/`.
+image_darken = 0  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+text_color_light = false  
+
 +++

@@ -4,7 +4,7 @@
     
     <url>
     
-      <loc>/post/bayesian-survival-analysis-with-data-augmentation/</loc>
+      <loc>/post/post1/bayesian-survival-analysis-with-data-augmentation/</loc>
       <lastmod>2019-03-06T00:00:00+00:00</lastmod>
     </url>
     
@@ -13,7 +13,7 @@
     <url>
     
       <loc>/publication/zdp/</loc>
-      <lastmod>2019-02-01T00:00:00-05:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
     
   
@@ -21,7 +21,7 @@
     <url>
     
       <loc>/tutorial/example/</loc>
-      <lastmod>2018-09-09T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
     
   
@@ -29,7 +29,7 @@
     <url>
     
       <loc>/tutorial/</loc>
-      <lastmod>2018-09-09T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
     
   
@@ -37,7 +37,7 @@
     <url>
     
       <loc>/publication/bayes_latent_phenotype/</loc>
-      <lastmod>2018-09-03T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
     
   
@@ -45,7 +45,7 @@
     <url>
     
       <loc>/talk/jsm2017/</loc>
-      <lastmod>2018-07-30T15:05:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
     
   
@@ -53,7 +53,7 @@
     <url>
     
       <loc>/project/external-project/</loc>
-      <lastmod>2016-04-27T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
     
   
@@ -61,7 +61,7 @@
     <url>
     
       <loc>/project/internal-project/</loc>
-      <lastmod>2016-04-27T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
     
   
@@ -78,13 +78,7 @@
     <url>
     
       <loc>/author/admin/</loc>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/post/header/</loc>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
     
   
@@ -92,7 +86,7 @@
     <url>
     
       <loc>/authors/a.-oganisian/</loc>
-      <lastmod>2019-02-01T00:00:00-05:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -101,7 +95,7 @@
     <url>
     
       <loc>/publication_types/2/</loc>
-      <lastmod>2018-09-03T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -110,7 +104,7 @@
     <url>
     
       <loc>/publication_types/3/</loc>
-      <lastmod>2019-02-01T00:00:00-05:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -119,7 +113,7 @@
     <url>
     
       <loc>/authors/arman-oganisian/</loc>
-      <lastmod>2018-07-30T15:05:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -136,7 +130,7 @@
     <url>
     
       <loc>/authors/</loc>
-      <lastmod>2019-02-01T00:00:00-05:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -172,7 +166,7 @@
     <url>
     
       <loc>/tags/deep-learning/</loc>
-      <lastmod>2016-04-27T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -181,7 +175,7 @@
     <url>
     
       <loc>/tags/demo/</loc>
-      <lastmod>2016-04-27T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -190,7 +184,7 @@
     <url>
     
       <loc>/authors/grace-choi/</loc>
-      <lastmod>2018-09-03T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -199,7 +193,7 @@
     <url>
     
       <loc>/authors/ihuoma-eneli/</loc>
-      <lastmod>2018-09-03T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -208,7 +202,7 @@
     <url>
     
       <loc>/authors/jason-roy/</loc>
-      <lastmod>2019-02-01T00:00:00-05:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -217,7 +211,7 @@
     <url>
     
       <loc>/authors/jing-huang/</loc>
-      <lastmod>2018-09-03T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -226,7 +220,7 @@
     <url>
     
       <loc>/authors/joanna-harton/</loc>
-      <lastmod>2018-09-03T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -235,7 +229,7 @@
     <url>
     
       <loc>/authors/l.-charles-bailey/</loc>
-      <lastmod>2018-09-03T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -244,7 +238,7 @@
     <url>
     
       <loc>/authors/levon-utidjian/</loc>
-      <lastmod>2018-09-03T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -262,7 +256,7 @@
     <url>
     
       <loc>/authors/nandita-mitra/</loc>
-      <lastmod>2019-02-01T00:00:00-05:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -280,7 +274,7 @@
     <url>
     
       <loc>/project/</loc>
-      <lastmod>2016-04-27T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -289,7 +283,7 @@
     <url>
     
       <loc>/publication_types/</loc>
-      <lastmod>2018-09-03T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -298,7 +292,7 @@
     <url>
     
       <loc>/publication/</loc>
-      <lastmod>2019-02-01T00:00:00-05:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
     
   
@@ -315,7 +309,7 @@
     <url>
     
       <loc>/authors/rebecca-a.-hubbard/</loc>
-      <lastmod>2018-09-03T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -324,7 +318,7 @@
     <url>
     
       <loc>/talk/</loc>
-      <lastmod>2018-07-30T15:05:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
     
   
@@ -332,6 +326,7 @@
     <url>
     
       <loc>/slides/</loc>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -340,6 +335,7 @@
     <url>
     
       <loc>/slides/example-slides/</loc>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
     
   
@@ -365,7 +361,7 @@
     <url>
     
       <loc>/authors/yong-chen/</loc>
-      <lastmod>2018-09-03T00:00:00-04:00</lastmod>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -374,6 +370,7 @@
     <url>
     
       <loc>/authors/admin/</loc>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     

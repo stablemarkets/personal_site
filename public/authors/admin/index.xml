@@ -6,6 +6,7 @@
     <description>Recent content in admin on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 06 Mar 2019 10:35:05 -0500</lastBuildDate>
     
 	<atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,11 +14,11 @@
     <item>
       <title></title>
       <link>/author/admin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 06 Mar 2019 10:35:05 -0500</pubDate>
       
       <guid>/author/admin/</guid>
-      <description>I’m a biostatistics PhD candidate at the University of Pennsylvania. I am also an Associate Fellow at the LDI and a member of of the Center for Causal Inference. For the most part, my research centers around developing Bayesian nonparametric methods for causal inference problems. Before Penn, I was a senior analyst at Analysis Group.
-I blog about statistics, bayesian methods, computation/MCMC, visualization, and other things that happen to interest me.</description>
+      <description>I’m a biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the LDI, and a member of the Center for Causal Inference. My research centers around developing Bayesian nonparametric methods with applications to health economics, prediction, and causal inference problems. Before Penn, I was a Senior Analyst at Analysis Group&amp;rsquo;s health economics and outcomes research (HEOR) group.
+I blog about statistics, bayesian methods, computation/MCMC, visualization, and other things I happen to stumble upon during research.</description>
     </item>
     
   </channel>

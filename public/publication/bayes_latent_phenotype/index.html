@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Phenotyping, ie, identification of patients possessing a characteristic of interest, is a fundamental task for research conducted using electronic health records. However, challenges to this task include imperfect sensitivity and specificity of clinical codes and inconsistent availability of more detailed data such as laboratory test results. Despite these challenges, most existing electronic health records–derived phenotypes are rule‐based, consisting of a series of Boolean arguments informed by expert knowledge of the disease of interest and its coding. The objective of this paper is to introduce a Bayesian latent phenotyping approach that accounts for imperfect data elements and missing not at random missingness patterns that can be used when no gold‐standard data are available. We conducted simulation studies to compare alternative phenotyping methods under different patterns of missingness and applied these approaches to a cohort of 68,265 children at elevated risk for type 2 diabetes mellitus (T2DM). In simulation studies, the latent class approach had similar sensitivity to a rule‐based approach (95.9% vs 91.9%) while substantially improving specificity (99.7% vs 90.8%). In the PEDSnet cohort, we found that biomarkers and clinical codes were strongly associated with latent T2DM status. The latent T2DM class was also strongly predictive of missingness in biomarkers. Glucose was missing in 83.4% of patients (odds ratio for latent T2DM status = 0.52) while hemoglobin A1c was missing in 91.2% (odds ratio for latent T2DM status = 0.03 ), suggesting missing not at random missingness. The latent phenotype approach may substantially improve on rule‐based phenotyping.">
+  <meta name="description" content="">
 
   
   <link rel="alternate" hreflang="en-us" href="/publication/bayes_latent_phenotype/">
@@ -72,10 +72,7 @@
     
       
       
-        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/magula.min.css" crossorigin="anonymous">
       
     
 
@@ -95,6 +92,20 @@
 
   
   
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-37364497-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
   
 
   
@@ -113,9 +124,8 @@
   
   
     
-    
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="twitter:site" content="@StableMarkets">
   <meta property="twitter:creator" content="@StableMarkets">
@@ -123,12 +133,12 @@
   <meta property="og:site_name" content="">
   <meta property="og:url" content="/publication/bayes_latent_phenotype/">
   <meta property="og:title" content="A Bayesian latent class approach for EHR‐based phenotyping | ">
-  <meta property="og:description" content="Phenotyping, ie, identification of patients possessing a characteristic of interest, is a fundamental task for research conducted using electronic health records. However, challenges to this task include imperfect sensitivity and specificity of clinical codes and inconsistent availability of more detailed data such as laboratory test results. Despite these challenges, most existing electronic health records–derived phenotypes are rule‐based, consisting of a series of Boolean arguments informed by expert knowledge of the disease of interest and its coding. The objective of this paper is to introduce a Bayesian latent phenotyping approach that accounts for imperfect data elements and missing not at random missingness patterns that can be used when no gold‐standard data are available. We conducted simulation studies to compare alternative phenotyping methods under different patterns of missingness and applied these approaches to a cohort of 68,265 children at elevated risk for type 2 diabetes mellitus (T2DM). In simulation studies, the latent class approach had similar sensitivity to a rule‐based approach (95.9% vs 91.9%) while substantially improving specificity (99.7% vs 90.8%). In the PEDSnet cohort, we found that biomarkers and clinical codes were strongly associated with latent T2DM status. The latent T2DM class was also strongly predictive of missingness in biomarkers. Glucose was missing in 83.4% of patients (odds ratio for latent T2DM status = 0.52) while hemoglobin A1c was missing in 91.2% (odds ratio for latent T2DM status = 0.03 ), suggesting missing not at random missingness. The latent phenotype approach may substantially improve on rule‐based phenotyping."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:description" content=""><meta property="og:image" content="/publication/bayes_latent_phenotype/featured.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2018-09-03T00:00:00-04:00">
   
-  <meta property="article:modified_time" content="2018-09-03T00:00:00-04:00">
+  <meta property="article:modified_time" content="2019-03-06T10:35:05-05:00">
   
 
   
@@ -264,10 +274,6 @@
         
 
         
-        <li class="nav-item">
-          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-        </li>
-        
 
       </ul>
 
@@ -290,23 +296,260 @@
 
 
 
-  
+
+<div class="article-header d-xl-none">
+  <div class="featured-image" style="background-image: url('/publication/bayes_latent_phenotype/featured_hu14014395b4b34f9a6eac655991441199_299814_800x0_resize_lanczos_2.png');"></div>
+  <span class="article-header-caption">Bayesian latent classifier performance.</span>
+</div>
+
+
+<div class="container-fluid split-header d-none d-xl-block">
+  <div class="row">
+    <div class="col-6">
+      <div class="split-header-content">
+        <h1 itemprop="name">A Bayesian latent class approach for EHR‐based phenotyping</h1>
+
+        
+
+        
+
+
+
+<meta content="2018-09-03 00:00:00 -0400 EDT" itemprop="datePublished">
+<meta content="2019-03-06 10:35:05 -0500 EST" itemprop="dateModified">
+
+<div class="article-metadata">
 
   
   
   
-<div class="article-container pt-3">
+  
+  <div>
+    
+
+
+
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/rebecca-a.-hubbard/">Rebecca A. Hubbard</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/jing-huang/">Jing Huang</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/joanna-harton/">Joanna Harton</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/a.-oganisian/"><strong>A. Oganisian</strong></a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/grace-choi/">Grace Choi</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/levon-utidjian/">Levon Utidjian</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/ihuoma-eneli/">Ihuoma Eneli</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/l.-charles-bailey/">L. Charles Bailey</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/yong-chen/">Yong Chen</a></span></span>
+  
+
+
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>September 2018</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+</div>
+
+
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+  
+    
+  
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://onlinelibrary.wiley.com/doi/10.1002/sim.7953" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 js-cite-modal"
+        data-filename="/publication/bayes_latent_phenotype/cite.bib">
+  Cite
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=A%20Bayesian%20latent%20class%20approach%20for%20EHR%e2%80%90based%20phenotyping&amp;url=%2fpublication%2fbayes_latent_phenotype%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpublication%2fbayes_latent_phenotype%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpublication%2fbayes_latent_phenotype%2f&amp;title=A%20Bayesian%20latent%20class%20approach%20for%20EHR%e2%80%90based%20phenotyping"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpublication%2fbayes_latent_phenotype%2f&amp;title=A%20Bayesian%20latent%20class%20approach%20for%20EHR%e2%80%90based%20phenotyping"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=A%20Bayesian%20latent%20class%20approach%20for%20EHR%e2%80%90based%20phenotyping&amp;body=%2fpublication%2fbayes_latent_phenotype%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="split-header-image">
+        <img src="/publication/bayes_latent_phenotype/featured_hu14014395b4b34f9a6eac655991441199_299814_680x500_fill_q90_lanczos_smart1_2.png" itemprop="image" alt="">
+        <span class="article-header-caption">Bayesian latent classifier performance.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-container d-xl-none">
   <h1 itemprop="name">A Bayesian latent class approach for EHR‐based phenotyping</h1>
 
   
 
   
-    
 
 
 
 <meta content="2018-09-03 00:00:00 -0400 EDT" itemprop="datePublished">
-<meta content="2018-09-03 00:00:00 -0400 EDT" itemprop="dateModified">
+<meta content="2019-03-06 10:35:05 -0500 EST" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -455,7 +698,7 @@
 
 </div>
 
-    
+  
 
 
 
@@ -517,16 +760,12 @@
 </div>
 
 
-  
 </div>
 
 
 
   <div class="article-container">
 
-    
-    <h3>Abstract</h3>
-    <p class="pub-abstract" itemprop="text">Phenotyping, ie, identification of patients possessing a characteristic of interest, is a fundamental task for research conducted using electronic health records. However, challenges to this task include imperfect sensitivity and specificity of clinical codes and inconsistent availability of more detailed data such as laboratory test results. Despite these challenges, most existing electronic health records–derived phenotypes are rule‐based, consisting of a series of Boolean arguments informed by expert knowledge of the disease of interest and its coding. The objective of this paper is to introduce a Bayesian latent phenotyping approach that accounts for imperfect data elements and missing not at random missingness patterns that can be used when no gold‐standard data are available. We conducted simulation studies to compare alternative phenotyping methods under different patterns of missingness and applied these approaches to a cohort of 68,265 children at elevated risk for type 2 diabetes mellitus (T2DM). In simulation studies, the latent class approach had similar sensitivity to a rule‐based approach (95.9% vs 91.9%) while substantially improving specificity (99.7% vs 90.8%). In the PEDSnet cohort, we found that biomarkers and clinical codes were strongly associated with latent T2DM status. The latent T2DM class was also strongly predictive of missingness in biomarkers. Glucose was missing in 83.4% of patients (odds ratio for latent T2DM status = 0.52) while hemoglobin A1c was missing in 91.2% (odds ratio for latent T2DM status = 0.03 ), suggesting missing not at random missingness. The latent phenotype approach may substantially improve on rule‐based phenotyping.</p>
     
 
     
@@ -671,6 +910,8 @@
       
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
         
       
 

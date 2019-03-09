@@ -21,7 +21,7 @@ publication = ""
 publication_short = ""
 
 # Abstract.
-abstract = "Researchers are often interested in predicting outcomes, conducting clustering analysis to detect distinct subgroups of their data, or computing causal treatment effects. Pathological data distributions that exhibit skewness and zero-inflation complicate these tasks - requiring highly flexible, data-adaptive modeling. In this paper, we present a fully nonparametric Bayesian generative model for continuous, zero-inflated outcomes that simultaneously predicts structural zeros, captures skewness, and clusters patients with similar joint data distributions. The flexibility of our approach yields predictions that capture the joint data distribution better than commonly used zero-inflated methods. Moreover, we demonstrate that our model can be coherently incorporated into a standardization procedure for computing causal effect estimates that are robust to such data pathologies. Uncertainty at all levels of this model flow through to the causal effect estimates of interest - allowing easy point estimation, interval estimation, and posterior predictive checks verifying positivity, a required causal identification assumption. Our simulation results show point estimates to have low bias and interval estimates to have close to nominal coverage under complicated data settings. Under simpler settings, these results hold while incurring lower efficiency loss than comparator methods. Lastly, we use our proposed method to analyze zero-inflated inpatient medical costs among endometrial cancer patients receiving either chemotherapy and radiation therapy in the SEER medicare database."
+abstract = ""
 
 # Summary. An optional shortened abstract.
 summary = ""
@@ -66,7 +66,7 @@ math = true
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 [image]
   # Caption (optional)
-  caption = "Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)"
+  caption = "Predictions from zero-inflated Dirichlet process mixture"
 
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight

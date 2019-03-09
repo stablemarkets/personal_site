@@ -22,7 +22,7 @@ publication = "**Statistics in Medicine**"
 publication_short = "**Stats. in Med**"
 
 # Abstract.
-abstract = "Phenotyping, ie, identification of patients possessing a characteristic of interest, is a fundamental task for research conducted using electronic health records. However, challenges to this task include imperfect sensitivity and specificity of clinical codes and inconsistent availability of more detailed data such as laboratory test results. Despite these challenges, most existing electronic health records–derived phenotypes are rule‐based, consisting of a series of Boolean arguments informed by expert knowledge of the disease of interest and its coding. The objective of this paper is to introduce a Bayesian latent phenotyping approach that accounts for imperfect data elements and missing not at random missingness patterns that can be used when no gold‐standard data are available. We conducted simulation studies to compare alternative phenotyping methods under different patterns of missingness and applied these approaches to a cohort of 68,265 children at elevated risk for type 2 diabetes mellitus (T2DM). In simulation studies, the latent class approach had similar sensitivity to a rule‐based approach (95.9% vs 91.9%) while substantially improving specificity (99.7% vs 90.8%). In the PEDSnet cohort, we found that biomarkers and clinical codes were strongly associated with latent T2DM status. The latent T2DM class was also strongly predictive of missingness in biomarkers. Glucose was missing in 83.4% of patients (odds ratio for latent T2DM status = 0.52) while hemoglobin A1c was missing in 91.2% (odds ratio for latent T2DM status = 0.03 ), suggesting missing not at random missingness. The latent phenotype approach may substantially improve on rule‐based phenotyping."
+abstract = ""
 
 # Summary. An optional shortened abstract.
 summary = ""
@@ -67,7 +67,7 @@ math = true
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 [image]
   # Caption (optional)
-  caption = "Dirichlet Process Predictions versus competing models."
+  caption = "Bayesian latent classifier performance."
 
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
