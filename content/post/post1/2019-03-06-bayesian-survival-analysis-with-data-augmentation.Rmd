@@ -306,6 +306,6 @@ hist(hazard_ratio,xlab='Hazard Ratio',
      main='Posterior distribution of hazard ratio')
 abline(v=exp(-true_beta[2]*true_alpha), col='red')
 ```
-We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and $95\%$ credible interval are $.36 \ (.24-.40)$. The true value is $.367$. Not too bad. Remember this is only a single simulated dataset.
+We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and $95\%$ credible interval are $.32 \ (.24-.40)$. The true value is $.367$. Not too bad. Remember this is only a single simulated dataset.
 
 

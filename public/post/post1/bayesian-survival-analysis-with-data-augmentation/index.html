@@ -139,7 +139,7 @@
   
   <meta property="article:published_time" content="2019-03-06T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-03-08T23:44:15-05:00">
+  <meta property="article:modified_time" content="2019-03-09T11:51:54-05:00">
   
 
   
@@ -314,7 +314,7 @@
 
 
 <meta content="2019-03-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-03-08 23:44:15 -0500 EST" itemprop="dateModified">
+<meta content="2019-03-09 11:51:54 -0500 EST" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -329,7 +329,7 @@
           Last updated on
       
     
-    <time>Mar 8, 2019</time>
+    <time>Mar 9, 2019</time>
   </span>
   
 
@@ -509,7 +509,7 @@ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta
 <p>Here is the estimated survival function for each treatment group. Overlayed are the non-parametric estimates from a stratified Kaplan-Meier (KM) estimator. Note the parametric model is correctly specified here, so it does just as well as the KM in terms of estimating the mean curve. But the parametric model provides a less noisy fit - notice the credible bands are narrower at later time points when the at-risk counts get low in each treatment arm.</p>
 <p><img src="/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/sampler-1.png" width="672" /></p>
 <p>That’s just a helpful reminder of the efficiency gains parametric models have over nonparametric ones (when they’re correctly specified. Let’s take a look at the posterior distribution of the hazard ratio. The true value is indicated by the red line.</p>
-<p><img src="/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png" width="1152" /> We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and <span class="math inline">\(95\%\)</span> credible interval are <span class="math inline">\(.36 \ (.24-.40)\)</span>. The true value is <span class="math inline">\(.367\)</span>. Not too bad. Remember this is only a single simulated dataset.</p>
+<p><img src="/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png" width="1152" /> We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and <span class="math inline">\(95\%\)</span> credible interval are <span class="math inline">\(.32 \ (.24-.40)\)</span>. The true value is <span class="math inline">\(.367\)</span>. Not too bad. Remember this is only a single simulated dataset.</p>
 </div>
 
     </div>
@@ -655,10 +655,6 @@ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta
 
 <div class="container">
   <footer class="site-footer">
-  
-  <p class="powered-by">
-    <a href="/privacy/">Privacy Policy</a>
-  </p>
   
 
   <p class="powered-by">

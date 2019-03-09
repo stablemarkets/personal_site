@@ -97,7 +97,7 @@ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta
 &lt;p&gt;Here is the estimated survival function for each treatment group. Overlayed are the non-parametric estimates from a stratified Kaplan-Meier (KM) estimator. Note the parametric model is correctly specified here, so it does just as well as the KM in terms of estimating the mean curve. But the parametric model provides a less noisy fit - notice the credible bands are narrower at later time points when the at-risk counts get low in each treatment arm.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/sampler-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;That’s just a helpful reminder of the efficiency gains parametric models have over nonparametric ones (when they’re correctly specified. Let’s take a look at the posterior distribution of the hazard ratio. The true value is indicated by the red line.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png&#34; width=&#34;1152&#34; /&gt; We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; credible interval are &lt;span class=&#34;math inline&#34;&gt;\(.36 \ (.24-.40)\)&lt;/span&gt;. The true value is &lt;span class=&#34;math inline&#34;&gt;\(.367\)&lt;/span&gt;. Not too bad. Remember this is only a single simulated dataset.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png&#34; width=&#34;1152&#34; /&gt; We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; credible interval are &lt;span class=&#34;math inline&#34;&gt;\(.32 \ (.24-.40)\)&lt;/span&gt;. The true value is &lt;span class=&#34;math inline&#34;&gt;\(.367\)&lt;/span&gt;. Not too bad. Remember this is only a single simulated dataset.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -147,16 +147,6 @@ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta
       
       <guid>/talk/jsm2017/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Privacy Policy</title>
-      <link>/privacy/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
-      
-      <guid>/privacy/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
     </item>
     
     <item>
