@@ -17,7 +17,7 @@ image:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, eval = TRUE, warning = F, message = F, error = F, cache=T)
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, warning = F, message = F, error = F, cache=F)
 library(rstan)
 library(survival)
 ```
