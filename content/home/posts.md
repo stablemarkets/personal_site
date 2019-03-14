@@ -35,7 +35,7 @@ subtitle = ""
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  view = 3
+  view = 2
   
 [design.background]
   # Apply a background color, gradient, or image.
@@ -51,8 +51,8 @@ subtitle = ""
   # gradient_end = "SkyBlue"
   
   # Background image.
-   image = "surv.png"  # Name of image in `static/img/`.
-   image_darken = 0.1  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+  image = "surv.png"  # Name of image in `static/img/`.
+  image_darken = 0.05  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
 
   # Text color (true=light or false=dark).
   text_color_light = false  
