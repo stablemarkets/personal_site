@@ -5,7 +5,7 @@
     <url>
     
       <loc>/post/post2/specifying-accelerated-failure-time-models-in-stan/</loc>
-      <lastmod>2019-04-02T20:27:17-04:00</lastmod>
+      <lastmod>2019-04-02T21:32:43-04:00</lastmod>
     </url>
     
   
@@ -60,6 +60,14 @@
     
     <url>
     
+      <loc>/privacy/</loc>
+      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/project/external-project/</loc>
       <lastmod>2019-03-06T10:35:05-05:00</lastmod>
     </url>
@@ -77,7 +85,7 @@
     <url>
     
       <loc>/</loc>
-      <lastmod>2019-04-02T20:27:17-04:00</lastmod>
+      <lastmod>2019-04-02T21:32:43-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -147,7 +155,7 @@
     <url>
     
       <loc>/tags/bayesian/</loc>
-      <lastmod>2019-04-02T20:27:17-04:00</lastmod>
+      <lastmod>2019-04-02T21:32:43-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -156,7 +164,7 @@
     <url>
     
       <loc>/categories/bayesian/</loc>
-      <lastmod>2019-04-02T20:27:17-04:00</lastmod>
+      <lastmod>2019-04-02T21:32:43-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -165,7 +173,7 @@
     <url>
     
       <loc>/categories/</loc>
-      <lastmod>2019-04-02T20:27:17-04:00</lastmod>
+      <lastmod>2019-04-02T21:32:43-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -255,7 +263,7 @@
     <url>
     
       <loc>/categories/mcmc/</loc>
-      <lastmod>2019-04-02T20:27:17-04:00</lastmod>
+      <lastmod>2019-04-02T21:32:43-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -273,7 +281,7 @@
     <url>
     
       <loc>/post/</loc>
-      <lastmod>2019-04-02T20:27:17-04:00</lastmod>
+      <lastmod>2019-04-02T21:32:43-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -308,7 +316,7 @@
     <url>
     
       <loc>/tags/r/</loc>
-      <lastmod>2019-04-02T20:27:17-04:00</lastmod>
+      <lastmod>2019-04-02T21:32:43-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -351,7 +359,7 @@
     <url>
     
       <loc>/tags/stan/</loc>
-      <lastmod>2019-04-02T20:27:17-04:00</lastmod>
+      <lastmod>2019-04-02T21:32:43-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -360,7 +368,7 @@
     <url>
     
       <loc>/categories/survival-analysis/</loc>
-      <lastmod>2019-04-02T20:27:17-04:00</lastmod>
+      <lastmod>2019-04-02T21:32:43-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -369,7 +377,7 @@
     <url>
     
       <loc>/tags/</loc>
-      <lastmod>2019-04-02T20:27:17-04:00</lastmod>
+      <lastmod>2019-04-02T21:32:43-04:00</lastmod>
       <priority>0</priority>
     </url>
     
