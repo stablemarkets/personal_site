@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="PhD Candidate, Biostatistics">
+  <meta name="description" content="Statistics, Causal Inference, and Bayesian Modeling">
 
   
   <link rel="alternate" hreflang="en-us" href="/categories/r/">
@@ -74,10 +74,7 @@
     
       
       
-        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/magula.min.css" crossorigin="anonymous">
       
     
 
@@ -96,6 +93,20 @@
   
 
   
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-37364497-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
   
   
 
@@ -119,13 +130,16 @@
   
   <meta property="twitter:card" content="summary">
   
+  <meta property="twitter:site" content="@StableMarkets">
+  <meta property="twitter:creator" content="@StableMarkets">
+  
   <meta property="og:site_name" content="">
   <meta property="og:url" content="/categories/r/">
   <meta property="og:title" content="R | ">
-  <meta property="og:description" content="PhD Candidate, Biostatistics"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:description" content="Statistics, Causal Inference, and Bayesian Modeling"><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2015-07-23T21:13:14-05:00">
+  <meta property="og:updated_time" content="2019-03-09T00:00:00&#43;00:00">
   
 
   
@@ -216,9 +230,9 @@
         
 
         <li class="nav-item">
-          <a class="nav-link" href="/#posts">
+          <a class="nav-link" href="/post">
             
-            <span>Posts</span>
+            <span>Blog Posts</span>
             
           </a>
         </li>
@@ -260,10 +274,6 @@
 
         
 
-        
-        <li class="nav-item">
-          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-        </li>
         
 
       </ul>
@@ -309,12 +319,20 @@
   
   
   <div>
-    <h2><a href="/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a></h2>
+    <h2><a href="/post/post2/specifying-accelerated-failure-time-models-in-stan/">Specifying Accelerated Failure Time Models in STAN</a></h2>
     <div class="article-style">
       
-      R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.
+      This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in Stan.
+Let’s start with simulating some randomly censored data from a Weibull model.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/post/post1/bayesian-survival-analysis-with-data-augmentation/">Bayesian Survival Analysis with Data Augmentation</a></h2>
+    <div class="article-style">
+      
+      Motivation Model Set Up Data Augmentation Metropolis-in-Gibbs Sampler Simulation Example in R   Motivation When dealing with time-to-event data, right-censoring is a common occurance. Although most are familiar with likelihood construction under right-censoring (and corresponding frequentist estimation), there’s very little available online about Bayesian approaches even for fully parametric models. Here I’ll briefly outline a Bayesian estimation procedure for a Weibull model with right-censoring. The estimation procedure is MCMC based using a data augmentation approach.
       
     </div>
   </div>
@@ -382,6 +400,9 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
 
     
     
+    
+    <script src="/js/mathjax-config.js"></script>
+    
 
     
     
@@ -396,9 +417,13 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
         
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+        
       
 
       
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
       
     
 

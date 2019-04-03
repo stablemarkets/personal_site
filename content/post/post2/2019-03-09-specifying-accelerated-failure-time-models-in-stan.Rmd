@@ -7,8 +7,6 @@ categories:
   - Bayesian
   - MCMC
   - Survival Analysis
-tags:
-  - Bayesian
   - R
   - Stan
 image:

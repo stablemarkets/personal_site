@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -31,7 +33,7 @@
   <meta name="description" content="Statistics, Causal Inference, and Bayesian Modeling">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/">
+  <link rel="alternate" hreflang="en-us" href="/categories/stan/">
 
   
 
@@ -109,15 +111,15 @@
   
 
   
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="">
-  <link rel="feed" href="/post/index.xml" type="application/rss+xml" title="">
+  <link rel="alternate" href="/categories/stan/index.xml" type="application/rss+xml" title="">
+  <link rel="feed" href="/categories/stan/index.xml" type="application/rss+xml" title="">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/">
+  <link rel="canonical" href="/categories/stan/">
 
   
   
@@ -132,8 +134,8 @@
   <meta property="twitter:creator" content="@StableMarkets">
   
   <meta property="og:site_name" content="">
-  <meta property="og:url" content="/post/">
-  <meta property="og:title" content="Posts | ">
+  <meta property="og:url" content="/categories/stan/">
+  <meta property="og:title" content="Stan | ">
   <meta property="og:description" content="Statistics, Causal Inference, and Bayesian Modeling"><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
@@ -144,7 +146,7 @@
 
   
 
-  <title>Posts | </title>
+  <title>Stan | </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -302,7 +304,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Posts</h1>
+  <h1 itemprop="name">Stan</h1>
 
   
 
@@ -312,224 +314,22 @@
 
 
 <div class="universal-wrapper">
-
   
 
   
   
-    
+  <div>
+    <h2><a href="/post/post2/specifying-accelerated-failure-time-models-in-stan/">Specifying Accelerated Failure Time Models in STAN</a></h2>
+    <div class="article-style">
       
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/post2/specifying-accelerated-failure-time-models-in-stan/" itemprop="url">Specifying Accelerated Failure Time Models in STAN</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-
-<meta content="2019-03-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-04-02 22:18:15 -0400 EDT" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-          Last updated on
-      
-    
-    <time>Apr 2, 2019</time>
-  </span>
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/bayesian/">Bayesian</a>, 
-    
-    <a href="/categories/mcmc/">MCMC</a>, 
-    
-    <a href="/categories/survival-analysis/">Survival Analysis</a>, 
-    
-    <a href="/categories/r/">R</a>, 
-    
-    <a href="/categories/stan/">Stan</a>
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
+      This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in Stan.
+Let’s start with simulating some randomly censored data from a Weibull model.
       
     </div>
-
-    
-
   </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/post1/bayesian-survival-analysis-with-data-augmentation/" itemprop="url">Bayesian Survival Analysis with Data Augmentation</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      Motivation Model Set Up Data Augmentation Metropolis-in-Gibbs Sampler Simulation Example in R   Motivation When dealing with …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-
-<meta content="2019-03-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-03-09 11:54:24 -0500 EST" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
   
 
   
-  <span class="article-date">
-    
-    
-      
-          Last updated on
-      
-    
-    <time>Mar 9, 2019</time>
-  </span>
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/bayesian/">Bayesian</a>, 
-    
-    <a href="/categories/survival-analysis/">Survival Analysis</a>, 
-    
-    <a href="/categories/mcmc/">MCMC</a>, 
-    
-    <a href="/categories/r/">R</a>
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-
-  
-
 
 </div>
 <div class="container">
@@ -691,4 +491,6 @@
 
   </body>
 </html>
+
+
 
