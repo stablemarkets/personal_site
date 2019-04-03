@@ -7,7 +7,161 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/home/slider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/slider/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Academic</title>
+      <link>/home/hero/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/hero/</guid>
+      <description>The Best Way to Create the Website You Want from Markdown (or RStudio/Jupyter)
+Build Anything with Widgets
+Star</description>
+    </item>
+    
+    <item>
+      <title>Demos</title>
+      <link>/home/demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/demo/</guid>
+      <description>Welcome to the personal demo of Academic. Other demos available include:
+ Project Demo (Academic&amp;rsquo;s actual site)  Over 100,000 Amazing Websites have Already Been Built with Academic
+Join the Most Empowered Hugo Community
+ This homepage section is an example of adding elements to the Blank widget.
+Backgrounds can be applied to any section. Here, the background option is set give an image parallax effect.
+  </description>
+    </item>
+    
+    <item>
+      <title>What I&#39;m About...</title>
+      <link>/home/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>/home/posts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Skills</title>
+      <link>/home/skills/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/skills/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Experience</title>
+      <link>/home/experience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Accomplish&amp;shy;ments</title>
+      <link>/home/accomplishments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/accomplishments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>/home/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gallery</title>
+      <link>/home/gallery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/gallery/</guid>
+      <description>          </description>
+    </item>
+    
+    <item>
+      <title>People</title>
+      <link>/home/people/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/people/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selected Publications &amp; Working Papers</title>
+      <link>/home/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/publications/</guid>
+      <description> Quickly discover relevant content by filtering publications.
+  </description>
+    </item>
+    
+    <item>
+      <title>Featured Publications</title>
+      <link>/home/featured/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/featured/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>/home/talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Popular Topics</title>
+      <link>/home/tags/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/home/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/home/contact/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Specifying Accelerated Failure Time Models in STAN</title>
@@ -15,173 +169,8 @@
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
-      <description>
-
-
-&lt;p&gt;This post is an add-on to my &lt;a href=&#34;https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/&#34;&gt;previous post&lt;/a&gt; about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in &lt;a href=&#34;https://mc-stan.org/users/interfaces/rstan&#34;&gt;Stan&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Let’s start with simulating some randomly censored data from a Weibull model. In this case, we just include a binary indicator and are interested in characterizing survival between these two groups.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(1)
-
-n &amp;lt;- 1000
-
-# simulate covariates (just a binary treatment indicator)
-A &amp;lt;- rbinom(n, 1, .5)
-X &amp;lt;- model.matrix(~ A)
-
-# true parameters
-true_beta &amp;lt;- (1/2)*matrix(c(-1/3, 2), ncol=1)
-true_mu &amp;lt;- X %*% true_beta
-
-true_sigma &amp;lt;- 1
-
-true_alpha &amp;lt;- 1/true_sigma
-true_lambda &amp;lt;- exp(-1*true_mu*true_alpha)
-
-# simulate censoring and survival times
-survt = rweibull(n, shape=true_alpha, scale = true_lambda) 
-cent = rweibull(n, shape=true_alpha, scale = true_lambda)
-
-## observed data:
-#censoring indicator
-delta &amp;lt;- cent &amp;lt; survt
-survt[delta==1] &amp;lt;- cent[delta==1] # censor survival time.
-
-# count number of missing/censored survival times
-n_miss &amp;lt;- sum(delta)
-
-d_list &amp;lt;- list(N_m = n_miss, N_o = n - n_miss, P=2, # number of betas
-               # data for censored subjects
-               y_m=survt[delta==1], X_m=X[delta==1,],
-               # data for uncensored subjects
-               y_o=survt[delta==0], X_o=X[delta==0,])&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The list &lt;code&gt;d_list&lt;/code&gt; is what we’ll eventually feed to Stan. Below is the Stan model for Weibull distributed survival times. Note in the transformed parameters block we specify the canonical accelerated failure time (AFT) parameterization - modeling the scale as a function of the shape parameter, &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;, and covariates.&lt;/p&gt;
-&lt;p&gt;In the model block, we specify the likelihood as the Weibull density for uncensored subjects, and then augment the likelihood with evaluations from the Weibull survival function (&lt;code&gt;_lccdf&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;The generated quantities block transforms the parameters to get posterior draws of the hazard ratio (as specified in my &lt;a href=&#34;https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/&#34;&gt;previous post&lt;/a&gt; ) as well as posterior draws of the survival function.&lt;/p&gt;
-&lt;pre class=&#34;stan&#34;&gt;&lt;code&gt;data {
-  int&amp;lt;lower=0&amp;gt; P; // number of beta parameters
-  
-  // data for censored subjects
-  int&amp;lt;lower=0&amp;gt; N_m;
-  matrix[N_m,P] X_m;
-  vector[N_m] y_m;
-  
-  // data for observed subjects
-  int&amp;lt;lower=0&amp;gt; N_o;
-  matrix[N_o,P] X_o;
-  real y_o[N_o];
-}
-
-parameters {
-  vector[P] beta;                
-  real&amp;lt;lower=0&amp;gt; alpha; // Weibull Shape      
-}
-
-transformed parameters{
-  // model Weibull rate as function of covariates
-  vector[N_m] lambda_m;
-  vector[N_o] lambda_o;
-  
-  // standard weibull AFT re-parameterization
-  lambda_m = exp((X_m*beta)*alpha);
-  lambda_o = exp((X_o*beta)*alpha);
-}
-
-model {
-  beta ~ normal(0, 100);
-  alpha ~ exponential(1);
-  
-  // evaluate likelihood for censored and uncensored subjects
-  target += weibull_lpdf(y_o | alpha, lambda_o);
-  target += weibull_lccdf(y_m | alpha, lambda_m);
-}
-
-
-// generate posterior quantities of interest
-generated quantities{
-  vector[1000] post_pred_trt;
-  vector[1000] post_pred_pbo;
-  real lambda_trt; 
-  real lambda_pbo; 
-  real hazard_ratio;
-  
-  // generate hazard ratio
-  lambda_trt = exp((beta[1] + beta[2])*alpha ) ;
-  lambda_pbo = exp((beta[1])*alpha ) ;
-  
-  hazard_ratio = exp(beta[2]*alpha ) ;
-  
-  // generate survival times (for plotting survival curves)
-  for(i in 1:1000){
-    post_pred_trt[i] = weibull_rng(alpha,  lambda_trt);
-    post_pred_pbo[i] = weibull_rng(alpha,  lambda_pbo);
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The Stan model specified above is stored in an object called &lt;code&gt;weibull_mod&lt;/code&gt;, which is called below in &lt;code&gt;sampling()&lt;/code&gt;. The code below samples from the posterior and outputs posterior draws of the hazard and predicted survival times.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;weibull_fit &amp;lt;- sampling(weibull_mod,
-                data = d_list, 
-                chains = 1, iter=20000, warmup=19000, save_warmup=F,
-                pars= c(&amp;#39;hazard_ratio&amp;#39;,&amp;#39;post_pred_trt&amp;#39;,&amp;#39;post_pred_pbo&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## 
-## SAMPLING FOR MODEL &amp;#39;80acc0f9293b946800a710dd7f5e211c&amp;#39; NOW (CHAIN 1).
-## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000143 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.43 seconds.
-## Chain 1: Adjust your expectations accordingly!
-## Chain 1: 
-## Chain 1: 
-## Chain 1: Iteration:     1 / 20000 [  0%]  (Warmup)
-## Chain 1: Iteration:  2000 / 20000 [ 10%]  (Warmup)
-## Chain 1: Iteration:  4000 / 20000 [ 20%]  (Warmup)
-## Chain 1: Iteration:  6000 / 20000 [ 30%]  (Warmup)
-## Chain 1: Iteration:  8000 / 20000 [ 40%]  (Warmup)
-## Chain 1: Iteration: 10000 / 20000 [ 50%]  (Warmup)
-## Chain 1: Iteration: 12000 / 20000 [ 60%]  (Warmup)
-## Chain 1: Iteration: 14000 / 20000 [ 70%]  (Warmup)
-## Chain 1: Iteration: 16000 / 20000 [ 80%]  (Warmup)
-## Chain 1: Iteration: 18000 / 20000 [ 90%]  (Warmup)
-## Chain 1: Iteration: 19001 / 20000 [ 95%]  (Sampling)
-## Chain 1: Iteration: 20000 / 20000 [100%]  (Sampling)
-## Chain 1: 
-## Chain 1:  Elapsed Time: 9.29109 seconds (Warm-up)
-## Chain 1:                0.756214 seconds (Sampling)
-## Chain 1:                10.0473 seconds (Total)
-## Chain 1:&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;post_draws&amp;lt;-extract(weibull_fit)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Below we plot posterior distribution of the hazard ratio. The red line indicates the true value under which we generated the data.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(post_draws$hazard_ratio,
-     xlab=&amp;#39;Hazard Ratio&amp;#39;, main=&amp;#39;Hazard Ratio Posterior Distribution&amp;#39;)
-abline(v=exp(-1*true_beta[2,1]*true_alpha), col=&amp;#39;red&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_hazard_ratio-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(post_draws$hazard_ratio)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.3635223&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quantile(post_draws$hazard_ratio, probs = c(.025, .975))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##      2.5%     97.5% 
-## 0.2989080 0.4399663&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Below we plot the survival functions. Note these results are very similar to the augmented sampler coded in the previous post.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(survfit(Surv(survt, 1-delta) ~ A ), col=c(&amp;#39;black&amp;#39;,&amp;#39;blue&amp;#39;),
-     xlab=&amp;#39;Time&amp;#39;,ylab=&amp;#39;Survival Probability&amp;#39;, conf.int=T)
-
-for(i in 1:1000){
-  trt_ecdf &amp;lt;- ecdf(post_draws$post_pred_trt[i,])
-  curve(1 - trt_ecdf(x), from = 0, to=4, add=T, col=&amp;#39;gray&amp;#39;)
-  
-  pbo_ecdf &amp;lt;- ecdf(post_draws$post_pred_pbo[i,])
-  curve(1 - pbo_ecdf(x), from = 0, to=4, add=T, col=&amp;#39;lightblue&amp;#39;)
-}
-
-lines(survfit(Surv(survt, 1-delta) ~ A ), col=c(&amp;#39;black&amp;#39;,&amp;#39;blue&amp;#39;), add=T,
-      conf.int=T)
-
-legend(&amp;#39;topright&amp;#39;, 
-       legend = c(&amp;#39;KM Curve and Intervals (TRT)&amp;#39;,
-                  &amp;#39;Posterior Survival Draws (TRT)&amp;#39;,
-                  &amp;#39;KM Curve and Intervals (PBO)&amp;#39;,
-                  &amp;#39;Posterior Survival Draws (PBO)&amp;#39;),
-       col=c(&amp;#39;black&amp;#39;,&amp;#39;gray&amp;#39;,&amp;#39;blue&amp;#39;,&amp;#39;lightblue&amp;#39;), 
-       lty=c(1,0,1,0), pch=c(NA,15,NA,15), bty=&amp;#39;n&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_survival-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in Stan.
+Let’s start with simulating some randomly censored data from a Weibull model.</description>
     </item>
     
     <item>
@@ -190,91 +179,7 @@ legend(&amp;#39;topright&amp;#39;,
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#motivation&#34;&gt;Motivation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#model-set-up&#34;&gt;Model Set Up&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-augmentation&#34;&gt;Data Augmentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#metropolis-in-gibbs-sampler&#34;&gt;Metropolis-in-Gibbs Sampler&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#simulation-example-in-r&#34;&gt;Simulation Example in R&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;motivation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Motivation&lt;/h2&gt;
-&lt;p&gt;When dealing with time-to-event data, right-censoring is a common occurance. Although most are familiar with likelihood construction under right-censoring (and corresponding frequentist estimation), there’s very little available online about Bayesian approaches even for fully parametric models. Here I’ll briefly outline a Bayesian estimation procedure for a Weibull model with right-censoring. The estimation procedure is MCMC based using a data augmentation approach.&lt;/p&gt;
-&lt;p&gt;As with most of my posts, all MCMC is coded from scratch. It helps me and it helps readers understand the underlying algorithm - an intuition that is more difficult to get if you’re just specifying the model in Stan.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;model-set-up&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Model Set Up&lt;/h2&gt;
-&lt;p&gt;Suppose we observe &lt;span class=&#34;math inline&#34;&gt;\(i=1,\dots, r\)&lt;/span&gt; survival times, &lt;span class=&#34;math inline&#34;&gt;\(T^o_i\)&lt;/span&gt;. Survival times past the end of our study (at time &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;) are censored for subjects &lt;span class=&#34;math inline&#34;&gt;\(i=r+1, \dots, n\)&lt;/span&gt;. We know that the survival times for these subjects are greater than &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;, but that is all. Say we also have some &lt;span class=&#34;math inline&#34;&gt;\(p\times 1\)&lt;/span&gt; covariate vector, &lt;span class=&#34;math inline&#34;&gt;\(x_i\)&lt;/span&gt;. Finally, we have indicator of whether survival time is observed &lt;span class=&#34;math inline&#34;&gt;\(\delta_{1:n}\)&lt;/span&gt; for each subject. A parametric approach follows by assuming a model for &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;, we choose the Weibull&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ T^o_i \sim Weibull(\alpha, \lambda_i) \]&lt;/span&gt; Where &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; is the shape parameter and &lt;span class=&#34;math inline&#34;&gt;\(\lambda_i\)&lt;/span&gt; is a subject-specific scale. An Accelerated Failure Time model (AFT) follows from modeling a reparameterization of the scale function &lt;span class=&#34;math inline&#34;&gt;\(\lambda_i = exp(-\mu_i\alpha)\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(\mu_i = x_i^T\beta\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;We’ll consider the setting where we regress on a binary treatment indicator, &lt;span class=&#34;math inline&#34;&gt;\(\mu_i = \beta_0 + \beta_1A\)&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(A=1\)&lt;/span&gt; indicates treated and &lt;span class=&#34;math inline&#34;&gt;\(A=0\)&lt;/span&gt; indicates untreated/placebo. This is a funky reparameterization, but it yields intuitive interpretations for &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; in terms of the Weibull’s hazard function, &lt;span class=&#34;math inline&#34;&gt;\(h(t|\beta,x, \alpha) = \lambda_i\alpha x^{\alpha-1}\)&lt;/span&gt;. Substituting &lt;span class=&#34;math inline&#34;&gt;\(\lambda_i\)&lt;/span&gt;, we see the hazard for treated subjects is &lt;span class=&#34;math inline&#34;&gt;\(h(t|A=1) = e^{-(\beta_0 + \beta_1)*\alpha}\alpha t^{\alpha-1}\)&lt;/span&gt; and for untreated subjects it is &lt;span class=&#34;math inline&#34;&gt;\(h(t|A=1) = e^{-(\beta_0)*\alpha}\alpha t^{\alpha-1}\)&lt;/span&gt;. The hazard ratio is,&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[HR = \frac{h(t|A=1) }{h(t|A=0)} = e^{-\beta_1*\alpha} \]&lt;/span&gt; If &lt;span class=&#34;math inline&#34;&gt;\(HR=.5\)&lt;/span&gt;, then the hazard of death, for example, at time &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(50\%\)&lt;/span&gt; lower in the treated group, relative to the untreated.&lt;/p&gt;
-&lt;p&gt;From a Bayesian point of view, we are interested in the posterior &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, \alpha | T^o_{1:r} , \delta_{1:n}, \tau)\)&lt;/span&gt;. Once we have this, we can get a whole posterior distribution for the survival function itself - as well as any quantity derived from it. For example, posterior mean and credible intervals for &lt;span class=&#34;math inline&#34;&gt;\(HR\)&lt;/span&gt; (just a function of &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;). We can also get posterior survival curve estimates for each treatment group. For the Weibull, the survival curve is given by &lt;span class=&#34;math inline&#34;&gt;\(S(t|\beta,\alpha, A) = exp(-\lambda t^\alpha)\)&lt;/span&gt; - again just a function of &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-augmentation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data Augmentation&lt;/h2&gt;
-&lt;p&gt;We’ll first look at the joint data distribution (the likelihood) for this problem. The central idea is to view the survival times for the &lt;span class=&#34;math inline&#34;&gt;\(n-r\)&lt;/span&gt; censored subjects as missing data, &lt;span class=&#34;math inline&#34;&gt;\(T^m_{r+1:n}\)&lt;/span&gt;. We refer to the full data as &lt;span class=&#34;math inline&#34;&gt;\(T_{i=1:n} = (T_{i:r}^o, T_{r+1:n}^m)\)&lt;/span&gt;. Now we construct a complete-data (augmented) likelihood with these values. The observed likelihood and complete-data likelihood are related by&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
- p(T^o_{1:r}, \delta_{1:n}| \tau, \beta, \alpha) &amp;amp; = \int p(T_{1:n}, \delta_{1:n} | \tau, \beta, \alpha) \ dT^m_{r+1:n} \\
-  &amp;amp; = \int p(\delta_{1:n} | T_{1:n}, \tau, \beta, \alpha) \ p(T_{1:n} | \tau, \beta, \alpha) \ dT^m_{r+1:n}
-\end{aligned}
-\]&lt;/span&gt; Now in this ideal, complete-data setting, we observe patients with either &lt;span class=&#34;math inline&#34;&gt;\(\delta_i = 1 \ \cap \ T_i &amp;gt; \tau\)&lt;/span&gt; or with &lt;span class=&#34;math inline&#34;&gt;\(\delta_i = 0 \ \cap \ T_i &amp;lt; \tau\)&lt;/span&gt;. That is, &lt;span class=&#34;math inline&#34;&gt;\(p(\delta_{i} | T_i, \tau, \beta, \alpha)=1\)&lt;/span&gt; if either of these conditions hold and &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; otherwise.&lt;/p&gt;
-&lt;p&gt;We also assume that subjects are independent so that &lt;span class=&#34;math inline&#34;&gt;\(p(T_{i=1:n} | \tau, \beta, \alpha) = p(T^o_{1:r}| \tau, \beta, \alpha)p( T^m_{r+1:n} | \tau, \beta, \alpha)\)&lt;/span&gt;. So the likelihood simplifies to: &lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
- p(T^o_{1:r}, \delta_{1:n}| \tau, \beta, \alpha) &amp;amp; = \prod_{i=1}^n\int p(\delta_{i} | T_{i}, \tau, \beta, \alpha) \ p(T_{i} | \tau, \beta, \alpha) \ dT^m_{r+1:n} \\
- &amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} \int p(\delta_{i} | T^m_{i}, \tau, \beta, \alpha) \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i} \\
-&amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} \int I(T_i^m &amp;gt; \tau) \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i} \\
-&amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} \int_\tau^\infty \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i} \\
-\end{aligned}
-\]&lt;/span&gt; The first line follows by independence of observations. The second line follows by separating censored and uncensored subjects. &lt;span class=&#34;math inline&#34;&gt;\(p(\delta_i | -)=1\)&lt;/span&gt; for all uncensored subjects, but &lt;span class=&#34;math inline&#34;&gt;\(p(\delta_i | -)=1\)&lt;/span&gt; for censored subjects only when &lt;span class=&#34;math inline&#34;&gt;\(T_i^m \in (0, \infty)\)&lt;/span&gt;. Otherwise, the integrand is 0. Therefore, in the fourth line we only need to integrate of the region where the integrand is non-zero.&lt;/p&gt;
-&lt;p&gt;Now the integral is over the region &lt;span class=&#34;math inline&#34;&gt;\(T_i^m \in (0, \infty)\)&lt;/span&gt;. But in this region &lt;span class=&#34;math inline&#34;&gt;\(p(\delta_{i} | T^m_{i}, \tau, \beta, \alpha)=1\)&lt;/span&gt; only when &lt;span class=&#34;math inline&#34;&gt;\(T_i^m &amp;gt;\tau\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;This is the usual likelihood for frequentist survival models: uncensored subjects contribute to the likelihood via the density while censored subjects contribute to the likelihood via the survival function &lt;span class=&#34;math inline&#34;&gt;\(\int_\tau^\infty \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i}\)&lt;/span&gt;. Functions for this integral exist in for most basic distributions in &lt;code&gt;R&lt;/code&gt;. For our Weibull model, it is &lt;code&gt;1-pweibull()&lt;/code&gt;. We would simply place priors on &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt;, then sample from the posterior using MCMC.&lt;/p&gt;
-&lt;p&gt;But what if this integral was too hard to evaluate (as it may be for more complicated censoring mechanisms) and the complete data likelihood given below is easier?&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
- p(T^o_{1:r}, T^m_{r+1:n}, \delta_{1:n}| \tau, \beta, \alpha) &amp;amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} I(T_i^m &amp;gt; \tau)\ p(T_{i}^m | \tau, \beta, \alpha)\\
-\end{aligned}
-\]&lt;/span&gt; Then we can design a Gibbs sampler around this complete data likelihood.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;metropolis-in-gibbs-sampler&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Metropolis-in-Gibbs Sampler&lt;/h2&gt;
-&lt;p&gt;The target posterior of interest is &lt;span class=&#34;math display&#34;&gt;\[p(\beta, \alpha, T_{r+1:n}^m | T^o_{1:r}, \delta_{1:n}) = p(\beta, \alpha | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n}) \ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n})\]&lt;/span&gt; Where each conditional posterior is known up to a proportionality constant. With a joint prior &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, \alpha)\)&lt;/span&gt; specified, we have&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
-\begin{aligned}
-p(\beta, \alpha | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n}) &amp;amp; \propto \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} I(T_i^m &amp;gt; \tau)\ p(T_{i}^m | \tau, \beta, \alpha)  \\
-&amp;amp; \propto p(\beta, \alpha) \prod_{i=1}^n p(T_{i}| \tau, \beta, \alpha) \\
-\end{aligned}
-\]&lt;/span&gt; Note here that &lt;span class=&#34;math inline&#34;&gt;\(p(T_{i}| \tau, \beta, \alpha)\)&lt;/span&gt; is the assumed Weibull density. We can use a Metropolis step to sample &lt;span class=&#34;math inline&#34;&gt;\((\beta, \alpha)\)&lt;/span&gt; from this distribution.&lt;/p&gt;
-The second conditional posterior is
-&lt;span class=&#34;math display&#34;&gt;\[\begin{equation}
-\begin{aligned}
-p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta_i=1} I(T_i^m &amp;gt; \tau)\ p(T_{i}^m | \tau, \beta, \alpha)
-\end{aligned}
-\end{equation}\]&lt;/span&gt;
-&lt;p&gt;This is a truncated Weibull distribution (truncated at the bottom by &lt;span class=&#34;math inline&#34;&gt;\(\tau\)&lt;/span&gt;). We can also sample from this using a Metropolis step.&lt;/p&gt;
-&lt;p&gt;The Gibbs sampler alternates between sampling from these two conditionals:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Given parameters &lt;span class=&#34;math inline&#34;&gt;\((\beta, \alpha)\)&lt;/span&gt;, impute &lt;span class=&#34;math inline&#34;&gt;\(T^m_i\)&lt;/span&gt; by drawing from &lt;span class=&#34;math inline&#34;&gt;\(p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n})\)&lt;/span&gt;, for each &lt;span class=&#34;math inline&#34;&gt;\(i=r+1,\dots, n\)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;Combine these imputed values, &lt;span class=&#34;math inline&#34;&gt;\(T^m_{r+1:n}\)&lt;/span&gt;, with observed data &lt;span class=&#34;math inline&#34;&gt;\(T_{1:n}^o\)&lt;/span&gt;, and update the parameters &lt;span class=&#34;math inline&#34;&gt;\((\beta, \alpha)\)&lt;/span&gt; from &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, \alpha | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n})\)&lt;/span&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;As the parameter estimates update, the imputations get better. As the imputations get better, the parameter estimates improve. Over time the process yields draws from the joint posterior &lt;span class=&#34;math inline&#34;&gt;\(p(\beta, \alpha, T_{r+1:n}^m | T^o_{1:r}, \delta_{1:n})\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;We retain the sample of &lt;span class=&#34;math inline&#34;&gt;\((\beta, \alpha)\)&lt;/span&gt; for inference and toss samples of &lt;span class=&#34;math inline&#34;&gt;\(T^m\)&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;simulation-example-in-r&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Simulation Example in R&lt;/h2&gt;
-&lt;p&gt;All of the code implementing the augmented sampler (from scratch!) can be found on my &lt;a href=&#34;https://github.com/stablemarkets/BayesianTutorials/tree/master/BayesianSurvival&#34;&gt;GitHub&lt;/a&gt;. Basically I simulate a data set with a binary treatment indicator for 1,000 subjects with censoring and survival times independently drawn from a Weibull. \&lt;/p&gt;
-&lt;p&gt;For the &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; vector, I use independent &lt;span class=&#34;math inline&#34;&gt;\(N(0,sd=100)\)&lt;/span&gt; priors. For the shape parameter, I use an &lt;span class=&#34;math inline&#34;&gt;\(Exp(1)\)&lt;/span&gt; prior. I run a single MCMC chain for 20,000 iterations and toss the first 15,000 out as burn-in.&lt;/p&gt;
-&lt;p&gt;Here is the estimated survival function for each treatment group. Overlayed are the non-parametric estimates from a stratified Kaplan-Meier (KM) estimator. Note the parametric model is correctly specified here, so it does just as well as the KM in terms of estimating the mean curve. But the parametric model provides a less noisy fit - notice the credible bands are narrower at later time points when the at-risk counts get low in each treatment arm.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/sampler-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;That’s just a helpful reminder of the efficiency gains parametric models have over nonparametric ones (when they’re correctly specified. Let’s take a look at the posterior distribution of the hazard ratio. The true value is indicated by the red line.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png&#34; width=&#34;1152&#34; /&gt; We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; credible interval are &lt;span class=&#34;math inline&#34;&gt;\(.32 \ (.24-.40)\)&lt;/span&gt;. The true value is &lt;span class=&#34;math inline&#34;&gt;\(.367\)&lt;/span&gt;. Not too bad. Remember this is only a single simulated dataset.&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>Motivation Model Set Up Data Augmentation Metropolis-in-Gibbs Sampler Simulation Example in R   Motivation When dealing with time-to-event data, right-censoring is a common occurance. Although most are familiar with likelihood construction under right-censoring (and corresponding frequentist estimation), there’s very little available online about Bayesian approaches even for fully parametric models. Here I’ll briefly outline a Bayesian estimation procedure for a Weibull model with right-censoring. The estimation procedure is MCMC based using a data augmentation approach.</description>
     </item>
     
     <item>
@@ -292,18 +197,9 @@ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta
       <pubDate>Sun, 09 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>/tutorial/example/</guid>
-      <description>
-
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
+      <description>In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:
+Tip 1 &amp;hellip;
+Tip 2 &amp;hellip;</description>
     </item>
     
     <item>
@@ -330,8 +226,7 @@ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta
       <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
       
       <guid>/privacy/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
+      <description>&amp;hellip;</description>
     </item>
     
     <item>
@@ -349,16 +244,7 @@ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>/project/internal-project/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus.</description>
     </item>
     
     <item>
@@ -367,181 +253,10 @@ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/slides/example-slides/</guid>
-      <description>
-
-&lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34;&gt;Academic&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
-&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
-&lt;li&gt;Supports speaker notes&lt;/li&gt;
-&lt;li&gt;Mobile friendly slides&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
-
-&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Code block:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
-if porridge == &amp;quot;blueberry&amp;quot;:
-    print(&amp;quot;Eating...&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
-
-&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
-
-&lt;p&gt;Block math:&lt;/p&gt;
-
-&lt;p&gt;$$
-f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
-$$&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
-
-&lt;p&gt;Make content appear incrementally&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
-{{% fragment %}} **Two** {{% /fragment %}}
-{{% fragment %}} Three {{% /fragment %}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
-  One
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-  &lt;strong&gt;Two&lt;/strong&gt;
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-  Three
-&lt;/span&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
-
-&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
-- Only the speaker can read these notes
-- Press `S` key to view
-{{% /speaker_note %}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
-
-&lt;aside class=&#34;notes&#34;&gt;
-  &lt;ul&gt;
-&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
-&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/aside&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
-&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
-&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
-&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
-&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
-&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-
-&lt;section data-noprocess data-shortcode-slide
-  
-      
-      data-background-image=&#34;/img/boards.jpg&#34;
-  &gt;
-
-
-&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
-
-&lt;p&gt;Customize the slide style and background&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/img/boards.jpg&amp;quot; &amp;gt;}}
-{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
-{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
-
-&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
-
-&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
-.reveal section h2,
-.reveal section h3 {
-  color: navy;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Welcome to Slides Academic
+Features  Efficiently write slides in Markdown 3-in-1: Create, Present, and Publish your slides Supports speaker notes Mobile friendly slides  Controls  Next: Right Arrow or Space Previous: Left Arrow Start: Home Finish: End Overview: Esc Speaker notes: S Fullscreen: F Zoom: Alt + Click PDF Export: E  Code Highlighting Inline code: variable
+Code block:
+porridge = &amp;quot;blueberry&amp;quot; if porridge == &amp;quot;blueberry&amp;quot;: print(&amp;quot;Eating...&amp;quot;)  Math In-line math: $x + y = z$</description>
     </item>
     
   </channel>
