@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 Mar 2019 10:35:05 -0500</lastBuildDate>
-    
-	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Bayesian Nonparametric Method for Zero-Inflated Data with Applications to Medical Costs</title>

@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 Mar 2019 23:44:15 -0500</lastBuildDate>
-    
-	<atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/authors/admin/" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
@@ -17,8 +15,12 @@
       <pubDate>Fri, 08 Mar 2019 23:44:15 -0500</pubDate>
       
       <guid>/author/admin/</guid>
-      <description>I’m a biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the LDI, and a member of the Center for Causal Inference. My research centers around developing Bayesian nonparametric methods with applications to health economics, prediction, and causal inference problems. Before Penn, I was a Senior Analyst at Analysis Group&amp;rsquo;s health economics and outcomes research (HEOR) group.
-I blog about statistics, bayesian methods, computation/MCMC, visualization, and other things I happen to stumble upon during research.</description>
+      <description>&lt;p&gt;I’m a biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the &lt;a href=&#34;https://ldi.upenn.edu/&#34; target=&#34;_blank&#34;&gt;LDI&lt;/a&gt;, and a member of the &lt;a href=&#34;https://www.cceb.med.upenn.edu/cci&#34; target=&#34;_blank&#34;&gt;Center for Causal Inference&lt;/a&gt;. My research centers around developing Bayesian nonparametric methods with applications to health economics, prediction, and causal inference problems. Before Penn, I was a Senior Analyst at &lt;a href=&#34;https://www.analysisgroup.com/practices/epidemiology-and--biostatistics/&#34; target=&#34;_blank&#34;&gt;Analysis Group&lt;/a&gt;&amp;rsquo;s health economics and outcomes research (HEOR) group.&lt;/p&gt;
+
+&lt;p&gt;I blog about statistics, bayesian methods, computation/MCMC, visualization, and other things I happen to stumble upon during research.&lt;/p&gt;
+
+&lt;p&gt;My blog posts are syndicated on &lt;a href=&#34;https://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R-bloggers&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
