@@ -68,17 +68,12 @@ user_groups = ["Researchers", "Visitors"]
   icon_pack = "fab"
   link = "https://github.com/stablemarkets"
 
+# Link to a PDF of your resume/CV from the About widget.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 [[social]]
   icon = "cv"
   icon_pack = "ai"
-  link = "https://upenn.box.com/s/kwmi230d7le4x950qgvssld4n7cxm41d"
-
-# Link to a PDF of your resume/CV from the About widget.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# [[social]]
-#   icon = "cv"
-#   icon_pack = "ai"
-#   link = "files/cv.pdf"
+  link = "files/cv.pdf"
 
 +++
 
