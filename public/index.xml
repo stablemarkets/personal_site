@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -161,6 +161,16 @@ Backgrounds can be applied to any section. Here, the background option is set gi
       
       <guid>/home/contact/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Gamma Process Prior for Semiparametric Survival Analysis</title>
+      <link>/post/post3/gamma-process-prior/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/post3/gamma-process-prior/</guid>
+      <description>Motviation The Gamma Process Prior Independent Hazards Correlated Hazards    Heads up: equations may not render on blog aggregation sites. See original post here for good formatting. If you like this post, you can follow me on twitter.
+Motviation Suppose we observe survival/event times from some distribution \[T_{i\in1:n} \stackrel{iid}{\sim} f(t)\] where \(f\) is the density and \(F(t)=1-S(t)\) is the corresponding CDF expressed in terms of the survival function \(S(t)\).</description>
     </item>
     
     <item>

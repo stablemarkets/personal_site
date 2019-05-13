@@ -1,0 +1,80 @@
+---
+title: "Gamma Process Prior for Semiparametric Survival Analysis"
+author: Arman Oganisian
+date: '2019-05-12'
+slug: gamma-process-prior
+categories:
+  - Bayesian
+  - Nonparametrics
+  - MCMC
+  - Survival Analysis
+  - R
+image:
+  caption: ''
+  focal_point: ''
+output:
+  blogdown::html_page:
+    toc: true
+
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#motviation">Motviation</a></li>
+<li><a href="#the-gamma-process-prior">The Gamma Process Prior</a><ul>
+<li><a href="#independent-hazards">Independent Hazards</a></li>
+<li><a href="#correlated-hazards">Correlated Hazards</a></li>
+</ul></li>
+</ul>
+</div>
+
+<p>Heads up: equations may not render on blog aggregation sites. See original post <a href="https://stablemarkets.netlify.com/post/post3/gamma-process-prior/">here</a> for good formatting. If you like this post, you can follow me on <a href="https://twitter.com/StableMarkets">twitter</a>.</p>
+<div id="motviation" class="section level2">
+<h2>Motviation</h2>
+<p>Suppose we observe survival/event times from some distribution <span class="math display">\[T_{i\in1:n} \stackrel{iid}{\sim} f(t)\]</span> where <span class="math inline">\(f\)</span> is the density and <span class="math inline">\(F(t)=1-S(t)\)</span> is the corresponding CDF expressed in terms of the survival function <span class="math inline">\(S(t)\)</span>. We can represent the hazard function of this distribution in terms of the density, <span class="math display">\[\lambda(t) = \frac{f(t)}{S(t)}\]</span> The hazard, CDF, and survival functions are all related. Thus, if we have a model for the hazard, we also have a model for the survival function and the survival time distribution. The well-known Cox proportional hazard approach models the hazard as a function of covariates <span class="math inline">\(x_i \in \mathbb{R}^p\)</span> that multiply some baseline hazard <span class="math inline">\(\lambda_0(t)\)</span>, <span class="math display">\[ \lambda(t_i) = \lambda_0(t_i)\exp(x_i&#39;\theta)\]</span> Frequentist estimation of <span class="math inline">\(\theta\)</span> follows from maximizing the profile likelihood - which avoids the need to specify the baseline hazard <span class="math inline">\(\lambda_0(t)\)</span>. The model is semi-parametric because, while we don’t model the baseline hazard, we require that the multiplicative relationship between covariates and the hazard is correct.</p>
+<p>This already works fine, so why go Bayesian? Here are just a few (hopefully) compelling reasons:</p>
+<ul>
+<li>We may want to nonparametrically estimate the baseline hazard itself.</li>
+<li>Posterior inference is exact, so we don’t need to rely on asymptotic uncertainty estimates (though we may want to evaluate the frequentist properties of resulting point and interval estimates).</li>
+<li>Easy credible interval estimation for any function of the parameters. If we have posterior samples for the hazard, we also get automatic inference for the survival function as well.</li>
+</ul>
+<p>Full Bayesian inference requires a proper probability model for both <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\lambda_0\)</span>. This post walks through a Bayesian approach that places a nonparametric prior on <span class="math inline">\(\lambda_0\)</span> - specifically the Gamma Process.</p>
+</div>
+<div id="the-gamma-process-prior" class="section level2">
+<h2>The Gamma Process Prior</h2>
+<div id="independent-hazards" class="section level3">
+<h3>Independent Hazards</h3>
+<p>Most of this comes from <a href="https://www.jstor.org/stable/pdf/2984758.pdf?refreqid=excelsior%3Ad44a383839b71ed572992049f08f2932">Kalbfleisch (1978)</a>, with an excellent technical outline by <a href="https://www.springer.com/us/book/9780387952772">Ibrahim (2001)</a>.</p>
+<p>Recall that the cumulative baseline hazard <span class="math inline">\(H_0(t) = \int_0^t \lambda_0(t) dt\)</span> where the integral is the Riemann-Stieltjes integral. The central idea is to develop a prior for the cumulative hazard <span class="math inline">\(H_0(t)\)</span>, which will then admit a prior for the hazard, <span class="math inline">\(\lambda_0(t)\)</span>.</p>
+<p>The Gamma Process is such a prior. Each realization of a Gamma Process is a cumulative hazard function that is centered around some prior cumulative hazard function, <span class="math inline">\(H^*\)</span>, with a sort of dispersion/concentration parameter, <span class="math inline">\(\beta\)</span> that controls how tightly the realizations are distributed around the prior <span class="math inline">\(H^*\)</span>.</p>
+<p>Okay, now the math. Let <span class="math inline">\(\mathcal{G}(\alpha, \beta)\)</span> denote the Gamma distribution with shape parameter <span class="math inline">\(\alpha\)</span> and rate parameter <span class="math inline">\(\beta\)</span>. Let <span class="math inline">\(H^*(t)\)</span> for <span class="math inline">\(t\geq 0\)</span> be our prior cumulative hazard function. For example we could choose <span class="math inline">\(H^*\)</span> to be the exponential cumulative hazard, <span class="math inline">\(H^*(t)= \eta\cdot t\)</span>, where <span class="math inline">\(\eta\)</span> is a fixed hyperparameter. By definition <span class="math inline">\(H^*(0)=0\)</span>. The Gamma Process is defined as having the following properties:</p>
+<ul>
+<li><span class="math inline">\(H_0(0) = 0\)</span></li>
+<li><span class="math inline">\(\lambda_0(t) = H_0(t) - H_0(s) \sim \mathcal G \Big(\ \beta\big(H^*(t) - H^*(s)\big)\ , \ \beta \ \Big)\)</span>, for <span class="math inline">\(t&gt;s\)</span></li>
+</ul>
+<p>The increments in the cumulative hazard is the hazard function. The gamma process has the property that these increments are independent and Gamma-distributed. For a set of time increments <span class="math inline">\(t\geq0\)</span>, we can use the properties above to generate one realization of hazards <span class="math inline">\(\{\lambda_0(t) \}_{t\geq0}\)</span>. Equivaltently, one realization of the cumulative hazard function is <span class="math inline">\(\{H_0(t)\}_{t\geq0}\)</span>, where <span class="math inline">\(H_0(t) = \sum_{k=0}^t \lambda_0(k)\)</span>. We denote the Gamma Process just described as <span class="math display">\[H_0(t) \sim \mathcal{GP}\Big(\ \beta H^*(t), \ \beta \Big),  \ \ t\geq0\]</span></p>
+<p>Below in Panel A are some prior realizations of <span class="math inline">\(H_0(t)\)</span> with a Weibull <span class="math inline">\(H^*\)</span> prior for various concentration parameters, <span class="math inline">\(\beta\)</span>. Notice for low <span class="math inline">\(\beta\)</span> the realizations are widely dispersed around the mean cumulative hazard. Higher <span class="math inline">\(\beta\)</span> yields to tighter dispersion around <span class="math inline">\(H^*\)</span>.</p>
+<p>Since there’s a correspondence between the <span class="math inline">\(H_0(t)\)</span>, <span class="math inline">\(\lambda_0(t)\)</span>, and <span class="math inline">\(S_0(t)\)</span>, we could also plot prior realizations of the baseline survival function <span class="math inline">\(S_0(t) = \exp\big\{- H_0(t) \big\}\)</span> using the realization <span class="math inline">\(\{H_0(t)\}_{t\geq0}\)</span>. This is shown in Panel B with the Weibull survival function <span class="math inline">\(S^*\)</span> corresponding to <span class="math inline">\(H^*\)</span>.</p>
+<p><img src="/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-1-.gif" width="864" style="display: block; margin: auto;" /></p>
+</div>
+<div id="correlated-hazards" class="section level3">
+<h3>Correlated Hazards</h3>
+<p>In the previous section, the hazards <span class="math inline">\(\lambda_0(t)\)</span> between increments were a priori independent - a naive prior belief perhaps. Instead, we might expect that the hazard at the current time point is centered around the hazard in the previous time point. We’d also expect that a higher hazard at the previous time point likely means a higher hazard at the current time point (positive correlation across time).</p>
+<p><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9469.00298">Nieto‐Barajas et al (2002)</a> came up with a correlated Gamma Process that expresses exactly this prior belief. The basic idea is to introduce a latent stochastic process <span class="math inline">\(\{u_t\}_{t\geq0}\)</span> that links <span class="math inline">\(\lambda_0(t)\)</span> with <span class="math inline">\(\lambda_0(t-1)\)</span>. Here is the correlated Gamma Process,</p>
+<ul>
+<li>Draw a hazard rate for the first time interval, <span class="math inline">\(I_1=[0, t_1)\)</span>, <span class="math inline">\(\lambda_1 \sim \mathcal G(\beta H^*(t_1), \beta)\)</span>,</li>
+<li>Draw a latent variable <span class="math inline">\(u_1 | \lambda_1 \sim Pois(c \cdot \lambda_1)\)</span></li>
+<li>Draw a hazard rate for second time interval <span class="math inline">\(I_2 = [t_1, t_2)\)</span>, <span class="math inline">\(\lambda_2 \sim \mathcal G(\beta( H^*(t_2) - H^*(t_1) ) + u_1, \beta + c )\)</span></li>
+<li><p>In general for <span class="math inline">\(k\geq1\)</span>, define <span class="math inline">\(\alpha_k = \beta( H^*(t_k) - H^*(t_{k-1}) )\)</span></p>
+<ul>
+<li><span class="math inline">\(u_k | \lambda_k \sim Pois(c\cdot \lambda_k)\)</span></li>
+<li><span class="math inline">\(\lambda_{k+1} | u_k \sim \mathcal G( \alpha_k + u_k, \beta + c )\)</span></li>
+</ul></li>
+</ul>
+<p>Notice that if <span class="math inline">\(c=0\)</span>, then <span class="math inline">\(u=0\)</span> with probability <span class="math inline">\(1\)</span> and the process reduces to the independent Gamma Process in the previous section. Now consider <span class="math inline">\(c=1\)</span>. Then, the hazard rate in the next interval has mean <span class="math inline">\(E[\lambda_{k+1} | u_k] = \frac{ \alpha_k + u_k }{\beta+c}\)</span>. Now <span class="math inline">\(u_k \sim Pois(\lambda_k)\)</span> is centered around the current <span class="math inline">\(\lambda_k\)</span> - allowinng <span class="math inline">\(\lambda_k\)</span> to influence <span class="math inline">\(\lambda_{k+1}\)</span> through the latent variable <span class="math inline">\(u_k\)</span>. The higher the current hazard, <span class="math inline">\(\lambda_k\)</span>, the higher <span class="math inline">\(u_k\)</span>, and the higher the mean of the next hazard, <span class="math inline">\(\lambda_{k+1}\)</span>.</p>
+<p>Below are some realizations of a correlated and independent Gamma processes centered around the <span class="math inline">\(Weibull(2,1.5)\)</span> hazard shown in red. One realization is higlighted in blue to make it easier to see the differences between correlated and independent realizations</p>
+<p><img src="/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-2-.gif" width="864" style="display: block; margin: auto;" /></p>
+<p>Notice the correlated gamma process looks very snake-y. This is because of the autoregressive structure on <span class="math inline">\(\{\lambda_0(t)\}_{t\geq0}\)</span> induced by the latent process<span class="math inline">\(\{ u_t\}_{t\geq0}\)</span>.</p>
+</div>
+</div>
