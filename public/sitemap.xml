@@ -4,8 +4,16 @@
     
     <url>
     
+      <loc>/talk/jsm2019/</loc>
+      <lastmod>2019-07-31T15:05:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/post/post3/gamma-process-prior/</loc>
-      <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-12T21:33:30-04:00</lastmod>
     </url>
     
   
@@ -13,7 +21,7 @@
     <url>
     
       <loc>/post/post2/specifying-accelerated-failure-time-models-in-stan/</loc>
-      <lastmod>2019-04-23T17:55:31-04:00</lastmod>
+      <lastmod>2019-05-12T21:33:30-04:00</lastmod>
     </url>
     
   
@@ -93,7 +101,7 @@
     <url>
     
       <loc>/</loc>
-      <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+      <lastmod>2019-07-31T15:05:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -137,7 +145,7 @@
     <url>
     
       <loc>/authors/arman-oganisian/</loc>
-      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
+      <lastmod>2019-07-31T15:05:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -163,7 +171,7 @@
     <url>
     
       <loc>/categories/bayesian/</loc>
-      <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-12T21:33:30-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -172,7 +180,7 @@
     <url>
     
       <loc>/categories/</loc>
-      <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-12T21:33:30-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -262,7 +270,7 @@
     <url>
     
       <loc>/categories/mcmc/</loc>
-      <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-12T21:33:30-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -280,7 +288,7 @@
     <url>
     
       <loc>/categories/nonparametrics/</loc>
-      <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-12T21:33:30-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -289,7 +297,7 @@
     <url>
     
       <loc>/post/</loc>
-      <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-12T21:33:30-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -324,7 +332,7 @@
     <url>
     
       <loc>/categories/r/</loc>
-      <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-12T21:33:30-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -367,7 +375,7 @@
     <url>
     
       <loc>/categories/stan/</loc>
-      <lastmod>2019-04-23T17:55:31-04:00</lastmod>
+      <lastmod>2019-05-12T21:33:30-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -376,7 +384,7 @@
     <url>
     
       <loc>/categories/survival-analysis/</loc>
-      <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-12T21:33:30-04:00</lastmod>
       <priority>0</priority>
     </url>
     
