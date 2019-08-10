@@ -42,7 +42,7 @@ tags = []
 #slides = "example-slides"
 
 # Optional filename of your slides within your talk folder or a URL.
-#url_slides = ""
+url_slides = "zero_inf_oganisian.pdf"
 
 # Projects (optional).
 #   Associate this talk with one or more of your projects.
@@ -53,7 +53,7 @@ tags = []
 #projects = ["internal-project"]
 
 # Links (optional).
-url_pdf = "https://ww2.amstat.org/meetings/jsm/2018/onlineprogram/AbstractDetails.cfm?abstractid=328693"
+url_pdf = ""
 url_video = ""
 url_code = ""
 
@@ -64,7 +64,7 @@ math = true
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 [image]
   # Caption (optional)
-  caption = "Clustering Results on Simulated Data."
+  caption = "MCMC Chains of Posterior ATE Draws."
 
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
