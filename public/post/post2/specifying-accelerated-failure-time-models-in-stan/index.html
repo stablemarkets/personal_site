@@ -141,7 +141,7 @@ Let’s start with simulating some randomly censored data from a Weibull model."
   
   <meta property="article:published_time" content="2019-03-09T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-10T15:33:47-04:00">
+  <meta property="article:modified_time" content="2019-11-17T12:20:25-05:00">
   
 
   
@@ -335,7 +335,7 @@ Let’s start with simulating some randomly censored data from a Weibull model."
 
 
 <meta content="2019-03-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-10 15:33:47 -0400 EDT" itemprop="dateModified">
+<meta content="2019-11-17 12:20:25 -0500 EST" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -350,7 +350,7 @@ Let’s start with simulating some randomly censored data from a Weibull model."
           Last updated on
       
     
-    <time>Aug 10, 2019</time>
+    <time>Nov 17, 2019</time>
   </span>
   
 
@@ -562,8 +562,8 @@ generated quantities{
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;80acc0f9293b946800a710dd7f5e211c&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000145 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.45 seconds.
+## Chain 1: Gradient evaluation took 0.000146 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.46 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -580,9 +580,9 @@ generated quantities{
 ## Chain 1: Iteration: 19001 / 20000 [ 95%]  (Sampling)
 ## Chain 1: Iteration: 20000 / 20000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 9.43757 seconds (Warm-up)
-## Chain 1:                0.742707 seconds (Sampling)
-## Chain 1:                10.1803 seconds (Total)
+## Chain 1:  Elapsed Time: 10.0132 seconds (Warm-up)
+## Chain 1:                0.766944 seconds (Sampling)
+## Chain 1:                10.7801 seconds (Total)
 ## Chain 1:</code></pre>
 <pre class="r"><code>post_draws&lt;-extract(weibull_fit)</code></pre>
 <p>Below we plot posterior distribution of the hazard ratio. The red line indicates the true value under which we generated the data.</p>
