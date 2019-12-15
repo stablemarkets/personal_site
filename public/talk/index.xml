@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks on </title>
-    <link>/talk/</link>
+    <link>https://stablemarkets.netlify.com/talk/</link>
     <description>Recent content in Recent &amp; Upcoming Talks on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 Mar 2019 10:35:05 -0500</lastBuildDate>
     
-	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://stablemarkets.netlify.com/talk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>BNP Model for Zero-Inflated Outcomes: Clustering, Prediction, Causal Inference</title>
-      <link>/talk/jsm2019/</link>
-      <pubDate>Wed, 31 Jul 2019 15:05:00 -0400</pubDate>
+      <link>https://stablemarkets.netlify.com/talk/jsm2019/</link>
+      <pubDate>Wed, 31 Jul 2019 15:05:00 +0800</pubDate>
       
-      <guid>/talk/jsm2019/</guid>
+      <guid>https://stablemarkets.netlify.com/talk/jsm2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Bayesian Nonparametric Method for Zero-Inflated Data with Applications to Medical Costs</title>
-      <link>/talk/jsm2017/</link>
-      <pubDate>Mon, 30 Jul 2018 15:05:00 -0400</pubDate>
+      <link>https://stablemarkets.netlify.com/talk/jsm2017/</link>
+      <pubDate>Mon, 30 Jul 2018 15:05:00 +0800</pubDate>
       
-      <guid>/talk/jsm2017/</guid>
+      <guid>https://stablemarkets.netlify.com/talk/jsm2017/</guid>
       <description></description>
     </item>
     

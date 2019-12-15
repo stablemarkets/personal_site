@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bayesian on </title>
-    <link>/categories/bayesian/</link>
+    <link>https://stablemarkets.netlify.com/categories/bayesian/</link>
     <description>Recent content in Bayesian on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/categories/bayesian/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://stablemarkets.netlify.com/categories/bayesian/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Gamma Process Prior for Semiparametric Survival Analysis</title>
-      <link>/post/post3/gamma-process-prior/</link>
+      <link>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</link>
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/post3/gamma-process-prior/</guid>
+      <guid>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -56,7 +56,7 @@
 &lt;p&gt;The increments in the cumulative hazard is the hazard function. The gamma process has the property that these increments are independent and Gamma-distributed. For a set of time increments &lt;span class=&#34;math inline&#34;&gt;\(t\geq0\)&lt;/span&gt;, we can use the properties above to generate one realization of hazards &lt;span class=&#34;math inline&#34;&gt;\(\{\lambda_0(t) \}_{t\geq0}\)&lt;/span&gt;. Equivaltently, one realization of the cumulative hazard function is &lt;span class=&#34;math inline&#34;&gt;\(\{H_0(t)\}_{t\geq0}\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(H_0(t) = \sum_{k=0}^t \lambda_0(k)\)&lt;/span&gt;. We denote the Gamma Process just described as &lt;span class=&#34;math display&#34;&gt;\[H_0(t) \sim \mathcal{GP}\Big(\ \beta H^*(t), \ \beta \Big),  \ \ t\geq0\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Below in Panel A are some prior realizations of &lt;span class=&#34;math inline&#34;&gt;\(H_0(t)\)&lt;/span&gt; with a Weibull &lt;span class=&#34;math inline&#34;&gt;\(H^*\)&lt;/span&gt; prior for various concentration parameters, &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;. Notice for low &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; the realizations are widely dispersed around the mean cumulative hazard. Higher &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; yields to tighter dispersion around &lt;span class=&#34;math inline&#34;&gt;\(H^*\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Since there’s a correspondence between the &lt;span class=&#34;math inline&#34;&gt;\(H_0(t)\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\lambda_0(t)\)&lt;/span&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(S_0(t)\)&lt;/span&gt;, we could also plot prior realizations of the baseline survival function &lt;span class=&#34;math inline&#34;&gt;\(S_0(t) = \exp\big\{- H_0(t) \big\}\)&lt;/span&gt; using the realization &lt;span class=&#34;math inline&#34;&gt;\(\{H_0(t)\}_{t\geq0}\)&lt;/span&gt;. This is shown in Panel B with the Weibull survival function &lt;span class=&#34;math inline&#34;&gt;\(S^*\)&lt;/span&gt; corresponding to &lt;span class=&#34;math inline&#34;&gt;\(H^*\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-1-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-1-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;correlated-hazards&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Correlated Hazards&lt;/h3&gt;
@@ -74,7 +74,7 @@
 &lt;/ul&gt;
 &lt;p&gt;Notice that if &lt;span class=&#34;math inline&#34;&gt;\(c=0\)&lt;/span&gt;, then &lt;span class=&#34;math inline&#34;&gt;\(u=0\)&lt;/span&gt; with probability &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; and the process reduces to the independent Gamma Process in the previous section. Now consider &lt;span class=&#34;math inline&#34;&gt;\(c=1\)&lt;/span&gt;. Then, the hazard rate in the next interval has mean &lt;span class=&#34;math inline&#34;&gt;\(E[\lambda_{k+1} | u_k] = \frac{ \alpha_k + u_k }{\beta+c}\)&lt;/span&gt;. Now &lt;span class=&#34;math inline&#34;&gt;\(u_k \sim Pois(\lambda_k)\)&lt;/span&gt; is centered around the current &lt;span class=&#34;math inline&#34;&gt;\(\lambda_k\)&lt;/span&gt; - allowinng &lt;span class=&#34;math inline&#34;&gt;\(\lambda_k\)&lt;/span&gt; to influence &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{k+1}\)&lt;/span&gt; through the latent variable &lt;span class=&#34;math inline&#34;&gt;\(u_k\)&lt;/span&gt;. The higher the current hazard, &lt;span class=&#34;math inline&#34;&gt;\(\lambda_k\)&lt;/span&gt;, the higher &lt;span class=&#34;math inline&#34;&gt;\(u_k\)&lt;/span&gt;, and the higher the mean of the next hazard, &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{k+1}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Below are some realizations of a correlated and independent Gamma processes centered around the &lt;span class=&#34;math inline&#34;&gt;\(Weibull(2,1.5)\)&lt;/span&gt; hazard shown in red. One realization is higlighted in blue to make it easier to see the differences between correlated and independent realizations&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-2-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-2-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Notice the correlated gamma process looks very snake-y. This is because of the autoregressive structure on &lt;span class=&#34;math inline&#34;&gt;\(\{\lambda_0(t)\}_{t\geq0}\)&lt;/span&gt; induced by the latent process&lt;span class=&#34;math inline&#34;&gt;\(\{ u_t\}_{t\geq0}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -83,10 +83,10 @@
     
     <item>
       <title>Specifying Accelerated Failure Time Models in STAN</title>
-      <link>/post/post2/specifying-accelerated-failure-time-models-in-stan/</link>
+      <link>https://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
+      <guid>https://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
       <description>
 
 
@@ -197,8 +197,8 @@ generated quantities{
 &lt;pre&gt;&lt;code&gt;## 
 ## SAMPLING FOR MODEL &amp;#39;80acc0f9293b946800a710dd7f5e211c&amp;#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000147 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.47 seconds.
+## Chain 1: Gradient evaluation took 0.000176 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.76 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -215,16 +215,16 @@ generated quantities{
 ## Chain 1: Iteration: 19001 / 20000 [ 95%]  (Sampling)
 ## Chain 1: Iteration: 20000 / 20000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 10.1102 seconds (Warm-up)
-## Chain 1:                0.707901 seconds (Sampling)
-## Chain 1:                10.8181 seconds (Total)
+## Chain 1:  Elapsed Time: 9.09895 seconds (Warm-up)
+## Chain 1:                0.736377 seconds (Sampling)
+## Chain 1:                9.83533 seconds (Total)
 ## Chain 1:&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;post_draws&amp;lt;-extract(weibull_fit)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Below we plot posterior distribution of the hazard ratio. The red line indicates the true value under which we generated the data.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(post_draws$hazard_ratio,
      xlab=&amp;#39;Hazard Ratio&amp;#39;, main=&amp;#39;Hazard Ratio Posterior Distribution&amp;#39;)
 abline(v=exp(-1*true_beta[2,1]*true_alpha), col=&amp;#39;red&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_hazard_ratio-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_hazard_ratio-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(post_draws$hazard_ratio)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 0.3635223&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quantile(post_draws$hazard_ratio, probs = c(.025, .975))&lt;/code&gt;&lt;/pre&gt;
@@ -252,16 +252,16 @@ legend(&amp;#39;topright&amp;#39;,
                   &amp;#39;Posterior Survival Draws (PBO)&amp;#39;),
        col=c(&amp;#39;black&amp;#39;,&amp;#39;gray&amp;#39;,&amp;#39;blue&amp;#39;,&amp;#39;lightblue&amp;#39;), 
        lty=c(1,0,1,0), pch=c(NA,15,NA,15), bty=&amp;#39;n&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_survival-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_survival-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Bayesian Survival Analysis with Data Augmentation</title>
-      <link>/post/post1/bayesian-survival-analysis-with-data-augmentation/</link>
+      <link>https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</link>
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
+      <guid>https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -342,9 +342,9 @@ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta
 &lt;p&gt;All of the code implementing the augmented sampler (from scratch!) can be found on my &lt;a href=&#34;https://github.com/stablemarkets/BayesianTutorials/tree/master/BayesianSurvival&#34;&gt;GitHub&lt;/a&gt;. Basically I simulate a data set with a binary treatment indicator for 1,000 subjects with censoring and survival times independently drawn from a Weibull. \&lt;/p&gt;
 &lt;p&gt;For the &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; vector, I use independent &lt;span class=&#34;math inline&#34;&gt;\(N(0,sd=100)\)&lt;/span&gt; priors. For the shape parameter, I use an &lt;span class=&#34;math inline&#34;&gt;\(Exp(1)\)&lt;/span&gt; prior. I run a single MCMC chain for 20,000 iterations and toss the first 15,000 out as burn-in.&lt;/p&gt;
 &lt;p&gt;Here is the estimated survival function for each treatment group. Overlayed are the non-parametric estimates from a stratified Kaplan-Meier (KM) estimator. Note the parametric model is correctly specified here, so it does just as well as the KM in terms of estimating the mean curve. But the parametric model provides a less noisy fit - notice the credible bands are narrower at later time points when the at-risk counts get low in each treatment arm.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/sampler-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/sampler-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;That’s just a helpful reminder of the efficiency gains parametric models have over nonparametric ones (when they’re correctly specified. Let’s take a look at the posterior distribution of the hazard ratio. The true value is indicated by the red line.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png&#34; width=&#34;1152&#34; /&gt; We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; credible interval are &lt;span class=&#34;math inline&#34;&gt;\(.32 \ (.24-.40)\)&lt;/span&gt;. The true value is &lt;span class=&#34;math inline&#34;&gt;\(.367\)&lt;/span&gt;. Not too bad. Remember this is only a single simulated dataset.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png&#34; width=&#34;1152&#34; /&gt; We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; credible interval are &lt;span class=&#34;math inline&#34;&gt;\(.32 \ (.24-.40)\)&lt;/span&gt;. The true value is &lt;span class=&#34;math inline&#34;&gt;\(.367\)&lt;/span&gt;. Not too bad. Remember this is only a single simulated dataset.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
