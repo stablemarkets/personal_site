@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jul 2019 15:05:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2019 15:05:00 -0400</lastBuildDate>
     
 	<atom:link href="https://stablemarkets.netlify.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -166,7 +166,7 @@ Backgrounds can be applied to any section. Here, the background option is set gi
     <item>
       <title>BNP Model for Zero-Inflated Outcomes: Clustering, Prediction, Causal Inference</title>
       <link>https://stablemarkets.netlify.com/talk/jsm2019/</link>
-      <pubDate>Wed, 31 Jul 2019 15:05:00 +0800</pubDate>
+      <pubDate>Wed, 31 Jul 2019 15:05:00 -0400</pubDate>
       
       <guid>https://stablemarkets.netlify.com/talk/jsm2019/</guid>
       <description></description>
@@ -204,7 +204,7 @@ Let’s start with simulating some randomly censored data from a Weibull model.<
     <item>
       <title>Bayesian Nonparametric Method for Zero-Inflated Outcomes: Prediction, Clustering, and Causal Inference</title>
       <link>https://stablemarkets.netlify.com/publication/zdp/</link>
-      <pubDate>Fri, 01 Feb 2019 00:00:00 +0800</pubDate>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 -0500</pubDate>
       
       <guid>https://stablemarkets.netlify.com/publication/zdp/</guid>
       <description></description>
@@ -213,7 +213,7 @@ Let’s start with simulating some randomly censored data from a Weibull model.<
     <item>
       <title>Example Page</title>
       <link>https://stablemarkets.netlify.com/tutorial/example/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 +0800</pubDate>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://stablemarkets.netlify.com/tutorial/example/</guid>
       <description>In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:
@@ -224,7 +224,7 @@ Tip 2 &amp;hellip;</description>
     <item>
       <title>A Bayesian latent class approach for EHR‐based phenotyping</title>
       <link>https://stablemarkets.netlify.com/publication/bayes_latent_phenotype/</link>
-      <pubDate>Mon, 03 Sep 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 03 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>https://stablemarkets.netlify.com/publication/bayes_latent_phenotype/</guid>
       <description></description>
@@ -233,7 +233,7 @@ Tip 2 &amp;hellip;</description>
     <item>
       <title>A Bayesian Nonparametric Method for Zero-Inflated Data with Applications to Medical Costs</title>
       <link>https://stablemarkets.netlify.com/talk/jsm2017/</link>
-      <pubDate>Mon, 30 Jul 2018 15:05:00 +0800</pubDate>
+      <pubDate>Mon, 30 Jul 2018 15:05:00 -0400</pubDate>
       
       <guid>https://stablemarkets.netlify.com/talk/jsm2017/</guid>
       <description></description>
@@ -242,7 +242,7 @@ Tip 2 &amp;hellip;</description>
     <item>
       <title>External Project</title>
       <link>https://stablemarkets.netlify.com/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://stablemarkets.netlify.com/project/external-project/</guid>
       <description></description>
@@ -251,7 +251,7 @@ Tip 2 &amp;hellip;</description>
     <item>
       <title>Internal Project</title>
       <link>https://stablemarkets.netlify.com/project/internal-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://stablemarkets.netlify.com/project/internal-project/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus.</description>
