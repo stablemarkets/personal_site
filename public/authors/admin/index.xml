@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>admin on </title>
-    <link>https://stablemarkets.netlify.com/authors/admin/</link>
+    <link>/authors/admin/</link>
     <description>Recent content in admin on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 23 Apr 2019 17:55:31 -0400</lastBuildDate>
     
-	<atom:link href="https://stablemarkets.netlify.com/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://stablemarkets.netlify.com/author/admin/</link>
+      <link>/author/admin/</link>
       <pubDate>Tue, 23 Apr 2019 17:55:31 -0400</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/author/admin/</guid>
+      <guid>/author/admin/</guid>
       <description>I’m a biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the LDI, and a member of the Center for Causal Inference. My research centers around developing Bayesian nonparametric methods with applications to health economics, prediction, and causal inference problems. Before Penn, I was a Senior Analyst at Analysis Group&amp;rsquo;s health economics and outcomes research (HEOR) group.
 I blog about statistics, bayesian methods, computation/MCMC, visualization, and other things I happen to stumble upon during research.</description>
     </item>

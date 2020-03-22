@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>https://stablemarkets.netlify.com/</link>
+    <link>/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Feb 2020 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://stablemarkets.netlify.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://stablemarkets.netlify.com/home/slider/</link>
+      <link>/home/slider/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/slider/</guid>
+      <guid>/home/slider/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Academic</title>
-      <link>https://stablemarkets.netlify.com/home/hero/</link>
+      <link>/home/hero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/hero/</guid>
+      <guid>/home/hero/</guid>
       <description>The Best Way to Create the Website You Want from Markdown (or RStudio/Jupyter)
 Build Anything with Widgets
 Star</description>
@@ -33,10 +33,10 @@ Star</description>
     
     <item>
       <title>Demos</title>
-      <link>https://stablemarkets.netlify.com/home/demo/</link>
+      <link>/home/demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/demo/</guid>
+      <guid>/home/demo/</guid>
       <description>Welcome to the personal demo of Academic. Other demos available include:
  Project Demo (Academic&amp;rsquo;s actual site)  Over 100,000 Amazing Websites have Already Been Built with Academic
 Join the Most Empowered Hugo Community
@@ -47,184 +47,193 @@ Backgrounds can be applied to any section. Here, the background option is set gi
     
     <item>
       <title>What I&#39;m About...</title>
-      <link>https://stablemarkets.netlify.com/home/about/</link>
+      <link>/home/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/about/</guid>
+      <guid>/home/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Posts</title>
-      <link>https://stablemarkets.netlify.com/home/posts/</link>
+      <link>/home/posts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/posts/</guid>
+      <guid>/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Skills</title>
-      <link>https://stablemarkets.netlify.com/home/skills/</link>
+      <link>/home/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/skills/</guid>
+      <guid>/home/skills/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Experience</title>
-      <link>https://stablemarkets.netlify.com/home/experience/</link>
+      <link>/home/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/experience/</guid>
+      <guid>/home/experience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Accomplish&amp;shy;ments</title>
-      <link>https://stablemarkets.netlify.com/home/accomplishments/</link>
+      <link>/home/accomplishments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/accomplishments/</guid>
+      <guid>/home/accomplishments/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://stablemarkets.netlify.com/home/projects/</link>
+      <link>/home/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/projects/</guid>
+      <guid>/home/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gallery</title>
-      <link>https://stablemarkets.netlify.com/home/gallery/</link>
+      <link>/home/gallery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/gallery/</guid>
+      <guid>/home/gallery/</guid>
       <description>          </description>
     </item>
     
     <item>
       <title>People</title>
-      <link>https://stablemarkets.netlify.com/home/people/</link>
+      <link>/home/people/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/people/</guid>
+      <guid>/home/people/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Selected Publications &amp; Working Papers</title>
-      <link>https://stablemarkets.netlify.com/home/publications/</link>
+      <link>/home/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/publications/</guid>
+      <guid>/home/publications/</guid>
       <description> Quickly discover relevant content by filtering publications.
   </description>
     </item>
     
     <item>
       <title>Featured Publications</title>
-      <link>https://stablemarkets.netlify.com/home/featured/</link>
+      <link>/home/featured/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/featured/</guid>
+      <guid>/home/featured/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>https://stablemarkets.netlify.com/home/talks/</link>
+      <link>/home/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/talks/</guid>
+      <guid>/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Popular Topics</title>
-      <link>https://stablemarkets.netlify.com/home/tags/</link>
+      <link>/home/tags/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/tags/</guid>
+      <guid>/home/tags/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://stablemarkets.netlify.com/home/contact/</link>
+      <link>/home/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/home/contact/</guid>
+      <guid>/home/contact/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Coupled Chains with Tempered Posterior</title>
+      <link>/post/post4/tempered-mcmc/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/post4/tempered-mcmc/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
       <title>Bayesian Nonparametric Cost-Effectiveness Analyses: Causal Estimation and Adaptive Subgroup Discovery</title>
-      <link>https://stablemarkets.netlify.com/publication/bnpce/</link>
+      <link>/publication/bnpce/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/publication/bnpce/</guid>
+      <guid>/publication/bnpce/</guid>
       <description></description>
     </item>
     
     <item>
       <title>BNP Model for Zero-Inflated Outcomes: Clustering, Prediction, Causal Inference</title>
-      <link>https://stablemarkets.netlify.com/talk/jsm2019/</link>
+      <link>/talk/jsm2019/</link>
       <pubDate>Wed, 31 Jul 2019 15:05:00 -0400</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/talk/jsm2019/</guid>
+      <guid>/talk/jsm2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gamma Process Prior for Semiparametric Survival Analysis</title>
-      <link>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</link>
+      <link>/post/post3/gamma-process-prior/</link>
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</guid>
+      <guid>/post/post3/gamma-process-prior/</guid>
       <description>Motviation The Gamma Process Prior Independent Hazards Correlated Hazards    Heads up: equations may not render on blog aggregation sites. See original post here for good formatting. If you like this post, you can follow me on twitter.
 Motviation Suppose we observe survival/event times from some distribution \[T_{i\in1:n} \stackrel{iid}{\sim} f(t)\] where \(f\) is the density and \(F(t)=1-S(t)\) is the corresponding CDF expressed in terms of the survival function \(S(t)\).</description>
     </item>
     
     <item>
       <title>Specifying Accelerated Failure Time Models in STAN</title>
-      <link>https://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</link>
+      <link>/post/post2/specifying-accelerated-failure-time-models-in-stan/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
+      <guid>/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
       <description>This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in Stan.
 Let’s start with simulating some randomly censored data from a Weibull model.</description>
     </item>
     
     <item>
       <title>Bayesian Survival Analysis with Data Augmentation</title>
-      <link>https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</link>
+      <link>/post/post1/bayesian-survival-analysis-with-data-augmentation/</link>
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
+      <guid>/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
       <description>Motivation Model Set Up Data Augmentation Metropolis-in-Gibbs Sampler Simulation Example in R   Motivation When dealing with time-to-event data, right-censoring is a common occurance. Although most are familiar with likelihood construction under right-censoring (and corresponding frequentist estimation), there’s very little available online about Bayesian approaches even for fully parametric models. Here I’ll briefly outline a Bayesian estimation procedure for a Weibull model with right-censoring. The estimation procedure is MCMC based using a data augmentation approach.</description>
     </item>
     
     <item>
       <title>Bayesian Nonparametric Method for Zero-Inflated Outcomes: Prediction, Clustering, and Causal Inference</title>
-      <link>https://stablemarkets.netlify.com/publication/zdp/</link>
+      <link>/publication/zdp/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 -0500</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/publication/zdp/</guid>
+      <guid>/publication/zdp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Example Page</title>
-      <link>https://stablemarkets.netlify.com/tutorial/example/</link>
+      <link>/tutorial/example/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/tutorial/example/</guid>
+      <guid>/tutorial/example/</guid>
       <description>In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:
 Tip 1 &amp;hellip;
 Tip 2 &amp;hellip;</description>
@@ -232,46 +241,55 @@ Tip 2 &amp;hellip;</description>
     
     <item>
       <title>A Bayesian latent class approach for EHR‐based phenotyping</title>
-      <link>https://stablemarkets.netlify.com/publication/bayes_latent_phenotype/</link>
+      <link>/publication/bayes_latent_phenotype/</link>
       <pubDate>Mon, 03 Sep 2018 00:00:00 -0400</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/publication/bayes_latent_phenotype/</guid>
+      <guid>/publication/bayes_latent_phenotype/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Bayesian Nonparametric Method for Zero-Inflated Data with Applications to Medical Costs</title>
-      <link>https://stablemarkets.netlify.com/talk/jsm2017/</link>
+      <link>/talk/jsm2017/</link>
       <pubDate>Mon, 30 Jul 2018 15:05:00 -0400</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/talk/jsm2017/</guid>
+      <guid>/talk/jsm2017/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/privacy/</guid>
+      <description>&amp;hellip;</description>
+    </item>
+    
+    <item>
       <title>External Project</title>
-      <link>https://stablemarkets.netlify.com/project/external-project/</link>
+      <link>/project/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/project/external-project/</guid>
+      <guid>/project/external-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Internal Project</title>
-      <link>https://stablemarkets.netlify.com/project/internal-project/</link>
+      <link>/project/internal-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/project/internal-project/</guid>
+      <guid>/project/internal-project/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus.</description>
     </item>
     
     <item>
       <title>Slides</title>
-      <link>https://stablemarkets.netlify.com/slides/example-slides/</link>
+      <link>/slides/example-slides/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/slides/example-slides/</guid>
+      <guid>/slides/example-slides/</guid>
       <description>Welcome to Slides Academic
 Features  Efficiently write slides in Markdown 3-in-1: Create, Present, and Publish your slides Supports speaker notes Mobile friendly slides  Controls  Next: Right Arrow or Space Previous: Left Arrow Start: Home Finish: End Overview: Esc Speaker notes: S Fullscreen: F Zoom: Alt + Click PDF Export: E  Code Highlighting Inline code: variable
 Code block:
