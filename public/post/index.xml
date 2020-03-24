@@ -12,12 +12,13 @@
     
     
     <item>
-      <title>Coupled Chains with Tempered Posterior</title>
+      <title>Tempered MCMC for Multimodal Posteriors</title>
       <link>/post/post4/tempered-mcmc/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/post4/tempered-mcmc/</guid>
-      <description> </description>
+      <description>Previous Posts This is part of a sequence of posts chronicling my journey to manually implement as many MCMC samplers as I can from scratch. Code from previous psots can be found on GitHub. Also I tweet more than I should: StableMarkets.
+ The Multimodal posterior I wanted to write up my own implementation of coupled MCMC chains using a tempered posterior along with an animation of the process. This is a classic sampling strategy used to deal with multi-modal posteriors.</description>
     </item>
     
     <item>

@@ -6,10 +6,52 @@
     <description>Recent content in R on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tempered MCMC for Multimodal Posteriors</title>
+      <link>/post/post4/tempered-mcmc/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/post4/tempered-mcmc/</guid>
+      <description>
+
+
+&lt;div id=&#34;previous-posts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Previous Posts&lt;/h2&gt;
+&lt;p&gt;This is part of a sequence of posts chronicling my journey to manually implement as many MCMC samplers as I can from scratch. Code from previous psots can be found on &lt;a href=&#34;https://github.com/stablemarkets/BayesianTutorials&#34;&gt;GitHub&lt;/a&gt;. Also I tweet more than I should: &lt;a href=&#34;https://twitter.com/StableMarkets&#34;&gt;StableMarkets&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-multimodal-posterior&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Multimodal posterior&lt;/h2&gt;
+&lt;p&gt;I wanted to write up my own implementation of coupled MCMC chains using a tempered posterior along with an animation of the process. This is a classic sampling strategy used to deal with multi-modal posteriors. Here I have a tri-modal target posterior:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ p(\theta \mid D) = \frac{1}{3}N(-20,1) + \frac{1}{3}N(0,1) + \frac{1}{3}N(20,1)\]&lt;/span&gt; The density looks like this&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_post-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Notice the regions of flat posterior density at about &lt;span class=&#34;math inline&#34;&gt;\((-15,-5)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\((5,15)\)&lt;/span&gt;…these are often referred to as “bottlenecks”.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;problems-with-standard-mh&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Problems with standard MH&lt;/h2&gt;
+&lt;p&gt;These bottlenecks causes standard MCMC algorithms like Metropolis-Hastings (MH) to get stuck at one of these modes. Suppose at iteration &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; of a standard MH sampler, the current value of the parameter is &lt;span class=&#34;math inline&#34;&gt;\(\theta^{(t-1)}= - 5\)&lt;/span&gt;. Suppose we use a Gaussian jumping distribution, so that we propose &lt;span class=&#34;math inline&#34;&gt;\(\theta^{(t)}\)&lt;/span&gt; from &lt;span class=&#34;math inline&#34;&gt;\(\theta^{(t)} \sim N( -5, \sigma)\)&lt;/span&gt;. Let’s say that &lt;span class=&#34;math inline&#34;&gt;\(\sigma=1\)&lt;/span&gt; so the proposal distribution is proportional to the green density below&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_proposal-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;It’s clear here that we’re almost never going to propose draws from the other two modes from this jumping distribution. Vast majority of the proposals to the left will end up in the bottlenecks and get rejected. We could increase &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; to make the proposal distribution is wide enough to jump over these bottlenecks. However, we know in MH that increasing &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; tends to reduce acceptance probability in general. So maybe that helps us explore the other two modes, but we won’t be accepting frequently - slowing down how efficiently the chain explores the posterior.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-tempered-posterior&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Tempered Posterior&lt;/h2&gt;
+&lt;p&gt;The idea behind tempering is to have two chains: one that is exploring the tempered posterior and another that explores the posterior. Ideally, the tempered posterior won’t have these bottlenecks, so a chain exploring it won’t have trouble getting from mode to mode. Then, we can propose jumps of the chain exploring the posterior to the tempered chain. This increases the chance of our chain of interest jumping to other modes.&lt;/p&gt;
+&lt;p&gt;So when we say “tempered” we mean raising the posterior to some power (temperature) &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;: &lt;span class=&#34;math inline&#34;&gt;\(p(\theta \mid D)^T\)&lt;/span&gt;. Let’s see what &lt;span class=&#34;math inline&#34;&gt;\(p(\theta \mid D)^T\)&lt;/span&gt; looks like (proportional to gray density):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_temper-1.png&#34; width=&#34;960&#34; /&gt; Notice that the tempered posterior has no bottlenecks. So an MH chain exploring this distribution won’t get stuck in bottlenecks of the posterior. So now we set up two chains: one exploring the tempered posterior and another exploring the posterior - both with standard MH updates. In each iteration, once we’ve update the two chains, we propose a swap between the two chains that is accepted with some probability. We say that the chains “meet” when these swaps occur. That is, we’ve in a sense “coupled” the chains.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;linking-both-chains&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Linking both chains&lt;/h2&gt;
+&lt;p&gt;Above is a gif of this playing out over 200 iterations. The gray chain is the standard MH chain (not including the swaps) that explores the tempered distribution. The blue chain is the chain exploring the posterior. The red dots indicate values of the blue chain that are swaps from the tempered chain. I.e. at these red points, the chains meet. Notice that the blue chain now easily hops between the modes by occasionally jumping to the gray chain.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/post4/2020-03-22-tempered-mcmc_files/figure-html/make_gif-.gif&#34; width=&#34;1152&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;How this scales to higher dimensions was a topic of much research - still sort of is. The choice of temperatures is crucial. Often, we need to use several chains, not just two chains as we did here.&lt;/p&gt;
+&lt;p&gt;Some references: &lt;a href=&#34;https://watermark.silverchair.com/btg427.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAnIwggJuBgkqhkiG9w0BBwagggJfMIICWwIBADCCAlQGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM04FQsJU_yuBlk6pUAgEQgIICJU5z_DCSyt4AWDbdYc5DKoYVAwlXc4EAxGX3JiQSB-xRmw1yVhp7HxYz7FChVxgevsfxYge4-YiegspbC3DHo7YoF2f0am8rPPZiH8R2bHbm-jRG5FrlgIARRVCPqOvH4RzJpAyOSfMujiZapiJJ-1TQzBx2vWWOYl9rcKNsndj25dj19gNC8ac0qNlfe9kaNmZTkjJvkw3OGVhkBhYINM0MxVx22VBI0BDfGHlPUU8pfKIWm-IlCOJWGYOafYrxp5Jkx1D_tQcAGhfnUUx_IDNQkxnfi6zrfun_PBw9X846gb3HEaZl-6CPzWSwy9-eyx0B_hw_YzAuv1a1ykwlsVcFxRFqatSGy_qQNcHOnV5mDNqssmKvk4YFtbBjvRlhcoE3lIocOplAOO3WiVMfqG1s16N2z-t6UDKGCLJINsQtiW2bExmkhip4zd0jZiYG7RemKRlnSKVjMFrs98bHgNmOkeAZomX-ICG8dUmmQG6y9hL-LtGVtd7MR5jbop71eCMtfKT-02RkSSZrR-SN9czgiNlxf46w1IEu3ayAITwwCQkqi9Jme4lQBvo9FXpE8EVE75-qryOmfqIDbcVrq4uylsw149rTPupS5EVfMI_Rb9ULQAgLAugE5LU3hKz8rFDJzbcK1OBPmR36ZUBX7Ly_5jupsTZ-Qsm2HZkDLHXsgSlnB6xst7mLE9gL1jpjO3RVCrOp87n351p3-4Fb8SIYa35XNw&#34;&gt;Altekar (2004)&lt;/a&gt; is a nice outline and has references to seminal works by Geyers, Gilks and Roberts, etc. I based my sampler on the math they provide in the paper. Also this &lt;a href=&#34;https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/&#34;&gt;post&lt;/a&gt; by Darren Wilkinson on MH coupled MCMC is a really nice treatment on this topic as well.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Gamma Process Prior for Semiparametric Survival Analysis</title>
@@ -197,8 +239,8 @@ generated quantities{
 &lt;pre&gt;&lt;code&gt;## 
 ## SAMPLING FOR MODEL &amp;#39;80acc0f9293b946800a710dd7f5e211c&amp;#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000148 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.48 seconds.
+## Chain 1: Gradient evaluation took 0.000323 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 3.23 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -215,9 +257,9 @@ generated quantities{
 ## Chain 1: Iteration: 19001 / 20000 [ 95%]  (Sampling)
 ## Chain 1: Iteration: 20000 / 20000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 9.23524 seconds (Warm-up)
-## Chain 1:                0.808913 seconds (Sampling)
-## Chain 1:                10.0441 seconds (Total)
+## Chain 1:  Elapsed Time: 9.82896 seconds (Warm-up)
+## Chain 1:                0.840492 seconds (Sampling)
+## Chain 1:                10.6694 seconds (Total)
 ## Chain 1:&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;post_draws&amp;lt;-extract(weibull_fit)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Below we plot posterior distribution of the hazard ratio. The red line indicates the true value under which we generated the data.&lt;/p&gt;

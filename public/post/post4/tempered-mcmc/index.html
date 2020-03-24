@@ -28,7 +28,8 @@
   
     
   
-  <meta name="description" content=" ">
+  <meta name="description" content="Previous Posts This is part of a sequence of posts chronicling my journey to manually implement as many MCMC samplers as I can from scratch. Code from previous psots can be found on GitHub. Also I tweet more than I should: StableMarkets.
+ The Multimodal posterior I wanted to write up my own implementation of coupled MCMC chains using a tempered posterior along with an animation of the process. This is a classic sampling strategy used to deal with multi-modal posteriors.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/post4/tempered-mcmc/">
@@ -133,20 +134,21 @@
   
   <meta property="og:site_name" content="">
   <meta property="og:url" content="/post/post4/tempered-mcmc/">
-  <meta property="og:title" content="Coupled Chains with Tempered Posterior | ">
-  <meta property="og:description" content=" "><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:title" content="Tempered MCMC for Multimodal Posteriors | ">
+  <meta property="og:description" content="Previous Posts This is part of a sequence of posts chronicling my journey to manually implement as many MCMC samplers as I can from scratch. Code from previous psots can be found on GitHub. Also I tweet more than I should: StableMarkets.
+ The Multimodal posterior I wanted to write up my own implementation of coupled MCMC chains using a tempered posterior along with an animation of the process. This is a classic sampling strategy used to deal with multi-modal posteriors."><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2020-03-22T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2020-03-22T18:10:03-04:00">
+  <meta property="article:modified_time" content="2020-03-22T18:28:45-04:00">
   
 
   
 
   
 
-  <title>Coupled Chains with Tempered Posterior | </title>
+  <title>Tempered MCMC for Multimodal Posteriors | </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -323,7 +325,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Coupled Chains with Tempered Posterior</h1>
+  <h1 itemprop="name">Tempered MCMC for Multimodal Posteriors</h1>
 
   
 
@@ -333,7 +335,7 @@
 
 
 <meta content="2020-03-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2020-03-22 18:10:03 -0400 EDT" itemprop="dateModified">
+<meta content="2020-03-22 18:28:45 -0400 EDT" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -368,7 +370,9 @@
     
     <a href="/categories/bayesian/">Bayesian</a>, 
     
-    <a href="/categories/mcmc/">MCMC</a>
+    <a href="/categories/mcmc/">MCMC</a>, 
+    
+    <a href="/categories/r/">R</a>
     
   </span>
   
@@ -380,7 +384,7 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Coupled%20Chains%20with%20Tempered%20Posterior&amp;url=%2fpost%2fpost4%2ftempered-mcmc%2f"
+         href="https://twitter.com/intent/tweet?text=Tempered%20MCMC%20for%20Multimodal%20Posteriors&amp;url=%2fpost%2fpost4%2ftempered-mcmc%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
@@ -394,21 +398,21 @@
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fpost4%2ftempered-mcmc%2f&amp;title=Coupled%20Chains%20with%20Tempered%20Posterior"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fpost4%2ftempered-mcmc%2f&amp;title=Tempered%20MCMC%20for%20Multimodal%20Posteriors"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2fpost4%2ftempered-mcmc%2f&amp;title=Coupled%20Chains%20with%20Tempered%20Posterior"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fpost4%2ftempered-mcmc%2f&amp;title=Tempered%20MCMC%20for%20Multimodal%20Posteriors"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Coupled%20Chains%20with%20Tempered%20Posterior&amp;body=%2fpost%2fpost4%2ftempered-mcmc%2f">
+         href="mailto:?subject=Tempered%20MCMC%20for%20Multimodal%20Posteriors&amp;body=%2fpost%2fpost4%2ftempered-mcmc%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -447,7 +451,36 @@
       
 
 
+<div id="previous-posts" class="section level2">
+<h2>Previous Posts</h2>
+<p>This is part of a sequence of posts chronicling my journey to manually implement as many MCMC samplers as I can from scratch. Code from previous psots can be found on <a href="https://github.com/stablemarkets/BayesianTutorials">GitHub</a>. Also I tweet more than I should: <a href="https://twitter.com/StableMarkets">StableMarkets</a>.</p>
+</div>
+<div id="the-multimodal-posterior" class="section level2">
+<h2>The Multimodal posterior</h2>
+<p>I wanted to write up my own implementation of coupled MCMC chains using a tempered posterior along with an animation of the process. This is a classic sampling strategy used to deal with multi-modal posteriors. Here I have a tri-modal target posterior:</p>
+<p><span class="math display">\[ p(\theta \mid D) = \frac{1}{3}N(-20,1) + \frac{1}{3}N(0,1) + \frac{1}{3}N(20,1)\]</span> The density looks like this</p>
+<p><img src="/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_post-1.png" width="960" /></p>
+<p>Notice the regions of flat posterior density at about <span class="math inline">\((-15,-5)\)</span> and <span class="math inline">\((5,15)\)</span>…these are often referred to as “bottlenecks”.</p>
+</div>
+<div id="problems-with-standard-mh" class="section level2">
+<h2>Problems with standard MH</h2>
+<p>These bottlenecks causes standard MCMC algorithms like Metropolis-Hastings (MH) to get stuck at one of these modes. Suppose at iteration <span class="math inline">\(t\)</span> of a standard MH sampler, the current value of the parameter is <span class="math inline">\(\theta^{(t-1)}= - 5\)</span>. Suppose we use a Gaussian jumping distribution, so that we propose <span class="math inline">\(\theta^{(t)}\)</span> from <span class="math inline">\(\theta^{(t)} \sim N( -5, \sigma)\)</span>. Let’s say that <span class="math inline">\(\sigma=1\)</span> so the proposal distribution is proportional to the green density below</p>
+<p><img src="/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_proposal-1.png" width="960" /></p>
+<p>It’s clear here that we’re almost never going to propose draws from the other two modes from this jumping distribution. Vast majority of the proposals to the left will end up in the bottlenecks and get rejected. We could increase <span class="math inline">\(\sigma\)</span> to make the proposal distribution is wide enough to jump over these bottlenecks. However, we know in MH that increasing <span class="math inline">\(\sigma\)</span> tends to reduce acceptance probability in general. So maybe that helps us explore the other two modes, but we won’t be accepting frequently - slowing down how efficiently the chain explores the posterior.</p>
+</div>
+<div id="the-tempered-posterior" class="section level2">
+<h2>The Tempered Posterior</h2>
+<p>The idea behind tempering is to have two chains: one that is exploring the tempered posterior and another that explores the posterior. Ideally, the tempered posterior won’t have these bottlenecks, so a chain exploring it won’t have trouble getting from mode to mode. Then, we can propose jumps of the chain exploring the posterior to the tempered chain. This increases the chance of our chain of interest jumping to other modes.</p>
+<p>So when we say “tempered” we mean raising the posterior to some power (temperature) <span class="math inline">\(T\)</span>: <span class="math inline">\(p(\theta \mid D)^T\)</span>. Let’s see what <span class="math inline">\(p(\theta \mid D)^T\)</span> looks like (proportional to gray density):</p>
+<p><img src="/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_temper-1.png" width="960" /> Notice that the tempered posterior has no bottlenecks. So an MH chain exploring this distribution won’t get stuck in bottlenecks of the posterior. So now we set up two chains: one exploring the tempered posterior and another exploring the posterior - both with standard MH updates. In each iteration, once we’ve update the two chains, we propose a swap between the two chains that is accepted with some probability. We say that the chains “meet” when these swaps occur. That is, we’ve in a sense “coupled” the chains.</p>
+</div>
+<div id="linking-both-chains" class="section level2">
+<h2>Linking both chains</h2>
+<p>Above is a gif of this playing out over 200 iterations. The gray chain is the standard MH chain (not including the swaps) that explores the tempered distribution. The blue chain is the chain exploring the posterior. The red dots indicate values of the blue chain that are swaps from the tempered chain. I.e. at these red points, the chains meet. Notice that the blue chain now easily hops between the modes by occasionally jumping to the gray chain.</p>
 <p><img src="/post/post4/2020-03-22-tempered-mcmc_files/figure-html/make_gif-.gif" width="1152" style="display: block; margin: auto;" /></p>
+<p>How this scales to higher dimensions was a topic of much research - still sort of is. The choice of temperatures is crucial. Often, we need to use several chains, not just two chains as we did here.</p>
+<p>Some references: <a href="https://watermark.silverchair.com/btg427.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAnIwggJuBgkqhkiG9w0BBwagggJfMIICWwIBADCCAlQGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM04FQsJU_yuBlk6pUAgEQgIICJU5z_DCSyt4AWDbdYc5DKoYVAwlXc4EAxGX3JiQSB-xRmw1yVhp7HxYz7FChVxgevsfxYge4-YiegspbC3DHo7YoF2f0am8rPPZiH8R2bHbm-jRG5FrlgIARRVCPqOvH4RzJpAyOSfMujiZapiJJ-1TQzBx2vWWOYl9rcKNsndj25dj19gNC8ac0qNlfe9kaNmZTkjJvkw3OGVhkBhYINM0MxVx22VBI0BDfGHlPUU8pfKIWm-IlCOJWGYOafYrxp5Jkx1D_tQcAGhfnUUx_IDNQkxnfi6zrfun_PBw9X846gb3HEaZl-6CPzWSwy9-eyx0B_hw_YzAuv1a1ykwlsVcFxRFqatSGy_qQNcHOnV5mDNqssmKvk4YFtbBjvRlhcoE3lIocOplAOO3WiVMfqG1s16N2z-t6UDKGCLJINsQtiW2bExmkhip4zd0jZiYG7RemKRlnSKVjMFrs98bHgNmOkeAZomX-ICG8dUmmQG6y9hL-LtGVtd7MR5jbop71eCMtfKT-02RkSSZrR-SN9czgiNlxf46w1IEu3ayAITwwCQkqi9Jme4lQBvo9FXpE8EVE75-qryOmfqIDbcVrq4uylsw149rTPupS5EVfMI_Rb9ULQAgLAugE5LU3hKz8rFDJzbcK1OBPmR36ZUBX7Ly_5jupsTZ-Qsm2HZkDLHXsgSlnB6xst7mLE9gL1jpjO3RVCrOp87n351p3-4Fb8SIYa35XNw">Altekar (2004)</a> is a nice outline and has references to seminal works by Geyers, Gilks and Roberts, etc. I based my sampler on the math they provide in the paper. Also this <a href="https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/">post</a> by Darren Wilkinson on MH coupled MCMC is a really nice treatment on this topic as well.</p>
+</div>
 
     </div>
 

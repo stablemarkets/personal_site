@@ -1,11 +1,12 @@
 ---
-title: "Coupled Chains with Tempered Posterior"
+title: "Tempered MCMC for Multimodal Posteriors"
 author: Arman Oganisian
 date: '2020-03-22'
 slug: tempered-mcmc
 categories:
   - Bayesian
   - MCMC
+  - R
 image:
   caption: ''
   focal_point: ''
@@ -17,10 +18,20 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(latex2exp)
 
 ```
 
+## Previous Posts
 
+This is part of a sequence of posts chronicling my journey to manually implement as many MCMC samplers as I can from scratch. Code from previous psots can be found on [GitHub](https://github.com/stablemarkets/BayesianTutorials). Also I tweet more than I should: [StableMarkets](https://twitter.com/StableMarkets).
+
+## The Multimodal posterior
+
+I wanted to write up my own implementation of coupled MCMC chains using a tempered posterior along with an animation of the process. This is a classic sampling strategy used to deal with multi-modal posteriors. Here I have a tri-modal target posterior:
+
+$$ p(\theta \mid D) = \frac{1}{3}N(-20,1) + \frac{1}{3}N(0,1) + \frac{1}{3}N(20,1)$$
+The density looks like this
 ```{r helper_functions, include=F, echo=F}
 vanilla_mh <- function(log_target, theta_curr, prop_sd){
   theta_star <- rnorm(1, theta_curr, prop_sd )
@@ -37,6 +48,50 @@ ftemp <- function(x, temp) ( (1/3)*dnorm(x,-20,1) + (1/3)*dnorm(x,0,1) + (1/3)*d
 log_target <- function(x) log(ftemp(x, temp=1))
 ```
 
+```{r plot_post, include=T, echo=F, fig.width=10, fig.height=5}
+curve(exp(log_target(x)), from=-25, to=25, n = 1000, xlab=TeX("$\\theta$"), 
+      ylab=TeX("$p(\\theta | D)$"), col='pink', axes=F)
+axis(side = 1, at = seq(-25,25,10), labels = seq(-25,25, 10))
+
+```
+
+Notice the regions of flat posterior density at about $(-15,-5)$ and $(5,15)$...these are often referred to as "bottlenecks". 
+
+## Problems with standard MH
+
+These bottlenecks causes standard MCMC algorithms like Metropolis-Hastings (MH) to get stuck at one of these modes. Suppose at iteration $t$ of a standard MH sampler, the current value of the parameter is $\theta^{(t-1)}= - 5$. Suppose we use a Gaussian jumping distribution, so that we propose $\theta^{(t)}$ from $\theta^{(t)} \sim N( -5, \sigma)$. Let's say that $\sigma=1$ so the proposal distribution is proportional to the green density below
+
+```{r plot_proposal, include=T, echo=F, fig.width=10, fig.height=5}
+curve(exp(log_target(x)), from=-25, to=25, n = 1000, xlab=TeX("$\\theta$"), 
+      ylab=TeX("$p(\\theta | D)$"), col='pink', axes=F)
+
+curve( .1*dnorm(x, -5, 1), from=-10, to=0, n = 1000, col='lightgreen', add=T)
+
+axis(side = 1, at = seq(-25,25,10), labels = seq(-25,25, 10))
+
+```
+
+It's clear here that we're almost never going to propose draws from the other two modes from this jumping distribution. Vast majority of the proposals to the left will end up in the bottlenecks and get rejected. We could increase $\sigma$ to make the proposal distribution is wide enough to jump over these bottlenecks. However, we know in MH that increasing $\sigma$ tends to reduce acceptance probability in general. So maybe that helps us explore the other two modes, but we won't be accepting frequently - slowing down how efficiently the chain explores the posterior.  
+
+## The Tempered Posterior 
+
+The idea behind tempering is to have two chains: one that is exploring the tempered posterior and another that explores the posterior. Ideally, the tempered posterior won't have these bottlenecks, so a chain exploring it won't have trouble getting from mode to mode. Then, we can propose jumps of the chain exploring the posterior to the tempered chain. This increases the chance of our chain of interest jumping to other modes.  
+
+So when we say "tempered" we mean raising the posterior to some power (temperature) $T$: $p(\theta \mid D)^T$. Let's see what $p(\theta \mid D)^T$ looks like (proportional to gray density):
+
+```{r plot_temper, include=T, echo=F, fig.width=10, fig.height=5}
+curve(exp(log_target(x)), from=-25, to=25, n = 1000, xlab=TeX("$\\theta$"), 
+      ylab=TeX("$p(\\theta | D)$"), col='pink', axes=F)
+curve( .10*ftemp(x, 100), from=-25, to=25, n = 1000, col='gray', add=T)
+
+axis(side = 1, at = seq(-25,25,10), labels = seq(-25,25, 10))
+
+```
+Notice that the tempered posterior has no bottlenecks. So an MH chain exploring this distribution won't get stuck in bottlenecks of the posterior. So now we set up two chains: one exploring the tempered posterior and another exploring the posterior - both with standard MH updates. In each iteration, once we've update the two chains, we propose a swap between the two chains that is accepted with some probability. We say that the chains "meet" when these swaps occur. That is, we've in a sense "coupled" the chains.
+
+## Linking both chains
+
+Above is a gif of this playing out over 200 iterations. The gray chain is the standard MH chain (not including the swaps) that explores the tempered distribution. The blue chain is the chain exploring the posterior. The red dots indicate values of the blue chain that are swaps from the tempered chain. I.e. at these red points, the chains meet. Notice that the blue chain now easily hops between the modes by occasionally jumping to the gray chain. 
 
 ```{r,  echo=F, warning=FALSE, message=FALSE, error=FALSE, cache=T, eval=T}
 set.seed(10)
@@ -121,3 +176,7 @@ for( i in 2:iter){
   }
 
 ```
+
+How this scales to higher dimensions was a topic of much research - still sort of is. The choice of temperatures is crucial. Often, we need to use several chains, not just two chains as we did here.
+
+Some references: [Altekar (2004)](https://watermark.silverchair.com/btg427.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAnIwggJuBgkqhkiG9w0BBwagggJfMIICWwIBADCCAlQGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM04FQsJU_yuBlk6pUAgEQgIICJU5z_DCSyt4AWDbdYc5DKoYVAwlXc4EAxGX3JiQSB-xRmw1yVhp7HxYz7FChVxgevsfxYge4-YiegspbC3DHo7YoF2f0am8rPPZiH8R2bHbm-jRG5FrlgIARRVCPqOvH4RzJpAyOSfMujiZapiJJ-1TQzBx2vWWOYl9rcKNsndj25dj19gNC8ac0qNlfe9kaNmZTkjJvkw3OGVhkBhYINM0MxVx22VBI0BDfGHlPUU8pfKIWm-IlCOJWGYOafYrxp5Jkx1D_tQcAGhfnUUx_IDNQkxnfi6zrfun_PBw9X846gb3HEaZl-6CPzWSwy9-eyx0B_hw_YzAuv1a1ykwlsVcFxRFqatSGy_qQNcHOnV5mDNqssmKvk4YFtbBjvRlhcoE3lIocOplAOO3WiVMfqG1s16N2z-t6UDKGCLJINsQtiW2bExmkhip4zd0jZiYG7RemKRlnSKVjMFrs98bHgNmOkeAZomX-ICG8dUmmQG6y9hL-LtGVtd7MR5jbop71eCMtfKT-02RkSSZrR-SN9czgiNlxf46w1IEu3ayAITwwCQkqi9Jme4lQBvo9FXpE8EVE75-qryOmfqIDbcVrq4uylsw149rTPupS5EVfMI_Rb9ULQAgLAugE5LU3hKz8rFDJzbcK1OBPmR36ZUBX7Ly_5jupsTZ-Qsm2HZkDLHXsgSlnB6xst7mLE9gL1jpjO3RVCrOp87n351p3-4Fb8SIYa35XNw) is a nice outline and has references to seminal works by Geyers, Gilks and Roberts, etc. I based my sampler on the math they provide in the paper. Also this [post](https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/) by Darren Wilkinson on MH coupled MCMC is a really nice treatment on this topic as well.
