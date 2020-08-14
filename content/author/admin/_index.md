@@ -16,7 +16,7 @@ role = "Biostatistics PhD Candidate"
 organizations = [ { name = "University of Pennsylvania", url = "https://www.dbei.med.upenn.edu/" } ]
 
 # Short bio (displayed in user profile at end of posts)
-bio = "Bayesed and Confused."
+bio = "Developing nonparametric Bayesian solutions to challenging causal inference problems."
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email = "aoganisi@upenn.edu"
@@ -30,7 +30,7 @@ interests = [
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-user_groups = ["Researchers", "Visitors"]
+#user_groups = ["Researchers", "Visitors"]
 
 # List qualifications (such as academic degrees)
 [[education.courses]]
@@ -77,8 +77,10 @@ user_groups = ["Researchers", "Visitors"]
 
 +++
 
-I’m a biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the [LDI](https://ldi.upenn.edu/), and a member of the [Center for Causal Inference](https://www.cceb.med.upenn.edu/cci). My research centers around developing Bayesian nonparametric methods with applications to health economics, prediction, and causal inference problems. Before Penn, I was a Senior Analyst at [Analysis Group](https://www.analysisgroup.com/practices/epidemiology-and--biostatistics/)'s health economics and outcomes research (HEOR) group.
+I am a 5th year biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the [LDI](https://ldi.upenn.edu/), and a member of the [Center for Causal Inference](https://www.cceb.med.upenn.edu/cci). My research centers around developing Bayesian nonparametric methods with applications to health economics, prediction, and causal inference problems. Before Penn, I was a Senior Analyst at [Analysis Group](https://www.analysisgroup.com/practices/epidemiology-and--biostatistics/)'s health economics and outcomes research (HEOR) group.
 
-I blog about statistics, bayesian methods, computation/MCMC, visualization, and other things I happen to stumble upon during research.
+Here you will find a link to my full CV and a selection of some past and current research work.
+
+I also blog about statistics, bayesian methods, computation/MCMC, and other things I happen to stumble upon during research.
 
 My blog posts are syndicated on [R-bloggers](https://www.r-bloggers.com/).

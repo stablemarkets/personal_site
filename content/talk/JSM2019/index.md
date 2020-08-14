@@ -50,7 +50,7 @@ url_slides = "ZeroToHero_Oganisian.pdf"
 #   E.g. `projects = ["deep-learning"]` references 
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-#projects = ["internal-project"]
+projects = ["bnp","causalbayes"]
 
 # Links (optional).
 url_pdf = ""

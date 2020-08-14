@@ -43,7 +43,7 @@ tags = []
 #   E.g. `projects = ["deep-learning"]` references 
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects = []
+projects = ["applied"]
 
 # Links (optional).
 url_pdf = "https://onlinelibrary.wiley.com/doi/10.1002/sim.7953"

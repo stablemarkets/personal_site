@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2020 15:05:00 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -55,11 +55,11 @@ Backgrounds can be applied to any section. Here, the background option is set gi
     </item>
     
     <item>
-      <title>Recent Posts</title>
-      <link>/home/posts/</link>
+      <title>Research</title>
+      <link>/home/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/posts/</guid>
+      <guid>/home/projects/</guid>
       <description></description>
     </item>
     
@@ -91,11 +91,11 @@ Backgrounds can be applied to any section. Here, the background option is set gi
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>/home/projects/</link>
+      <title>Recent Posts</title>
+      <link>/home/posts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/projects/</guid>
+      <guid>/home/posts/</guid>
       <description></description>
     </item>
     
@@ -118,7 +118,7 @@ Backgrounds can be applied to any section. Here, the background option is set gi
     </item>
     
     <item>
-      <title>Selected Publications &amp; Working Papers</title>
+      <title>Selected Papers</title>
       <link>/home/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -164,6 +164,33 @@ Backgrounds can be applied to any section. Here, the background option is set gi
     </item>
     
     <item>
+      <title>Bayesian Causal Inference with Stan</title>
+      <link>/talk/stancon2020/</link>
+      <pubDate>Thu, 13 Aug 2020 15:05:00 -0400</pubDate>
+      
+      <guid>/talk/stancon2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Non-parametric Bayes</title>
+      <link>/project/bnp/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
+      
+      <guid>/project/bnp/</guid>
+      <description>Bayesian nonparametrics is a powerful class of methods including Gaussian processes, Bayesian Additive Regression Trees (BART), Gamma Processes, Dirichlet Process, etc. The central idea is to abstract away from parameters. For instance, standard methods may assume a regression function is linear, indexed by finitely many slope/intercept parameters. A prior on these finitely many parameters then induces a prior on the regression function. To avoid specifying such restrictive functional form, we need to cut out the middle-man (the parameters) and specify priors over the function directly.</description>
+    </item>
+    
+    <item>
+      <title>Bayesian Causal Inference</title>
+      <link>/project/causalbayes/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 -0400</pubDate>
+      
+      <guid>/project/causalbayes/</guid>
+      <description>Causal inference is broadly concerned with estimating parameters governing the causal mechanisms between an intervention or treatment of interest and an outcome. Causal inference provides a framework for 1) constructing different estimands that have explicitly causal, rather than associational, interpretations 2) formulating the assumptions under which we can estimate these using observed data, 3) devising sensitivity analyses around violations of these assumptions, and 4) making valid inferences about these estimans. These are just some of the many advances made in the causal literature.</description>
+    </item>
+    
+    <item>
       <title>Tempered MCMC for Multimodal Posteriors</title>
       <link>/post/post4/tempered-mcmc/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
@@ -174,11 +201,56 @@ Backgrounds can be applied to any section. Here, the background option is set gi
     </item>
     
     <item>
+      <title>Applied Causal and Bayesian Modeling</title>
+      <link>/project/applied/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/project/applied/</guid>
+      <description>Below is a collection of some applied work with particularly interesting Bayesian and/or causal modeling. For instance, Hubbard et al. use a Bayesian mixture model to infer patients&amp;rsquo; unknown diabetes status in noisy EHR data. Harrison et al. use a Bayesian hierarchical zero-inflated model to assess difference in costs associated with a cost-lowering healthcare intervention. Takvorian et al. use a difference-in-differences strategy to assess the impact of medicare expansion under ACA on cancer treatment delivery.</description>
+    </item>
+    
+    <item>
+      <title>Association of ACA Expansion with Timely Cancer Treatment</title>
+      <link>/publication/acadid/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/publication/acadid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Practical Introduction to Bayesian Estimation of Causal Effects: Parametric and Nonparametric Approaches</title>
+      <link>/publication/bayescausal/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/publication/bayescausal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Bayesian Nonparametric Cost-Effectiveness Analyses: Causal Estimation and Adaptive Subgroup Discovery</title>
       <link>/publication/bnpce/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
       <guid>/publication/bnpce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Economic Outcomes of Insurer-Led Care Management for High-Cost Medicaid Patients</title>
+      <link>/publication/ajmc/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/publication/ajmc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bayesian Nonparametric Method for Zero-Inflated Outcomes: Prediction, Clustering, and Causal Inference</title>
+      <link>/publication/zdp/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 -0500</pubDate>
+      
+      <guid>/publication/zdp/</guid>
       <description></description>
     </item>
     
@@ -221,15 +293,6 @@ Let’s start with simulating some randomly censored data from a Weibull model.<
     </item>
     
     <item>
-      <title>Bayesian Nonparametric Method for Zero-Inflated Outcomes: Prediction, Clustering, and Causal Inference</title>
-      <link>/publication/zdp/</link>
-      <pubDate>Fri, 01 Feb 2019 00:00:00 -0500</pubDate>
-      
-      <guid>/publication/zdp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Example Page</title>
       <link>/tutorial/example/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 -0400</pubDate>
@@ -268,21 +331,12 @@ Tip 2 &amp;hellip;</description>
     </item>
     
     <item>
-      <title>External Project</title>
-      <link>/project/external-project/</link>
+      <title>ChiRP</title>
+      <link>/project/chirp/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/project/external-project/</guid>
+      <guid>/project/chirp/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Internal Project</title>
-      <link>/project/internal-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>/project/internal-project/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus.</description>
     </item>
     
     <item>

@@ -54,11 +54,11 @@ Backgrounds can be applied to any section. Here, the background option is set gi
     </item>
     
     <item>
-      <title>Recent Posts</title>
-      <link>/home/posts/</link>
+      <title>Research</title>
+      <link>/home/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/posts/</guid>
+      <guid>/home/projects/</guid>
       <description></description>
     </item>
     
@@ -90,11 +90,11 @@ Backgrounds can be applied to any section. Here, the background option is set gi
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>/home/projects/</link>
+      <title>Recent Posts</title>
+      <link>/home/posts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/projects/</guid>
+      <guid>/home/posts/</guid>
       <description></description>
     </item>
     
@@ -117,7 +117,7 @@ Backgrounds can be applied to any section. Here, the background option is set gi
     </item>
     
     <item>
-      <title>Selected Publications &amp; Working Papers</title>
+      <title>Selected Papers</title>
       <link>/home/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

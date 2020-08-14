@@ -42,7 +42,7 @@ tags = []
 #   E.g. `projects = ["deep-learning"]` references 
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects = []
+projects = ["bnp","causalbayes"]
 
 # Links (optional).
 url_pdf = "https://arxiv.org/pdf/2002.04706.pdf"

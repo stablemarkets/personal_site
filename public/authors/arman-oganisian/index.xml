@@ -6,10 +6,19 @@
     <description>Recent content in Arman Oganisian on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jul 2019 15:05:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2020 15:05:00 -0400</lastBuildDate>
     
 	<atom:link href="/authors/arman-oganisian/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bayesian Causal Inference with Stan</title>
+      <link>/talk/stancon2020/</link>
+      <pubDate>Thu, 13 Aug 2020 15:05:00 -0400</pubDate>
+      
+      <guid>/talk/stancon2020/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>BNP Model for Zero-Inflated Outcomes: Clustering, Prediction, Causal Inference</title>

@@ -1,6 +1,6 @@
 +++
 title = "Bayesian Nonparametric Method for Zero-Inflated Outcomes: Prediction, Clustering, and Causal Inference"
-date = 2019-02-01T00:00:00
+date = 2020-02-01T00:00:00
 
 # Authors. Comma separated list, e.g. `["Arman Oganisian", "Nandita Mitra", "Jason Roy"]`.
 authors = ["**A. Oganisian**", "Nandita Mitra", "Jason Roy"]
@@ -14,10 +14,10 @@ authors = ["**A. Oganisian**", "Nandita Mitra", "Jason Roy"]
 # 4 = Report
 # 5 = Book
 # 6 = Book section
-publication_types = ["3"]
+publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = ""
+publication = "*Biometrics*"
 publication_short = ""
 
 # Abstract.
@@ -42,10 +42,10 @@ tags = []
 #   E.g. `projects = ["deep-learning"]` references 
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects = []
+projects = ["bnp","causalbayes"]
 
 # Links (optional).
-url_pdf = "https://arxiv.org/abs/1810.09494"
+url_pdf = "https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.13244"
 #url_preprint = "#"
 #url_code = "#"
 #url_dataset = "#"
