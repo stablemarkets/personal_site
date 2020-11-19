@@ -34,6 +34,11 @@ interests = [
 
 # List qualifications (such as academic degrees)
 [[education.courses]]
+  course = "PhD, Biostatistics"
+  institution = "University of Pennsylvania"
+  year = "2021 (exp.)"
+
+[[education.courses]]
   course = "MS, Biostatistics"
   institution = "University of Pennsylvania"
   year = 2018
