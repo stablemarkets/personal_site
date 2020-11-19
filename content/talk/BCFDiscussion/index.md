@@ -1,5 +1,5 @@
 +++
-title = "Invited Discussion on Bayesian Cousal Forests"
+title = "Invited Discussion on Bayesian Causal Forests"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

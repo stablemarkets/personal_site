@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>/</link>
+    <link>https://stablemarkets.netlify.com/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Nov 2020 15:12:00 -0500</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://stablemarkets.netlify.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/home/slider/</link>
+      <link>https://stablemarkets.netlify.com/home/slider/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/slider/</guid>
+      <guid>https://stablemarkets.netlify.com/home/slider/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Academic</title>
-      <link>/home/hero/</link>
+      <link>https://stablemarkets.netlify.com/home/hero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/hero/</guid>
+      <guid>https://stablemarkets.netlify.com/home/hero/</guid>
       <description>The Best Way to Create the Website You Want from Markdown (or RStudio/Jupyter)
 Build Anything with Widgets
 Star</description>
@@ -33,10 +33,10 @@ Star</description>
     
     <item>
       <title>Demos</title>
-      <link>/home/demo/</link>
+      <link>https://stablemarkets.netlify.com/home/demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/demo/</guid>
+      <guid>https://stablemarkets.netlify.com/home/demo/</guid>
       <description>Welcome to the personal demo of Academic. Other demos available include:
  Project Demo (Academic&amp;rsquo;s actual site)  Over 100,000 Amazing Websites have Already Been Built with Academic
 Join the Most Empowered Hugo Community
@@ -47,293 +47,293 @@ Backgrounds can be applied to any section. Here, the background option is set gi
     
     <item>
       <title>What I&#39;m About...</title>
-      <link>/home/about/</link>
+      <link>https://stablemarkets.netlify.com/home/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/about/</guid>
+      <guid>https://stablemarkets.netlify.com/home/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Research</title>
-      <link>/home/projects/</link>
+      <link>https://stablemarkets.netlify.com/home/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/projects/</guid>
+      <guid>https://stablemarkets.netlify.com/home/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Skills</title>
-      <link>/home/skills/</link>
+      <link>https://stablemarkets.netlify.com/home/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/skills/</guid>
+      <guid>https://stablemarkets.netlify.com/home/skills/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Experience</title>
-      <link>/home/experience/</link>
+      <link>https://stablemarkets.netlify.com/home/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/experience/</guid>
+      <guid>https://stablemarkets.netlify.com/home/experience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Accomplish&amp;shy;ments</title>
-      <link>/home/accomplishments/</link>
+      <link>https://stablemarkets.netlify.com/home/accomplishments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/accomplishments/</guid>
+      <guid>https://stablemarkets.netlify.com/home/accomplishments/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Posts</title>
-      <link>/home/posts/</link>
+      <link>https://stablemarkets.netlify.com/home/posts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/posts/</guid>
+      <guid>https://stablemarkets.netlify.com/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gallery</title>
-      <link>/home/gallery/</link>
+      <link>https://stablemarkets.netlify.com/home/gallery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/gallery/</guid>
+      <guid>https://stablemarkets.netlify.com/home/gallery/</guid>
       <description>          </description>
     </item>
     
     <item>
       <title>People</title>
-      <link>/home/people/</link>
+      <link>https://stablemarkets.netlify.com/home/people/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/people/</guid>
+      <guid>https://stablemarkets.netlify.com/home/people/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Selected Papers</title>
-      <link>/home/publications/</link>
+      <link>https://stablemarkets.netlify.com/home/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/publications/</guid>
+      <guid>https://stablemarkets.netlify.com/home/publications/</guid>
       <description> Quickly discover relevant content by filtering publications.
   </description>
     </item>
     
     <item>
       <title>Featured Publications</title>
-      <link>/home/featured/</link>
+      <link>https://stablemarkets.netlify.com/home/featured/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/featured/</guid>
+      <guid>https://stablemarkets.netlify.com/home/featured/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>/home/talks/</link>
+      <link>https://stablemarkets.netlify.com/home/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/talks/</guid>
+      <guid>https://stablemarkets.netlify.com/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Popular Topics</title>
-      <link>/home/tags/</link>
+      <link>https://stablemarkets.netlify.com/home/tags/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/tags/</guid>
+      <guid>https://stablemarkets.netlify.com/home/tags/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>/home/contact/</link>
+      <link>https://stablemarkets.netlify.com/home/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/home/contact/</guid>
+      <guid>https://stablemarkets.netlify.com/home/contact/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Introduction to Nonparametric Bayes</title>
-      <link>/talk/generable/</link>
+      <link>https://stablemarkets.netlify.com/talk/generable/</link>
       <pubDate>Wed, 18 Nov 2020 15:12:00 -0500</pubDate>
       
-      <guid>/talk/generable/</guid>
+      <guid>https://stablemarkets.netlify.com/talk/generable/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Invited Discussion on Bayesian Cousal Forests</title>
-      <link>/talk/bcfdiscussion/</link>
+      <title>Invited Discussion on Bayesian Causal Forests</title>
+      <link>https://stablemarkets.netlify.com/talk/bcfdiscussion/</link>
       <pubDate>Sat, 26 Sep 2020 15:05:00 -0400</pubDate>
       
-      <guid>/talk/bcfdiscussion/</guid>
+      <guid>https://stablemarkets.netlify.com/talk/bcfdiscussion/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hierarchical Bayesian Bootstrap for Heterogeneous Treatment Effect Estimation</title>
-      <link>/publication/hbb/</link>
+      <link>https://stablemarkets.netlify.com/publication/hbb/</link>
       <pubDate>Tue, 22 Sep 2020 00:00:00 -0400</pubDate>
       
-      <guid>/publication/hbb/</guid>
+      <guid>https://stablemarkets.netlify.com/publication/hbb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bayesian Causal Inference with Stan</title>
-      <link>/talk/stancon2020/</link>
+      <link>https://stablemarkets.netlify.com/talk/stancon2020/</link>
       <pubDate>Thu, 13 Aug 2020 15:05:00 -0400</pubDate>
       
-      <guid>/talk/stancon2020/</guid>
+      <guid>https://stablemarkets.netlify.com/talk/stancon2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nonparametric Cost-Effectiveness Analyses</title>
-      <link>/talk/jsm2020/</link>
+      <link>https://stablemarkets.netlify.com/talk/jsm2020/</link>
       <pubDate>Thu, 06 Aug 2020 15:10:00 -0400</pubDate>
       
-      <guid>/talk/jsm2020/</guid>
+      <guid>https://stablemarkets.netlify.com/talk/jsm2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Non-parametric Bayes</title>
-      <link>/project/bnp/</link>
+      <link>https://stablemarkets.netlify.com/project/bnp/</link>
       <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
       
-      <guid>/project/bnp/</guid>
+      <guid>https://stablemarkets.netlify.com/project/bnp/</guid>
       <description>Bayesian nonparametrics is a powerful class of methods including Gaussian processes, Bayesian Additive Regression Trees (BART), Gamma Processes, Dirichlet Process, etc. The central idea is to abstract away from parameters. For instance, standard methods may assume a regression function is linear, indexed by finitely many slope/intercept parameters. A prior on these finitely many parameters then induces a prior on the regression function. To avoid specifying such restrictive functional form, we need to cut out the middle-man (the parameters) and specify priors over the function directly.</description>
     </item>
     
     <item>
       <title>Bayesian Causal Inference</title>
-      <link>/project/causalbayes/</link>
+      <link>https://stablemarkets.netlify.com/project/causalbayes/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 -0400</pubDate>
       
-      <guid>/project/causalbayes/</guid>
+      <guid>https://stablemarkets.netlify.com/project/causalbayes/</guid>
       <description>Causal inference is broadly concerned with estimating parameters governing the causal mechanisms between an intervention or treatment of interest and an outcome. Causal inference provides a framework for 1) constructing different estimands that have explicitly causal, rather than associational, interpretations 2) formulating the assumptions under which we can estimate these using observed data, 3) devising sensitivity analyses around violations of these assumptions, and 4) making valid inferences about these estimans. These are just some of the many advances made in the causal literature.</description>
     </item>
     
     <item>
       <title>Tempered MCMC for Multimodal Posteriors</title>
-      <link>/post/post4/tempered-mcmc/</link>
+      <link>https://stablemarkets.netlify.com/post/post4/tempered-mcmc/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/post4/tempered-mcmc/</guid>
+      <guid>https://stablemarkets.netlify.com/post/post4/tempered-mcmc/</guid>
       <description>Previous Posts This is part of a sequence of posts chronicling my journey to manually implement as many MCMC samplers as I can from scratch. Code from previous psots can be found on GitHub. Also I tweet more than I should: StableMarkets.
  The Multimodal posterior I wanted to write up my own implementation of coupled MCMC chains using a tempered posterior along with an animation of the process. This is a classic sampling strategy used to deal with multi-modal posteriors.</description>
     </item>
     
     <item>
       <title>Applied Causal and Bayesian Modeling</title>
-      <link>/project/applied/</link>
+      <link>https://stablemarkets.netlify.com/project/applied/</link>
       <pubDate>Tue, 03 Mar 2020 00:00:00 -0500</pubDate>
       
-      <guid>/project/applied/</guid>
+      <guid>https://stablemarkets.netlify.com/project/applied/</guid>
       <description>Below is a collection of some applied work with particularly interesting Bayesian and/or causal modeling. For instance, Hubbard et al. use a Bayesian mixture model to infer patients&amp;rsquo; unknown diabetes status in noisy EHR data. Harrison et al. use a Bayesian hierarchical zero-inflated model to assess difference in costs associated with a cost-lowering healthcare intervention. Takvorian et al. use a difference-in-differences strategy to assess the impact of medicare expansion under ACA on cancer treatment delivery.</description>
     </item>
     
     <item>
       <title>Association of ACA Expansion with Timely Cancer Treatment</title>
-      <link>/publication/acadid/</link>
+      <link>https://stablemarkets.netlify.com/publication/acadid/</link>
       <pubDate>Wed, 19 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>/publication/acadid/</guid>
+      <guid>https://stablemarkets.netlify.com/publication/acadid/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Practical Introduction to Bayesian Estimation of Causal Effects: Parametric and Nonparametric Approaches</title>
-      <link>/publication/bayescausal/</link>
+      <link>https://stablemarkets.netlify.com/publication/bayescausal/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>/publication/bayescausal/</guid>
+      <guid>https://stablemarkets.netlify.com/publication/bayescausal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bayesian Nonparametric Cost-Effectiveness Analyses: Causal Estimation and Adaptive Subgroup Discovery</title>
-      <link>/publication/bnpce/</link>
+      <link>https://stablemarkets.netlify.com/publication/bnpce/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>/publication/bnpce/</guid>
+      <guid>https://stablemarkets.netlify.com/publication/bnpce/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Economic Outcomes of Insurer-Led Care Management for High-Cost Medicaid Patients</title>
-      <link>/publication/ajmc/</link>
+      <link>https://stablemarkets.netlify.com/publication/ajmc/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>/publication/ajmc/</guid>
+      <guid>https://stablemarkets.netlify.com/publication/ajmc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bayesian Nonparametric Method for Zero-Inflated Outcomes: Prediction, Clustering, and Causal Inference</title>
-      <link>/publication/zdp/</link>
+      <link>https://stablemarkets.netlify.com/publication/zdp/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>/publication/zdp/</guid>
+      <guid>https://stablemarkets.netlify.com/publication/zdp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>BNP Model for Zero-Inflated Outcomes: Clustering, Prediction, Causal Inference</title>
-      <link>/talk/jsm2019/</link>
+      <link>https://stablemarkets.netlify.com/talk/jsm2019/</link>
       <pubDate>Wed, 31 Jul 2019 15:05:00 -0400</pubDate>
       
-      <guid>/talk/jsm2019/</guid>
+      <guid>https://stablemarkets.netlify.com/talk/jsm2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gamma Process Prior for Semiparametric Survival Analysis</title>
-      <link>/post/post3/gamma-process-prior/</link>
+      <link>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</link>
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/post3/gamma-process-prior/</guid>
+      <guid>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</guid>
       <description>Motviation The Gamma Process Prior Independent Hazards Correlated Hazards    Heads up: equations may not render on blog aggregation sites. See original post here for good formatting. If you like this post, you can follow me on twitter.
 Motviation Suppose we observe survival/event times from some distribution \[T_{i\in1:n} \stackrel{iid}{\sim} f(t)\] where \(f\) is the density and \(F(t)=1-S(t)\) is the corresponding CDF expressed in terms of the survival function \(S(t)\).</description>
     </item>
     
     <item>
       <title>Specifying Accelerated Failure Time Models in STAN</title>
-      <link>/post/post2/specifying-accelerated-failure-time-models-in-stan/</link>
+      <link>https://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
+      <guid>https://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
       <description>This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in Stan.
 Let’s start with simulating some randomly censored data from a Weibull model.</description>
     </item>
     
     <item>
       <title>Bayesian Survival Analysis with Data Augmentation</title>
-      <link>/post/post1/bayesian-survival-analysis-with-data-augmentation/</link>
+      <link>https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</link>
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
+      <guid>https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
       <description>Motivation Model Set Up Data Augmentation Metropolis-in-Gibbs Sampler Simulation Example in R   Motivation When dealing with time-to-event data, right-censoring is a common occurance. Although most are familiar with likelihood construction under right-censoring (and corresponding frequentist estimation), there’s very little available online about Bayesian approaches even for fully parametric models. Here I’ll briefly outline a Bayesian estimation procedure for a Weibull model with right-censoring. The estimation procedure is MCMC based using a data augmentation approach.</description>
     </item>
     
     <item>
       <title>Example Page</title>
-      <link>/tutorial/example/</link>
+      <link>https://stablemarkets.netlify.com/tutorial/example/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 -0400</pubDate>
       
-      <guid>/tutorial/example/</guid>
+      <guid>https://stablemarkets.netlify.com/tutorial/example/</guid>
       <description>In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:
 Tip 1 &amp;hellip;
 Tip 2 &amp;hellip;</description>
@@ -341,46 +341,37 @@ Tip 2 &amp;hellip;</description>
     
     <item>
       <title>A Bayesian latent class approach for EHR‐based phenotyping</title>
-      <link>/publication/bayes_latent_phenotype/</link>
+      <link>https://stablemarkets.netlify.com/publication/bayes_latent_phenotype/</link>
       <pubDate>Mon, 03 Sep 2018 00:00:00 -0400</pubDate>
       
-      <guid>/publication/bayes_latent_phenotype/</guid>
+      <guid>https://stablemarkets.netlify.com/publication/bayes_latent_phenotype/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Bayesian Nonparametric Method for Zero-Inflated Data with Applications to Medical Costs</title>
-      <link>/talk/jsm2017/</link>
+      <link>https://stablemarkets.netlify.com/talk/jsm2017/</link>
       <pubDate>Mon, 30 Jul 2018 15:05:00 -0400</pubDate>
       
-      <guid>/talk/jsm2017/</guid>
+      <guid>https://stablemarkets.netlify.com/talk/jsm2017/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Privacy Policy</title>
-      <link>/privacy/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
-      
-      <guid>/privacy/</guid>
-      <description>&amp;hellip;</description>
-    </item>
-    
-    <item>
       <title>ChiRP</title>
-      <link>/project/chirp/</link>
+      <link>https://stablemarkets.netlify.com/project/chirp/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/project/chirp/</guid>
+      <guid>https://stablemarkets.netlify.com/project/chirp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Slides</title>
-      <link>/slides/example-slides/</link>
+      <link>https://stablemarkets.netlify.com/slides/example-slides/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/slides/example-slides/</guid>
+      <guid>https://stablemarkets.netlify.com/slides/example-slides/</guid>
       <description>Welcome to Slides Academic
 Features  Efficiently write slides in Markdown 3-in-1: Create, Present, and Publish your slides Supports speaker notes Mobile friendly slides  Controls  Next: Right Arrow or Space Previous: Left Arrow Start: Home Finish: End Overview: Esc Speaker notes: S Fullscreen: F Zoom: Alt + Click PDF Export: E  Code Highlighting Inline code: variable
 Code block:

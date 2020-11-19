@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>admin on </title>
-    <link>/authors/admin/</link>
+    <link>https://stablemarkets.netlify.com/authors/admin/</link>
     <description>Recent content in admin on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Nov 2020 19:32:44 -0500</lastBuildDate>
     
-	<atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://stablemarkets.netlify.com/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/author/admin/</link>
+      <link>https://stablemarkets.netlify.com/author/admin/</link>
       <pubDate>Wed, 18 Nov 2020 19:32:44 -0500</pubDate>
       
-      <guid>/author/admin/</guid>
+      <guid>https://stablemarkets.netlify.com/author/admin/</guid>
       <description>I am a 5th year biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the LDI, and a member of the Center for Causal Inference.
 My methodological research focuses on developing nonparametric Bayesian methods for estimating causal effects using complex, observational data. This first requires rigorous causal reasoning to both formulate estimands with precise causal interpretations and determine the conditions under which they are estimable with observed data.</description>
     </item>

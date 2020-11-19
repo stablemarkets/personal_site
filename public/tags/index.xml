@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>/tags/</link>
+    <link>https://stablemarkets.netlify.com/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://stablemarkets.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>applied</title>
-      <link>/tags/applied/</link>
+      <link>https://stablemarkets.netlify.com/tags/applied/</link>
       <pubDate>Tue, 03 Mar 2020 00:00:00 -0500</pubDate>
       
-      <guid>/tags/applied/</guid>
+      <guid>https://stablemarkets.netlify.com/tags/applied/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bnp</title>
-      <link>/tags/bnp/</link>
+      <link>https://stablemarkets.netlify.com/tags/bnp/</link>
       <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
       
-      <guid>/tags/bnp/</guid>
+      <guid>https://stablemarkets.netlify.com/tags/bnp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>causalbayes</title>
-      <link>/tags/causalbayes/</link>
+      <link>https://stablemarkets.netlify.com/tags/causalbayes/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 -0400</pubDate>
       
-      <guid>/tags/causalbayes/</guid>
+      <guid>https://stablemarkets.netlify.com/tags/causalbayes/</guid>
       <description></description>
     </item>
     
