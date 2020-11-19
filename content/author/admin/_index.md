@@ -16,7 +16,7 @@ role = "Biostatistics PhD Candidate"
 organizations = [ { name = "University of Pennsylvania", url = "https://www.dbei.med.upenn.edu/" } ]
 
 # Short bio (displayed in user profile at end of posts)
-bio = "Developing nonparametric Bayesian solutions to challenging causal inference problems."
+bio = "Developing nonparametric Bayesian solutions to complex causal inference problems."
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email = "aoganisi@upenn.edu"
@@ -77,10 +77,8 @@ interests = [
 
 +++
 
-I am a 5th year biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the [LDI](https://ldi.upenn.edu/), and a member of the [Center for Causal Inference](https://www.cceb.med.upenn.edu/cci). My research centers around developing Bayesian nonparametric methods with applications to health economics, prediction, and causal inference problems. Before Penn, I was a Senior Analyst at [Analysis Group](https://www.analysisgroup.com/practices/epidemiology-and--biostatistics/)'s health economics and outcomes research (HEOR) group.
+I am a 5th year biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the [LDI](https://ldi.upenn.edu/), and a member of the [Center for Causal Inference](https://www.cceb.med.upenn.edu/cci). 
 
-Here you will find a link to my full CV and a selection of some past and current research work.
+My methodological research focuses on developing nonparametric Bayesian methods for estimating causal effects using complex, observational data. This first requires rigorous causal reasoning to both formulate estimands with precise causal interpretations and determine the conditions under which they are estimable with observed data. Flexible Bayesian estimation follows from constructing models with a high-dimensional set of parameters that grows with the sample size. The nonparametric Bayes procedures I develop leverage special priors over these high-dimensional spaces to do posterior causal estimation. Crucial for implementation is my work emphasizing efficient computation with these models.
 
-I also blog about statistics, bayesian methods, computation/MCMC, and other things I happen to stumble upon during research.
-
-My blog posts are syndicated on [R-bloggers](https://www.r-bloggers.com/).
+Here you will find a link to my full CV and a selection of some past and current research work. I sometimes blog about statistics, bayesian methods, computation/MCMC, and other things I happen to stumble upon during research. These posts are syndicated on [R-bloggers](https://www.r-bloggers.com/).

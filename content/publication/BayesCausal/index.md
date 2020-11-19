@@ -45,7 +45,7 @@ tags = []
 projects = ["causalbayes"]
 
 # Links (optional).
-url_pdf = "https://arxiv.org/abs/2004.07375"
+url_pdf = "https://onlinelibrary.wiley.com/doi/10.1002/sim.8761"
 #url_preprint = "#"
 #url_code = "#"
 #url_dataset = "#"

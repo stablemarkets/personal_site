@@ -54,7 +54,7 @@ projects = ["causalbayes"]
 
 # Links (optional).
 url_pdf = ""
-url_video = ""
+url_video = "https://www.youtube.com/watch?v=BKumW2RfSoQ&t=38s&ab_channel=Stan"
 url_code = "https://github.com/stablemarkets/StanCon2020_BayesCausal"
 
 # Demo talk page uses LaTeX math.
