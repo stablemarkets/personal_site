@@ -18,7 +18,7 @@
       
       <guid>https://stablemarkets.netlify.com/post/post4/tempered-mcmc/</guid>
       <description>Previous Posts This is part of a sequence of posts chronicling my journey to manually implement as many MCMC samplers as I can from scratch. Code from previous psots can be found on GitHub. Also I tweet more than I should: StableMarkets.
- The Multimodal posterior I wanted to write up my own implementation of coupled MCMC chains using a tempered posterior along with an animation of the process. This is a classic sampling strategy used to deal with multi-modal posteriors.</description>
+ The Multimodal posterior I wanted to write up my own implementation of coupled MCMC chains using a tempered posterior along with an animation of the process.</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</guid>
-      <description>Motviation The Gamma Process Prior Independent Hazards Correlated Hazards    Heads up: equations may not render on blog aggregation sites. See original post here for good formatting. If you like this post, you can follow me on twitter.
+      <description>Motviation The Gamma Process Prior  Independent Hazards Correlated Hazards    Heads up: equations may not render on blog aggregation sites. See original post here for good formatting. If you like this post, you can follow me on twitter.
 Motviation Suppose we observe survival/event times from some distribution \[T_{i\in1:n} \stackrel{iid}{\sim} f(t)\] where \(f\) is the density and \(F(t)=1-S(t)\) is the corresponding CDF expressed in terms of the survival function \(S(t)\).</description>
     </item>
     

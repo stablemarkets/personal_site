@@ -14,6 +14,7 @@ image:
   focal_point: ''
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>This post is an add-on to my <a href="https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/">previous post</a> about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in <a href="https://mc-stan.org/users/interfaces/rstan">Stan</a>.</p>
@@ -123,8 +124,8 @@ generated quantities{
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;80acc0f9293b946800a710dd7f5e211c&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000178 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.78 seconds.
+## Chain 1: Gradient evaluation took 0.000295 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 2.95 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -141,9 +142,9 @@ generated quantities{
 ## Chain 1: Iteration: 19001 / 20000 [ 95%]  (Sampling)
 ## Chain 1: Iteration: 20000 / 20000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 8.81284 seconds (Warm-up)
-## Chain 1:                0.742317 seconds (Sampling)
-## Chain 1:                9.55516 seconds (Total)
+## Chain 1:  Elapsed Time: 9.2897 seconds (Warm-up)
+## Chain 1:                0.815333 seconds (Sampling)
+## Chain 1:                10.105 seconds (Total)
 ## Chain 1:</code></pre>
 <pre class="r"><code>post_draws&lt;-extract(weibull_fit)</code></pre>
 <p>Below we plot posterior distribution of the hazard ratio. The red line indicates the true value under which we generated the data.</p>

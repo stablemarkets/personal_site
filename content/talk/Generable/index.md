@@ -54,7 +54,7 @@ projects = ["bnp"]
 
 # Links (optional).
 url_pdf = ""
-url_video = ""
+url_video = "https://youtu.be/Sv4sAjZjcBg"
 url_code = ""
 
 # Demo talk page uses LaTeX math.

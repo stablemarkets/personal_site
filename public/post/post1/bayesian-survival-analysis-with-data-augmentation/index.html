@@ -449,6 +449,7 @@
 
     <div class="article-style" itemprop="articleBody">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 <ul>
@@ -468,9 +469,11 @@
 <div id="model-set-up" class="section level2">
 <h2>Model Set Up</h2>
 <p>Suppose we observe <span class="math inline">\(i=1,\dots, r\)</span> survival times, <span class="math inline">\(T^o_i\)</span>. Survival times past the end of our study (at time <span class="math inline">\(\tau\)</span>) are censored for subjects <span class="math inline">\(i=r+1, \dots, n\)</span>. We know that the survival times for these subjects are greater than <span class="math inline">\(\tau\)</span>, but that is all. Say we also have some <span class="math inline">\(p\times 1\)</span> covariate vector, <span class="math inline">\(x_i\)</span>. Finally, we have indicator of whether survival time is observed <span class="math inline">\(\delta_{1:n}\)</span> for each subject. A parametric approach follows by assuming a model for <span class="math inline">\(T\)</span>, we choose the Weibull</p>
-<p><span class="math display">\[ T^o_i \sim Weibull(\alpha, \lambda_i) \]</span> Where <span class="math inline">\(\alpha\)</span> is the shape parameter and <span class="math inline">\(\lambda_i\)</span> is a subject-specific scale. An Accelerated Failure Time model (AFT) follows from modeling a reparameterization of the scale function <span class="math inline">\(\lambda_i = exp(-\mu_i\alpha)\)</span>, where <span class="math inline">\(\mu_i = x_i^T\beta\)</span>.</p>
+<p><span class="math display">\[ T^o_i \sim Weibull(\alpha, \lambda_i) \]</span>
+Where <span class="math inline">\(\alpha\)</span> is the shape parameter and <span class="math inline">\(\lambda_i\)</span> is a subject-specific scale. An Accelerated Failure Time model (AFT) follows from modeling a reparameterization of the scale function <span class="math inline">\(\lambda_i = exp(-\mu_i\alpha)\)</span>, where <span class="math inline">\(\mu_i = x_i^T\beta\)</span>.</p>
 <p>We’ll consider the setting where we regress on a binary treatment indicator, <span class="math inline">\(\mu_i = \beta_0 + \beta_1A\)</span> where <span class="math inline">\(A=1\)</span> indicates treated and <span class="math inline">\(A=0\)</span> indicates untreated/placebo. This is a funky reparameterization, but it yields intuitive interpretations for <span class="math inline">\(\beta_1\)</span> in terms of the Weibull’s hazard function, <span class="math inline">\(h(t|\beta,x, \alpha) = \lambda_i\alpha x^{\alpha-1}\)</span>. Substituting <span class="math inline">\(\lambda_i\)</span>, we see the hazard for treated subjects is <span class="math inline">\(h(t|A=1) = e^{-(\beta_0 + \beta_1)*\alpha}\alpha t^{\alpha-1}\)</span> and for untreated subjects it is <span class="math inline">\(h(t|A=1) = e^{-(\beta_0)*\alpha}\alpha t^{\alpha-1}\)</span>. The hazard ratio is,</p>
-<p><span class="math display">\[HR = \frac{h(t|A=1) }{h(t|A=0)} = e^{-\beta_1*\alpha} \]</span> If <span class="math inline">\(HR=.5\)</span>, then the hazard of death, for example, at time <span class="math inline">\(t\)</span> is <span class="math inline">\(50\%\)</span> lower in the treated group, relative to the untreated.</p>
+<p><span class="math display">\[HR = \frac{h(t|A=1) }{h(t|A=0)} = e^{-\beta_1*\alpha} \]</span>
+If <span class="math inline">\(HR=.5\)</span>, then the hazard of death, for example, at time <span class="math inline">\(t\)</span> is <span class="math inline">\(50\%\)</span> lower in the treated group, relative to the untreated.</p>
 <p>From a Bayesian point of view, we are interested in the posterior <span class="math inline">\(p(\beta, \alpha | T^o_{1:r} , \delta_{1:n}, \tau)\)</span>. Once we have this, we can get a whole posterior distribution for the survival function itself - as well as any quantity derived from it. For example, posterior mean and credible intervals for <span class="math inline">\(HR\)</span> (just a function of <span class="math inline">\(\beta_1\)</span> and <span class="math inline">\(\alpha\)</span>). We can also get posterior survival curve estimates for each treatment group. For the Weibull, the survival curve is given by <span class="math inline">\(S(t|\beta,\alpha, A) = exp(-\lambda t^\alpha)\)</span> - again just a function of <span class="math inline">\(\beta_1\)</span> and <span class="math inline">\(\alpha\)</span>.</p>
 </div>
 <div id="data-augmentation" class="section level2">
@@ -481,15 +484,18 @@
  p(T^o_{1:r}, \delta_{1:n}| \tau, \beta, \alpha) &amp; = \int p(T_{1:n}, \delta_{1:n} | \tau, \beta, \alpha) \ dT^m_{r+1:n} \\
   &amp; = \int p(\delta_{1:n} | T_{1:n}, \tau, \beta, \alpha) \ p(T_{1:n} | \tau, \beta, \alpha) \ dT^m_{r+1:n}
 \end{aligned}
-\]</span> Now in this ideal, complete-data setting, we observe patients with either <span class="math inline">\(\delta_i = 1 \ \cap \ T_i &gt; \tau\)</span> or with <span class="math inline">\(\delta_i = 0 \ \cap \ T_i &lt; \tau\)</span>. That is, <span class="math inline">\(p(\delta_{i} | T_i, \tau, \beta, \alpha)=1\)</span> if either of these conditions hold and <span class="math inline">\(0\)</span> otherwise.</p>
-<p>We also assume that subjects are independent so that <span class="math inline">\(p(T_{i=1:n} | \tau, \beta, \alpha) = p(T^o_{1:r}| \tau, \beta, \alpha)p( T^m_{r+1:n} | \tau, \beta, \alpha)\)</span>. So the likelihood simplifies to: <span class="math display">\[
+\]</span>
+Now in this ideal, complete-data setting, we observe patients with either <span class="math inline">\(\delta_i = 1 \ \cap \ T_i &gt; \tau\)</span> or with <span class="math inline">\(\delta_i = 0 \ \cap \ T_i &lt; \tau\)</span>. That is, <span class="math inline">\(p(\delta_{i} | T_i, \tau, \beta, \alpha)=1\)</span> if either of these conditions hold and <span class="math inline">\(0\)</span> otherwise.</p>
+<p>We also assume that subjects are independent so that <span class="math inline">\(p(T_{i=1:n} | \tau, \beta, \alpha) = p(T^o_{1:r}| \tau, \beta, \alpha)p( T^m_{r+1:n} | \tau, \beta, \alpha)\)</span>. So the likelihood simplifies to:
+<span class="math display">\[
 \begin{aligned}
  p(T^o_{1:r}, \delta_{1:n}| \tau, \beta, \alpha) &amp; = \prod_{i=1}^n\int p(\delta_{i} | T_{i}, \tau, \beta, \alpha) \ p(T_{i} | \tau, \beta, \alpha) \ dT^m_{r+1:n} \\
  &amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} \int p(\delta_{i} | T^m_{i}, \tau, \beta, \alpha) \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i} \\
 &amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} \int I(T_i^m &gt; \tau) \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i} \\
 &amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} \int_\tau^\infty \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i} \\
 \end{aligned}
-\]</span> The first line follows by independence of observations. The second line follows by separating censored and uncensored subjects. <span class="math inline">\(p(\delta_i | -)=1\)</span> for all uncensored subjects, but <span class="math inline">\(p(\delta_i | -)=1\)</span> for censored subjects only when <span class="math inline">\(T_i^m \in (0, \infty)\)</span>. Otherwise, the integrand is 0. Therefore, in the fourth line we only need to integrate of the region where the integrand is non-zero.</p>
+\]</span>
+The first line follows by independence of observations. The second line follows by separating censored and uncensored subjects. <span class="math inline">\(p(\delta_i | -)=1\)</span> for all uncensored subjects, but <span class="math inline">\(p(\delta_i | -)=1\)</span> for censored subjects only when <span class="math inline">\(T_i^m \in (0, \infty)\)</span>. Otherwise, the integrand is 0. Therefore, in the fourth line we only need to integrate of the region where the integrand is non-zero.</p>
 <p>Now the integral is over the region <span class="math inline">\(T_i^m \in (0, \infty)\)</span>. But in this region <span class="math inline">\(p(\delta_{i} | T^m_{i}, \tau, \beta, \alpha)=1\)</span> only when <span class="math inline">\(T_i^m &gt;\tau\)</span>.</p>
 <p>This is the usual likelihood for frequentist survival models: uncensored subjects contribute to the likelihood via the density while censored subjects contribute to the likelihood via the survival function <span class="math inline">\(\int_\tau^\infty \ p(T_{i}^m | \tau, \beta, \alpha) \ dT^m_{i}\)</span>. Functions for this integral exist in for most basic distributions in <code>R</code>. For our Weibull model, it is <code>1-pweibull()</code>. We would simply place priors on <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\alpha\)</span>, then sample from the posterior using MCMC.</p>
 <p>But what if this integral was too hard to evaluate (as it may be for more complicated censoring mechanisms) and the complete data likelihood given below is easier?</p>
@@ -497,24 +503,28 @@
 \begin{aligned}
  p(T^o_{1:r}, T^m_{r+1:n}, \delta_{1:n}| \tau, \beta, \alpha) &amp; = \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} I(T_i^m &gt; \tau)\ p(T_{i}^m | \tau, \beta, \alpha)\\
 \end{aligned}
-\]</span> Then we can design a Gibbs sampler around this complete data likelihood.</p>
+\]</span>
+Then we can design a Gibbs sampler around this complete data likelihood.</p>
 </div>
 <div id="metropolis-in-gibbs-sampler" class="section level2">
 <h2>Metropolis-in-Gibbs Sampler</h2>
-<p>The target posterior of interest is <span class="math display">\[p(\beta, \alpha, T_{r+1:n}^m | T^o_{1:r}, \delta_{1:n}) = p(\beta, \alpha | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n}) \ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n})\]</span> Where each conditional posterior is known up to a proportionality constant. With a joint prior <span class="math inline">\(p(\beta, \alpha)\)</span> specified, we have</p>
+<p>The target posterior of interest is
+<span class="math display">\[p(\beta, \alpha, T_{r+1:n}^m | T^o_{1:r}, \delta_{1:n}) = p(\beta, \alpha | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n}) \ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n})\]</span>
+Where each conditional posterior is known up to a proportionality constant. With a joint prior <span class="math inline">\(p(\beta, \alpha)\)</span> specified, we have</p>
 <p><span class="math display">\[
 \begin{aligned}
 p(\beta, \alpha | T_{r+1:n}^m, T^o_{1:r}, \delta_{1:n}) &amp; \propto \prod_{i| \delta_i=0} p(T_{i}^o | \tau, \beta, \alpha) \prod_{i| \delta_i=1} I(T_i^m &gt; \tau)\ p(T_{i}^m | \tau, \beta, \alpha)  \\
 &amp; \propto p(\beta, \alpha) \prod_{i=1}^n p(T_{i}| \tau, \beta, \alpha) \\
 \end{aligned}
-\]</span> Note here that <span class="math inline">\(p(T_{i}| \tau, \beta, \alpha)\)</span> is the assumed Weibull density. We can use a Metropolis step to sample <span class="math inline">\((\beta, \alpha)\)</span> from this distribution.</p>
-The second conditional posterior is
+\]</span>
+Note here that <span class="math inline">\(p(T_{i}| \tau, \beta, \alpha)\)</span> is the assumed Weibull density. We can use a Metropolis step to sample <span class="math inline">\((\beta, \alpha)\)</span> from this distribution.</p>
+<p>The second conditional posterior is
 <span class="math display">\[\begin{equation}
 \begin{aligned}
 p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta_i=1} I(T_i^m &gt; \tau)\ p(T_{i}^m | \tau, \beta, \alpha)
 \end{aligned}
 \end{equation}\]</span>
-<p>This is a truncated Weibull distribution (truncated at the bottom by <span class="math inline">\(\tau\)</span>). We can also sample from this using a Metropolis step.</p>
+This is a truncated Weibull distribution (truncated at the bottom by <span class="math inline">\(\tau\)</span>). We can also sample from this using a Metropolis step.</p>
 <p>The Gibbs sampler alternates between sampling from these two conditionals:</p>
 <ol style="list-style-type: decimal">
 <li>Given parameters <span class="math inline">\((\beta, \alpha)\)</span>, impute <span class="math inline">\(T^m_i\)</span> by drawing from <span class="math inline">\(p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n})\)</span>, for each <span class="math inline">\(i=r+1,\dots, n\)</span>.</li>
@@ -530,7 +540,8 @@ p(T_{r+1:n}^m | \beta, \alpha, T^o_{1:r}, \delta_{1:n}) \propto \prod_{i| \delta
 <p>Here is the estimated survival function for each treatment group. Overlayed are the non-parametric estimates from a stratified Kaplan-Meier (KM) estimator. Note the parametric model is correctly specified here, so it does just as well as the KM in terms of estimating the mean curve. But the parametric model provides a less noisy fit - notice the credible bands are narrower at later time points when the at-risk counts get low in each treatment arm.</p>
 <p><img src="/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/sampler-1.png" width="672" /></p>
 <p>That’s just a helpful reminder of the efficiency gains parametric models have over nonparametric ones (when they’re correctly specified. Let’s take a look at the posterior distribution of the hazard ratio. The true value is indicated by the red line.</p>
-<p><img src="/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png" width="1152" /> We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and <span class="math inline">\(95\%\)</span> credible interval are <span class="math inline">\(.32 \ (.24-.40)\)</span>. The true value is <span class="math inline">\(.367\)</span>. Not too bad. Remember this is only a single simulated dataset.</p>
+<p><img src="/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png" width="1152" />
+We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and <span class="math inline">\(95\%\)</span> credible interval are <span class="math inline">\(.32 \ (.24-.40)\)</span>. The true value is <span class="math inline">\(.367\)</span>. Not too bad. Remember this is only a single simulated dataset.</p>
 </div>
 
     </div>

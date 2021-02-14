@@ -18,6 +18,7 @@
       
       <guid>https://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
       <description>
+&lt;script src=&#34;https://stablemarkets.netlify.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;This post is an add-on to my &lt;a href=&#34;https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/&#34;&gt;previous post&lt;/a&gt; about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in &lt;a href=&#34;https://mc-stan.org/users/interfaces/rstan&#34;&gt;Stan&lt;/a&gt;.&lt;/p&gt;
@@ -127,8 +128,8 @@ generated quantities{
 &lt;pre&gt;&lt;code&gt;## 
 ## SAMPLING FOR MODEL &amp;#39;80acc0f9293b946800a710dd7f5e211c&amp;#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000178 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.78 seconds.
+## Chain 1: Gradient evaluation took 0.000295 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 2.95 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -145,9 +146,9 @@ generated quantities{
 ## Chain 1: Iteration: 19001 / 20000 [ 95%]  (Sampling)
 ## Chain 1: Iteration: 20000 / 20000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 8.81284 seconds (Warm-up)
-## Chain 1:                0.742317 seconds (Sampling)
-## Chain 1:                9.55516 seconds (Total)
+## Chain 1:  Elapsed Time: 9.2897 seconds (Warm-up)
+## Chain 1:                0.815333 seconds (Sampling)
+## Chain 1:                10.105 seconds (Total)
 ## Chain 1:&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;post_draws&amp;lt;-extract(weibull_fit)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Below we plot posterior distribution of the hazard ratio. The red line indicates the true value under which we generated the data.&lt;/p&gt;
