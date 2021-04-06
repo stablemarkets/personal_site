@@ -82,6 +82,8 @@ interests = [
 
 +++
 
-I am a 5th year biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the [LDI](https://ldi.upenn.edu/), and a member of the [Center for Causal Inference](https://www.cceb.med.upenn.edu/cci). My methodological research centers around developing nonparametric Bayesian methods for flexibly estimating causal effects with observational data. This involves, among other things, devising methods for efficient posterior computation via MCMC. Though broadly applicable, these methodological interests are particularly motivated by applied problems in health economics and, more recently, oncology.
+I am a 5th year biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the [LDI](https://ldi.upenn.edu/), and a member of the [Center for Causal Inference](https://www.cceb.med.upenn.edu/cci). I recently passed my dissertation defense and will be joining Brown University's [Department of Biostatistics](https://www.brown.edu/academics/public-health/biostats/home) as an tenure-track Assistant Professor in July 2021.
+
+My methodological research centers around developing nonparametric Bayesian methods for flexibly estimating causal effects with observational data. This involves, among other things, devising priors over high-dimensional model spaces and constructing MCMC methods for efficient posterior computation. Though broadly applicable, these methodological interests are particularly motivated by applied problems in health economics and, more recently, statistical complexities in oncology research.
 
 Here you will find a link to my full CV and a selection of some past and current research work. I sometimes blog about statistics, bayesian methods, computation/MCMC, and other things I happen to stumble upon during research. These posts are syndicated on [R-bloggers](https://www.r-bloggers.com/).

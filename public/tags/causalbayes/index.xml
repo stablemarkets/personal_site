@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>causalbayes on </title>
-    <link>https://stablemarkets.netlify.com/tags/causalbayes/</link>
+    <link>http://stablemarkets.netlify.com/tags/causalbayes/</link>
     <description>Recent content in causalbayes on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Jun 2020 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://stablemarkets.netlify.com/tags/causalbayes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://stablemarkets.netlify.com/tags/causalbayes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bayesian Causal Inference</title>
-      <link>https://stablemarkets.netlify.com/project/causalbayes/</link>
+      <link>http://stablemarkets.netlify.com/project/causalbayes/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 -0400</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/project/causalbayes/</guid>
+      <guid>http://stablemarkets.netlify.com/project/causalbayes/</guid>
       <description>Causal inference is broadly concerned with estimating parameters governing the causal mechanisms between an intervention or treatment of interest and an outcome. Causal inference provides a framework for 1) constructing different estimands that have explicitly causal, rather than associational, interpretations 2) formulating the assumptions under which we can estimate these using observed data, 3) devising sensitivity analyses around violations of these assumptions, and 4) making valid inferences about these estimans. These are just some of the many advances made in the causal literature.</description>
     </item>
     

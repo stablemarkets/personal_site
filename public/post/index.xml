@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
-    <link>https://stablemarkets.netlify.com/post/</link>
+    <link>http://stablemarkets.netlify.com/post/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://stablemarkets.netlify.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://stablemarkets.netlify.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tempered MCMC for Multimodal Posteriors</title>
-      <link>https://stablemarkets.netlify.com/post/post4/tempered-mcmc/</link>
+      <link>http://stablemarkets.netlify.com/post/post4/tempered-mcmc/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post4/tempered-mcmc/</guid>
+      <guid>http://stablemarkets.netlify.com/post/post4/tempered-mcmc/</guid>
       <description>Previous Posts This is part of a sequence of posts chronicling my journey to manually implement as many MCMC samplers as I can from scratch. Code from previous psots can be found on GitHub. Also I tweet more than I should: StableMarkets.
  The Multimodal posterior I wanted to write up my own implementation of coupled MCMC chains using a tempered posterior along with an animation of the process.</description>
     </item>
     
     <item>
       <title>Gamma Process Prior for Semiparametric Survival Analysis</title>
-      <link>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</link>
+      <link>http://stablemarkets.netlify.com/post/post3/gamma-process-prior/</link>
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</guid>
+      <guid>http://stablemarkets.netlify.com/post/post3/gamma-process-prior/</guid>
       <description>Motviation The Gamma Process Prior  Independent Hazards Correlated Hazards    Heads up: equations may not render on blog aggregation sites. See original post here for good formatting. If you like this post, you can follow me on twitter.
 Motviation Suppose we observe survival/event times from some distribution \[T_{i\in1:n} \stackrel{iid}{\sim} f(t)\] where \(f\) is the density and \(F(t)=1-S(t)\) is the corresponding CDF expressed in terms of the survival function \(S(t)\).</description>
     </item>
     
     <item>
       <title>Specifying Accelerated Failure Time Models in STAN</title>
-      <link>https://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</link>
+      <link>http://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
+      <guid>http://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
       <description>This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in Stan.
 Let’s start with simulating some randomly censored data from a Weibull model.</description>
     </item>
     
     <item>
       <title>Bayesian Survival Analysis with Data Augmentation</title>
-      <link>https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</link>
+      <link>http://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</link>
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
+      <guid>http://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
       <description>Motivation Model Set Up Data Augmentation Metropolis-in-Gibbs Sampler Simulation Example in R   Motivation When dealing with time-to-event data, right-censoring is a common occurance. Although most are familiar with likelihood construction under right-censoring (and corresponding frequentist estimation), there’s very little available online about Bayesian approaches even for fully parametric models. Here I’ll briefly outline a Bayesian estimation procedure for a Weibull model with right-censoring. The estimation procedure is MCMC based using a data augmentation approach.</description>
     </item>
     

@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MCMC on </title>
-    <link>https://stablemarkets.netlify.com/categories/mcmc/</link>
+    <link>http://stablemarkets.netlify.com/categories/mcmc/</link>
     <description>Recent content in MCMC on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://stablemarkets.netlify.com/categories/mcmc/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://stablemarkets.netlify.com/categories/mcmc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tempered MCMC for Multimodal Posteriors</title>
-      <link>https://stablemarkets.netlify.com/post/post4/tempered-mcmc/</link>
+      <link>http://stablemarkets.netlify.com/post/post4/tempered-mcmc/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post4/tempered-mcmc/</guid>
+      <guid>http://stablemarkets.netlify.com/post/post4/tempered-mcmc/</guid>
       <description>
-&lt;script src=&#34;https://stablemarkets.netlify.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://stablemarkets.netlify.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;previous-posts&#34; class=&#34;section level2&#34;&gt;
@@ -30,26 +30,26 @@
 &lt;p&gt;I wanted to write up my own implementation of coupled MCMC chains using a tempered posterior along with an animation of the process. This is a classic sampling strategy used to deal with multi-modal posteriors. Here I have a tri-modal target posterior:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ p(\theta \mid D) = \frac{1}{3}N(-20,1) + \frac{1}{3}N(0,1) + \frac{1}{3}N(20,1)\]&lt;/span&gt;
 The density looks like this&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_post-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_post-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Notice the regions of flat posterior density at about &lt;span class=&#34;math inline&#34;&gt;\((-15,-5)\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\((5,15)\)&lt;/span&gt;…these are often referred to as “bottlenecks”.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;problems-with-standard-mh&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Problems with standard MH&lt;/h2&gt;
 &lt;p&gt;These bottlenecks causes standard MCMC algorithms like Metropolis-Hastings (MH) to get stuck at one of these modes. Suppose at iteration &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; of a standard MH sampler, the current value of the parameter is &lt;span class=&#34;math inline&#34;&gt;\(\theta^{(t-1)}= - 5\)&lt;/span&gt;. Suppose we use a Gaussian jumping distribution, so that we propose &lt;span class=&#34;math inline&#34;&gt;\(\theta^{(t)}\)&lt;/span&gt; from &lt;span class=&#34;math inline&#34;&gt;\(\theta^{(t)} \sim N( -5, \sigma)\)&lt;/span&gt;. Let’s say that &lt;span class=&#34;math inline&#34;&gt;\(\sigma=1\)&lt;/span&gt; so the proposal distribution is proportional to the green density below&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_proposal-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_proposal-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;It’s clear here that we’re almost never going to propose draws from the other two modes from this jumping distribution. Vast majority of the proposals to the left will end up in the bottlenecks and get rejected. We could increase &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; to make the proposal distribution is wide enough to jump over these bottlenecks. However, we know in MH that increasing &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; tends to reduce acceptance probability in general. So maybe that helps us explore the other two modes, but we won’t be accepting frequently - slowing down how efficiently the chain explores the posterior.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;the-tempered-posterior&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The Tempered Posterior&lt;/h2&gt;
 &lt;p&gt;The idea behind tempering is to have two chains: one that is exploring the tempered posterior and another that explores the posterior. Ideally, the tempered posterior won’t have these bottlenecks, so a chain exploring it won’t have trouble getting from mode to mode. Then, we can propose jumps of the chain exploring the posterior to the tempered chain. This increases the chance of our chain of interest jumping to other modes.&lt;/p&gt;
 &lt;p&gt;So when we say “tempered” we mean raising the posterior to some power (temperature) &lt;span class=&#34;math inline&#34;&gt;\(T\)&lt;/span&gt;: &lt;span class=&#34;math inline&#34;&gt;\(p(\theta \mid D)^T\)&lt;/span&gt;. Let’s see what &lt;span class=&#34;math inline&#34;&gt;\(p(\theta \mid D)^T\)&lt;/span&gt; looks like (proportional to gray density):&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_temper-1.png&#34; width=&#34;960&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post4/2020-03-22-tempered-mcmc_files/figure-html/plot_temper-1.png&#34; width=&#34;960&#34; /&gt;
 Notice that the tempered posterior has no bottlenecks. So an MH chain exploring this distribution won’t get stuck in bottlenecks of the posterior. So now we set up two chains: one exploring the tempered posterior and another exploring the posterior - both with standard MH updates. In each iteration, once we’ve update the two chains, we propose a swap between the two chains that is accepted with some probability. We say that the chains “meet” when these swaps occur. That is, we’ve in a sense “coupled” the chains.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;linking-both-chains&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Linking both chains&lt;/h2&gt;
 &lt;p&gt;Above is a gif of this playing out over 200 iterations. The gray chain is the standard MH chain (not including the swaps) that explores the tempered distribution. The blue chain is the chain exploring the posterior. The red dots indicate values of the blue chain that are swaps from the tempered chain. I.e. at these red points, the chains meet. Notice that the blue chain now easily hops between the modes by occasionally jumping to the gray chain.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post4/2020-03-22-tempered-mcmc_files/figure-html/make_gif-.gif&#34; width=&#34;1152&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post4/2020-03-22-tempered-mcmc_files/figure-html/make_gif-.gif&#34; width=&#34;1152&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;How this scales to higher dimensions was a topic of much research - still sort of is. The choice of temperatures is crucial. Often, we need to use several chains, not just two chains as we did here.&lt;/p&gt;
 &lt;p&gt;Some references: &lt;a href=&#34;https://watermark.silverchair.com/btg427.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAnIwggJuBgkqhkiG9w0BBwagggJfMIICWwIBADCCAlQGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM04FQsJU_yuBlk6pUAgEQgIICJU5z_DCSyt4AWDbdYc5DKoYVAwlXc4EAxGX3JiQSB-xRmw1yVhp7HxYz7FChVxgevsfxYge4-YiegspbC3DHo7YoF2f0am8rPPZiH8R2bHbm-jRG5FrlgIARRVCPqOvH4RzJpAyOSfMujiZapiJJ-1TQzBx2vWWOYl9rcKNsndj25dj19gNC8ac0qNlfe9kaNmZTkjJvkw3OGVhkBhYINM0MxVx22VBI0BDfGHlPUU8pfKIWm-IlCOJWGYOafYrxp5Jkx1D_tQcAGhfnUUx_IDNQkxnfi6zrfun_PBw9X846gb3HEaZl-6CPzWSwy9-eyx0B_hw_YzAuv1a1ykwlsVcFxRFqatSGy_qQNcHOnV5mDNqssmKvk4YFtbBjvRlhcoE3lIocOplAOO3WiVMfqG1s16N2z-t6UDKGCLJINsQtiW2bExmkhip4zd0jZiYG7RemKRlnSKVjMFrs98bHgNmOkeAZomX-ICG8dUmmQG6y9hL-LtGVtd7MR5jbop71eCMtfKT-02RkSSZrR-SN9czgiNlxf46w1IEu3ayAITwwCQkqi9Jme4lQBvo9FXpE8EVE75-qryOmfqIDbcVrq4uylsw149rTPupS5EVfMI_Rb9ULQAgLAugE5LU3hKz8rFDJzbcK1OBPmR36ZUBX7Ly_5jupsTZ-Qsm2HZkDLHXsgSlnB6xst7mLE9gL1jpjO3RVCrOp87n351p3-4Fb8SIYa35XNw&#34;&gt;Altekar (2004)&lt;/a&gt; is a nice outline and has references to seminal works by Geyers, Gilks and Roberts, etc. I based my sampler on the math they provide in the paper. Also this &lt;a href=&#34;https://darrenjw.wordpress.com/2013/09/29/parallel-tempering-and-metropolis-coupled-mcmc/&#34;&gt;post&lt;/a&gt; by Darren Wilkinson on MH coupled MCMC is a really nice treatment on this topic as well.&lt;/p&gt;
 &lt;/div&gt;
@@ -58,12 +58,12 @@ Notice that the tempered posterior has no bottlenecks. So an MH chain exploring 
     
     <item>
       <title>Gamma Process Prior for Semiparametric Survival Analysis</title>
-      <link>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</link>
+      <link>http://stablemarkets.netlify.com/post/post3/gamma-process-prior/</link>
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</guid>
+      <guid>http://stablemarkets.netlify.com/post/post3/gamma-process-prior/</guid>
       <description>
-&lt;script src=&#34;https://stablemarkets.netlify.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://stablemarkets.netlify.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -110,7 +110,7 @@ Frequentist estimation of &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;
 &lt;span class=&#34;math display&#34;&gt;\[H_0(t) \sim \mathcal{GP}\Big(\ \beta H^*(t), \ \beta \Big),  \ \ t\geq0\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Below in Panel A are some prior realizations of &lt;span class=&#34;math inline&#34;&gt;\(H_0(t)\)&lt;/span&gt; with a Weibull &lt;span class=&#34;math inline&#34;&gt;\(H^*\)&lt;/span&gt; prior for various concentration parameters, &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;. Notice for low &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; the realizations are widely dispersed around the mean cumulative hazard. Higher &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; yields to tighter dispersion around &lt;span class=&#34;math inline&#34;&gt;\(H^*\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Since there’s a correspondence between the &lt;span class=&#34;math inline&#34;&gt;\(H_0(t)\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\lambda_0(t)\)&lt;/span&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(S_0(t)\)&lt;/span&gt;, we could also plot prior realizations of the baseline survival function &lt;span class=&#34;math inline&#34;&gt;\(S_0(t) = \exp\big\{- H_0(t) \big\}\)&lt;/span&gt; using the realization &lt;span class=&#34;math inline&#34;&gt;\(\{H_0(t)\}_{t\geq0}\)&lt;/span&gt;. This is shown in Panel B with the Weibull survival function &lt;span class=&#34;math inline&#34;&gt;\(S^*\)&lt;/span&gt; corresponding to &lt;span class=&#34;math inline&#34;&gt;\(H^*\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-1-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-1-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;correlated-hazards&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Correlated Hazards&lt;/h3&gt;
@@ -128,7 +128,7 @@ Frequentist estimation of &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;
 &lt;/ul&gt;
 &lt;p&gt;Notice that if &lt;span class=&#34;math inline&#34;&gt;\(c=0\)&lt;/span&gt;, then &lt;span class=&#34;math inline&#34;&gt;\(u=0\)&lt;/span&gt; with probability &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; and the process reduces to the independent Gamma Process in the previous section. Now consider &lt;span class=&#34;math inline&#34;&gt;\(c=1\)&lt;/span&gt;. Then, the hazard rate in the next interval has mean &lt;span class=&#34;math inline&#34;&gt;\(E[\lambda_{k+1} | u_k] = \frac{ \alpha_k + u_k }{\beta+c}\)&lt;/span&gt;. Now &lt;span class=&#34;math inline&#34;&gt;\(u_k \sim Pois(\lambda_k)\)&lt;/span&gt; is centered around the current &lt;span class=&#34;math inline&#34;&gt;\(\lambda_k\)&lt;/span&gt; - allowinng &lt;span class=&#34;math inline&#34;&gt;\(\lambda_k\)&lt;/span&gt; to influence &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{k+1}\)&lt;/span&gt; through the latent variable &lt;span class=&#34;math inline&#34;&gt;\(u_k\)&lt;/span&gt;. The higher the current hazard, &lt;span class=&#34;math inline&#34;&gt;\(\lambda_k\)&lt;/span&gt;, the higher &lt;span class=&#34;math inline&#34;&gt;\(u_k\)&lt;/span&gt;, and the higher the mean of the next hazard, &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{k+1}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Below are some realizations of a correlated and independent Gamma processes centered around the &lt;span class=&#34;math inline&#34;&gt;\(Weibull(2,1.5)\)&lt;/span&gt; hazard shown in red. One realization is higlighted in blue to make it easier to see the differences between correlated and independent realizations&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-2-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-2-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Notice the correlated gamma process looks very snake-y. This is because of the autoregressive structure on &lt;span class=&#34;math inline&#34;&gt;\(\{\lambda_0(t)\}_{t\geq0}\)&lt;/span&gt; induced by the latent process&lt;span class=&#34;math inline&#34;&gt;\(\{ u_t\}_{t\geq0}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -137,12 +137,12 @@ Frequentist estimation of &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;
     
     <item>
       <title>Specifying Accelerated Failure Time Models in STAN</title>
-      <link>https://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</link>
+      <link>http://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
+      <guid>http://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</guid>
       <description>
-&lt;script src=&#34;https://stablemarkets.netlify.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://stablemarkets.netlify.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;This post is an add-on to my &lt;a href=&#34;https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/&#34;&gt;previous post&lt;/a&gt; about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post. Luckily you don’t have to because you can easily specify that same model in &lt;a href=&#34;https://mc-stan.org/users/interfaces/rstan&#34;&gt;Stan&lt;/a&gt;.&lt;/p&gt;
@@ -279,7 +279,7 @@ generated quantities{
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;hist(post_draws$hazard_ratio,
      xlab=&amp;#39;Hazard Ratio&amp;#39;, main=&amp;#39;Hazard Ratio Posterior Distribution&amp;#39;)
 abline(v=exp(-1*true_beta[2,1]*true_alpha), col=&amp;#39;red&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_hazard_ratio-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_hazard_ratio-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(post_draws$hazard_ratio)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 0.3646075&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quantile(post_draws$hazard_ratio, probs = c(.025, .975))&lt;/code&gt;&lt;/pre&gt;
@@ -307,18 +307,18 @@ legend(&amp;#39;topright&amp;#39;,
                   &amp;#39;Posterior Survival Draws (PBO)&amp;#39;),
        col=c(&amp;#39;black&amp;#39;,&amp;#39;gray&amp;#39;,&amp;#39;blue&amp;#39;,&amp;#39;lightblue&amp;#39;), 
        lty=c(1,0,1,0), pch=c(NA,15,NA,15), bty=&amp;#39;n&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_survival-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_survival-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Bayesian Survival Analysis with Data Augmentation</title>
-      <link>https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</link>
+      <link>http://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</link>
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
+      <guid>http://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</guid>
       <description>
-&lt;script src=&#34;https://stablemarkets.netlify.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://stablemarkets.netlify.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -407,9 +407,9 @@ This is a truncated Weibull distribution (truncated at the bottom by &lt;span cl
 &lt;p&gt;All of the code implementing the augmented sampler (from scratch!) can be found on my &lt;a href=&#34;https://github.com/stablemarkets/BayesianTutorials/tree/master/BayesianSurvival&#34;&gt;GitHub&lt;/a&gt;. Basically I simulate a data set with a binary treatment indicator for 1,000 subjects with censoring and survival times independently drawn from a Weibull. \&lt;/p&gt;
 &lt;p&gt;For the &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; vector, I use independent &lt;span class=&#34;math inline&#34;&gt;\(N(0,sd=100)\)&lt;/span&gt; priors. For the shape parameter, I use an &lt;span class=&#34;math inline&#34;&gt;\(Exp(1)\)&lt;/span&gt; prior. I run a single MCMC chain for 20,000 iterations and toss the first 15,000 out as burn-in.&lt;/p&gt;
 &lt;p&gt;Here is the estimated survival function for each treatment group. Overlayed are the non-parametric estimates from a stratified Kaplan-Meier (KM) estimator. Note the parametric model is correctly specified here, so it does just as well as the KM in terms of estimating the mean curve. But the parametric model provides a less noisy fit - notice the credible bands are narrower at later time points when the at-risk counts get low in each treatment arm.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/sampler-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/sampler-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;That’s just a helpful reminder of the efficiency gains parametric models have over nonparametric ones (when they’re correctly specified. Let’s take a look at the posterior distribution of the hazard ratio. The true value is indicated by the red line.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png&#34; width=&#34;1152&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post1/2019-03-06-bayesian-survival-analysis-with-data-augmentation_files/figure-html/hazard_ratio-1.png&#34; width=&#34;1152&#34; /&gt;
 We could have run this thing for longer (and with multiple chains with different starting values). But I think this gets the point across. The posterior mean and &lt;span class=&#34;math inline&#34;&gt;\(95\%\)&lt;/span&gt; credible interval are &lt;span class=&#34;math inline&#34;&gt;\(.32 \ (.24-.40)\)&lt;/span&gt;. The true value is &lt;span class=&#34;math inline&#34;&gt;\(.367\)&lt;/span&gt;. Not too bad. Remember this is only a single simulated dataset.&lt;/p&gt;
 &lt;/div&gt;
 </description>

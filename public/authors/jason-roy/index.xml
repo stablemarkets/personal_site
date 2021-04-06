@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jason Roy on </title>
-    <link>https://stablemarkets.netlify.com/authors/jason-roy/</link>
+    <link>http://stablemarkets.netlify.com/authors/jason-roy/</link>
     <description>Recent content in Jason Roy on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 22 Sep 2020 00:00:00 -0400</lastBuildDate>
     
-	<atom:link href="https://stablemarkets.netlify.com/authors/jason-roy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://stablemarkets.netlify.com/authors/jason-roy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hierarchical Bayesian Bootstrap for Heterogeneous Treatment Effect Estimation</title>
-      <link>https://stablemarkets.netlify.com/publication/hbb/</link>
+      <link>http://stablemarkets.netlify.com/publication/hbb/</link>
       <pubDate>Tue, 22 Sep 2020 00:00:00 -0400</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/publication/hbb/</guid>
+      <guid>http://stablemarkets.netlify.com/publication/hbb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Practical Introduction to Bayesian Estimation of Causal Effects: Parametric and Nonparametric Approaches</title>
-      <link>https://stablemarkets.netlify.com/publication/bayescausal/</link>
+      <link>http://stablemarkets.netlify.com/publication/bayescausal/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/publication/bayescausal/</guid>
+      <guid>http://stablemarkets.netlify.com/publication/bayescausal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bayesian Nonparametric Cost-Effectiveness Analyses: Causal Estimation and Adaptive Subgroup Discovery</title>
-      <link>https://stablemarkets.netlify.com/publication/bnpce/</link>
+      <link>http://stablemarkets.netlify.com/publication/bnpce/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/publication/bnpce/</guid>
+      <guid>http://stablemarkets.netlify.com/publication/bnpce/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bayesian Nonparametric Method for Zero-Inflated Outcomes: Prediction, Clustering, and Causal Inference</title>
-      <link>https://stablemarkets.netlify.com/publication/zdp/</link>
+      <link>http://stablemarkets.netlify.com/publication/zdp/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 -0500</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/publication/zdp/</guid>
+      <guid>http://stablemarkets.netlify.com/publication/zdp/</guid>
       <description></description>
     </item>
     

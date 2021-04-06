@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nonparametrics on </title>
-    <link>https://stablemarkets.netlify.com/categories/nonparametrics/</link>
+    <link>http://stablemarkets.netlify.com/categories/nonparametrics/</link>
     <description>Recent content in Nonparametrics on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://stablemarkets.netlify.com/categories/nonparametrics/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://stablemarkets.netlify.com/categories/nonparametrics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Gamma Process Prior for Semiparametric Survival Analysis</title>
-      <link>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</link>
+      <link>http://stablemarkets.netlify.com/post/post3/gamma-process-prior/</link>
       <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://stablemarkets.netlify.com/post/post3/gamma-process-prior/</guid>
+      <guid>http://stablemarkets.netlify.com/post/post3/gamma-process-prior/</guid>
       <description>
-&lt;script src=&#34;https://stablemarkets.netlify.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://stablemarkets.netlify.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -65,7 +65,7 @@ Frequentist estimation of &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;
 &lt;span class=&#34;math display&#34;&gt;\[H_0(t) \sim \mathcal{GP}\Big(\ \beta H^*(t), \ \beta \Big),  \ \ t\geq0\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Below in Panel A are some prior realizations of &lt;span class=&#34;math inline&#34;&gt;\(H_0(t)\)&lt;/span&gt; with a Weibull &lt;span class=&#34;math inline&#34;&gt;\(H^*\)&lt;/span&gt; prior for various concentration parameters, &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;. Notice for low &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; the realizations are widely dispersed around the mean cumulative hazard. Higher &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; yields to tighter dispersion around &lt;span class=&#34;math inline&#34;&gt;\(H^*\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Since there’s a correspondence between the &lt;span class=&#34;math inline&#34;&gt;\(H_0(t)\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\lambda_0(t)\)&lt;/span&gt;, and &lt;span class=&#34;math inline&#34;&gt;\(S_0(t)\)&lt;/span&gt;, we could also plot prior realizations of the baseline survival function &lt;span class=&#34;math inline&#34;&gt;\(S_0(t) = \exp\big\{- H_0(t) \big\}\)&lt;/span&gt; using the realization &lt;span class=&#34;math inline&#34;&gt;\(\{H_0(t)\}_{t\geq0}\)&lt;/span&gt;. This is shown in Panel B with the Weibull survival function &lt;span class=&#34;math inline&#34;&gt;\(S^*\)&lt;/span&gt; corresponding to &lt;span class=&#34;math inline&#34;&gt;\(H^*\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-1-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-1-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;correlated-hazards&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Correlated Hazards&lt;/h3&gt;
@@ -83,7 +83,7 @@ Frequentist estimation of &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;
 &lt;/ul&gt;
 &lt;p&gt;Notice that if &lt;span class=&#34;math inline&#34;&gt;\(c=0\)&lt;/span&gt;, then &lt;span class=&#34;math inline&#34;&gt;\(u=0\)&lt;/span&gt; with probability &lt;span class=&#34;math inline&#34;&gt;\(1\)&lt;/span&gt; and the process reduces to the independent Gamma Process in the previous section. Now consider &lt;span class=&#34;math inline&#34;&gt;\(c=1\)&lt;/span&gt;. Then, the hazard rate in the next interval has mean &lt;span class=&#34;math inline&#34;&gt;\(E[\lambda_{k+1} | u_k] = \frac{ \alpha_k + u_k }{\beta+c}\)&lt;/span&gt;. Now &lt;span class=&#34;math inline&#34;&gt;\(u_k \sim Pois(\lambda_k)\)&lt;/span&gt; is centered around the current &lt;span class=&#34;math inline&#34;&gt;\(\lambda_k\)&lt;/span&gt; - allowinng &lt;span class=&#34;math inline&#34;&gt;\(\lambda_k\)&lt;/span&gt; to influence &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{k+1}\)&lt;/span&gt; through the latent variable &lt;span class=&#34;math inline&#34;&gt;\(u_k\)&lt;/span&gt;. The higher the current hazard, &lt;span class=&#34;math inline&#34;&gt;\(\lambda_k\)&lt;/span&gt;, the higher &lt;span class=&#34;math inline&#34;&gt;\(u_k\)&lt;/span&gt;, and the higher the mean of the next hazard, &lt;span class=&#34;math inline&#34;&gt;\(\lambda_{k+1}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Below are some realizations of a correlated and independent Gamma processes centered around the &lt;span class=&#34;math inline&#34;&gt;\(Weibull(2,1.5)\)&lt;/span&gt; hazard shown in red. One realization is higlighted in blue to make it easier to see the differences between correlated and independent realizations&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.com/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-2-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://stablemarkets.netlify.com/post/post3/2019-05-11-the-gamma-process-prior_files/figure-html/unnamed-chunk-2-.gif&#34; width=&#34;864&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Notice the correlated gamma process looks very snake-y. This is because of the autoregressive structure on &lt;span class=&#34;math inline&#34;&gt;\(\{\lambda_0(t)\}_{t\geq0}\)&lt;/span&gt; induced by the latent process&lt;span class=&#34;math inline&#34;&gt;\(\{ u_t\}_{t\geq0}\)&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
