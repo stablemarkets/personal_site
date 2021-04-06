@@ -36,7 +36,7 @@ interests = [
 [[education.courses]]
   course = "PhD, Biostatistics"
   institution = "University of Pennsylvania"
-  year = "2021 (exp.)"
+  year = "2021"
 
 [[education.courses]]
   course = "MS, Biostatistics"
@@ -82,7 +82,7 @@ interests = [
 
 +++
 
-I am a 5th year biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the [LDI](https://ldi.upenn.edu/), and a member of the [Center for Causal Inference](https://www.cceb.med.upenn.edu/cci). I recently passed my dissertation defense and will be joining Brown University's [Department of Biostatistics](https://www.brown.edu/academics/public-health/biostats/home) as an tenure-track Assistant Professor in July 2021.
+I am a 5th year biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the [LDI](https://ldi.upenn.edu/), and a member of the [Center for Causal Inference](https://www.cceb.med.upenn.edu/cci). I recently passed my dissertation defense and will be joining Brown University's [Department of Biostatistics](https://www.brown.edu/academics/public-health/biostats/home) as an Assistant Professor (tenure-track) in July 2021.
 
 My methodological research centers around developing nonparametric Bayesian methods for flexibly estimating causal effects with observational data. This involves, among other things, devising priors over high-dimensional model spaces and constructing MCMC methods for efficient posterior computation. Though broadly applicable, these methodological interests are particularly motivated by applied problems in health economics and, more recently, statistical complexities in oncology research.
 
