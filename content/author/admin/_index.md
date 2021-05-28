@@ -9,17 +9,17 @@ authors = ["admin"]
 superuser = true
 
 # Role/position
-role = "Biostatistics PhD Candidate"
+role = "Assistant Professor of Biostatistics"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-organizations = [ { name = "University of Pennsylvania", url = "https://www.dbei.med.upenn.edu/" } ]
+organizations = [ { name = "Brown University", url = "https://www.brown.edu/academics/public-health/biostats/home" } ]
 
 # Short bio (displayed in user profile at end of posts)
 bio = "Developing nonparametric Bayesian solutions to complex causal inference problems."
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email = "aoganisi@upenn.edu"
+email = "aoganisi@brown.edu"
 
 # List (academic) interests or hobbies
 interests = [
@@ -82,7 +82,7 @@ interests = [
 
 +++
 
-I am a 5th year biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the [LDI](https://ldi.upenn.edu/), and a member of the [Center for Causal Inference](https://www.cceb.med.upenn.edu/cci). I recently passed my dissertation defense and will be joining Brown University's [Department of Biostatistics](https://www.brown.edu/academics/public-health/biostats/home) as an Assistant Professor (tenure-track) in July 2021.
+I am an incoming Assistant Professor of Biostaistics (tenure-track) at Brown University's [Department of Biostatistics](https://www.brown.edu/academics/public-health/biostats/home), starting July 1 2021.I received my PhD in Biostatistics from the University of Pennsylvania.
 
 My methodological research centers around developing nonparametric Bayesian methods for flexibly estimating causal effects with observational data. This involves, among other things, devising priors over high-dimensional model spaces and constructing MCMC methods for efficient posterior computation. Though broadly applicable, these methodological interests are particularly motivated by applied problems in health economics and, more recently, statistical complexities in oncology research.
 

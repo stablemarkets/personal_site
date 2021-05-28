@@ -6,7 +6,7 @@
     <description>Recent content in admin on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Apr 2021 09:02:44 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 06 Apr 2021 09:07:05 -0400</lastBuildDate>
     
 	<atom:link href="http://stablemarkets.netlify.com/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,11 +14,11 @@
     <item>
       <title></title>
       <link>http://stablemarkets.netlify.com/author/admin/</link>
-      <pubDate>Tue, 06 Apr 2021 09:02:44 -0400</pubDate>
+      <pubDate>Tue, 06 Apr 2021 09:07:05 -0400</pubDate>
       
       <guid>http://stablemarkets.netlify.com/author/admin/</guid>
-      <description>I am a 5th year biostatistics PhD candidate at the University of Pennsylvania, an Associate Fellow at the LDI, and a member of the Center for Causal Inference. I recently passed my dissertation defense and will be joining Brown University&amp;rsquo;s Department of Biostatistics as an Assistant Professor (tenure-track) in July 2021.
-My methodological research centers around developing nonparametric Bayesian methods for flexibly estimating causal effects with observational data. This involves, among other things, devising priors over high-dimensional model spaces and constructing MCMC methods for efficient posterior computation.</description>
+      <description>I am an incoming Assistant Professor of Biostaistics (tenure-track) at Brown University&amp;rsquo;s Department of Biostatistics, starting July 1 2021.I received my PhD in Biostatistics from the University of Pennsylvania.
+My methodological research centers around developing nonparametric Bayesian methods for flexibly estimating causal effects with observational data. This involves, among other things, devising priors over high-dimensional model spaces and constructing MCMC methods for efficient posterior computation. Though broadly applicable, these methodological interests are particularly motivated by applied problems in health economics and, more recently, statistical complexities in oncology research.</description>
     </item>
     
   </channel>
