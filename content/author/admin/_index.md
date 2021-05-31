@@ -9,7 +9,7 @@ authors = ["admin"]
 superuser = true
 
 # Role/position
-role = "Assistant Professor of Biostatistics"
+role = "Incoming Assistant Professor of Biostatistics"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -56,7 +56,7 @@ interests = [
 [[social]]
   icon = "envelope"
   icon_pack = "fas"
-  link = "mailto:aoganisi@upenn.edu"
+  link = "mailto:aoganisi@brown.edu"
 
 [[social]]
   icon = "twitter"
@@ -82,8 +82,8 @@ interests = [
 
 +++
 
-I am an incoming Assistant Professor of Biostaistics (tenure-track) at Brown University's [Department of Biostatistics](https://www.brown.edu/academics/public-health/biostats/home), starting July 1 2021.I received my PhD in Biostatistics from the University of Pennsylvania.
+I am an incoming Assistant Professor of Biostaistics (tenure-track) at Brown University's [Department of Biostatistics](https://www.brown.edu/academics/public-health/biostats/home), starting July 1, 2021.
 
-My methodological research centers around developing nonparametric Bayesian methods for flexibly estimating causal effects with observational data. This involves, among other things, devising priors over high-dimensional model spaces and constructing MCMC methods for efficient posterior computation. Though broadly applicable, these methodological interests are particularly motivated by applied problems in health economics and, more recently, statistical complexities in oncology research.
+My methodological research centers around developing nonparametric Bayesian methods for flexibly estimating causal effects with observational data. This involves, among other things, devising priors over high-dimensional model spaces and constructing MCMC methods for efficient posterior computation. Though broadly applicable, these methodological interests are motivated by applied problems in health economics and, more recently, statistical challenges in oncology research.
 
-Here you will find a link to my full CV and a selection of some past and current research work. I sometimes blog about statistics, bayesian methods, computation/MCMC, and other things I happen to stumble upon during research. These posts are syndicated on [R-bloggers](https://www.r-bloggers.com/).
+I received my PhD in Biostatistics from the University of Pennsylvania under supervision of Jason Roy and Nandita Mitra. Before starting my PhD I was a Senior Analyst at [Analysis Group's HEOR team](https://www.analysisgroup.com/practices/health-care/health-economics-and--outcomes-research-heor/). Here you will find a link to my full CV and a selection of some past and current research work. I sometimes blog about statistics, bayesian methods, computation/MCMC, and other things I happen to stumble upon during research. These posts are syndicated on [R-bloggers](https://www.r-bloggers.com/).
