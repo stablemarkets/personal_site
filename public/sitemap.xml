@@ -1,605 +1,219 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/talk/generable/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/talk/bcfdiscussion/</loc>
-      <lastmod>2020-11-19T16:18:07-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/publication/hbb/</loc>
-      <lastmod>2020-11-18T19:27:17-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/talk/stancon2020/</loc>
-      <lastmod>2020-11-18T19:27:17-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/talk/jsm2020/</loc>
-      <lastmod>2020-11-18T19:27:17-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/project/bnp/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/project/causalbayes/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/post/post4/tempered-mcmc/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/project/applied/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/publication/acadid/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/publication/bayescausal/</loc>
-      <lastmod>2020-11-18T19:27:17-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/publication/bnpce/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/publication/ajmc/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/publication/zdp/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/talk/jsm2019/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/post/post3/gamma-process-prior/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/post/post2/specifying-accelerated-failure-time-models-in-stan/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/post/post1/bayesian-survival-analysis-with-data-augmentation/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/tutorial/example/</loc>
-      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/tutorial/</loc>
-      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/publication/bayes_latent_phenotype/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/talk/jsm2017/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/project/chirp/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/author/admin/</loc>
-      <lastmod>2021-05-31T12:28:24-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/a.-oganisian/</loc>
-      <lastmod>2020-11-18T19:27:17-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/publication_types/2/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/publication_types/3/</loc>
-      <lastmod>2020-11-18T19:27:17-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/arman-oganisian/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/author/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/</loc>
-      <lastmod>2020-11-18T19:27:17-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/categories/bayesian/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/categories/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/dt-grande/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/grace-choi/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/ihuoma-eneli/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/je-bekelman/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/jm-harrison/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/jason-roy/</loc>
-      <lastmod>2020-11-18T19:27:17-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/jing-huang/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/joanna-harton/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/kh-chaiyachati/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/l.-charles-bailey/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/ln-shulman/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/levon-utidjian/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/categories/mcmc/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/manik-chhabra/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/n.-mitra/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/nandita-mitra/</loc>
-      <lastmod>2020-11-18T19:27:17-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/categories/nonparametrics/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/post/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/project/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/publication_types/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/publication/</loc>
-      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/categories/r/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/r.-mamtani/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/rm-werner/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/rebecca-a.-hubbard/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/talk/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/su-takvorian/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/slides/</loc>
-      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/slides/example-slides/</loc>
-      <lastmod>2019-03-06T10:35:05-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/categories/stan/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/categories/survival-analysis/</loc>
-      <lastmod>2021-02-13T20:17:30-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/tags/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/yong-chen/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/authors/admin/</loc>
-      <lastmod>2021-05-31T12:28:24-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/tags/applied/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/tags/bnp/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>http://stablemarkets.netlify.com/tags/causalbayes/</loc>
-      <lastmod>2020-08-13T21:28:58-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://stablemarkets.netlify.app/courses/example/python/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/courses/example/visualization/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/courses/example/stats/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/</loc>
+    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/courses/</loc>
+    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/courses/example/</loc>
+    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/arman-oganisian/</loc>
+    <lastmod>2020-11-18T15:12:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/authors/</loc>
+    <lastmod>2020-11-18T15:12:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/talk/introduction-to-nonparametric-bayes/</loc>
+    <lastmod>2020-11-18T15:12:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/event/</loc>
+    <lastmod>2020-11-18T15:12:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/talk/invited-discussion-on-bayesian-causal-forests/</loc>
+    <lastmod>2020-09-26T15:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/a.-oganisian/</loc>
+    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication-type/3/</loc>
+    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication/hbb/</loc>
+    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/jason-roy/</loc>
+    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/nandita-mitra/</loc>
+    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication_types/</loc>
+    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication/</loc>
+    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/talk/bayesian-causal-inference-with-stan/</loc>
+    <lastmod>2020-08-13T15:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/talk/nonparametric-cost-effectiveness-analyses/</loc>
+    <lastmod>2020-08-06T15:10:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/tag/bnp/</loc>
+    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/project/bnp/</loc>
+    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/project/</loc>
+    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/tags/</loc>
+    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/project/causalbayes/</loc>
+    <lastmod>2020-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/tag/causalbayes/</loc>
+    <lastmod>2020-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/category/bayesian/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/categories/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/category/mcmc/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/post/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/category/r/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/post/post4/tempered-mcmc/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/tag/applied/</loc>
+    <lastmod>2020-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/project/applied/</loc>
+    <lastmod>2020-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication-type/2/</loc>
+    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication/acadid/</loc>
+    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/je-bekelman/</loc>
+    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/ln-shulman/</loc>
+    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/n.-mitra/</loc>
+    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/r.-mamtani/</loc>
+    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/rm-werner/</loc>
+    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/su-takvorian/</loc>
+    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication/bayescausal/</loc>
+    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication/bnpce/</loc>
+    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/dt-grande/</loc>
+    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication/ajmc/</loc>
+    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/jm-harrison/</loc>
+    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/kh-chaiyachati/</loc>
+    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/manik-chhabra/</loc>
+    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication/zdp/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/talk/bnp-model-for-zero-inflated-outcomes-clustering-prediction-causal-inference/</loc>
+    <lastmod>2019-07-31T15:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/post/post3/gamma-process-prior/</loc>
+    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/category/nonparametrics/</loc>
+    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/category/survival-analysis/</loc>
+    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/post/post2/specifying-accelerated-failure-time-models-in-stan/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/category/stan/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/post/post1/bayesian-survival-analysis-with-data-augmentation/</loc>
+    <lastmod>2019-03-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication/bayes_latent_phenotype/</loc>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/grace-choi/</loc>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/ihuoma-eneli/</loc>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/jing-huang/</loc>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/joanna-harton/</loc>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/l.-charles-bailey/</loc>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/levon-utidjian/</loc>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/rebecca-a.-hubbard/</loc>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/yong-chen/</loc>
+    <lastmod>2018-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/talk/a-bayesian-nonparametric-method-for-zero-inflated-data-with-applications-to-medical-costs/</loc>
+    <lastmod>2018-07-30T15:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/project/chirp/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/admin/</loc>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/arman-oganisian/</loc>
+  </url>
 </urlset>

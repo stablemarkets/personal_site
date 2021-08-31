@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>**A. Oganisian** | </title>
+    <link>https://stablemarkets.netlify.app/author/a.-oganisian/</link>
+      <atom:link href="https://stablemarkets.netlify.app/author/a.-oganisian/index.xml" rel="self" type="application/rss+xml" />
+    <description>**A. Oganisian**</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 22 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://stablemarkets.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>**A. Oganisian**</title>
+      <link>https://stablemarkets.netlify.app/author/a.-oganisian/</link>
+    </image>
+    
+    <item>
+      <title>Hierarchical Bayesian Bootstrap for Heterogeneous Treatment Effect Estimation</title>
+      <link>https://stablemarkets.netlify.app/publication/hbb/</link>
+      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/publication/hbb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Association of ACA Expansion with Timely Cancer Treatment</title>
+      <link>https://stablemarkets.netlify.app/publication/acadid/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/publication/acadid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Practical Introduction to Bayesian Estimation of Causal Effects: Parametric and Nonparametric Approaches</title>
+      <link>https://stablemarkets.netlify.app/publication/bayescausal/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/publication/bayescausal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bayesian Nonparametric Cost-Effectiveness Analyses: Causal Estimation and Adaptive Subgroup Discovery</title>
+      <link>https://stablemarkets.netlify.app/publication/bnpce/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/publication/bnpce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Economic Outcomes of Insurer-Led Care Management for High-Cost Medicaid Patients</title>
+      <link>https://stablemarkets.netlify.app/publication/ajmc/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/publication/ajmc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bayesian Nonparametric Method for Zero-Inflated Outcomes: Prediction, Clustering, and Causal Inference</title>
+      <link>https://stablemarkets.netlify.app/publication/zdp/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/publication/zdp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Bayesian latent class approach for EHR‐based phenotyping</title>
+      <link>https://stablemarkets.netlify.app/publication/bayes_latent_phenotype/</link>
+      <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/publication/bayes_latent_phenotype/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

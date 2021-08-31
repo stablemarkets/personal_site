@@ -1,69 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on </title>
-    <link>http://stablemarkets.netlify.com/categories/</link>
-    <description>Recent content in Categories on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://stablemarkets.netlify.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Bayesian</title>
-      <link>http://stablemarkets.netlify.com/categories/bayesian/</link>
-      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://stablemarkets.netlify.com/categories/bayesian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MCMC</title>
-      <link>http://stablemarkets.netlify.com/categories/mcmc/</link>
-      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://stablemarkets.netlify.com/categories/mcmc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nonparametrics</title>
-      <link>http://stablemarkets.netlify.com/categories/nonparametrics/</link>
-      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://stablemarkets.netlify.com/categories/nonparametrics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>http://stablemarkets.netlify.com/categories/r/</link>
-      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://stablemarkets.netlify.com/categories/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stan</title>
-      <link>http://stablemarkets.netlify.com/categories/stan/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://stablemarkets.netlify.com/categories/stan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Survival Analysis</title>
-      <link>http://stablemarkets.netlify.com/categories/survival-analysis/</link>
-      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://stablemarkets.netlify.com/categories/survival-analysis/</guid>
-      <description></description>
-    </item>
+    <title>Categories | </title>
+    <link>https://stablemarkets.netlify.app/categories/</link>
+      <atom:link href="https://stablemarkets.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://stablemarkets.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Categories</title>
+      <link>https://stablemarkets.netlify.app/categories/</link>
+    </image>
     
   </channel>
 </rss>

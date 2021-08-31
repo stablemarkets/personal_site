@@ -1,4 +1,0 @@
-theme = "hugo-academic"
-baseURL = "http://stablemarkets.netlify.com/"
-languageCode = "en-us"
-title = "StableMarkets"

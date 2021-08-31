@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>causalbayes | </title>
+    <link>https://stablemarkets.netlify.app/tag/causalbayes/</link>
+      <atom:link href="https://stablemarkets.netlify.app/tag/causalbayes/index.xml" rel="self" type="application/rss+xml" />
+    <description>causalbayes</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://stablemarkets.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>causalbayes</title>
+      <link>https://stablemarkets.netlify.app/tag/causalbayes/</link>
+    </image>
+    
+    <item>
+      <title>Bayesian Causal Inference</title>
+      <link>https://stablemarkets.netlify.app/project/causalbayes/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/project/causalbayes/</guid>
+      <description>&lt;p&gt;Causal inference is broadly concerned with estimating parameters governing the causal mechanisms between an intervention or treatment of interest and an outcome. Causal inference provides a framework for 1) constructing different estimands that have explicitly causal, rather than associational, interpretations 2) formulating the assumptions under which we can estimate these using observed data, 3) devising sensitivity analyses around violations of these assumptions, and 4) making valid inferences about these estimans. These are just some of the many advances made in the causal literature.&lt;/p&gt;
+&lt;p&gt;In practice, causal inference requires complex, high-dimensional models. Here, the Bayesian paradigm has a lot to offer. For instance,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Shrinking&lt;/strong&gt; heterogeneous (stratum-specific) causal effects towards an overall average causal effect for sparse strata.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sparsity priors&lt;/strong&gt; such as Horseshoes and Spike-and-Slab that can regularize high-dimensional nuissance parameters. Such parameters are common in g-computation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sensitivity Analyses&lt;/strong&gt; around causal identification assumptions. Uncertainty about the direction and magnitude of the bias can be expressed via a prior and baked into posterior inference.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See below for work related to Bayesian causal modeling.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

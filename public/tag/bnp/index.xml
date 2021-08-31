@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bnp | </title>
+    <link>https://stablemarkets.netlify.app/tag/bnp/</link>
+      <atom:link href="https://stablemarkets.netlify.app/tag/bnp/index.xml" rel="self" type="application/rss+xml" />
+    <description>bnp</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://stablemarkets.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>bnp</title>
+      <link>https://stablemarkets.netlify.app/tag/bnp/</link>
+    </image>
+    
+    <item>
+      <title>Non-parametric Bayes</title>
+      <link>https://stablemarkets.netlify.app/project/bnp/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/project/bnp/</guid>
+      <description>&lt;p&gt;Bayesian nonparametrics is a powerful class of methods including Gaussian processes, Bayesian Additive Regression Trees (BART), Gamma Processes, Dirichlet Process, etc. The central idea is to abstract away from parameters. For instance, standard methods may assume a regression function is linear, indexed by finitely many slope/intercept parameters. A prior on these finitely many parameters then induces a prior on the regression function. To avoid specifying such restrictive functional form, we need to cut out the middle-man (the parameters) and specify priors over the function &lt;em&gt;directly&lt;/em&gt;. Bayesian nonparametrics is characterized by priors over such abstract objects: priors over regressions, priors over baseline hazard functions, prior distributions over distributions themselves.&lt;/p&gt;
+&lt;p&gt;These methods give you the flexibility of machine learning, with the added benefit uncertainty quantitification via full posterior inference.&lt;/p&gt;
+&lt;p&gt;See below for work related to nonparametric Bayesian inference.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ChiRP</title>
+      <link>https://stablemarkets.netlify.app/project/chirp/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/project/chirp/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

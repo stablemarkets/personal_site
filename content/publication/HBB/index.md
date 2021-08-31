@@ -2,7 +2,6 @@
 title = "Hierarchical Bayesian Bootstrap for Heterogeneous Treatment Effect Estimation"
 date = 2020-09-22T00:00:00
 
-# Authors. Comma separated list, e.g. `["Arman Oganisian","Nandita Mitra", "Jason Roy"]`.
 authors = ["**A. Oganisian**","Nandita Mitra", "Jason Roy"]
 
 # Publication type.
