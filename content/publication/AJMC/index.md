@@ -3,7 +3,7 @@ title = "Economic Outcomes of Insurer-Led Care Management for High-Cost Medicaid
 date = 2020-02-11T00:00:00
 
 # Authors. Comma separated list, e.g.
-authors = ["JM Harrison", "**A. Oganisian**",  "DT Grande", "N. Mitra", "Manik Chhabra", "KH Chaiyachati"]
+authors = ["JM Harrison", "A. Oganisian",  "DT Grande", "N. Mitra", "Manik Chhabra", "KH Chaiyachati"]
 
 # Publication type.
 # Legend:

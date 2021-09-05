@@ -3,8 +3,7 @@ title = "A Bayesian latent class approach for EHR‐based phenotyping"
 
 date = 2018-09-03T00:00:00
 
-# Authors. Comma separated list, e.g. `["Rebecca A. Hubbard", "Jing Huang", "Joanna Harton", "Arman Oganisian","Grace Choi", "Levon Utidjian", "Ihuoma Eneli", "L. Charles Bailey",  "Yong Chen"]`.
-authors = ["Rebecca A. Hubbard", "Jing Huang", "Joanna Harton", "**A. Oganisian**","Grace Choi", "Levon Utidjian", "Ihuoma Eneli", "L. Charles Bailey",  "Yong Chen"]
+authors = ["Rebecca A. Hubbard", "Jing Huang", "Joanna Harton", "A. Oganisian","Grace Choi", "Levon Utidjian", "Ihuoma Eneli", "L. Charles Bailey",  "Yong Chen"]
 
 # Publication type.
 # Legend:

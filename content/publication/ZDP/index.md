@@ -3,7 +3,7 @@ title = "Bayesian Nonparametric Method for Zero-Inflated Outcomes: Prediction, C
 date = 2020-02-01T00:00:00
 
 # Authors. Comma separated list, e.g. `["Arman Oganisian", "Nandita Mitra", "Jason Roy"]`.
-authors = ["**A. Oganisian**", "Nandita Mitra", "Jason Roy"]
+authors = ["A. Oganisian", "Nandita Mitra", "Jason Roy"]
 
 # Publication type.
 # Legend:

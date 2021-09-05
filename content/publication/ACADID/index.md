@@ -3,7 +3,7 @@ title = "Association of ACA Expansion with Timely Cancer Treatment"
 date = 2020-02-19T00:00:00
 
 # Authors. Comma separated list, e.g.
-authors = ["SU Takvorian", "**A. Oganisian**", "R. Mamtani", "N. Mitra", "LN Shulman", "JE Bekelman", "RM Werner"]
+authors = ["SU Takvorian", "A. Oganisian", "R. Mamtani", "N. Mitra", "LN Shulman", "JE Bekelman", "RM Werner"]
 
 # Publication type.
 # Legend:

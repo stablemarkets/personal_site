@@ -3,7 +3,7 @@ title = "A Practical Introduction to Bayesian Estimation of Causal Effects: Para
 date = 2020-02-11T00:00:00
 
 # Authors. Comma separated list, e.g. `["Arman Oganisian", "Jason Roy"]`.
-authors = ["**A. Oganisian**", "Jason Roy"]
+authors = ["A. Oganisian", "Jason Roy"]
 
 # Publication type.
 # Legend:

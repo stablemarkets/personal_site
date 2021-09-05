@@ -27,10 +27,15 @@ content:
   filter_button:
   - name: All
     tag: '*'
-  - name: Deep Learning
-    tag: Deep Learning
-  - name: Other
-    tag: Demo
+  - name: Collaborative
+    tag: applied
+  - name: Nonparametric bayes
+    tag: bnp
+  - name: Bayesian Causal Inference
+    tag: causalbayes
+  - name: Software
+    tag: software 
+
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
