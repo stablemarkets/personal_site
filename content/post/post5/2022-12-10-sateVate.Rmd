@@ -1,0 +1,72 @@
+---
+title: "Sample versus Population ATE in Bayesian Caual Estimation"
+author: Arman Oganisian
+date: '2020-03-22'
+slug: tempered-mcmc
+categories:
+  - Bayesian
+  - causal inference
+image:
+  caption: ''
+  focal_point: ''
+output:
+  blogdown::html_page:
+    toc: false
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(latex2exp)
+
+```
+
+Writing up a quick post to clarify a point of common confusion when doing posterior inference for causal effects. All causal inference (regardless of statistical modeling paradigm in consideration) begins with expressing the target estimand in terms of unobservables (e.g. potential outcomes) and linking them to observed data with ``identification assumptions.'' Two common estimands (which are often confused) are the population level average treatment effect (ATE) and the sample level ATE. These are two very different estimands and inferential procedures therefore differ for each. Yet, they seem to be confused with each other quite often. This post clarifies the distinction.
+
+Suppose we have a binary treatment $A_i\in\{0,1\}$, outcome $Y_i$, and a set of pre-treatment confounders $L_i$ for $n$ independent subjects. Let the observed data be $D = \{Y_i, A_i, L_i \}_{i=1}^n$. Much of the following can be found in [Oganisian & Roy, 2020](https://onlinelibrary.wiley.com/doi/full/10.1002/sim.8761) and [Ding and Li, 2018](https://projecteuclid.org/journals/statistical-science/volume-33/issue-2/Causal-Inference-A-Missing-Data-Perspective/10.1214/18-STS645.full). 
+
+## The population-level ATE
+
+The population-level in potential outcome notation can be expressed as 
+$$ \Psi = [Y^1 - Y^0] $$
+Under certain identification assumptions, this is identified via the g-formula: 
+$$ \Psi(\mu, P_L) = \int_{\mathcal{L}} \Big( \mu(1, l)- \mu(0, l)\Big) dP_L(l) $$
+Where $\mu(a, l) = E[Y\mid A=a, L=l]$ is the outcome regression function. Here the notation $\Psi(\mu, P_L)$ makes it explicit that the causal estimand is a function of two unknowns: the unknown regression function and the unknown confounder distribution. If we have estimates of these objects, $\hat \mu$ and $\hat P_L$, frequentist inference can be done via a plug-in estimator
+$$ \hat\Psi(\hat \mu, \hat P_L) = \int_{\mathcal{L}} \Big( \hat\mu(1, l)- \hat\mu(0, l)\Big) d\hat P_L(l) $$
+For example, if we could fit a standard GLM with some inverse-link function,$g^{-1}$, $\hat\mu(a, l) = g^{-1}(\hat \beta_0 + \hat \beta_1 A + \hat L'\beta_2)$. Typically we use the empirical distribution for the confounder distribution estimate, $\hat P_L(l) =  \sum_{i=1}^n \frac{1}{n} I(L_i = l)$. So we have 
+$$
+\begin{align*}
+\hat\Psi(\hat \mu, \hat P_L) & = \int_{\mathcal{L}} \Big( \hat\mu(1, l)- \hat\mu(0, l)\Big) d\hat P_L(l) \\
+                              & = \sum_{i=1}^n \frac{1}{n} \Big( \hat\mu(1, L_i)- \hat\mu(0, L_i)\Big) \\
+\end{align*}
+$$
+That is, we end up average the difference in the mean function,$\hat\mu(a, l)$, under both treatments over the empirical distribution of confounders. Typically bootstrap is used to compute interval estimates for the population ATE.
+
+Bayesian inference for this quantity is also straightforward: obtain the $m^{th}$ posterior draw of the regression function $\mu^{(m)}(a,l)$ under your favorite Bayesian model (a Generalized Linear Model, Gaussian process, Dirichlet Process, BART, etc). Then obtain the $m^{th}$ posterior draw of the confounder distribution. It is common to use the ``Bayesian Bootstrap'' for this - a Bayesian analogue of the empirical distribution: $P_L^{(m)}(l) =  \sum_{i=1}^n \gamma_i^{(m)} I(L_i = l)$, where $(\gamma_1^{(m)}, \gamma_2^{(m)}, \dots, \gamma_n^{(m)}) \sim Dir(1_n)$ are drawn froma  Dirichlet Distribution. Then the posterior draw of the population-level ATE is
+$$
+\begin{align*}
+\Psi(\mu^{(m)}, P_L^{(m)}) & = \int_{\mathcal{L}} \Big(\mu^{(m)}(1, l)-\mu^{(m)}(0, l)\Big) d P_L^{(m)}(l) \\
+                           & = \sum_{i=1}^n \gamma_i\Big(\mu^{(m)}(1, L_i)-\mu^{(m)}(0, L_i)\Big) \\
+\end{align*}
+$$
+Again, we are taking a weighted average of the difference in the mean function draw, $\mu^{(m)}(a, l)$, under each intervention. Under the Bayesian bootstrap, the posterior expectation of each $\gamma_i$ is 1/n - so you think can think of this as being centered around the empirical distribution. Doing this for $m=1,2,\dots, M$ we get a set of posterior draws for the population ATE which can be used for point and interval estimation.
+
+## The sample-level ATE
+
+The sample-level ATE is given by 
+$$ \psi = \frac{1}{n} \sum_{i=1}^n (Y_i^1 - Y_i^0) $$
+This is a very different estimand:
+
+
+* The uncertainty in the population-level ATE is due to uncertainty about the unknown regression function and confounder distribution. 
+* The uncertainty in the sample-level estimand is due to uncertainty about the unknown counterfactual. After all, under SUTVA for subject with assignment $A_i$, we only observe $Y_i^{A_i}$ while $Y_i^{1-A_i}$ is unobserved.
+
+The Bayesian solutions, of course, differ as well:
+
+* To estimate the population-level ATE, we must draw the unknonwn regression function and confounder distributions from the posterior, $f(\mu, P_L \mid D)$
+* To estimate the sample-level ATE, we must draw the unknown counterfactual for each subject $Y_i^{1-A_i}$ from the posterior $f( \{ Y_i^{1-A_i} \}_{i=1}^n \mid D)$ .
+
+That last bullet is Bayesian inference for causal effects as originally described by Donald Rubin. Specifically, by Bayes' rule 
+$$ f( \{ Y_i^{1-A_i} \}_{i=1}^n \mid D) \propto f_A(A_i \mid L_i, Y_i^{A_i}, Y_i^{1-A_i} ) f_*(Y^A_i, Y_i^{1-A_i}\mid A_i, L_i) f_L(L_i) $$
+if the usual ignorability holds (due to say a randomized treatment) - i.e. $Y^1, Y^0 \perp A \mid L$ - the selection mechanism no longer depends on potential outcomes: $$f_A(A_i \mid L_i, Y_i^{A_i}, Y_i^{1-A_i} ) = f_A(A_i \mid L_i )$$ 
+and, along with $f_L$ can be dropped while maintaining proportionality. But the crucial thing here is that the remaining joint distribution $f_*(Y^A_i, Y_i^{1-A_i}\mid A_i, L_i)$ is \textit{not estimable from observed data} - we never observe both potential outcomes for subject $i$. This complicates sample-level inference. We could still make inferences. For instance, by invoking de Finetti, we could model it as $N_2(Y_i^{A_i}, Y_i^{1-A_i}\mid A_i, L_i; \eta, \Sigma ) p(\eta)p(\Sigma)$. Where $N_2$ indicates a bivariate normal distribution with mean vector $\eta$ and 2x2 covariance matrix, $\Sigma$. But the off-diagonal terms of $\Sigma$, $ Cov( Y_i^{A_i}, Y_i^{1-A_i} ) $, cannot be learned from data. The posterior is still defined, but will be completely driven by the prior $p(\Sigma)$. Thus, the sample-level effect is significantly more complicated .
