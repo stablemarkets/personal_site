@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>causal inference | </title>
+    <link>https://stablemarkets.netlify.app/category/causal-inference/</link>
+      <atom:link href="https://stablemarkets.netlify.app/category/causal-inference/index.xml" rel="self" type="application/rss+xml" />
+    <description>causal inference</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_512x512_fill_lanczos_center_3.png</url>
+      <title>causal inference</title>
+      <link>https://stablemarkets.netlify.app/category/causal-inference/</link>
+    </image>
+    
+    <item>
+      <title>Sample versus Population ATE in Bayesian Caual Estimation</title>
+      <link>https://stablemarkets.netlify.app/post/post5/tempered-mcmc/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/post/post5/tempered-mcmc/</guid>
+      <description>
+&lt;script src=&#34;https://stablemarkets.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Writing up a quick post to clarify a point of common confusion when doing posterior inference for causal effects. All causal inference (regardless of statistical modeling paradigm in consideration) begins with expressing the target estimand in terms of unobservables (e.g. potential outcomes) and linking them to observed data with ``identification assumptions.’’ Two common estimands (which are often confused) are the population level average treatment effect (ATE) and the sample level ATE. These are two very different estimands and inferential procedures therefore differ for each. Yet, they seem to be confused with each other quite often. This post clarifies the distinction.&lt;/p&gt;
+&lt;p&gt;Suppose we have a binary treatment &lt;span class=&#34;math inline&#34;&gt;\(A_i\in\{0,1\}\)&lt;/span&gt;, outcome &lt;span class=&#34;math inline&#34;&gt;\(Y_i\)&lt;/span&gt;, and a set of pre-treatment confounders &lt;span class=&#34;math inline&#34;&gt;\(L_i\)&lt;/span&gt; for &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; independent subjects. Let the observed data be &lt;span class=&#34;math inline&#34;&gt;\(D = \{Y_i, A_i, L_i \}_{i=1}^n\)&lt;/span&gt;. Much of the following can be found in &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/full/10.1002/sim.8761&#34;&gt;Oganisian &amp;amp; Roy, 2020&lt;/a&gt; and &lt;a href=&#34;https://projecteuclid.org/journals/statistical-science/volume-33/issue-2/Causal-Inference-A-Missing-Data-Perspective/10.1214/18-STS645.full&#34;&gt;Ding and Li, 2018&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;the-population-level-ate&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The population-level ATE&lt;/h2&gt;
+&lt;p&gt;The population-level in potential outcome notation can be expressed as
+&lt;span class=&#34;math display&#34;&gt;\[ \Psi = [Y^1 - Y^0] \]&lt;/span&gt;
+Under certain identification assumptions, this is identified via the g-formula:
+&lt;span class=&#34;math display&#34;&gt;\[ \Psi(\mu, P_L) = \int_{\mathcal{L}} \Big( \mu(1, l)- \mu(0, l)\Big) dP_L(l) \]&lt;/span&gt;
+Where &lt;span class=&#34;math inline&#34;&gt;\(\mu(a, l) = E[Y\mid A=a, L=l]\)&lt;/span&gt; is the outcome regression function. Here the notation &lt;span class=&#34;math inline&#34;&gt;\(\Psi(\mu, P_L)\)&lt;/span&gt; makes it explicit that the causal estimand is a function of two unknowns: the unknown regression function and the unknown confounder distribution. If we have estimates of these objects, &lt;span class=&#34;math inline&#34;&gt;\(\hat \mu\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\hat P_L\)&lt;/span&gt;, frequentist inference can be done via a plug-in estimator
+&lt;span class=&#34;math display&#34;&gt;\[ \hat\Psi(\hat \mu, \hat P_L) = \int_{\mathcal{L}} \Big( \hat\mu(1, l)- \hat\mu(0, l)\Big) d\hat P_L(l) \]&lt;/span&gt;
+For example, if we could fit a standard GLM with some inverse-link function,&lt;span class=&#34;math inline&#34;&gt;\(g^{-1}\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\hat\mu(a, l) = g^{-1}(\hat \beta_0 + \hat \beta_1 A + \hat L&amp;#39;\beta_2)\)&lt;/span&gt;. Typically we use the empirical distribution for the confounder distribution estimate, &lt;span class=&#34;math inline&#34;&gt;\(\hat P_L(l) = \sum_{i=1}^n \frac{1}{n} I(L_i = l)\)&lt;/span&gt;. So we have
+&lt;span class=&#34;math display&#34;&gt;\[
+\begin{align*}
+\hat\Psi(\hat \mu, \hat P_L) &amp;amp; = \int_{\mathcal{L}} \Big( \hat\mu(1, l)- \hat\mu(0, l)\Big) d\hat P_L(l) \\
+                              &amp;amp; = \sum_{i=1}^n \frac{1}{n} \Big( \hat\mu(1, L_i)- \hat\mu(0, L_i)\Big) \\
+\end{align*}
+\]&lt;/span&gt;
+That is, we end up average the difference in the mean function,&lt;span class=&#34;math inline&#34;&gt;\(\hat\mu(a, l)\)&lt;/span&gt;, under both treatments over the empirical distribution of confounders. Typically bootstrap is used to compute interval estimates for the population ATE.&lt;/p&gt;
+&lt;p&gt;Bayesian inference for this quantity is also straightforward: obtain the &lt;span class=&#34;math inline&#34;&gt;\(m^{th}\)&lt;/span&gt; posterior draw of the regression function &lt;span class=&#34;math inline&#34;&gt;\(\mu^{(m)}(a,l)\)&lt;/span&gt; under your favorite Bayesian model (a Generalized Linear Model, Gaussian process, Dirichlet Process, BART, etc). Then obtain the &lt;span class=&#34;math inline&#34;&gt;\(m^{th}\)&lt;/span&gt; posterior draw of the confounder distribution. It is common to use the ``Bayesian Bootstrap’’ for this - a Bayesian analogue of the empirical distribution: &lt;span class=&#34;math inline&#34;&gt;\(P_L^{(m)}(l) = \sum_{i=1}^n \gamma_i^{(m)} I(L_i = l)\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\((\gamma_1^{(m)}, \gamma_2^{(m)}, \dots, \gamma_n^{(m)}) \sim Dir(1_n)\)&lt;/span&gt; are drawn froma Dirichlet Distribution. Then the posterior draw of the population-level ATE is
+&lt;span class=&#34;math display&#34;&gt;\[
+\begin{align*}
+\Psi(\mu^{(m)}, P_L^{(m)}) &amp;amp; = \int_{\mathcal{L}} \Big(\mu^{(m)}(1, l)-\mu^{(m)}(0, l)\Big) d P_L^{(m)}(l) \\
+                           &amp;amp; = \sum_{i=1}^n \gamma_i\Big(\mu^{(m)}(1, L_i)-\mu^{(m)}(0, L_i)\Big) \\
+\end{align*}
+\]&lt;/span&gt;
+Again, we are taking a weighted average of the difference in the mean function draw, &lt;span class=&#34;math inline&#34;&gt;\(\mu^{(m)}(a, l)\)&lt;/span&gt;, under each intervention. Under the Bayesian bootstrap, the posterior expectation of each &lt;span class=&#34;math inline&#34;&gt;\(\gamma_i\)&lt;/span&gt; is 1/n - so you think can think of this as being centered around the empirical distribution. Doing this for &lt;span class=&#34;math inline&#34;&gt;\(m=1,2,\dots, M\)&lt;/span&gt; we get a set of posterior draws for the population ATE which can be used for point and interval estimation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-sample-level-ate&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The sample-level ATE&lt;/h2&gt;
+&lt;p&gt;The sample-level ATE is given by
+&lt;span class=&#34;math display&#34;&gt;\[ \psi = \frac{1}{n} \sum_{i=1}^n (Y_i^1 - Y_i^0) \]&lt;/span&gt;
+This is a very different estimand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The uncertainty in the population-level ATE is due to uncertainty about the unknown regression function and confounder distribution.&lt;/li&gt;
+&lt;li&gt;The uncertainty in the sample-level estimand is due to uncertainty about the unknown counterfactual. After all, under SUTVA for subject with assignment &lt;span class=&#34;math inline&#34;&gt;\(A_i\)&lt;/span&gt;, we only observe &lt;span class=&#34;math inline&#34;&gt;\(Y_i^{A_i}\)&lt;/span&gt; while &lt;span class=&#34;math inline&#34;&gt;\(Y_i^{1-A_i}\)&lt;/span&gt; is unobserved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Bayesian solutions, of course, differ as well:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To estimate the population-level ATE, we must draw the unknonwn regression function and confounder distributions from the posterior, &lt;span class=&#34;math inline&#34;&gt;\(f(\mu, P_L \mid D)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;To estimate the sample-level ATE, we must draw the unknown counterfactual for each subject &lt;span class=&#34;math inline&#34;&gt;\(Y_i^{1-A_i}\)&lt;/span&gt; from the posterior &lt;span class=&#34;math inline&#34;&gt;\(f( \{ Y_i^{1-A_i} \}_{i=1}^n \mid D)\)&lt;/span&gt; .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That last bullet is Bayesian inference for causal effects as originally described by Donald Rubin. Specifically, by Bayes’ rule
+&lt;span class=&#34;math display&#34;&gt;\[ f( \{ Y_i^{1-A_i} \}_{i=1}^n \mid D) \propto f_A(A_i \mid L_i, Y_i^{A_i}, Y_i^{1-A_i} ) f_*(Y^A_i, Y_i^{1-A_i}\mid A_i, L_i) f_L(L_i) \]&lt;/span&gt;
+if the usual ignorability holds (due to say a randomized treatment) - i.e. &lt;span class=&#34;math inline&#34;&gt;\(Y^1, Y^0 \perp A \mid L\)&lt;/span&gt; - the selection mechanism no longer depends on potential outcomes: &lt;span class=&#34;math display&#34;&gt;\[f_A(A_i \mid L_i, Y_i^{A_i}, Y_i^{1-A_i} ) = f_A(A_i \mid L_i )\]&lt;/span&gt;
+and, along with &lt;span class=&#34;math inline&#34;&gt;\(f_L\)&lt;/span&gt; can be dropped while maintaining proportionality. But the crucial thing here is that the remaining joint distribution &lt;span class=&#34;math inline&#34;&gt;\(f_*(Y^A_i, Y_i^{1-A_i}\mid A_i, L_i)\)&lt;/span&gt; is  - we never observe both potential outcomes for subject &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;. This complicates sample-level inference. We could still make inferences. For instance, by invoking de Finetti, we could model it as &lt;span class=&#34;math inline&#34;&gt;\(N_2(Y_i^{A_i}, Y_i^{1-A_i}\mid A_i, L_i; \eta, \Sigma ) p(\eta)p(\Sigma)\)&lt;/span&gt;. Where &lt;span class=&#34;math inline&#34;&gt;\(N_2\)&lt;/span&gt; indicates a bivariate normal distribution with mean vector &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt; and 2x2 covariance matrix, &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;. But the off-diagonal terms of &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;, $ Cov( Y_i^{A_i}, Y_i^{1-A_i} ) $, cannot be learned from data. The posterior is still defined, but will be completely driven by the prior &lt;span class=&#34;math inline&#34;&gt;\(p(\Sigma)\)&lt;/span&gt;. Thus, the sample-level effect is significantly more complicated .&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

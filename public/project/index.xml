@@ -5,12 +5,21 @@
     <link>https://stablemarkets.netlify.app/project/</link>
       <atom:link href="https://stablemarkets.netlify.app/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://stablemarkets.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_512x512_fill_lanczos_center_3.png</url>
       <title>Projects</title>
       <link>https://stablemarkets.netlify.app/project/</link>
     </image>
+    
+    <item>
+      <title>Collaborative Causal and Bayesian Modeling</title>
+      <link>https://stablemarkets.netlify.app/project/applied/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/project/applied/</guid>
+      <description>&lt;p&gt;This is a collection of some applied work with particularly interesting Bayesian and/or causal modeling. For instance, Hubbard et al. use a Bayesian mixture model to infer patients&#39; unknown diabetes status in noisy EHR data. Harrison et al. use a Bayesian hierarchical zero-inflated model to assess difference in costs associated with a cost-lowering healthcare intervention. Takvorian et al. use a difference-in-differences strategy to assess the impact of medicare expansion under ACA on cancer treatment delivery.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Non-parametric Bayes</title>
@@ -36,15 +45,6 @@
 &lt;li&gt;&lt;strong&gt;Sensitivity Analyses&lt;/strong&gt; around causal identification assumptions. Uncertainty about the direction and magnitude of the bias can be expressed via a prior and baked into posterior inference.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;See below for work related to Bayesian causal modeling.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Applied Causal and Bayesian Modeling</title>
-      <link>https://stablemarkets.netlify.app/project/applied/</link>
-      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://stablemarkets.netlify.app/project/applied/</guid>
-      <description>&lt;p&gt;Below is a collection of some applied work with particularly interesting Bayesian and/or causal modeling. For instance, Hubbard et al. use a Bayesian mixture model to infer patients&#39; unknown diabetes status in noisy EHR data. Harrison et al. use a Bayesian hierarchical zero-inflated model to assess difference in costs associated with a cost-lowering healthcare intervention. Takvorian et al. use a difference-in-differences strategy to assess the impact of medicare expansion under ACA on cancer treatment delivery.&lt;/p&gt;
 </description>
     </item>
     

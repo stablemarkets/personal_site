@@ -63,6 +63,9 @@
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
@@ -212,9 +215,9 @@
 
       
       
-        
-      
 
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -275,8 +278,8 @@
     <link rel="manifest" href="/manifest.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_180x180_fill_lanczos_center_3.png" />
 
   <link rel="canonical" href="https://stablemarkets.netlify.app/post/post2/specifying-accelerated-failure-time-models-in-stan/" />
 
@@ -300,8 +303,8 @@
   <meta property="og:site_name" content="" />
   <meta property="og:url" content="https://stablemarkets.netlify.app/post/post2/specifying-accelerated-failure-time-models-in-stan/" />
   <meta property="og:title" content="Specifying Accelerated Failure Time Models in STAN | " />
-  <meta property="og:description" content="This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post." /><meta property="og:image" content="https://stablemarkets.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://stablemarkets.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post." /><meta property="og:image" content="https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -350,7 +353,7 @@
     "name": "Brown University",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://stablemarkets.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
+      "url": "https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "This post is an add-on to my previous post about augmented gibbs sampling for censored survival times. If you’re not a complete maniac like me, then you probably don’t want to code your own sampler from scratch like I did in that previous post."
@@ -888,8 +891,8 @@ generated quantities{
 <pre><code>## 
 ## SAMPLING FOR MODEL &#39;80acc0f9293b946800a710dd7f5e211c&#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000295 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 2.95 seconds.
+## Chain 1: Gradient evaluation took 0.000172 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.72 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -906,9 +909,9 @@ generated quantities{
 ## Chain 1: Iteration: 19001 / 20000 [ 95%]  (Sampling)
 ## Chain 1: Iteration: 20000 / 20000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 9.2897 seconds (Warm-up)
-## Chain 1:                0.815333 seconds (Sampling)
-## Chain 1:                10.105 seconds (Total)
+## Chain 1:  Elapsed Time: 12.2212 seconds (Warm-up)
+## Chain 1:                1.03363 seconds (Sampling)
+## Chain 1:                13.2548 seconds (Total)
 ## Chain 1:</code></pre>
 <pre class="r"><code>post_draws&lt;-extract(weibull_fit)</code></pre>
 <p>Below we plot posterior distribution of the hazard ratio. The red line indicates the true value under which we generated the data.</p>
@@ -917,10 +920,10 @@ generated quantities{
 abline(v=exp(-1*true_beta[2,1]*true_alpha), col=&#39;red&#39;)</code></pre>
 <p><img src="/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_hazard_ratio-1.png" width="672" /></p>
 <pre class="r"><code>mean(post_draws$hazard_ratio)</code></pre>
-<pre><code>## [1] 0.3646075</code></pre>
+<pre><code>## [1] 0.3658342</code></pre>
 <pre class="r"><code>quantile(post_draws$hazard_ratio, probs = c(.025, .975))</code></pre>
 <pre><code>##      2.5%     97.5% 
-## 0.3037961 0.4438446</code></pre>
+## 0.3039049 0.4376196</code></pre>
 <p>Below we plot the survival functions. Note these results are very similar to the augmented sampler coded in the previous post.</p>
 <pre class="r"><code>plot(survfit(Surv(survt, 1-delta) ~ A ), col=c(&#39;black&#39;,&#39;blue&#39;),
      xlab=&#39;Time&#39;,ylab=&#39;Survival Probability&#39;, conf.int=T)
@@ -1071,7 +1074,7 @@ legend(&#39;topright&#39;,
     <div class="media-body">
       <h5 class="card-title"><a href="https://stablemarkets.netlify.app/">Arman Oganisian</a></h5>
       <h6 class="card-subtitle">Assistant Professor of Biostatistics</h6>
-      <p class="card-text">My research interests include distributed robotics, mobile computing and programmable matter.</p>
+      
       <ul class="network-icon" aria-hidden="true">
   
     

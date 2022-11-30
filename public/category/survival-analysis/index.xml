@@ -7,7 +7,7 @@
     <description>Survival Analysis</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://stablemarkets.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_512x512_fill_lanczos_center_3.png</url>
       <title>Survival Analysis</title>
       <link>https://stablemarkets.netlify.app/category/survival-analysis/</link>
     </image>
@@ -206,8 +206,8 @@ generated quantities{
 &lt;pre&gt;&lt;code&gt;## 
 ## SAMPLING FOR MODEL &amp;#39;80acc0f9293b946800a710dd7f5e211c&amp;#39; NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 0.000295 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 2.95 seconds.
+## Chain 1: Gradient evaluation took 0.000172 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.72 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -224,9 +224,9 @@ generated quantities{
 ## Chain 1: Iteration: 19001 / 20000 [ 95%]  (Sampling)
 ## Chain 1: Iteration: 20000 / 20000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 9.2897 seconds (Warm-up)
-## Chain 1:                0.815333 seconds (Sampling)
-## Chain 1:                10.105 seconds (Total)
+## Chain 1:  Elapsed Time: 12.2212 seconds (Warm-up)
+## Chain 1:                1.03363 seconds (Sampling)
+## Chain 1:                13.2548 seconds (Total)
 ## Chain 1:&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;post_draws&amp;lt;-extract(weibull_fit)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Below we plot posterior distribution of the hazard ratio. The red line indicates the true value under which we generated the data.&lt;/p&gt;
@@ -235,10 +235,10 @@ generated quantities{
 abline(v=exp(-1*true_beta[2,1]*true_alpha), col=&amp;#39;red&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://stablemarkets.netlify.app/post/post2/2019-03-09-specifying-accelerated-failure-time-models-in-stan_files/figure-html/plot_hazard_ratio-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean(post_draws$hazard_ratio)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.3646075&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.3658342&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quantile(post_draws$hazard_ratio, probs = c(.025, .975))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##      2.5%     97.5% 
-## 0.3037961 0.4438446&lt;/code&gt;&lt;/pre&gt;
+## 0.3039049 0.4376196&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Below we plot the survival functions. Note these results are very similar to the augmented sampler coded in the previous post.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(survfit(Surv(survt, 1-delta) ~ A ), col=c(&amp;#39;black&amp;#39;,&amp;#39;blue&amp;#39;),
      xlab=&amp;#39;Time&amp;#39;,ylab=&amp;#39;Survival Probability&amp;#39;, conf.int=T)

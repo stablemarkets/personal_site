@@ -12,7 +12,19 @@
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/tag/applied/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/project/applied/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/project/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/tags/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/courses/</loc>
     <lastmod>2021-01-24T00:00:00+00:00</lastmod>
@@ -35,10 +47,10 @@
     <loc>https://stablemarkets.netlify.app/talk/invited-discussion-on-bayesian-causal-forests/</loc>
     <lastmod>2020-09-26T15:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://stablemarkets.netlify.app/author/a.-oganisian/</loc>
+    <loc>https://stablemarkets.netlify.app/publication-type/3/</loc>
     <lastmod>2020-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://stablemarkets.netlify.app/publication-type/3/</loc>
+    <loc>https://stablemarkets.netlify.app/author/a.-oganisian/</loc>
     <lastmod>2020-09-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/publication/hbb/</loc>
@@ -68,12 +80,6 @@
     <loc>https://stablemarkets.netlify.app/project/bnp/</loc>
     <lastmod>2020-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://stablemarkets.netlify.app/project/</loc>
-    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/tags/</loc>
-    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://stablemarkets.netlify.app/project/causalbayes/</loc>
     <lastmod>2020-06-05T00:00:00+00:00</lastmod>
   </url><url>
@@ -86,6 +92,9 @@
     <loc>https://stablemarkets.netlify.app/categories/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://stablemarkets.netlify.app/category/causal-inference/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://stablemarkets.netlify.app/category/mcmc/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -95,14 +104,11 @@
     <loc>https://stablemarkets.netlify.app/category/r/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://stablemarkets.netlify.app/post/post4/tempered-mcmc/</loc>
+    <loc>https://stablemarkets.netlify.app/post/post5/tempered-mcmc/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://stablemarkets.netlify.app/tag/applied/</loc>
-    <lastmod>2020-03-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/project/applied/</loc>
-    <lastmod>2020-03-03T00:00:00+00:00</lastmod>
+    <loc>https://stablemarkets.netlify.app/post/post4/tempered-mcmc/</loc>
+    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/publication-type/2/</loc>
     <lastmod>2020-02-19T00:00:00+00:00</lastmod>
@@ -210,6 +216,9 @@
     <lastmod>2018-07-30T15:05:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/project/chirp/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/tag/software/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/admin/</loc>
