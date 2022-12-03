@@ -45,7 +45,7 @@ tags = []
 projects = ["bnp","causalbayes"]
 
 # Links (optional).
-url_pdf = "https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.13244"
+url_pdf = "https://arxiv.org/pdf/2211.16393.pdf"
 #url_preprint = "#"
 #url_code = "#"
 #url_dataset = "#"
