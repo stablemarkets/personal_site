@@ -2,7 +2,7 @@
 title: "Sample versus Population ATE in Bayesian Caual Estimation"
 author: Arman Oganisian
 date: '2020-03-22'
-slug: tempered-mcmc
+slug: sate-v-pate
 categories:
   - Bayesian
   - causal inference

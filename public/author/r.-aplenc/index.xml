@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R. Aplenc | </title>
+    <link>https://stablemarkets.netlify.app/author/r.-aplenc/</link>
+      <atom:link href="https://stablemarkets.netlify.app/author/r.-aplenc/index.xml" rel="self" type="application/rss+xml" />
+    <description>R. Aplenc</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_512x512_fill_lanczos_center_3.png</url>
+      <title>R. Aplenc</title>
+      <link>https://stablemarkets.netlify.app/author/r.-aplenc/</link>
+    </image>
+    
+    <item>
+      <title>Bayesian Semiparametric Model for Sequential Treatment Decisions with Informative Timing</title>
+      <link>https://stablemarkets.netlify.app/publication/bayesdtraml/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/publication/bayesdtraml/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

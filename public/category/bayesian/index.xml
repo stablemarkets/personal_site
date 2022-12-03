@@ -5,12 +5,50 @@
     <link>https://stablemarkets.netlify.app/category/bayesian/</link>
       <atom:link href="https://stablemarkets.netlify.app/category/bayesian/index.xml" rel="self" type="application/rss+xml" />
     <description>Bayesian</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 03 Dec 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_512x512_fill_lanczos_center_3.png</url>
       <title>Bayesian</title>
       <link>https://stablemarkets.netlify.app/category/bayesian/</link>
     </image>
+    
+    <item>
+      <title>Bayesian Sequential Decision-Making with Informative Timing</title>
+      <link>https://stablemarkets.netlify.app/post/post6/bayeseq_aml/</link>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/post/post6/bayeseq_aml/</guid>
+      <description>
+&lt;script src=&#34;https://stablemarkets.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;This post is a brief summary of highlights from our &lt;a href=&#34;https://arxiv.org/abs/2211.16393&#34;&gt;recent working paper&lt;/a&gt; titled “Bayesian Semiparametric Model for Sequential Treatment Decisions with Informative Timing.” It’s part of a series of projects on developing robust Bayesian nonparametric models for sequential decision making in a variety of complex settings. In this case, we deal with a situation in which the decisions are informatively timed - with a motivating application in chemotherapy treatments for pediatric acute myeloid leukemia (AML).&lt;/p&gt;
+&lt;p&gt;This is partially funded by a &lt;a href=&#34;https://www.pcori.org/research-results/2022/statistical-methods-optimizing-dynamic-patient-level-treatment-and-monitoring-strategies&#34;&gt;PCORI grant&lt;/a&gt; grant awarded earlier this year (2022).&lt;/p&gt;
+&lt;div id=&#34;setting-and-problem&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Setting and Problem&lt;/h1&gt;
+&lt;p&gt;Chemotherapy treatment in AML is not “one and done” but involves making a sequence of treatment decisions over time, with each subsequent treatment decision depending on how the patient has responded to previous trts and the evolution of their disease process. There are many chemo agents. This work focuses on understanding the effect of anthracyclines (ACT) in particular on survival. ACT is known to be effective in certain cases, but it can also lead to cardiotoxicity and subsequent early death.&lt;/p&gt;
+&lt;p&gt;This presents clinicians with a risk-reward tradeoff - trting too aggressively or too conservatively with ACT may reduce survival. To help inform decisions, an echocardiogram is done to help decide if the heart is healthy enough to tolerate ACT. Clinicians follow various rules of thumb in practice. For instance: withholding ACT if a patient’s current ejection fraction (measured via echocardiogram) falls below some absolute threshold (eg 50%) or if it declines more than some relative (e.g. declines more than 20% from time of enrollment). Briefly, ejection fraction (EF) is the proportion of blood that is pumped out of the heart’s left ventricle during a beat. In healthy individuals, this is fairly high (from 50-75%) but can be lower among patients with cardiotoxicity. These treatment rules are “dynamic” in that ACT is decided based on evolving ejection fraction. This is in contrast to static rules such as “always trt with ACT”, “never trt with ACT” or “alternate ACT” - regardless of EF. The goal is to develop a strategy for estimating survival rates under various hypothetical ACT assignment rules. If we have such a method, we could evaluate the efficacy of the various rules of thumb employed in clinics and arrive at a more data-driven approach.&lt;/p&gt;
+&lt;p&gt;Luckily, using data from the Phase III AAML1031 trial, we can estimate effects of such ACT trt strategies on survival. In the trial, patients move through a sequence of 4 chemo courses. Ahead of each course, an echo is conducted &amp;amp; used to decide ACT inclusion.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;challenges&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Challenges&lt;/h1&gt;
+&lt;p&gt;There are many impediments to valid statistical estimation. 1) ACT is not randomized in the trial but informed by time-varying features such as EF. We need to adjust for such features to get an apples-to-apples comparison of different ACT rules. 2) Some patients die or drop out before ever completing the sequence. In the latter case, we are left with incomplete survival information. 3) Treatment courses are not initiated at pre-fixed times, but depending on when subjects recover from the previous chemotherapy course.&lt;/p&gt;
+&lt;p&gt;This last point suggests that the waiting times between treatments are potential confounders (e.g. slower recovery after previous treatment may inform subsequent treatment and drive survival) - quite a unique type of time-varying confounding which requires modifications to the usual g-computation algorithm for sequential treatments&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-bayesian-semiparametric-method&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;A Bayesian Semiparametric Method&lt;/h1&gt;
+&lt;p&gt;We model the causal structure using a non-homogenous continuous-time transition process. After each course, patients can transition into a state of subsequent death or transition into a state of subsequent treatment - whichever comes first - in continuous-time. These process is characterized by a pair of transition probabilities: one pair for each treatment course. We use Bayesian semiparametric hazard models to estimate the transition probabilities at each stage as a function of features available at the start of this course.&lt;/p&gt;
+&lt;p&gt;Causal effects of certain rules are computed by simulating from the transition process under a specified rule and computing the proportion of simulated subjects who survive past a certain time point (e.g. 3 years, if we want to compute 3-year survival).&lt;/p&gt;
+&lt;p&gt;Here is a twitter thread with some more details and images:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+Wanted to share some work I’ve been doing on semiparametric Bayesian methods for sequential decision making.&lt;br&gt;&lt;br&gt;This work is motivated by a need to understand the efficacy and toxicity of chemotherapy agents in pediatric acute myeloid leukemia (aml).&lt;a href=&#34;https://t.co/ivRMd6O7Vq&#34;&gt;https://t.co/ivRMd6O7Vq&lt;/a&gt;
+&lt;/p&gt;
+— Arman Oganisian (&lt;span class=&#34;citation&#34;&gt;@StableMarkets&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/StableMarkets/status/1598711965857087489?ref_src=twsrc%5Etfw&#34;&gt;December 2, 2022&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Sample versus Population ATE in Bayesian Caual Estimation</title>
