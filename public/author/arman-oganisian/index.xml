@@ -14,3 +14,56 @@
     
   </channel>
 </rss>
+>
+    </image>
+    
+    <item>
+      <title>Introduction to Nonparametric Bayes</title>
+      <link>https://stablemarkets.netlify.app/talk/introduction-to-nonparametric-bayes/</link>
+      <pubDate>Wed, 18 Nov 2020 15:12:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/talk/introduction-to-nonparametric-bayes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Invited Discussion on Bayesian Causal Forests</title>
+      <link>https://stablemarkets.netlify.app/talk/invited-discussion-on-bayesian-causal-forests/</link>
+      <pubDate>Sat, 26 Sep 2020 15:05:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/talk/invited-discussion-on-bayesian-causal-forests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bayesian Causal Inference with Stan</title>
+      <link>https://stablemarkets.netlify.app/talk/bayesian-causal-inference-with-stan/</link>
+      <pubDate>Thu, 13 Aug 2020 15:05:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/talk/bayesian-causal-inference-with-stan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nonparametric Cost-Effectiveness Analyses</title>
+      <link>https://stablemarkets.netlify.app/talk/nonparametric-cost-effectiveness-analyses/</link>
+      <pubDate>Thu, 06 Aug 2020 15:10:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/talk/nonparametric-cost-effectiveness-analyses/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BNP Model for Zero-Inflated Outcomes: Clustering, Prediction, Causal Inference</title>
+      <link>https://stablemarkets.netlify.app/talk/bnp-model-for-zero-inflated-outcomes-clustering-prediction-causal-inference/</link>
+      <pubDate>Wed, 31 Jul 2019 15:05:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/talk/bnp-model-for-zero-inflated-outcomes-clustering-prediction-causal-inference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Bayesian Nonparametric Method for Zero-Inflated Data with Applications to Medical Costs</title>
+      <link>https://stablemarkets.netlify.app/talk/a-bayesian-nonparametric-method-for-zero-inflated-data-with-applications-to-medical-costs/</link>
+      <pubDate>Mon, 30 Jul 2018 15:05:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/talk/a-bayesian-nonparametric-method-for-zero-inflated-data-with-applications-to-medical-costs/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

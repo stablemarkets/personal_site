@@ -16,7 +16,9 @@ highlight_name: false
 interests:
 - Bayesian nonparametrics
 - Causal Inference
+- Sequential decision-making
 - Health Economics
+- Oncology
 organizations:
 - name: Brown University
   url: https://vivo.brown.edu/display/aoganisi
@@ -44,6 +46,8 @@ superuser: true
 title: Arman Oganisian
 ---
 
-I am an Assistant Professor of Biostaistics (tenure-track) at Brown University's [Department of Biostatistics](https://www.brown.edu/academics/public-health/biostats/home). My methodological research centers around developing nonparametric Bayesian methods for flexibly estimating causal effects with observational data. This involves, among other things, devising priors over high-dimensional model spaces and constructing MCMC methods for efficient posterior computation. Though broadly applicable, these methodological interests are motivated by applied problems in health economics and, more recently, statistical challenges in oncology research.
+I am currently an Assistant Professor of Biostaistics (tenure-track) at Brown University's [Department of Biostatistics](https://www.brown.edu/academics/public-health/biostats/home). My methodological research centers around developing Bayesian methods for flexible causal effect estimation with observational data. These methods blend principled causal reasoning, nonparmetric Bayesian modeling, and efficient computation to build systems for data-driven decision making.
 
-I received my PhD in Biostatistics from the University of Pennsylvania under the supervision of Jason Roy and Nandita Mitra. Before starting my PhD I was a Senior Analyst at [Analysis Group's HEOR team](https://www.analysisgroup.com/practices/health-care/health-economics-and--outcomes-research-heor/). Here you will find a link to my full CV and a selection of some past and current research work. I sometimes blog about statistics, Bayesian methods, computation/MCMC, and other things I happen to stumble upon during research.
+Most of my motivating applications have been in oncology - e.g. Bayesian nonparametric [cost](https://onlinelibrary.wiley.com/doi/epdf/10.1111/biom.13244) and cost/efficacy of estimation for endometrial cancer treatments; assessing [treatment effect heterogeneity](https://arxiv.org/abs/2009.10839) of photon therapy across cancer types. My current research is partially funded by [a PCORI grant](https://www.pcori.org/research-results/2022/statistical-methods-optimizing-dynamic-patient-level-treatment-and-monitoring-strategies) and focuses on developing Bayesian semiparametric methods for estimating and optimizing effects of sequential treatment strategies with applications in leukemia.
+
+I received my PhD in Biostatistics from the University of Pennsylvania under the supervision of Jason Roy and Nandita Mitra. Here you will find a link to my CV and a selection of some past and current research, talks, etc. I sometimes blog about statistics, Bayesian methods, computation/MCMC, and other things I happen to stumble upon during research.
