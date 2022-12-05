@@ -2,7 +2,7 @@
 title: "Sample versus Population ATE in Bayesian Caual Estimation"
 author: Arman Oganisian
 date: '2020-03-22'
-slug: tempered-mcmc
+slug: sate-v-pate
 categories:
   - Bayesian
   - causal inference
@@ -23,7 +23,7 @@ output:
 <div id="the-population-level-ate" class="section level2">
 <h2>The population-level ATE</h2>
 <p>The population-level in potential outcome notation can be expressed as
-<span class="math display">\[ \Psi = [Y^1 - Y^0] \]</span>
+<span class="math display">\[ \Psi = E[Y^1 - Y^0] \]</span>
 Under certain identification assumptions, this is identified via the g-formula:
 <span class="math display">\[ \Psi(\mu, P_L) = \int_{\mathcal{L}} \Big( \mu(1, l)- \mu(0, l)\Big) dP_L(l) \]</span>
 Where <span class="math inline">\(\mu(a, l) = E[Y\mid A=a, L=l]\)</span> is the outcome regression function. Here the notation <span class="math inline">\(\Psi(\mu, P_L)\)</span> makes it explicit that the causal estimand is a function of two unknowns: the unknown regression function and the unknown confounder distribution. If we have estimates of these objects, <span class="math inline">\(\hat \mu\)</span> and <span class="math inline">\(\hat P_L\)</span>, frequentist inference can be done via a plug-in estimator
@@ -47,20 +47,21 @@ Again, we are taking a weighted average of the difference in the mean function d
 </div>
 <div id="the-sample-level-ate" class="section level2">
 <h2>The sample-level ATE</h2>
-<p>The sample-level ATE is given by
-<span class="math display">\[ \psi = \frac{1}{n} \sum_{i=1}^n (Y_i^1 - Y_i^0) \]</span>
-This is a very different estimand:</p>
+<p>Letting <span class="math inline">\(\textbf{Y}^m = \{ Y_i^{1-A_i} \}_{i=1}^n\)</span> be the set of missing counterfactuals for the patients in the sample. The sample-level ATE is given by
+<span class="math display">\[ \psi(\textbf{Y}^m) = \frac{1}{n} \sum_{i=1}^n (Y_i^1 - Y_i^0) \]</span>
+This is a very different quantity from the population-level estimand
+<span class="math display">\[ \Psi(\mu, P_L) = \int_{\mathcal{L}} \Big( \mu(1, l)- \mu(0, l)\Big) dP_L(l) \]</span></p>
 <ul>
-<li>The uncertainty in the population-level ATE is due to uncertainty about the unknown regression function and confounder distribution.</li>
-<li>The uncertainty in the sample-level estimand is due to uncertainty about the unknown counterfactual. After all, under SUTVA for subject with assignment <span class="math inline">\(A_i\)</span>, we only observe <span class="math inline">\(Y_i^{A_i}\)</span> while <span class="math inline">\(Y_i^{1-A_i}\)</span> is unobserved.</li>
+<li>The uncertainty in the population-level ATE, <span class="math inline">\(\Psi(\mu, P_L)\)</span>, is due to uncertainty about the unknown regression function, <span class="math inline">\(\mu\)</span>, and confounder distribution, <span class="math inline">\(P_L\)</span>.</li>
+<li>The uncertainty in the sample-level estimand is due to uncertainty about the missing counterfactuals, <span class="math inline">\(\textbf{Y}^m\)</span>. After all, under SUTVA, we only observe <span class="math inline">\(Y_i^{A_i}\)</span> while <span class="math inline">\(Y_i^{1-A_i}\)</span> is unobserved for subject with assignment <span class="math inline">\(A_i\)</span>.</li>
 </ul>
-<p>The Bayesian solutions, of course, differ as well:</p>
+<p>The Bayesian solutions differ accordingly:</p>
 <ul>
-<li>To estimate the population-level ATE, we must draw the unknonwn regression function and confounder distributions from the posterior, <span class="math inline">\(f(\mu, P_L \mid D)\)</span></li>
-<li>To estimate the sample-level ATE, we must draw the unknown counterfactual for each subject <span class="math inline">\(Y_i^{1-A_i}\)</span> from the posterior <span class="math inline">\(f( \{ Y_i^{1-A_i} \}_{i=1}^n \mid D)\)</span> .</li>
+<li>To do posterior inference for the population-level ATE, we must draw the unknonwn regression function and confounder distributions from the posterior, <span class="math inline">\(f(\mu, P_L \mid D)\)</span></li>
+<li>To do posterior inference for the sample-level ATE, we must draw the unknown counterfactuals <span class="math inline">\(Y_i^{1-A_i}\)</span> from the posterior <span class="math inline">\(f( \{ Y_i^{1-A_i} \}_{i=1}^n \mid D)\)</span>.</li>
 </ul>
-<p>That last bullet is Bayesian inference for causal effects as originally described by Donald Rubin. Specifically, by Bayes’ rule
+<p>That last bullet is Bayesian inference for causal effects as originally described by Donald Rubin. While <span class="math inline">\(\Psi\)</span> is identifiable, <span class="math inline">\(\psi\)</span> is not identifiable except up to a sensitivity parameter. To show this, apply Bayes’ rule:
 <span class="math display">\[ f( \{ Y_i^{1-A_i} \}_{i=1}^n \mid D) \propto f_A(A_i \mid L_i, Y_i^{A_i}, Y_i^{1-A_i} ) f_*(Y^A_i, Y_i^{1-A_i}\mid A_i, L_i) f_L(L_i) \]</span>
 if the usual ignorability holds (due to say a randomized treatment) - i.e. <span class="math inline">\(Y^1, Y^0 \perp A \mid L\)</span> - the selection mechanism no longer depends on potential outcomes: <span class="math display">\[f_A(A_i \mid L_i, Y_i^{A_i}, Y_i^{1-A_i} ) = f_A(A_i \mid L_i )\]</span>
-and, along with <span class="math inline">\(f_L\)</span> can be dropped while maintaining proportionality. But the crucial thing here is that the remaining joint distribution <span class="math inline">\(f_*(Y^A_i, Y_i^{1-A_i}\mid A_i, L_i)\)</span> is  - we never observe both potential outcomes for subject <span class="math inline">\(i\)</span>. This complicates sample-level inference. We could still make inferences. For instance, by invoking de Finetti, we could model it as <span class="math inline">\(N_2(Y_i^{A_i}, Y_i^{1-A_i}\mid A_i, L_i; \eta, \Sigma ) p(\eta)p(\Sigma)\)</span>. Where <span class="math inline">\(N_2\)</span> indicates a bivariate normal distribution with mean vector <span class="math inline">\(\eta\)</span> and 2x2 covariance matrix, <span class="math inline">\(\Sigma\)</span>. But the off-diagonal terms of <span class="math inline">\(\Sigma\)</span>, $ Cov( Y_i^{A_i}, Y_i^{1-A_i} ) $, cannot be learned from data. The posterior is still defined, but will be completely driven by the prior <span class="math inline">\(p(\Sigma)\)</span>. Thus, the sample-level effect is significantly more complicated .</p>
+and, along with <span class="math inline">\(f_L\)</span> can be dropped while maintaining proportionality. But the crucial thing here is that the remaining joint distribution <span class="math inline">\(f_*(Y^A_i, Y_i^{1-A_i}\mid A_i, L_i)\)</span> is  - we never observe both potential outcomes for subject <span class="math inline">\(i\)</span>. This complicates sample-level inference. We could still make inferences. For instance, by invoking de Finetti, we could model it as <span class="math inline">\(N_2(Y_i^{A_i}, Y_i^{1-A_i}\mid A_i, L_i; \eta, \Sigma ) p(\eta)p(\Sigma)\)</span>. Where <span class="math inline">\(N_2\)</span> indicates a bivariate normal distribution with mean vector <span class="math inline">\(\eta\)</span> and 2x2 covariance matrix, <span class="math inline">\(\Sigma\)</span>. But the off-diagonal terms of <span class="math inline">\(\Sigma\)</span>, $ Cov( Y_i^{A_i}, Y_i^{1-A_i} ) $, cannot be learned from data. Thus we call it a sensitivity parameter. The posterior is still defined, but will be completely driven by the prior <span class="math inline">\(p(\Sigma)\)</span>. Thus, the sample-level effect is significantly more complicated .</p>
 </div>

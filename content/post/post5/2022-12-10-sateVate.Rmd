@@ -28,7 +28,7 @@ Suppose we have a binary treatment $A_i\in\{0,1\}$, outcome $Y_i$, and a set of 
 ## The population-level ATE
 
 The population-level in potential outcome notation can be expressed as 
-$$ \Psi = [Y^1 - Y^0] $$
+$$ \Psi = E[Y^1 - Y^0] $$
 Under certain identification assumptions, this is identified via the g-formula: 
 $$ \Psi(\mu, P_L) = \int_{\mathcal{L}} \Big( \mu(1, l)- \mu(0, l)\Big) dP_L(l) $$
 Where $\mu(a, l) = E[Y\mid A=a, L=l]$ is the outcome regression function. Here the notation $\Psi(\mu, P_L)$ makes it explicit that the causal estimand is a function of two unknowns: the unknown regression function and the unknown confounder distribution. If we have estimates of these objects, $\hat \mu$ and $\hat P_L$, frequentist inference can be done via a plug-in estimator
@@ -53,20 +53,20 @@ Again, we are taking a weighted average of the difference in the mean function d
 
 ## The sample-level ATE
 
-The sample-level ATE is given by 
-$$ \psi = \frac{1}{n} \sum_{i=1}^n (Y_i^1 - Y_i^0) $$
-This is a very different estimand:
+Letting $\textbf{Y}^m = \{ Y_i^{1-A_i} \}_{i=1}^n$ be the set of missing counterfactuals for the patients in the sample. The sample-level ATE is given by 
+$$ \psi(\textbf{Y}^m) = \frac{1}{n} \sum_{i=1}^n (Y_i^1 - Y_i^0) $$
+This is a very different quantity from the population-level estimand
+$$ \Psi(\mu, P_L) = \int_{\mathcal{L}} \Big( \mu(1, l)- \mu(0, l)\Big) dP_L(l) $$
 
+* The uncertainty in the population-level ATE, $\Psi(\mu, P_L)$, is due to uncertainty about the unknown regression function, $\mu$, and confounder distribution, $P_L$. 
+* The uncertainty in the sample-level estimand is due to uncertainty about the missing counterfactuals, $\textbf{Y}^m$. After all, under SUTVA, we only observe $Y_i^{A_i}$ while $Y_i^{1-A_i}$ is unobserved for subject with assignment $A_i$.
 
-* The uncertainty in the population-level ATE is due to uncertainty about the unknown regression function and confounder distribution. 
-* The uncertainty in the sample-level estimand is due to uncertainty about the unknown counterfactual. After all, under SUTVA for subject with assignment $A_i$, we only observe $Y_i^{A_i}$ while $Y_i^{1-A_i}$ is unobserved.
+The Bayesian solutions differ accordingly:
 
-The Bayesian solutions, of course, differ as well:
+* To do posterior inference for the population-level ATE, we must draw the unknonwn regression function and confounder distributions from the posterior, $f(\mu, P_L \mid D)$
+* To do posterior inference for the sample-level ATE, we must draw the unknown counterfactuals $Y_i^{1-A_i}$ from the posterior $f( \{ Y_i^{1-A_i} \}_{i=1}^n \mid D)$.
 
-* To estimate the population-level ATE, we must draw the unknonwn regression function and confounder distributions from the posterior, $f(\mu, P_L \mid D)$
-* To estimate the sample-level ATE, we must draw the unknown counterfactual for each subject $Y_i^{1-A_i}$ from the posterior $f( \{ Y_i^{1-A_i} \}_{i=1}^n \mid D)$ .
-
-That last bullet is Bayesian inference for causal effects as originally described by Donald Rubin. Specifically, by Bayes' rule 
+That last bullet is Bayesian inference for causal effects as originally described by Donald Rubin. While $\Psi$ is identifiable, $\psi$ is not identifiable except up to a sensitivity parameter. To show this, apply Bayes' rule:
 $$ f( \{ Y_i^{1-A_i} \}_{i=1}^n \mid D) \propto f_A(A_i \mid L_i, Y_i^{A_i}, Y_i^{1-A_i} ) f_*(Y^A_i, Y_i^{1-A_i}\mid A_i, L_i) f_L(L_i) $$
 if the usual ignorability holds (due to say a randomized treatment) - i.e. $Y^1, Y^0 \perp A \mid L$ - the selection mechanism no longer depends on potential outcomes: $$f_A(A_i \mid L_i, Y_i^{A_i}, Y_i^{1-A_i} ) = f_A(A_i \mid L_i )$$ 
-and, along with $f_L$ can be dropped while maintaining proportionality. But the crucial thing here is that the remaining joint distribution $f_*(Y^A_i, Y_i^{1-A_i}\mid A_i, L_i)$ is \textit{not estimable from observed data} - we never observe both potential outcomes for subject $i$. This complicates sample-level inference. We could still make inferences. For instance, by invoking de Finetti, we could model it as $N_2(Y_i^{A_i}, Y_i^{1-A_i}\mid A_i, L_i; \eta, \Sigma ) p(\eta)p(\Sigma)$. Where $N_2$ indicates a bivariate normal distribution with mean vector $\eta$ and 2x2 covariance matrix, $\Sigma$. But the off-diagonal terms of $\Sigma$, $ Cov( Y_i^{A_i}, Y_i^{1-A_i} ) $, cannot be learned from data. The posterior is still defined, but will be completely driven by the prior $p(\Sigma)$. Thus, the sample-level effect is significantly more complicated .
+and, along with $f_L$ can be dropped while maintaining proportionality. But the crucial thing here is that the remaining joint distribution $f_*(Y^A_i, Y_i^{1-A_i}\mid A_i, L_i)$ is \textit{not estimable from observed data} - we never observe both potential outcomes for subject $i$. This complicates sample-level inference. We could still make inferences. For instance, by invoking de Finetti, we could model it as $N_2(Y_i^{A_i}, Y_i^{1-A_i}\mid A_i, L_i; \eta, \Sigma ) p(\eta)p(\Sigma)$. Where $N_2$ indicates a bivariate normal distribution with mean vector $\eta$ and 2x2 covariance matrix, $\Sigma$. But the off-diagonal terms of $\Sigma$, $ Cov( Y_i^{A_i}, Y_i^{1-A_i} ) $, cannot be learned from data. Thus we call it a sensitivity parameter. The posterior is still defined, but will be completely driven by the prior $p(\Sigma)$. Thus, the sample-level effect is significantly more complicated .
