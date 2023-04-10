@@ -47,6 +47,8 @@ title: Arman Oganisian
 ---
 
 # News
+ - 4/10/2023: New working [paper on arXiv](https://aps.arxiv.org/abs/2304.03247) developing semiparametric Bayesian framework for causal inference with recurrent event outcomes.
+ - Upcoming Summer 2023 talks: 5/18/2023 - [IRSA](https://irsa.umn.edu/arman-oganisian); 8/5/2023 - JSM Toronto; 8/1/2023 - EcoStat Tokyo.
  - 1/5/2023: I'll be giving a [talk at ICHPS](https://ww3.aievolution.com/AMSTATevents/index.cfm?do=ev.viewEv&ev=1298) on Bayesian methods for sequential treatment strategies.
  - 12/15/2022: New paper developing a [hierarchical Bayesian bootstrap](https://www.degruyter.com/document/doi/10.1515/ijb-2022-0051/html) for causal estimation.
  - 11/15/2022: New working [paper on arXiv](https://arxiv.org/abs/2211.16393) developing semiparametric Bayesian methods for sequential treatment decisions.
