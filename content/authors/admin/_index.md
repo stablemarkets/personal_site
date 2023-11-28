@@ -47,7 +47,7 @@ title: Arman Oganisian
 ---
 
 # News
- - 11/28/2023: Happy to announce a PCORI award funding my work on[Bayesian Machine Learning for Causal Inference](https://www.pcori.org/research-results/2023/bayesian-machine-learning-causal-inference-electronic-health-record-data-missing-covariates)!
+ - 11/28/2023: Happy to announce a PCORI award of ~$1 million funding my work on [Bayesian Machine Learning for Causal Inference](https://www.pcori.org/research-results/2023/bayesian-machine-learning-causal-inference-electronic-health-record-data-missing-covariates)!
  - 10/20/2023: New working [paper on arXiv](https://arxiv.org/abs/2310.12358) developing causalBETA R package for Bayesian Semiparametric causal inference with survival outcomes.
  - 4/10/2023: New working [paper on arXiv](https://aps.arxiv.org/abs/2304.03247) developing semiparametric Bayesian framework for causal inference with recurrent event outcomes.
  - 12/15/2022: New paper published developing a [hierarchical Bayesian bootstrap](https://www.degruyter.com/document/doi/10.1515/ijb-2022-0051/html) for causal estimation.
