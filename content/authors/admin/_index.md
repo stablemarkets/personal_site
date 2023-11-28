@@ -47,10 +47,10 @@ title: Arman Oganisian
 ---
 
 # News
+ - 11/28/2023: Happy to announce a PCORI award funding my work on[Bayesian Machine Learning for Causal Inference](https://www.pcori.org/research-results/2023/bayesian-machine-learning-causal-inference-electronic-health-record-data-missing-covariates)!
+ - 10/20/2023: New working [paper on arXiv](https://arxiv.org/abs/2310.12358) developing causalBETA R package for Bayesian Semiparametric causal inference with survival outcomes.
  - 4/10/2023: New working [paper on arXiv](https://aps.arxiv.org/abs/2304.03247) developing semiparametric Bayesian framework for causal inference with recurrent event outcomes.
- - Upcoming Summer 2023 talks: 5/18/2023 - [IRSA](https://irsa.umn.edu/arman-oganisian); 8/5/2023 - JSM Toronto; 8/1/2023 - EcoStat Tokyo.
- - 1/5/2023: I'll be giving a [talk at ICHPS](https://ww3.aievolution.com/AMSTATevents/index.cfm?do=ev.viewEv&ev=1298) on Bayesian methods for sequential treatment strategies.
- - 12/15/2022: New paper developing a [hierarchical Bayesian bootstrap](https://www.degruyter.com/document/doi/10.1515/ijb-2022-0051/html) for causal estimation.
+ - 12/15/2022: New paper published developing a [hierarchical Bayesian bootstrap](https://www.degruyter.com/document/doi/10.1515/ijb-2022-0051/html) for causal estimation.
  - 11/15/2022: New working [paper on arXiv](https://arxiv.org/abs/2211.16393) developing semiparametric Bayesian methods for sequential treatment decisions.
 ---
 
