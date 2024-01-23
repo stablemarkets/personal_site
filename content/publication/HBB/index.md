@@ -1,6 +1,6 @@
 +++
 title = "Hierarchical Bayesian Bootstrap for Heterogeneous Treatment Effect Estimation"
-date = 2020-09-22T00:00:00
+date = 2022-12-22T00:00:00
 
 authors = ["A. Oganisian","Nandita Mitra", "Jason Roy"]
 
@@ -13,14 +13,14 @@ authors = ["A. Oganisian","Nandita Mitra", "Jason Roy"]
 # 4 = Report
 # 5 = Book
 # 6 = Book section
-publication_types = ["3"]
+publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = ""
-publication_short = ""
+publication = "*International Journal of Biostatistics*"
+publication_short = "*International Journal of Biostatistics*"
 
 # Abstract.
-abstract = ""
+abstract = "A major focus of causal inference is the estimation of heterogeneous average treatment effects (HTE) - average treatment effects within strata of another variable of interest such as levels of a biomarker, education, or age strata. Inference involves estimating a stratum-specific regression and integrating it over the distribution of confounders in that stratum - which itself must be estimated. Standard practice involves estimating these stratum-specific confounder distributions independently (e.g. via the empirical distribution or Rubin's Bayesian bootstrap), which becomes problematic for sparsely populated strata with few observed confounder vectors. In this paper, we develop a nonparametric hierarchical Bayesian bootstrap (HBB) prior over the stratum-specific confounder distributions for HTE estimation. The HBB partially pools the stratum-specific distributions, thereby allowing principled borrowing of confounder information across strata when sparsity is a concern. We show that posterior inference under the HBB can yield efficiency gains over standard marginalization approaches while avoiding strong parametric assumptions about the confounder distribution. We use our approach to estimate the adverse event risk of proton versus photon chemoradiotherapy across various cancer types."
 
 # Summary. An optional shortened abstract.
 summary = ""
@@ -29,7 +29,7 @@ summary = ""
 doi = ""
 
 # Is this a featured publication? (true/false)
-featured = false
+featured = true
 
 # Tags (optional).
 #   Set `tags = []` for no tags, or use the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
@@ -44,8 +44,8 @@ tags = []
 projects = ["causalbayes", "bnp"]
 
 # Links (optional).
-url_pdf = "https://arxiv.org/abs/2009.10839"
-#url_preprint = "#"
+url_pdf = "https://www.degruyter.com/document/doi/10.1515/ijb-2022-0051/html?lang=en"
+url_preprint = "https://arxiv.org/abs/2009.10839"
 #url_code = "#"
 #url_dataset = "#"
 #url_project = ""

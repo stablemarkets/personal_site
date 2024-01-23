@@ -21,7 +21,7 @@ publication = "*Biometrics*"
 publication_short = ""
 
 # Abstract.
-abstract = ""
+abstract = "Researchers are often interested in predicting outcomes, detecting distinct subgroups of their data, or estimating causal treatment effects. Pathological data distributions that exhibit skewness and zero-inflation complicate these tasks—requiring highly flexible, data-adaptive modeling. In this paper, we present a multipurpose Bayesian nonparametric model for continuous, zero-inflated outcomes that simultaneously predicts structural zeros, captures skewness, and clusters patients with similar joint data distributions. The flexibility of our approach yields predictions that capture the joint data distribution better than commonly used zero-inflated methods. Moreover, we demonstrate that our model can be coherently incorporated into a standardization procedure for computing causal effect estimates that are robust to such data pathologies. Uncertainty at all levels of this model flow through to the causal effect estimates of interest—allowing easy point estimation, interval estimation, and posterior predictive checks verifying positivity, a required causal identification assumption. Our simulation results show point estimates to have low bias and interval estimates to have close to nominal coverage under complicated data settings. Under simpler settings, these results hold while incurring lower efficiency loss than comparator methods. We use our proposed method to analyze zero-inflated inpatient medical costs among endometrial cancer patients receiving either chemotherapy or radiation therapy in the SEER-Medicare database."
 
 # Summary. An optional shortened abstract.
 summary = ""
@@ -46,7 +46,7 @@ projects = ["bnp","causalbayes"]
 
 # Links (optional).
 url_pdf = "https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.13244"
-#url_preprint = "#"
+url_preprint = "https://arxiv.org/abs/1810.09494"
 #url_code = "#"
 #url_dataset = "#"
 #url_project = ""

@@ -17,8 +17,8 @@ authors = ["Rebecca A. Hubbard", "Jing Huang", "Joanna Harton", "A. Oganisian","
 publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = "**Statistics in Medicine**"
-publication_short = "**Stats. in Med**"
+publication = "*Statistics in Medicine*"
+publication_short = "*Statistics in Medicine*"
 
 # Abstract.
 abstract = ""

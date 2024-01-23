@@ -12,7 +12,46 @@
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/</loc>
-    <lastmod>2022-12-03T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication-type/2/</loc>
+    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/a.-oganisian/</loc>
+    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/authors/</loc>
+    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication/bayesdtraml/</loc>
+    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/j.-roy/</loc>
+    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/k.-getz/</loc>
+    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication_types/</loc>
+    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication/</loc>
+    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/r.-aplenc/</loc>
+    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/t.-alonzo/</loc>
+    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication/hbb/</loc>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/jason-roy/</loc>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/author/nandita-mitra/</loc>
+    <lastmod>2022-12-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/category/bayesian/</loc>
     <lastmod>2022-12-03T00:00:00+00:00</lastmod>
@@ -34,36 +73,6 @@
   </url><url>
     <loc>https://stablemarkets.netlify.app/category/survival-analysis/</loc>
     <lastmod>2022-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/publication-type/3/</loc>
-    <lastmod>2022-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/author/a.-oganisian/</loc>
-    <lastmod>2022-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/authors/</loc>
-    <lastmod>2022-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/publication/bayesdtraml/</loc>
-    <lastmod>2022-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/author/j.-roy/</loc>
-    <lastmod>2022-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/author/k.-getz/</loc>
-    <lastmod>2022-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/publication_types/</loc>
-    <lastmod>2022-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/publication/</loc>
-    <lastmod>2022-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/author/r.-aplenc/</loc>
-    <lastmod>2022-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/author/t.-alonzo/</loc>
-    <lastmod>2022-11-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/tag/applied/</loc>
     <lastmod>2021-09-01T00:00:00+00:00</lastmod>
@@ -95,15 +104,6 @@
     <loc>https://stablemarkets.netlify.app/talk/invited-discussion-on-bayesian-causal-forests/</loc>
     <lastmod>2020-09-26T15:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://stablemarkets.netlify.app/publication/hbb/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/author/jason-roy/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/author/nandita-mitra/</loc>
-    <lastmod>2020-09-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://stablemarkets.netlify.app/talk/bayesian-causal-inference-with-stan/</loc>
     <lastmod>2020-08-13T15:05:00+00:00</lastmod>
   </url><url>
@@ -134,9 +134,6 @@
     <loc>https://stablemarkets.netlify.app/post/post4/tempered-mcmc/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://stablemarkets.netlify.app/publication-type/2/</loc>
-    <lastmod>2020-02-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://stablemarkets.netlify.app/publication/acadid/</loc>
     <lastmod>2020-02-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -157,6 +154,9 @@
   </url><url>
     <loc>https://stablemarkets.netlify.app/author/su-takvorian/</loc>
     <lastmod>2020-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/publication-type/3/</loc>
+    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/publication/bayescausal/</loc>
     <lastmod>2020-02-11T00:00:00+00:00</lastmod>
