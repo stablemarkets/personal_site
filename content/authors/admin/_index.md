@@ -54,9 +54,11 @@ title: Arman Oganisian
 ---
 
 # Bio
-I am currently an Assistant Professor of Biostatistics at [Brown University](https://www.brown.edu/academics/public-health/biostats/home). My methodological research centers around developing [Bayesian nonparametric methods for causal estimation](https://onlinelibrary.wiley.com/doi/full/10.1002/sim.8761), with a focus on analyzing sequential treatments with incomplete information. These methods blend principled causal reasoning, nonparametric Bayesian modeling, and efficient computation to build systems for data-driven decision making.
+I am currently an Assistant Professor of Biostatistics at [Brown University](https://www.brown.edu/academics/public-health/biostats/home). I received my PhD in Biostatistics from the University of Pennsylvania under the supervision of Jason Roy and Nandita Mitra. My methodological research centers around developing [Bayesian nonparametric methods for causal estimation](https://onlinelibrary.wiley.com/doi/full/10.1002/sim.8761), with a focus on analyzing sequential treatments with incomplete information. These methods blend principled causal reasoning, nonparametric Bayesian modeling, and efficient computation to build systems for data-driven decision making.
 
 Many of my motivating applications are in oncology. Some current work is partially funded by [a PCORI contract](https://www.pcori.org/research-results/2022/statistical-methods-optimizing-dynamic-patient-level-treatment-and-monitoring-strategies) and focuses on developing Bayesian semiparametric methods for estimating (and optimizing) effects of sequential treatment strategies in acute myeloid leukemia. I have recently been awarded another [PCORI contract](https://www.pcori.org/research-results/2023/bayesian-machine-learning-causal-inference-electronic-health-record-data-missing-covariates) to develop Bayesian nonparametric methods for causal estimation with incomplete covariate information.
 
-I received my PhD in Biostatistics from the University of Pennsylvania under the supervision of Jason Roy and Nandita Mitra. On this site you will find a link to my CV and a selection of some past and current research, talks, etc. I sometimes blog about statistics, Bayesian methods, computation/MCMC, and other things I happen to stumble upon during research.
+On this site you will find a link to my CV and a selection of some past and current research, talks, etc. If you are a ScM or PhD students at Brown University who is considering working with me, please see [this page](https://stablemarkets.netlify.app/post/post7/advising/)
+
+I sometimes blog about statistics, Bayesian methods, computation/MCMC, and other things I happen to stumble upon during research.
 

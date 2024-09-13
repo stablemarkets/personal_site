@@ -38,14 +38,6 @@
 &lt;h1&gt;A Bayesian Semiparametric Method&lt;/h1&gt;
 &lt;p&gt;We model the causal structure using a non-homogenous continuous-time transition process. After each course, patients can transition into a state of subsequent death or transition into a state of subsequent treatment - whichever comes first - in continuous-time. These process is characterized by a pair of transition probabilities: one pair for each treatment course. We use Bayesian semiparametric hazard models to estimate the transition probabilities at each stage as a function of features available at the start of this course.&lt;/p&gt;
 &lt;p&gt;Causal effects of certain rules are computed by simulating from the transition process under a specified rule and computing the proportion of simulated subjects who survive past a certain time point (e.g. 3 years, if we want to compute 3-year survival).&lt;/p&gt;
-&lt;p&gt;Here is a twitter thread with some more details and images:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;
-&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
-Wanted to share some work I’ve been doing on semiparametric Bayesian methods for sequential decision making.&lt;br&gt;&lt;br&gt;This work is motivated by a need to understand the efficacy and toxicity of chemotherapy agents in pediatric acute myeloid leukemia (aml).&lt;a href=&#34;https://t.co/ivRMd6O7Vq&#34;&gt;https://t.co/ivRMd6O7Vq&lt;/a&gt;
-&lt;/p&gt;
-— Arman Oganisian (&lt;span class=&#34;citation&#34;&gt;@StableMarkets&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/StableMarkets/status/1598711965857087489?ref_src=twsrc%5Etfw&#34;&gt;December 2, 2022&lt;/a&gt;
-&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;/div&gt;
 </description>
     </item>

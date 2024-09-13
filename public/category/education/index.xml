@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Education | </title>
+    <link>https://stablemarkets.netlify.app/category/education/</link>
+      <atom:link href="https://stablemarkets.netlify.app/category/education/index.xml" rel="self" type="application/rss+xml" />
+    <description>Education</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_512x512_fill_lanczos_center_3.png</url>
+      <title>Education</title>
+      <link>https://stablemarkets.netlify.app/category/education/</link>
+    </image>
+    
+    <item>
+      <title>For prospective Brown advisees</title>
+      <link>https://stablemarkets.netlify.app/post/post7/bayeseq_aml/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/post/post7/bayeseq_aml/</guid>
+      <description>
+&lt;script src=&#34;https://stablemarkets.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;advising&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Advising&lt;/h2&gt;
+&lt;p&gt;Working with graduate students is a very fulfilling part of my job. Philosophically, I am not a very hierarchical person and I see students as fellow researchers working as part of a team to solve a common problem. The learning happens on the pathway towards finding these solutions and I sometimes find myself learning from students as well. I also like to foster independence, typically starting off with a lot of guidance and direction and then tapering incrementally.&lt;/p&gt;
+&lt;p&gt;I typically work with Brown University graduate students in the capacity of a thesis or dissertation adviser for the &lt;a href=&#34;https://biostatistics.sph.brown.edu/academics&#34;&gt;ScM and PhD programs in Biostatistics&lt;/a&gt;. How many students I take on depends on availability of funding and data projects. I generally do not take on more than two new students per year.&lt;/p&gt;
+&lt;p&gt;If you think you may like to work with me on a thesis, I first suggest you read the “Assessing Interest’’ and the  ``Finding a Project” sections below and go through some of the reading. If you feel like you are enjoying what you are reading and find it stimulating, feel free to email me to set up a meeting to discuss your interests and goals. I also summarize some placement outcomes for past advisees at the end.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;assessing-interest&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Assessing Interest&lt;/h2&gt;
+&lt;p&gt;My current research interests are in causal inference for sequential (aka time-varying) treatment settings. Lately, most of the problems that have come my way deal with survival or, more generally, event-time outcomes. When it comes to methods for estimation or inference on causal effects of treatments on these survival outcomes, I tend to work within the Bayesian paradigm. Thus, working with me typically requires working at the intersection of 1) causal inference, 2) survival analysis, and 3) Bayesian methods. Projects need not involve these - for instance, I also like working on causal inference using frequentist methods when applicable or on other types of outcomes aside from survival. But generally, at least causal inference and Bayesian methods are a common thread.&lt;/p&gt;
+&lt;p&gt;In terms of computing, knowledge in a statistical programming language like R is critical. For Bayesian inference, knowledge of probabilistic programming language such as Stan is also critical. Some more elaborate Bayesian models cannot be fit in Stan and the Markov Chain Monte Carlo (MCMC) methods must be coded from scratch.&lt;/p&gt;
+&lt;p&gt;Below, I have resources for each of these topics to help you learn and gauge your own interest in these topics.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Causal Inference&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/04/hernanrobins_WhatIf_26apr24.pdf&#34;&gt;What If&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Chapters 1-3: single treatment setting.&lt;/li&gt;
+&lt;li&gt;Chapters 11-13: Marginal structural models: estimation via IPTW estimation and g-formula.&lt;/li&gt;
+&lt;li&gt;Chapters 19-21: time-varying treatments.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Bayesian Inference&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.stat.columbia.edu/~gelman/book/BDA3.pdf&#34;&gt;Bayesian Data Analysis&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Chapters 1, 2, 14, and 11&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Primer on MCMC &lt;a href=&#34;https://www.cs.ubc.ca/~arnaud/andrieu_defreitas_doucet_jordan_intromontecarlomachinelearning.pdf&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://link.springer.com/book/10.1007/978-3-319-18968-0&#34;&gt;Bayesian nonparametric data analysis&lt;/a&gt; - access free via Brown University library.&lt;/li&gt;
+&lt;li&gt;A good rule of thumb is that you should be able to derive the posterior (up to a proportionality constant) for a logistic regression coefficient vector under, say, a multivariate Gaussian prior. You should also be able code a Metropolis-Hastings sampling for obtaining draws from that posterior. It’s also a good way of gauging whether you like computation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Bayesian causal inference&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/epdf/10.1002/sim.8761&#34;&gt;Practical Introduction to Bayesian estimation of causal effects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.routledge.com/Bayesian-Nonparametrics-for-Causal-Inference-and-Missing-Data/Daniels-Linero-Roy/p/book/9780367341008?srsltid=AfmBOooQdwAQGPuRQ3aKSf_rdO_es0NP_ijM3bR0Q1l4JPQrcrnF7_8U&#34;&gt;Bayesian Nonparametrics for Causal Inference and Missing Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://projecteuclid.org/journals/statistical-science/volume-33/issue-2/Causal-Inference-A-Missing-Data-Perspective/10.1214/18-STS645.full&#34;&gt;Causal Inference: A Missing Data Perspective&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://royalsocietypublishing.org/doi/10.1098/rsta.2022.0153&#34;&gt;Bayesian causal inference: a critical review&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Survival outcomes&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bayesian causal inference with survival outcomes see &lt;a href=&#34;https://arxiv.org/abs/2310.12358&#34;&gt;here&lt;/a&gt;:&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://link.springer.com/book/10.1007/978-1-4757-3447-8&#34;&gt;Bayesian Survival Analysis&lt;/a&gt; by Ibrahim. Available via Brown University library. See Chapters 1,2, and 3.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;finding-a-project&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Finding a Project&lt;/h2&gt;
+&lt;p&gt;Though it can happen many ways, typically a a thesis advising position has arisen in these ways for me:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A student approaches me and has read some of the literature in the “Assessing Interest” section in detail and concluded they are interested in working in this area. If I have an appropriate project that can be completed within 1-1.5 years ready, I will offer this project as a thesis project for the student. If I do not have a project ready, I will keep the student in mind for when an appropriate project does come my way.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A student approaches me usually after having done a previous RA-ship working with data. They are very interested in, say, a causal (or Bayesian) extension of the analysis and would like me to supervise. This is an example of a student coming to me with a project, which does sometimes happen and which I like because it can expose me to new and interesting problems.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My work is very application-driven. I’m quite bad at (and generally do not enjoy) making up methodological problems to solve and. Instead, I generate research ideas by working with clinical and applied collaborators in, say, the Department of Epidemiology or the medical school on concrete data analysis. Over the course of working on these projects, I often notice complexities for which I find existing methods to be unsatisfactory or have shortcomings. This then motivates new methodological research to overcome these shortcomings. Thesis work often arises from these concrete data analyses projects with collaborators - the arrival of these projects and their appropriateness for thesis work is stochastic in nature. I may not have an appropriate project lined up when you approach me. If I do not, you should keep searching for other projects and not assume one will pop up in the meantime.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;current-students-and-past-placements&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Current Students and Past Placements&lt;/h2&gt;
+&lt;p&gt;Below are previous students, degree completed, year of completion, and first industry or academic placement after graduation. Brown archives completed ScM theses &lt;a href=&#34;https://repository.library.brown.edu/studio/search/?q=biostatistics&amp;amp;selected_facets=ir_collection_name%3ABiostatistics&#34;&gt;here&lt;/a&gt;. I recommend prospective advisees read through some of the theses from my former students to get a sense of the type of projects they can work on.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Current Students
+&lt;ul&gt;
+&lt;li&gt;Daniel Posmik, PhD 2029.&lt;/li&gt;
+&lt;li&gt;Esteban Fernandes-Morales, PhD 2026.&lt;/li&gt;
+&lt;li&gt;Zhaoxiang Ding, ScM 2025.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Previous Students
+&lt;ul&gt;
+&lt;li&gt;Zihan Zhou, ScM 2024 - Biostatistics PhD student @ Pennsylvania State University.&lt;/li&gt;
+&lt;li&gt;Tova Ibbotson, ScM 2024 - Senior Statistician @ GSK.&lt;/li&gt;
+&lt;li&gt;Nancy Liu, ScM 2023 - Biostatistician @ Rutgers University.&lt;/li&gt;
+&lt;li&gt;Anthony Girard, ScM 2023 - Statistical Analyst @ Leonard Davis Institute, University of Pennsylvania.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

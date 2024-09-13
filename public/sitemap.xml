@@ -44,6 +44,18 @@
     <loc>https://stablemarkets.netlify.app/author/t.-alonzo/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://stablemarkets.netlify.app/categories/</loc>
+    <lastmod>2023-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/category/education/</loc>
+    <lastmod>2023-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/post/post7/bayeseq_aml/</loc>
+    <lastmod>2023-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/post/</loc>
+    <lastmod>2023-07-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://stablemarkets.netlify.app/publication/hbb/</loc>
     <lastmod>2022-12-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -59,16 +71,10 @@
     <loc>https://stablemarkets.netlify.app/post/post6/bayeseq_aml/</loc>
     <lastmod>2022-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://stablemarkets.netlify.app/categories/</loc>
-    <lastmod>2022-12-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://stablemarkets.netlify.app/category/causal-inference/</loc>
     <lastmod>2022-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/category/nonparametrics/</loc>
-    <lastmod>2022-12-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/post/</loc>
     <lastmod>2022-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/category/survival-analysis/</loc>
