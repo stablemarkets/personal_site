@@ -11,7 +11,7 @@ education:
   - course: BA in Quantitative Economics
     institution: Providence College
     year: 2013
-email: "aoganisi@brown.edu"
+email: "arman_oganisian@brown.edu"
 highlight_name: false
 interests:
 - Bayesian nonparametrics
@@ -47,10 +47,10 @@ title: Arman Oganisian
 ---
 
 # News
+ - 11/15/2024: [New paper accepted](https://arxiv.org/abs/2304.03247) in *Biometrics* (in press) developing semiparametric Bayesian models for causal inference with recurrent event outcomes.
  - 12/11/2023: [New paper published](https://academic.oup.com/biostatistics/advance-article/doi/10.1093/biostatistics/kxad035/7560445?login=true) in *Biostatistics* on semiparametric Bayesian methods estimating causal effects of dynamic treatment rules. arxiv version [here](https://arxiv.org/abs/2211.16393).
  - 11/28/2023: Happy to announce a PCORI award of ~$1 million funding my work on [Bayesian Machine Learning for Causal Inference](https://www.pcori.org/research-results/2023/bayesian-machine-learning-causal-inference-electronic-health-record-data-missing-covariates)!
  - 10/20/2023: New working [paper on arXiv](https://arxiv.org/abs/2310.12358) developing causalBETA R package for Bayesian Semiparametric causal inference with survival outcomes.
- - 4/10/2023: New working [paper on arXiv](https://aps.arxiv.org/abs/2304.03247) developing semiparametric Bayesian framework for causal inference with recurrent event outcomes.
 ---
 
 # Bio
@@ -58,7 +58,6 @@ I am currently an Assistant Professor of Biostatistics at [Brown University](htt
 
 Many of my motivating applications are in oncology. Some current work is partially funded by [a PCORI contract](https://www.pcori.org/research-results/2022/statistical-methods-optimizing-dynamic-patient-level-treatment-and-monitoring-strategies) and focuses on developing Bayesian semiparametric methods for estimating (and optimizing) effects of sequential treatment strategies in acute myeloid leukemia. I have recently been awarded another [PCORI contract](https://www.pcori.org/research-results/2023/bayesian-machine-learning-causal-inference-electronic-health-record-data-missing-covariates) to develop Bayesian nonparametric methods for causal estimation with incomplete covariate information.
 
-On this site you will find a link to my CV and a selection of some past and current research, talks, etc. If you are a ScM or PhD students at Brown University who is considering working with me, please see [this page](https://stablemarkets.netlify.app/post/post7/advising/)
+On this site you will find a link to my CV and a selection of some past and current research, talks, etc. I sometimes blog about statistics, Bayesian methods, computation/MCMC, and other things I happen to stumble upon during research.
 
-I sometimes blog about statistics, Bayesian methods, computation/MCMC, and other things I happen to stumble upon during research.
-
+If you are an ScM or PhD student at Brown University who is considering working with me, please see [this page](https://stablemarkets.netlify.app/post/post7/advising/).
