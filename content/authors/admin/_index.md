@@ -47,10 +47,10 @@ title: Arman Oganisian
 ---
 
 # News
- - 11/15/2024: [New paper accepted](https://arxiv.org/abs/2304.03247) in *Biometrics* (in press) developing semiparametric Bayesian models for causal inference with recurrent event outcomes.
+ - 01/12/2025: [New paper published](https://arxiv.org/abs/2310.12358) in *Observational Studies* (in press) developing causalBETA R package for Bayesian Semiparametric causal inference with survival outcomes.
+ - 11/15/2024: [New paper published](https://academic.oup.com/biometrics/article/80/4/ujae145/7914699) in *Biometrics* developing semiparametric Bayesian models for causal inference with recurrent event outcomes.
  - 12/11/2023: [New paper published](https://academic.oup.com/biostatistics/advance-article/doi/10.1093/biostatistics/kxad035/7560445?login=true) in *Biostatistics* on semiparametric Bayesian methods estimating causal effects of dynamic treatment rules. arxiv version [here](https://arxiv.org/abs/2211.16393).
- - 11/28/2023: Happy to announce a PCORI award of ~$1 million funding my work on [Bayesian Machine Learning for Causal Inference](https://www.pcori.org/research-results/2023/bayesian-machine-learning-causal-inference-electronic-health-record-data-missing-covariates)!
- - 10/20/2023: New working [paper on arXiv](https://arxiv.org/abs/2310.12358) developing causalBETA R package for Bayesian Semiparametric causal inference with survival outcomes.
+ - 11/28/2023: Happy to announce a PCORI award funding my work on [Bayesian Machine Learning for Causal Inference](https://www.pcori.org/research-results/2023/bayesian-machine-learning-causal-inference-electronic-health-record-data-missing-covariates)!
 ---
 
 # Bio

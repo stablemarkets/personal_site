@@ -45,7 +45,7 @@ tags = []
 projects = ["bnp","causalbayes"]
 
 # Links (optional).
-url_pdf = "#"
+url_pdf = "https://academic.oup.com/biometrics/article/80/4/ujae145/7914699"
 url_preprint = "https://arxiv.org/abs/2304.03247"
 #url_code = "#"
 #url_dataset = "#"

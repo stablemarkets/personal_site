@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Talks | </title>
+    <title>Selected Talks | </title>
     <link>https://stablemarkets.netlify.app/event/</link>
       <atom:link href="https://stablemarkets.netlify.app/event/index.xml" rel="self" type="application/rss+xml" />
-    <description>Recent &amp; Upcoming Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 18 Nov 2020 15:12:00 +0000</lastBuildDate>
+    <description>Selected Talks</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Mar 2025 15:05:00 +0000</lastBuildDate>
     <image>
       <url>https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_512x512_fill_lanczos_center_3.png</url>
-      <title>Recent &amp; Upcoming Talks</title>
+      <title>Selected Talks</title>
       <link>https://stablemarkets.netlify.app/event/</link>
     </image>
+    
+    <item>
+      <title>Bayesian Causal Inference with Recurrent Event Outcomes</title>
+      <link>https://stablemarkets.netlify.app/talk/bayesian-causal-inference-with-recurrent-event-outcomes/</link>
+      <pubDate>Mon, 24 Mar 2025 15:05:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/talk/bayesian-causal-inference-with-recurrent-event-outcomes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bayesian Counterfactual Prediction and Optimization with Incomplete Information</title>
+      <link>https://stablemarkets.netlify.app/talk/bayesian-counterfactual-prediction-and-optimization-with-incomplete-information/</link>
+      <pubDate>Tue, 02 Jul 2024 15:05:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/talk/bayesian-counterfactual-prediction-and-optimization-with-incomplete-information/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bayesian Semiparametric Inference for Dynamic Treatment Strategies with Informative Timing</title>
+      <link>https://stablemarkets.netlify.app/talk/bayesian-semiparametric-inference-for-dynamic-treatment-strategies-with-informative-timing/</link>
+      <pubDate>Tue, 01 Aug 2023 15:05:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/talk/bayesian-semiparametric-inference-for-dynamic-treatment-strategies-with-informative-timing/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Introduction to Nonparametric Bayes</title>
@@ -37,26 +61,10 @@
     </item>
     
     <item>
-      <title>Nonparametric Cost-Effectiveness Analyses</title>
-      <link>https://stablemarkets.netlify.app/talk/nonparametric-cost-effectiveness-analyses/</link>
-      <pubDate>Thu, 06 Aug 2020 15:10:00 +0000</pubDate>
-      <guid>https://stablemarkets.netlify.app/talk/nonparametric-cost-effectiveness-analyses/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>BNP Model for Zero-Inflated Outcomes: Clustering, Prediction, Causal Inference</title>
       <link>https://stablemarkets.netlify.app/talk/bnp-model-for-zero-inflated-outcomes-clustering-prediction-causal-inference/</link>
       <pubDate>Wed, 31 Jul 2019 15:05:00 +0000</pubDate>
       <guid>https://stablemarkets.netlify.app/talk/bnp-model-for-zero-inflated-outcomes-clustering-prediction-causal-inference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>A Bayesian Nonparametric Method for Zero-Inflated Data with Applications to Medical Costs</title>
-      <link>https://stablemarkets.netlify.app/talk/a-bayesian-nonparametric-method-for-zero-inflated-data-with-applications-to-medical-costs/</link>
-      <pubDate>Mon, 30 Jul 2018 15:05:00 +0000</pubDate>
-      <guid>https://stablemarkets.netlify.app/talk/a-bayesian-nonparametric-method-for-zero-inflated-data-with-applications-to-medical-costs/</guid>
       <description></description>
     </item>
     

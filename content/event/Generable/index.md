@@ -24,7 +24,7 @@ event_url = "https://hopin.com/events/introduction-to-nonparametric-bayes"
 #abstract = "Bayesian modeling techniques have been growing in popularity within the causal literature. In this talk, we highlight the unique benefits Bayes brings to the table when estimating causal effects of time-fixed and time-varying treatments. We also highlight how easily these methods can be implemented in Stan – opening up the causal toolkit to a large pool of practicing Bayesian statisticians. Methodologically, we highlight two uses of Bayesian causal inference: 1) partial pooling priors that shrink heterogeneous causal effects to a homogeneous effect in absence of data and 2) using priors to do sensitivity analyses for ignorability violations."
 
 # Summary. An optional shortened abstract.
-#summary = ""
+#summary = "Talk given "
 
 # Is this a featured talk? (true/false)
 featured = false

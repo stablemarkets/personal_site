@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JA. Steingrimsson | </title>
+    <link>https://stablemarkets.netlify.app/author/ja.-steingrimsson/</link>
+      <atom:link href="https://stablemarkets.netlify.app/author/ja.-steingrimsson/index.xml" rel="self" type="application/rss+xml" />
+    <description>JA. Steingrimsson</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 15 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_512x512_fill_lanczos_center_3.png</url>
+      <title>JA. Steingrimsson</title>
+      <link>https://stablemarkets.netlify.app/author/ja.-steingrimsson/</link>
+    </image>
+    
+    <item>
+      <title>A Bayesian Framework for Causal Analysis of Recurrent Events with Timing Misalignment</title>
+      <link>https://stablemarkets.netlify.app/publication/bayesrecurrent/</link>
+      <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/publication/bayesrecurrent/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

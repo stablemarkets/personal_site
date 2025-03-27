@@ -5,12 +5,20 @@
     <link>https://stablemarkets.netlify.app/publication-type/2/</link>
       <atom:link href="https://stablemarkets.netlify.app/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 15 Nov 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://stablemarkets.netlify.app/media/icon_hu56437e0029043a6980b2632a303bfe7c_22443_512x512_fill_lanczos_center_3.png</url>
       <title>2</title>
       <link>https://stablemarkets.netlify.app/publication-type/2/</link>
     </image>
+    
+    <item>
+      <title>A Bayesian Framework for Causal Analysis of Recurrent Events with Timing Misalignment</title>
+      <link>https://stablemarkets.netlify.app/publication/bayesrecurrent/</link>
+      <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://stablemarkets.netlify.app/publication/bayesrecurrent/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bayesian Semiparametric Model for Sequential Treatment Decisions with Informative Timing</title>
