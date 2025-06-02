@@ -20,11 +20,11 @@ library(latex2exp)
 ```
 
 ## Advising
-Working with graduate students is a very fulfilling part of my job. Philosophically, I am not a very hierarchical person and I see students as fellow researchers working as part of a team to solve a common problem. The learning happens on the pathway towards finding these solutions and I sometimes find myself learning from students as well. I also like to foster independence, typically starting off with a lot of guidance and direction and then tapering incrementally.
+Working with graduate students is a very fulfilling part of my job. Philosophically, I am not a very hierarchical person and I see students as fellow researchers. We work as part of a team to solve a common problem. The learning/mentoring happens on the journey towards finding these solutions and I sometimes find myself learning from students as well. I also like to foster independence, typically starting off with a lot of guidance and direction and then tapering incrementally over time.
 
 I typically work with Brown University graduate students in the capacity of a thesis or dissertation adviser for the [ScM and PhD programs in Biostatistics](https://biostatistics.sph.brown.edu/academics). How many students I take on depends on availability of funding and data projects. I generally do not take on more than two new students per year. 
 
-If you think you may like to work with me on a thesis, I first suggest you read the "Assessing Interest'' and the \ ``Finding a Project" sections below and go through some of the reading. If you feel like you are enjoying what you are reading and find it stimulating, feel free to email me to set up a meeting to discuss your interests and goals. I also summarize some placement outcomes for past advisees at the end.
+If you think you may like to work with me on a thesis, I first suggest you read the "Assessing Interest'' and the \ ``Finding a Project" sections below and go through some of the papers listed. If you feel like you are enjoying what you are reading and find it stimulating, feel free to email me to set up a meeting to discuss your interests and goals. I also summarize some placement outcomes for past advisees at the end of this post..
 
 ## Assessing Interest
 
@@ -78,12 +78,15 @@ My work is very application-driven. I'm quite bad at (and generally do not enjoy
 Below are previous students, degree completed, year of completion, and first industry or academic placement after graduation. Brown archives completed ScM theses [here](https://repository.library.brown.edu/studio/search/?q=biostatistics&selected_facets=ir_collection_name%3ABiostatistics). I recommend prospective advisees read through some of the theses from my former students to get a sense of the type of projects they can work on.
 
 - Current Students
-  - Daniel Posmik, PhD 2029.
   - Esteban Fernandes-Morales, PhD 2026.
-  - Zhaoxiang Ding, ScM 2025.
-
+  - Valentin Kirilenko, ScM 2027.
+  - Yuzhou Peng, ScM 2027.
+  - Zizhao Xie, ScM 2027.
+  
+  
 - Previous Students
-  -   Zihan Zhou, ScM 2024 - Biostatistics PhD student @ Pennsylvania State University.
+  - Zhaoxiang Ding, ScM 2025 - Statistician @ Eli Lilly.
+  - Zihan Zhou, ScM 2024 - Biostatistics PhD @ Pennsylvania State University.
   - Tova Ibbotson, ScM 2024 - Senior Statistician @ GSK.
   - Nancy Liu, ScM 2023 - Biostatistician @ Rutgers University.
   - Anthony Girard, ScM 2023 - Statistical Analyst @ Leonard Davis Institute, University of Pennsylvania.
