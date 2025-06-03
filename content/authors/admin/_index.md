@@ -47,7 +47,7 @@ title: Arman Oganisian
 ---
 
 # News
- - 06/01/2025: I'm giving two talks at [WNAR 2025 in Whistler, Canada](https://whova.com/embedded/speaker/hRqar%40ceM1oCRxx8SaTASu%40-ruGH1z6nVU55djYhzR8%3D/46907258/): one on [this paper](https://doi.org/10.1093/biomtc/ujae145) and another on [this paper](https://doi.org/10.1093/biostatistics/kxae029).
+ - 06/01/2025: I'm giving two talks at [WNAR 2025 in Whistler, Canada](https://whova.com/embedded/speaker/hRqar%40ceM1oCRxx8SaTASu%40-ruGH1z6nVU55djYhzR8%3D/46907258/): one on [this paper](https://doi.org/10.1093/biomtc/ujae145) and another on [this paper](https://doi.org/10.1093/biostatistics/kxad035).
  - 05/01/2025: Honored to have received the [Dean's Award for Excellence in Research Collaboration](https://dean.sph.brown.edu/news/2025-04-04/2025-winners).
  - 01/12/2025: [New paper published](https://arxiv.org/abs/2310.12358) in *Observational Studies* (in press) developing causalBETA R package for Bayesian Semiparametric causal inference with survival outcomes.
  - 11/15/2024: [New paper published](https://academic.oup.com/biometrics/article/80/4/ujae145/7914699) in *Biometrics* developing semiparametric Bayesian models for causal inference with recurrent event outcomes.
