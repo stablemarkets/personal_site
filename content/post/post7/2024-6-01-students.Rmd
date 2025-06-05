@@ -83,7 +83,6 @@ Below are previous students, degree completed, year of completion, and first ind
   - Yuzhou Peng, ScM 2027.
   - Zizhao Xie, ScM 2027.
   
-  
 - Previous Students
   - Zhaoxiang Ding, ScM 2025 - Statistician @ Eli Lilly.
   - Zihan Zhou, ScM 2024 - Biostatistics PhD @ Pennsylvania State University.
