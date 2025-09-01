@@ -152,16 +152,7 @@
     <loc>https://stablemarkets.netlify.app/project/causalbayes/</loc>
     <lastmod>2020-06-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://stablemarkets.netlify.app/category/mcmc/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/category/r/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://stablemarkets.netlify.app/post/post5/sate-v-pate/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/post/post4/tempered-mcmc/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/publication/acadid/</loc>
@@ -215,17 +206,17 @@
     <loc>https://stablemarkets.netlify.app/talk/bnp-model-for-zero-inflated-outcomes-clustering-prediction-causal-inference/</loc>
     <lastmod>2019-07-31T15:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://stablemarkets.netlify.app/post/post3/gamma-process-prior/</loc>
-    <lastmod>2019-05-12T00:00:00+00:00</lastmod>
+    <loc>https://stablemarkets.netlify.app/category/mcmc/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://stablemarkets.netlify.app/category/r/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/post/post2/specifying-accelerated-failure-time-models-in-stan/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/category/stan/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://stablemarkets.netlify.app/post/post1/bayesian-survival-analysis-with-data-augmentation/</loc>
-    <lastmod>2019-03-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://stablemarkets.netlify.app/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
