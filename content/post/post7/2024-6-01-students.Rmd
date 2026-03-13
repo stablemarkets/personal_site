@@ -60,33 +60,33 @@ Below, I have resources for each of these topics to help you learn and gauge you
 
 **Survival outcomes**:
 
-- Bayesian causal inference with survival outcomes see [here](https://arxiv.org/abs/2310.12358):
+- Bayesian causal inference with survival outcomes see [here](https://muse.jhu.edu/article/963646):
 - [Bayesian Survival Analysis](https://link.springer.com/book/10.1007/978-1-4757-3447-8) by Ibrahim. Available via Brown University library. See Chapters 1,2, and 3.
 
 
 ## Finding a Project
 
-Though it can happen many ways, typically a a thesis advising position has arisen in these ways for me:
+Though it can happen many ways, typically a thesis advising opportunities arise in these ways for me:
 
 - A student approaches me and has read some of the literature in the "Assessing Interest" section in detail and concluded they are interested in working in this area. If I have an appropriate project that can be completed within 1-1.5 years ready, I will offer this project as a thesis project for the student. If I do not have a project ready, I will keep the student in mind for when an appropriate project does come my way.
 
 - A student approaches me usually after having done a previous RA-ship working with data. They are very interested in, say, a causal (or Bayesian) extension of the analysis and would like me to supervise. This is an example of a student coming to me with a project, which does sometimes happen and which I like because it can expose me to new and interesting problems.
 
-My work is very application-driven. I'm quite bad at (and generally do not enjoy) making up methodological problems to solve and. Instead, I generate research ideas by working with clinical and applied collaborators in, say, the Department of Epidemiology or the medical school on concrete data analysis. Over the course of working on these projects, I often notice complexities for which I find existing methods to be unsatisfactory or have shortcomings. This then motivates new methodological research to overcome these shortcomings. Thesis work often arises from these concrete data analyses projects with collaborators - the arrival of these projects and their appropriateness for thesis work is stochastic in nature. I may not have an appropriate project lined up when you approach me. If I do not, you should keep searching for other projects and not assume one will pop up in the meantime.
+My work is very application-driven. I'm quite bad at (and generally do not enjoy) making up methodological problems to solve Instead, I generate research ideas by working with clinical and applied collaborators in, say, the Epidemiology, Health Services, or the medical school on concrete data analyses. Over the course of working on these projects, I often notice complexities for which I find existing methods to be unsatisfactory or have shortcomings. This then motivates new methodological research to overcome these shortcomings. Thesis work often arises from these concrete data analyses projects with collaborators - the arrival of these projects and their appropriateness for thesis work is stochastic in nature. I may not have an appropriate project lined up when you approach me. If I do not, you should keep searching for other projects and not assume one will pop up in the meantime.
 
 ## Current Students and Past Placements
 Below are previous students, degree completed, year of completion, and first industry or academic placement after graduation. Brown archives completed ScM theses [here](https://repository.library.brown.edu/studio/search/?q=biostatistics&selected_facets=ir_collection_name%3ABiostatistics). I recommend prospective advisees read through some of the theses from my former students to get a sense of the type of projects they can work on.
 
 - Current Students
   - Esteban Fernandes-Morales, PhD 2026.
-  - Valentin Kirilenko, ScM 2027.
-  - Yuzhou Peng, ScM 2027.
-  - Zizhao Xie, ScM 2027.
+  - Valentin Kirilenko, ScM 2026.
+  - Yuzhou Peng, ScM 2026.
+  - Zizhao Xie, ScM 2026.
   
 - Previous Students
-  - Zhaoxiang Ding, ScM 2025 - Statistician @ Eli Lilly.
+  - Zhaoxiang Ding, ScM 2025 - Senior Computational Statistician @ Eli Lilly.
   - Zihan Zhou, ScM 2024 - Biostatistics PhD @ Pennsylvania State University.
   - Tova Ibbotson, ScM 2024 - Senior Statistician @ GSK.
   - Nancy Liu, ScM 2023 - Biostatistician @ Rutgers University.
-  - Anthony Girard, ScM 2023 - Statistical Analyst @ Leonard Davis Institute, University of Pennsylvania.
+  - Anthony Girard, ScM 2023 - Statistical Analyst @ University of Pennsylvania.
 
