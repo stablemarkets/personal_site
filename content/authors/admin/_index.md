@@ -47,7 +47,9 @@ title: Arman Oganisian
 ---
 
 # News
- - 03/01/2026: [New paper accepted](https://arxiv.org/abs/2501.08231) in *Biometrics* (in press) on Bayesian causal inference with spatial spillovers.
+ - 08/01/2026: [New paper in press](https://arxiv.org/abs/2601.14309) at *Biometrical Journal* on Bayesian causal inference with cost-effectiveness outcomes.
+ - 05/01/2026: [New paper](https://www.degruyterbrill.com/document/doi/10.1515/jci-2025-0058/html) in *Journal of Causal Inference* on sample vs. population inference.
+ - 03/01/2026: [New paper](https://academic.oup.com/biometrics/article-abstract/82/2/ujag054/8657883) in *Biometrics* (in press) on Bayesian causal inference with spatial spillovers.
  - 09/01/2025: [New paper](https://journals.lww.com/epidem/fulltext/2026/03000/considerations_for_estimating_causal_effects_of.3.aspx) in *Epidemiology* on causal inference methods for informatively timed, sequential treatments.
  - 07/01/2025: I'm honored to be appointed to the Thomas J. \& Alice M. Tisch named professorship effective July.
  - 05/01/2025: Honored to have received the [Dean's Award for Excellence in Research Collaboration](https://dean.sph.brown.edu/news/2025-04-04/2025-winners).
