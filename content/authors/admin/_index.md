@@ -53,8 +53,6 @@ title: Arman Oganisian
  - 09/01/2025: [New paper](https://journals.lww.com/epidem/fulltext/2026/03000/considerations_for_estimating_causal_effects_of.3.aspx) in *Epidemiology* on causal inference methods for informatively timed, sequential treatments.
  - 07/01/2025: I'm honored to be appointed to the Thomas J. \& Alice M. Tisch named professorship effective July.
  - 05/01/2025: Honored to have received the [Dean's Award for Excellence in Research Collaboration](https://dean.sph.brown.edu/news/2025-04-04/2025-winners).
- - 01/12/2025: [New paper accepted](https://muse.jhu.edu/article/963646) in *Observational Studies* developing causalBETA R package for Bayesian Semiparametric causal inference with survival outcomes.
- - 11/15/2024: [New paper published](https://academic.oup.com/biometrics/article/80/4/ujae145/7914699) in *Biometrics* developing semiparametric Bayesian models for causal inference with recurrent event outcomes.
 ---
 
 # Bio
